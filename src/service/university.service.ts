@@ -42,6 +42,16 @@ export class UniversityService {
         });
       }
 
-    
+      async getAllTasksForUniversitys(id_university: string) {
+        return this.prisma.pergunta.findMany({
+          where: {
+            id_faculdade: id_university
+          },
+          include: {
+            opcoes: true, 
+            faculdade: true 
+          }
+        });
+      }
 
 }
