@@ -157,7 +157,9 @@ exports.Prisma.OpcaoRespostaScalarFieldEnum = {
 exports.Prisma.Usuario_AcertosScalarFieldEnum = {
   id_usuario_acerto: 'id_usuario_acerto',
   id_usuario: 'id_usuario',
-  id_pergunta: 'id_pergunta'
+  id_pergunta: 'id_pergunta',
+  id_opcao_resposta: 'id_opcao_resposta',
+  acertou: 'acertou'
 };
 
 exports.Prisma.SortOrder = {

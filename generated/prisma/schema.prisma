@@ -72,6 +72,8 @@ model Usuario_Acertos {
   id_usuario_acerto String   @id @default(uuid())
   id_usuario        String
   id_pergunta       String
+  id_opcao_resposta String
+  acertou           Boolean
   usuario           Usuario  @relation(fields: [id_usuario], references: [id_usuario])
   pergunta          Pergunta @relation(fields: [id_pergunta], references: [id_pergunta])
 

@@ -6844,18 +6844,24 @@ export namespace Prisma {
     id_usuario_acerto: string | null
     id_usuario: string | null
     id_pergunta: string | null
+    id_opcao_resposta: string | null
+    acertou: boolean | null
   }
 
   export type Usuario_AcertosMaxAggregateOutputType = {
     id_usuario_acerto: string | null
     id_usuario: string | null
     id_pergunta: string | null
+    id_opcao_resposta: string | null
+    acertou: boolean | null
   }
 
   export type Usuario_AcertosCountAggregateOutputType = {
     id_usuario_acerto: number
     id_usuario: number
     id_pergunta: number
+    id_opcao_resposta: number
+    acertou: number
     _all: number
   }
 
@@ -6864,18 +6870,24 @@ export namespace Prisma {
     id_usuario_acerto?: true
     id_usuario?: true
     id_pergunta?: true
+    id_opcao_resposta?: true
+    acertou?: true
   }
 
   export type Usuario_AcertosMaxAggregateInputType = {
     id_usuario_acerto?: true
     id_usuario?: true
     id_pergunta?: true
+    id_opcao_resposta?: true
+    acertou?: true
   }
 
   export type Usuario_AcertosCountAggregateInputType = {
     id_usuario_acerto?: true
     id_usuario?: true
     id_pergunta?: true
+    id_opcao_resposta?: true
+    acertou?: true
     _all?: true
   }
 
@@ -6955,6 +6967,8 @@ export namespace Prisma {
     id_usuario_acerto: string
     id_usuario: string
     id_pergunta: string
+    id_opcao_resposta: string
+    acertou: boolean
     _count: Usuario_AcertosCountAggregateOutputType | null
     _min: Usuario_AcertosMinAggregateOutputType | null
     _max: Usuario_AcertosMaxAggregateOutputType | null
@@ -6978,6 +6992,8 @@ export namespace Prisma {
     id_usuario_acerto?: boolean
     id_usuario?: boolean
     id_pergunta?: boolean
+    id_opcao_resposta?: boolean
+    acertou?: boolean
     usuario?: boolean | UsuarioDefaultArgs<ExtArgs>
     pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["usuario_Acertos"]>
@@ -6986,6 +7002,8 @@ export namespace Prisma {
     id_usuario_acerto?: boolean
     id_usuario?: boolean
     id_pergunta?: boolean
+    id_opcao_resposta?: boolean
+    acertou?: boolean
     usuario?: boolean | UsuarioDefaultArgs<ExtArgs>
     pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["usuario_Acertos"]>
@@ -6994,6 +7012,8 @@ export namespace Prisma {
     id_usuario_acerto?: boolean
     id_usuario?: boolean
     id_pergunta?: boolean
+    id_opcao_resposta?: boolean
+    acertou?: boolean
     usuario?: boolean | UsuarioDefaultArgs<ExtArgs>
     pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["usuario_Acertos"]>
@@ -7002,9 +7022,11 @@ export namespace Prisma {
     id_usuario_acerto?: boolean
     id_usuario?: boolean
     id_pergunta?: boolean
+    id_opcao_resposta?: boolean
+    acertou?: boolean
   }
 
-  export type Usuario_AcertosOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_usuario_acerto" | "id_usuario" | "id_pergunta", ExtArgs["result"]["usuario_Acertos"]>
+  export type Usuario_AcertosOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_usuario_acerto" | "id_usuario" | "id_pergunta" | "id_opcao_resposta" | "acertou", ExtArgs["result"]["usuario_Acertos"]>
   export type Usuario_AcertosInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     usuario?: boolean | UsuarioDefaultArgs<ExtArgs>
     pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
@@ -7028,6 +7050,8 @@ export namespace Prisma {
       id_usuario_acerto: string
       id_usuario: string
       id_pergunta: string
+      id_opcao_resposta: string
+      acertou: boolean
     }, ExtArgs["result"]["usuario_Acertos"]>
     composites: {}
   }
@@ -7456,6 +7480,8 @@ export namespace Prisma {
     readonly id_usuario_acerto: FieldRef<"Usuario_Acertos", 'String'>
     readonly id_usuario: FieldRef<"Usuario_Acertos", 'String'>
     readonly id_pergunta: FieldRef<"Usuario_Acertos", 'String'>
+    readonly id_opcao_resposta: FieldRef<"Usuario_Acertos", 'String'>
+    readonly acertou: FieldRef<"Usuario_Acertos", 'Boolean'>
   }
     
 
@@ -7936,7 +7962,9 @@ export namespace Prisma {
   export const Usuario_AcertosScalarFieldEnum: {
     id_usuario_acerto: 'id_usuario_acerto',
     id_usuario: 'id_usuario',
-    id_pergunta: 'id_pergunta'
+    id_pergunta: 'id_pergunta',
+    id_opcao_resposta: 'id_opcao_resposta',
+    acertou: 'acertou'
   };
 
   export type Usuario_AcertosScalarFieldEnum = (typeof Usuario_AcertosScalarFieldEnum)[keyof typeof Usuario_AcertosScalarFieldEnum]
@@ -8282,6 +8310,8 @@ export namespace Prisma {
     id_usuario_acerto?: StringFilter<"Usuario_Acertos"> | string
     id_usuario?: StringFilter<"Usuario_Acertos"> | string
     id_pergunta?: StringFilter<"Usuario_Acertos"> | string
+    id_opcao_resposta?: StringFilter<"Usuario_Acertos"> | string
+    acertou?: BoolFilter<"Usuario_Acertos"> | boolean
     usuario?: XOR<UsuarioScalarRelationFilter, UsuarioWhereInput>
     pergunta?: XOR<PerguntaScalarRelationFilter, PerguntaWhereInput>
   }
@@ -8290,6 +8320,8 @@ export namespace Prisma {
     id_usuario_acerto?: SortOrder
     id_usuario?: SortOrder
     id_pergunta?: SortOrder
+    id_opcao_resposta?: SortOrder
+    acertou?: SortOrder
     usuario?: UsuarioOrderByWithRelationInput
     pergunta?: PerguntaOrderByWithRelationInput
   }
@@ -8301,6 +8333,8 @@ export namespace Prisma {
     NOT?: Usuario_AcertosWhereInput | Usuario_AcertosWhereInput[]
     id_usuario?: StringFilter<"Usuario_Acertos"> | string
     id_pergunta?: StringFilter<"Usuario_Acertos"> | string
+    id_opcao_resposta?: StringFilter<"Usuario_Acertos"> | string
+    acertou?: BoolFilter<"Usuario_Acertos"> | boolean
     usuario?: XOR<UsuarioScalarRelationFilter, UsuarioWhereInput>
     pergunta?: XOR<PerguntaScalarRelationFilter, PerguntaWhereInput>
   }, "id_usuario_acerto">
@@ -8309,6 +8343,8 @@ export namespace Prisma {
     id_usuario_acerto?: SortOrder
     id_usuario?: SortOrder
     id_pergunta?: SortOrder
+    id_opcao_resposta?: SortOrder
+    acertou?: SortOrder
     _count?: Usuario_AcertosCountOrderByAggregateInput
     _max?: Usuario_AcertosMaxOrderByAggregateInput
     _min?: Usuario_AcertosMinOrderByAggregateInput
@@ -8321,6 +8357,8 @@ export namespace Prisma {
     id_usuario_acerto?: StringWithAggregatesFilter<"Usuario_Acertos"> | string
     id_usuario?: StringWithAggregatesFilter<"Usuario_Acertos"> | string
     id_pergunta?: StringWithAggregatesFilter<"Usuario_Acertos"> | string
+    id_opcao_resposta?: StringWithAggregatesFilter<"Usuario_Acertos"> | string
+    acertou?: BoolWithAggregatesFilter<"Usuario_Acertos"> | boolean
   }
 
   export type UsuarioCreateInput = {
@@ -8583,6 +8621,8 @@ export namespace Prisma {
 
   export type Usuario_AcertosCreateInput = {
     id_usuario_acerto?: string
+    id_opcao_resposta: string
+    acertou: boolean
     usuario: UsuarioCreateNestedOneWithoutAcertosInput
     pergunta: PerguntaCreateNestedOneWithoutAcertosInput
   }
@@ -8591,10 +8631,14 @@ export namespace Prisma {
     id_usuario_acerto?: string
     id_usuario: string
     id_pergunta: string
+    id_opcao_resposta: string
+    acertou: boolean
   }
 
   export type Usuario_AcertosUpdateInput = {
     id_usuario_acerto?: StringFieldUpdateOperationsInput | string
+    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
+    acertou?: BoolFieldUpdateOperationsInput | boolean
     usuario?: UsuarioUpdateOneRequiredWithoutAcertosNestedInput
     pergunta?: PerguntaUpdateOneRequiredWithoutAcertosNestedInput
   }
@@ -8603,22 +8647,30 @@ export namespace Prisma {
     id_usuario_acerto?: StringFieldUpdateOperationsInput | string
     id_usuario?: StringFieldUpdateOperationsInput | string
     id_pergunta?: StringFieldUpdateOperationsInput | string
+    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
+    acertou?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type Usuario_AcertosCreateManyInput = {
     id_usuario_acerto?: string
     id_usuario: string
     id_pergunta: string
+    id_opcao_resposta: string
+    acertou: boolean
   }
 
   export type Usuario_AcertosUpdateManyMutationInput = {
     id_usuario_acerto?: StringFieldUpdateOperationsInput | string
+    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
+    acertou?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type Usuario_AcertosUncheckedUpdateManyInput = {
     id_usuario_acerto?: StringFieldUpdateOperationsInput | string
     id_usuario?: StringFieldUpdateOperationsInput | string
     id_pergunta?: StringFieldUpdateOperationsInput | string
+    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
+    acertou?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -8868,18 +8920,24 @@ export namespace Prisma {
     id_usuario_acerto?: SortOrder
     id_usuario?: SortOrder
     id_pergunta?: SortOrder
+    id_opcao_resposta?: SortOrder
+    acertou?: SortOrder
   }
 
   export type Usuario_AcertosMaxOrderByAggregateInput = {
     id_usuario_acerto?: SortOrder
     id_usuario?: SortOrder
     id_pergunta?: SortOrder
+    id_opcao_resposta?: SortOrder
+    acertou?: SortOrder
   }
 
   export type Usuario_AcertosMinOrderByAggregateInput = {
     id_usuario_acerto?: SortOrder
     id_usuario?: SortOrder
     id_pergunta?: SortOrder
+    id_opcao_resposta?: SortOrder
+    acertou?: SortOrder
   }
 
   export type FaculdadeCreateNestedOneWithoutUsuariosInput = {
@@ -9335,12 +9393,16 @@ export namespace Prisma {
 
   export type Usuario_AcertosCreateWithoutUsuarioInput = {
     id_usuario_acerto?: string
+    id_opcao_resposta: string
+    acertou: boolean
     pergunta: PerguntaCreateNestedOneWithoutAcertosInput
   }
 
   export type Usuario_AcertosUncheckedCreateWithoutUsuarioInput = {
     id_usuario_acerto?: string
     id_pergunta: string
+    id_opcao_resposta: string
+    acertou: boolean
   }
 
   export type Usuario_AcertosCreateOrConnectWithoutUsuarioInput = {
@@ -9403,6 +9465,8 @@ export namespace Prisma {
     id_usuario_acerto?: StringFilter<"Usuario_Acertos"> | string
     id_usuario?: StringFilter<"Usuario_Acertos"> | string
     id_pergunta?: StringFilter<"Usuario_Acertos"> | string
+    id_opcao_resposta?: StringFilter<"Usuario_Acertos"> | string
+    acertou?: BoolFilter<"Usuario_Acertos"> | boolean
   }
 
   export type UsuarioCreateWithoutFaculdadeInput = {
@@ -9627,12 +9691,16 @@ export namespace Prisma {
 
   export type Usuario_AcertosCreateWithoutPerguntaInput = {
     id_usuario_acerto?: string
+    id_opcao_resposta: string
+    acertou: boolean
     usuario: UsuarioCreateNestedOneWithoutAcertosInput
   }
 
   export type Usuario_AcertosUncheckedCreateWithoutPerguntaInput = {
     id_usuario_acerto?: string
     id_usuario: string
+    id_opcao_resposta: string
+    acertou: boolean
   }
 
   export type Usuario_AcertosCreateOrConnectWithoutPerguntaInput = {
@@ -9882,21 +9950,29 @@ export namespace Prisma {
   export type Usuario_AcertosCreateManyUsuarioInput = {
     id_usuario_acerto?: string
     id_pergunta: string
+    id_opcao_resposta: string
+    acertou: boolean
   }
 
   export type Usuario_AcertosUpdateWithoutUsuarioInput = {
     id_usuario_acerto?: StringFieldUpdateOperationsInput | string
+    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
+    acertou?: BoolFieldUpdateOperationsInput | boolean
     pergunta?: PerguntaUpdateOneRequiredWithoutAcertosNestedInput
   }
 
   export type Usuario_AcertosUncheckedUpdateWithoutUsuarioInput = {
     id_usuario_acerto?: StringFieldUpdateOperationsInput | string
     id_pergunta?: StringFieldUpdateOperationsInput | string
+    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
+    acertou?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type Usuario_AcertosUncheckedUpdateManyWithoutUsuarioInput = {
     id_usuario_acerto?: StringFieldUpdateOperationsInput | string
     id_pergunta?: StringFieldUpdateOperationsInput | string
+    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
+    acertou?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type UsuarioCreateManyFaculdadeInput = {
@@ -9986,6 +10062,8 @@ export namespace Prisma {
   export type Usuario_AcertosCreateManyPerguntaInput = {
     id_usuario_acerto?: string
     id_usuario: string
+    id_opcao_resposta: string
+    acertou: boolean
   }
 
   export type OpcaoRespostaUpdateWithoutPerguntaInput = {
@@ -10008,17 +10086,23 @@ export namespace Prisma {
 
   export type Usuario_AcertosUpdateWithoutPerguntaInput = {
     id_usuario_acerto?: StringFieldUpdateOperationsInput | string
+    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
+    acertou?: BoolFieldUpdateOperationsInput | boolean
     usuario?: UsuarioUpdateOneRequiredWithoutAcertosNestedInput
   }
 
   export type Usuario_AcertosUncheckedUpdateWithoutPerguntaInput = {
     id_usuario_acerto?: StringFieldUpdateOperationsInput | string
     id_usuario?: StringFieldUpdateOperationsInput | string
+    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
+    acertou?: BoolFieldUpdateOperationsInput | boolean
   }
 
   export type Usuario_AcertosUncheckedUpdateManyWithoutPerguntaInput = {
     id_usuario_acerto?: StringFieldUpdateOperationsInput | string
     id_usuario?: StringFieldUpdateOperationsInput | string
+    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
+    acertou?: BoolFieldUpdateOperationsInput | boolean
   }
 
 

@@ -1,4 +1,4 @@
-import { Body, Controller, HttpCode, Post, UseGuards } from "@nestjs/common";
+import { Body, Controller, Get, HttpCode, Param, Post, UseGuards } from "@nestjs/common";
 import { AuthGuard } from "@nestjs/passport";
 import { CreateUserDto } from "src/dto/users/create-user.dto";
 import { LoginDto } from "src/dto/users/login-user.dto";
@@ -20,5 +20,12 @@ export class UsersController {
     @HttpCode(200)
     async login(@Body() loginDto: LoginDto) {   
       return this.usersService.login(loginDto);
+    }
+
+    @Get(':id')
+    @HttpCode(200)
+    @UseGuards(AuthGuard('jwt'))
+    async getUser(@Param('id') id: string) {
+      return this.usersService.getUser(id);
     }
 }
