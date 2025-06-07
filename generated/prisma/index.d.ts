@@ -14,35 +14,35 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Usuario
+ * Model Recrutador
  * 
  */
-export type Usuario = $Result.DefaultSelection<Prisma.$UsuarioPayload>
+export type Recrutador = $Result.DefaultSelection<Prisma.$RecrutadorPayload>
 /**
- * Model Faculdade
+ * Model Empresa
  * 
  */
-export type Faculdade = $Result.DefaultSelection<Prisma.$FaculdadePayload>
+export type Empresa = $Result.DefaultSelection<Prisma.$EmpresaPayload>
 /**
- * Model Faculdade_Empresa
+ * Model Aluno
  * 
  */
-export type Faculdade_Empresa = $Result.DefaultSelection<Prisma.$Faculdade_EmpresaPayload>
+export type Aluno = $Result.DefaultSelection<Prisma.$AlunoPayload>
 /**
- * Model Pergunta
+ * Model Contratacao
  * 
  */
-export type Pergunta = $Result.DefaultSelection<Prisma.$PerguntaPayload>
+export type Contratacao = $Result.DefaultSelection<Prisma.$ContratacaoPayload>
 /**
- * Model OpcaoResposta
+ * Model Nota
  * 
  */
-export type OpcaoResposta = $Result.DefaultSelection<Prisma.$OpcaoRespostaPayload>
+export type Nota = $Result.DefaultSelection<Prisma.$NotaPayload>
 /**
- * Model Usuario_Acertos
+ * Model Aptidao
  * 
  */
-export type Usuario_Acertos = $Result.DefaultSelection<Prisma.$Usuario_AcertosPayload>
+export type Aptidao = $Result.DefaultSelection<Prisma.$AptidaoPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -51,8 +51,8 @@ export type Usuario_Acertos = $Result.DefaultSelection<Prisma.$Usuario_AcertosPa
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Usuarios
- * const usuarios = await prisma.usuario.findMany()
+ * // Fetch zero or more Recrutadors
+ * const recrutadors = await prisma.recrutador.findMany()
  * ```
  *
  *
@@ -72,8 +72,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Usuarios
-   * const usuarios = await prisma.usuario.findMany()
+   * // Fetch zero or more Recrutadors
+   * const recrutadors = await prisma.recrutador.findMany()
    * ```
    *
    *
@@ -170,64 +170,64 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.usuario`: Exposes CRUD operations for the **Usuario** model.
+   * `prisma.recrutador`: Exposes CRUD operations for the **Recrutador** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Usuarios
-    * const usuarios = await prisma.usuario.findMany()
+    * // Fetch zero or more Recrutadors
+    * const recrutadors = await prisma.recrutador.findMany()
     * ```
     */
-  get usuario(): Prisma.UsuarioDelegate<ExtArgs, ClientOptions>;
+  get recrutador(): Prisma.RecrutadorDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.faculdade`: Exposes CRUD operations for the **Faculdade** model.
+   * `prisma.empresa`: Exposes CRUD operations for the **Empresa** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Faculdades
-    * const faculdades = await prisma.faculdade.findMany()
+    * // Fetch zero or more Empresas
+    * const empresas = await prisma.empresa.findMany()
     * ```
     */
-  get faculdade(): Prisma.FaculdadeDelegate<ExtArgs, ClientOptions>;
+  get empresa(): Prisma.EmpresaDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.faculdade_Empresa`: Exposes CRUD operations for the **Faculdade_Empresa** model.
+   * `prisma.aluno`: Exposes CRUD operations for the **Aluno** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Faculdade_Empresas
-    * const faculdade_Empresas = await prisma.faculdade_Empresa.findMany()
+    * // Fetch zero or more Alunos
+    * const alunos = await prisma.aluno.findMany()
     * ```
     */
-  get faculdade_Empresa(): Prisma.Faculdade_EmpresaDelegate<ExtArgs, ClientOptions>;
+  get aluno(): Prisma.AlunoDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.pergunta`: Exposes CRUD operations for the **Pergunta** model.
+   * `prisma.contratacao`: Exposes CRUD operations for the **Contratacao** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Perguntas
-    * const perguntas = await prisma.pergunta.findMany()
+    * // Fetch zero or more Contratacaos
+    * const contratacaos = await prisma.contratacao.findMany()
     * ```
     */
-  get pergunta(): Prisma.PerguntaDelegate<ExtArgs, ClientOptions>;
+  get contratacao(): Prisma.ContratacaoDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.opcaoResposta`: Exposes CRUD operations for the **OpcaoResposta** model.
+   * `prisma.nota`: Exposes CRUD operations for the **Nota** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more OpcaoRespostas
-    * const opcaoRespostas = await prisma.opcaoResposta.findMany()
+    * // Fetch zero or more Notas
+    * const notas = await prisma.nota.findMany()
     * ```
     */
-  get opcaoResposta(): Prisma.OpcaoRespostaDelegate<ExtArgs, ClientOptions>;
+  get nota(): Prisma.NotaDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.usuario_Acertos`: Exposes CRUD operations for the **Usuario_Acertos** model.
+   * `prisma.aptidao`: Exposes CRUD operations for the **Aptidao** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Usuario_Acertos
-    * const usuario_Acertos = await prisma.usuario_Acertos.findMany()
+    * // Fetch zero or more Aptidaos
+    * const aptidaos = await prisma.aptidao.findMany()
     * ```
     */
-  get usuario_Acertos(): Prisma.Usuario_AcertosDelegate<ExtArgs, ClientOptions>;
+  get aptidao(): Prisma.AptidaoDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -668,12 +668,12 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Usuario: 'Usuario',
-    Faculdade: 'Faculdade',
-    Faculdade_Empresa: 'Faculdade_Empresa',
-    Pergunta: 'Pergunta',
-    OpcaoResposta: 'OpcaoResposta',
-    Usuario_Acertos: 'Usuario_Acertos'
+    Recrutador: 'Recrutador',
+    Empresa: 'Empresa',
+    Aluno: 'Aluno',
+    Contratacao: 'Contratacao',
+    Nota: 'Nota',
+    Aptidao: 'Aptidao'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -692,451 +692,451 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "usuario" | "faculdade" | "faculdade_Empresa" | "pergunta" | "opcaoResposta" | "usuario_Acertos"
+      modelProps: "recrutador" | "empresa" | "aluno" | "contratacao" | "nota" | "aptidao"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      Usuario: {
-        payload: Prisma.$UsuarioPayload<ExtArgs>
-        fields: Prisma.UsuarioFieldRefs
+      Recrutador: {
+        payload: Prisma.$RecrutadorPayload<ExtArgs>
+        fields: Prisma.RecrutadorFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.UsuarioFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsuarioPayload> | null
+            args: Prisma.RecrutadorFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecrutadorPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.UsuarioFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsuarioPayload>
+            args: Prisma.RecrutadorFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecrutadorPayload>
           }
           findFirst: {
-            args: Prisma.UsuarioFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsuarioPayload> | null
+            args: Prisma.RecrutadorFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecrutadorPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.UsuarioFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsuarioPayload>
+            args: Prisma.RecrutadorFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecrutadorPayload>
           }
           findMany: {
-            args: Prisma.UsuarioFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsuarioPayload>[]
+            args: Prisma.RecrutadorFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecrutadorPayload>[]
           }
           create: {
-            args: Prisma.UsuarioCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsuarioPayload>
+            args: Prisma.RecrutadorCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecrutadorPayload>
           }
           createMany: {
-            args: Prisma.UsuarioCreateManyArgs<ExtArgs>
+            args: Prisma.RecrutadorCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.UsuarioCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsuarioPayload>[]
+            args: Prisma.RecrutadorCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecrutadorPayload>[]
           }
           delete: {
-            args: Prisma.UsuarioDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsuarioPayload>
+            args: Prisma.RecrutadorDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecrutadorPayload>
           }
           update: {
-            args: Prisma.UsuarioUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsuarioPayload>
+            args: Prisma.RecrutadorUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecrutadorPayload>
           }
           deleteMany: {
-            args: Prisma.UsuarioDeleteManyArgs<ExtArgs>
+            args: Prisma.RecrutadorDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.UsuarioUpdateManyArgs<ExtArgs>
+            args: Prisma.RecrutadorUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.UsuarioUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsuarioPayload>[]
+            args: Prisma.RecrutadorUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecrutadorPayload>[]
           }
           upsert: {
-            args: Prisma.UsuarioUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UsuarioPayload>
+            args: Prisma.RecrutadorUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$RecrutadorPayload>
           }
           aggregate: {
-            args: Prisma.UsuarioAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateUsuario>
+            args: Prisma.RecrutadorAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateRecrutador>
           }
           groupBy: {
-            args: Prisma.UsuarioGroupByArgs<ExtArgs>
-            result: $Utils.Optional<UsuarioGroupByOutputType>[]
+            args: Prisma.RecrutadorGroupByArgs<ExtArgs>
+            result: $Utils.Optional<RecrutadorGroupByOutputType>[]
           }
           count: {
-            args: Prisma.UsuarioCountArgs<ExtArgs>
-            result: $Utils.Optional<UsuarioCountAggregateOutputType> | number
+            args: Prisma.RecrutadorCountArgs<ExtArgs>
+            result: $Utils.Optional<RecrutadorCountAggregateOutputType> | number
           }
         }
       }
-      Faculdade: {
-        payload: Prisma.$FaculdadePayload<ExtArgs>
-        fields: Prisma.FaculdadeFieldRefs
+      Empresa: {
+        payload: Prisma.$EmpresaPayload<ExtArgs>
+        fields: Prisma.EmpresaFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.FaculdadeFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FaculdadePayload> | null
+            args: Prisma.EmpresaFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmpresaPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.FaculdadeFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FaculdadePayload>
+            args: Prisma.EmpresaFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmpresaPayload>
           }
           findFirst: {
-            args: Prisma.FaculdadeFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FaculdadePayload> | null
+            args: Prisma.EmpresaFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmpresaPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.FaculdadeFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FaculdadePayload>
+            args: Prisma.EmpresaFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmpresaPayload>
           }
           findMany: {
-            args: Prisma.FaculdadeFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FaculdadePayload>[]
+            args: Prisma.EmpresaFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmpresaPayload>[]
           }
           create: {
-            args: Prisma.FaculdadeCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FaculdadePayload>
+            args: Prisma.EmpresaCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmpresaPayload>
           }
           createMany: {
-            args: Prisma.FaculdadeCreateManyArgs<ExtArgs>
+            args: Prisma.EmpresaCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.FaculdadeCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FaculdadePayload>[]
+            args: Prisma.EmpresaCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmpresaPayload>[]
           }
           delete: {
-            args: Prisma.FaculdadeDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FaculdadePayload>
+            args: Prisma.EmpresaDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmpresaPayload>
           }
           update: {
-            args: Prisma.FaculdadeUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FaculdadePayload>
+            args: Prisma.EmpresaUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmpresaPayload>
           }
           deleteMany: {
-            args: Prisma.FaculdadeDeleteManyArgs<ExtArgs>
+            args: Prisma.EmpresaDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.FaculdadeUpdateManyArgs<ExtArgs>
+            args: Prisma.EmpresaUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.FaculdadeUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FaculdadePayload>[]
+            args: Prisma.EmpresaUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmpresaPayload>[]
           }
           upsert: {
-            args: Prisma.FaculdadeUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FaculdadePayload>
+            args: Prisma.EmpresaUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$EmpresaPayload>
           }
           aggregate: {
-            args: Prisma.FaculdadeAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateFaculdade>
+            args: Prisma.EmpresaAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateEmpresa>
           }
           groupBy: {
-            args: Prisma.FaculdadeGroupByArgs<ExtArgs>
-            result: $Utils.Optional<FaculdadeGroupByOutputType>[]
+            args: Prisma.EmpresaGroupByArgs<ExtArgs>
+            result: $Utils.Optional<EmpresaGroupByOutputType>[]
           }
           count: {
-            args: Prisma.FaculdadeCountArgs<ExtArgs>
-            result: $Utils.Optional<FaculdadeCountAggregateOutputType> | number
+            args: Prisma.EmpresaCountArgs<ExtArgs>
+            result: $Utils.Optional<EmpresaCountAggregateOutputType> | number
           }
         }
       }
-      Faculdade_Empresa: {
-        payload: Prisma.$Faculdade_EmpresaPayload<ExtArgs>
-        fields: Prisma.Faculdade_EmpresaFieldRefs
+      Aluno: {
+        payload: Prisma.$AlunoPayload<ExtArgs>
+        fields: Prisma.AlunoFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.Faculdade_EmpresaFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Faculdade_EmpresaPayload> | null
+            args: Prisma.AlunoFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AlunoPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.Faculdade_EmpresaFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Faculdade_EmpresaPayload>
+            args: Prisma.AlunoFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AlunoPayload>
           }
           findFirst: {
-            args: Prisma.Faculdade_EmpresaFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Faculdade_EmpresaPayload> | null
+            args: Prisma.AlunoFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AlunoPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.Faculdade_EmpresaFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Faculdade_EmpresaPayload>
+            args: Prisma.AlunoFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AlunoPayload>
           }
           findMany: {
-            args: Prisma.Faculdade_EmpresaFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Faculdade_EmpresaPayload>[]
+            args: Prisma.AlunoFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AlunoPayload>[]
           }
           create: {
-            args: Prisma.Faculdade_EmpresaCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Faculdade_EmpresaPayload>
+            args: Prisma.AlunoCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AlunoPayload>
           }
           createMany: {
-            args: Prisma.Faculdade_EmpresaCreateManyArgs<ExtArgs>
+            args: Prisma.AlunoCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.Faculdade_EmpresaCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Faculdade_EmpresaPayload>[]
+            args: Prisma.AlunoCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AlunoPayload>[]
           }
           delete: {
-            args: Prisma.Faculdade_EmpresaDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Faculdade_EmpresaPayload>
+            args: Prisma.AlunoDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AlunoPayload>
           }
           update: {
-            args: Prisma.Faculdade_EmpresaUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Faculdade_EmpresaPayload>
+            args: Prisma.AlunoUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AlunoPayload>
           }
           deleteMany: {
-            args: Prisma.Faculdade_EmpresaDeleteManyArgs<ExtArgs>
+            args: Prisma.AlunoDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.Faculdade_EmpresaUpdateManyArgs<ExtArgs>
+            args: Prisma.AlunoUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.Faculdade_EmpresaUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Faculdade_EmpresaPayload>[]
+            args: Prisma.AlunoUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AlunoPayload>[]
           }
           upsert: {
-            args: Prisma.Faculdade_EmpresaUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Faculdade_EmpresaPayload>
+            args: Prisma.AlunoUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AlunoPayload>
           }
           aggregate: {
-            args: Prisma.Faculdade_EmpresaAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateFaculdade_Empresa>
+            args: Prisma.AlunoAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateAluno>
           }
           groupBy: {
-            args: Prisma.Faculdade_EmpresaGroupByArgs<ExtArgs>
-            result: $Utils.Optional<Faculdade_EmpresaGroupByOutputType>[]
+            args: Prisma.AlunoGroupByArgs<ExtArgs>
+            result: $Utils.Optional<AlunoGroupByOutputType>[]
           }
           count: {
-            args: Prisma.Faculdade_EmpresaCountArgs<ExtArgs>
-            result: $Utils.Optional<Faculdade_EmpresaCountAggregateOutputType> | number
+            args: Prisma.AlunoCountArgs<ExtArgs>
+            result: $Utils.Optional<AlunoCountAggregateOutputType> | number
           }
         }
       }
-      Pergunta: {
-        payload: Prisma.$PerguntaPayload<ExtArgs>
-        fields: Prisma.PerguntaFieldRefs
+      Contratacao: {
+        payload: Prisma.$ContratacaoPayload<ExtArgs>
+        fields: Prisma.ContratacaoFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.PerguntaFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PerguntaPayload> | null
+            args: Prisma.ContratacaoFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContratacaoPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.PerguntaFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PerguntaPayload>
+            args: Prisma.ContratacaoFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContratacaoPayload>
           }
           findFirst: {
-            args: Prisma.PerguntaFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PerguntaPayload> | null
+            args: Prisma.ContratacaoFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContratacaoPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.PerguntaFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PerguntaPayload>
+            args: Prisma.ContratacaoFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContratacaoPayload>
           }
           findMany: {
-            args: Prisma.PerguntaFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PerguntaPayload>[]
+            args: Prisma.ContratacaoFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContratacaoPayload>[]
           }
           create: {
-            args: Prisma.PerguntaCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PerguntaPayload>
+            args: Prisma.ContratacaoCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContratacaoPayload>
           }
           createMany: {
-            args: Prisma.PerguntaCreateManyArgs<ExtArgs>
+            args: Prisma.ContratacaoCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.PerguntaCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PerguntaPayload>[]
+            args: Prisma.ContratacaoCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContratacaoPayload>[]
           }
           delete: {
-            args: Prisma.PerguntaDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PerguntaPayload>
+            args: Prisma.ContratacaoDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContratacaoPayload>
           }
           update: {
-            args: Prisma.PerguntaUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PerguntaPayload>
+            args: Prisma.ContratacaoUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContratacaoPayload>
           }
           deleteMany: {
-            args: Prisma.PerguntaDeleteManyArgs<ExtArgs>
+            args: Prisma.ContratacaoDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.PerguntaUpdateManyArgs<ExtArgs>
+            args: Prisma.ContratacaoUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.PerguntaUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PerguntaPayload>[]
+            args: Prisma.ContratacaoUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContratacaoPayload>[]
           }
           upsert: {
-            args: Prisma.PerguntaUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PerguntaPayload>
+            args: Prisma.ContratacaoUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$ContratacaoPayload>
           }
           aggregate: {
-            args: Prisma.PerguntaAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregatePergunta>
+            args: Prisma.ContratacaoAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateContratacao>
           }
           groupBy: {
-            args: Prisma.PerguntaGroupByArgs<ExtArgs>
-            result: $Utils.Optional<PerguntaGroupByOutputType>[]
+            args: Prisma.ContratacaoGroupByArgs<ExtArgs>
+            result: $Utils.Optional<ContratacaoGroupByOutputType>[]
           }
           count: {
-            args: Prisma.PerguntaCountArgs<ExtArgs>
-            result: $Utils.Optional<PerguntaCountAggregateOutputType> | number
+            args: Prisma.ContratacaoCountArgs<ExtArgs>
+            result: $Utils.Optional<ContratacaoCountAggregateOutputType> | number
           }
         }
       }
-      OpcaoResposta: {
-        payload: Prisma.$OpcaoRespostaPayload<ExtArgs>
-        fields: Prisma.OpcaoRespostaFieldRefs
+      Nota: {
+        payload: Prisma.$NotaPayload<ExtArgs>
+        fields: Prisma.NotaFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.OpcaoRespostaFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OpcaoRespostaPayload> | null
+            args: Prisma.NotaFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NotaPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.OpcaoRespostaFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OpcaoRespostaPayload>
+            args: Prisma.NotaFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NotaPayload>
           }
           findFirst: {
-            args: Prisma.OpcaoRespostaFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OpcaoRespostaPayload> | null
+            args: Prisma.NotaFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NotaPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.OpcaoRespostaFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OpcaoRespostaPayload>
+            args: Prisma.NotaFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NotaPayload>
           }
           findMany: {
-            args: Prisma.OpcaoRespostaFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OpcaoRespostaPayload>[]
+            args: Prisma.NotaFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NotaPayload>[]
           }
           create: {
-            args: Prisma.OpcaoRespostaCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OpcaoRespostaPayload>
+            args: Prisma.NotaCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NotaPayload>
           }
           createMany: {
-            args: Prisma.OpcaoRespostaCreateManyArgs<ExtArgs>
+            args: Prisma.NotaCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.OpcaoRespostaCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OpcaoRespostaPayload>[]
+            args: Prisma.NotaCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NotaPayload>[]
           }
           delete: {
-            args: Prisma.OpcaoRespostaDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OpcaoRespostaPayload>
+            args: Prisma.NotaDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NotaPayload>
           }
           update: {
-            args: Prisma.OpcaoRespostaUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OpcaoRespostaPayload>
+            args: Prisma.NotaUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NotaPayload>
           }
           deleteMany: {
-            args: Prisma.OpcaoRespostaDeleteManyArgs<ExtArgs>
+            args: Prisma.NotaDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.OpcaoRespostaUpdateManyArgs<ExtArgs>
+            args: Prisma.NotaUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.OpcaoRespostaUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OpcaoRespostaPayload>[]
+            args: Prisma.NotaUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NotaPayload>[]
           }
           upsert: {
-            args: Prisma.OpcaoRespostaUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OpcaoRespostaPayload>
+            args: Prisma.NotaUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NotaPayload>
           }
           aggregate: {
-            args: Prisma.OpcaoRespostaAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateOpcaoResposta>
+            args: Prisma.NotaAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateNota>
           }
           groupBy: {
-            args: Prisma.OpcaoRespostaGroupByArgs<ExtArgs>
-            result: $Utils.Optional<OpcaoRespostaGroupByOutputType>[]
+            args: Prisma.NotaGroupByArgs<ExtArgs>
+            result: $Utils.Optional<NotaGroupByOutputType>[]
           }
           count: {
-            args: Prisma.OpcaoRespostaCountArgs<ExtArgs>
-            result: $Utils.Optional<OpcaoRespostaCountAggregateOutputType> | number
+            args: Prisma.NotaCountArgs<ExtArgs>
+            result: $Utils.Optional<NotaCountAggregateOutputType> | number
           }
         }
       }
-      Usuario_Acertos: {
-        payload: Prisma.$Usuario_AcertosPayload<ExtArgs>
-        fields: Prisma.Usuario_AcertosFieldRefs
+      Aptidao: {
+        payload: Prisma.$AptidaoPayload<ExtArgs>
+        fields: Prisma.AptidaoFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.Usuario_AcertosFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Usuario_AcertosPayload> | null
+            args: Prisma.AptidaoFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AptidaoPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.Usuario_AcertosFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Usuario_AcertosPayload>
+            args: Prisma.AptidaoFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AptidaoPayload>
           }
           findFirst: {
-            args: Prisma.Usuario_AcertosFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Usuario_AcertosPayload> | null
+            args: Prisma.AptidaoFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AptidaoPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.Usuario_AcertosFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Usuario_AcertosPayload>
+            args: Prisma.AptidaoFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AptidaoPayload>
           }
           findMany: {
-            args: Prisma.Usuario_AcertosFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Usuario_AcertosPayload>[]
+            args: Prisma.AptidaoFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AptidaoPayload>[]
           }
           create: {
-            args: Prisma.Usuario_AcertosCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Usuario_AcertosPayload>
+            args: Prisma.AptidaoCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AptidaoPayload>
           }
           createMany: {
-            args: Prisma.Usuario_AcertosCreateManyArgs<ExtArgs>
+            args: Prisma.AptidaoCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.Usuario_AcertosCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Usuario_AcertosPayload>[]
+            args: Prisma.AptidaoCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AptidaoPayload>[]
           }
           delete: {
-            args: Prisma.Usuario_AcertosDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Usuario_AcertosPayload>
+            args: Prisma.AptidaoDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AptidaoPayload>
           }
           update: {
-            args: Prisma.Usuario_AcertosUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Usuario_AcertosPayload>
+            args: Prisma.AptidaoUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AptidaoPayload>
           }
           deleteMany: {
-            args: Prisma.Usuario_AcertosDeleteManyArgs<ExtArgs>
+            args: Prisma.AptidaoDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.Usuario_AcertosUpdateManyArgs<ExtArgs>
+            args: Prisma.AptidaoUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.Usuario_AcertosUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Usuario_AcertosPayload>[]
+            args: Prisma.AptidaoUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AptidaoPayload>[]
           }
           upsert: {
-            args: Prisma.Usuario_AcertosUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$Usuario_AcertosPayload>
+            args: Prisma.AptidaoUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$AptidaoPayload>
           }
           aggregate: {
-            args: Prisma.Usuario_AcertosAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateUsuario_Acertos>
+            args: Prisma.AptidaoAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateAptidao>
           }
           groupBy: {
-            args: Prisma.Usuario_AcertosGroupByArgs<ExtArgs>
-            result: $Utils.Optional<Usuario_AcertosGroupByOutputType>[]
+            args: Prisma.AptidaoGroupByArgs<ExtArgs>
+            result: $Utils.Optional<AptidaoGroupByOutputType>[]
           }
           count: {
-            args: Prisma.Usuario_AcertosCountArgs<ExtArgs>
-            result: $Utils.Optional<Usuario_AcertosCountAggregateOutputType> | number
+            args: Prisma.AptidaoCountArgs<ExtArgs>
+            result: $Utils.Optional<AptidaoCountAggregateOutputType> | number
           }
         }
       }
@@ -1224,12 +1224,12 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    usuario?: UsuarioOmit
-    faculdade?: FaculdadeOmit
-    faculdade_Empresa?: Faculdade_EmpresaOmit
-    pergunta?: PerguntaOmit
-    opcaoResposta?: OpcaoRespostaOmit
-    usuario_Acertos?: Usuario_AcertosOmit
+    recrutador?: RecrutadorOmit
+    empresa?: EmpresaOmit
+    aluno?: AlunoOmit
+    contratacao?: ContratacaoOmit
+    nota?: NotaOmit
+    aptidao?: AptidaoOmit
   }
 
   /* Types for Logging */
@@ -1320,122 +1320,113 @@ export namespace Prisma {
 
 
   /**
-   * Count Type UsuarioCountOutputType
+   * Count Type RecrutadorCountOutputType
    */
 
-  export type UsuarioCountOutputType = {
-    acertos: number
+  export type RecrutadorCountOutputType = {
+    contratacoes: number
   }
 
-  export type UsuarioCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    acertos?: boolean | UsuarioCountOutputTypeCountAcertosArgs
+  export type RecrutadorCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contratacoes?: boolean | RecrutadorCountOutputTypeCountContratacoesArgs
   }
 
   // Custom InputTypes
   /**
-   * UsuarioCountOutputType without action
+   * RecrutadorCountOutputType without action
    */
-  export type UsuarioCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the UsuarioCountOutputType
+     * Select specific fields to fetch from the RecrutadorCountOutputType
      */
-    select?: UsuarioCountOutputTypeSelect<ExtArgs> | null
+    select?: RecrutadorCountOutputTypeSelect<ExtArgs> | null
   }
 
   /**
-   * UsuarioCountOutputType without action
+   * RecrutadorCountOutputType without action
    */
-  export type UsuarioCountOutputTypeCountAcertosArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: Usuario_AcertosWhereInput
+  export type RecrutadorCountOutputTypeCountContratacoesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContratacaoWhereInput
   }
 
 
   /**
-   * Count Type FaculdadeCountOutputType
+   * Count Type EmpresaCountOutputType
    */
 
-  export type FaculdadeCountOutputType = {
-    usuarios: number
-    faculdadesEmpresas: number
-    perguntas: number
+  export type EmpresaCountOutputType = {
+    recrutadores: number
   }
 
-  export type FaculdadeCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    usuarios?: boolean | FaculdadeCountOutputTypeCountUsuariosArgs
-    faculdadesEmpresas?: boolean | FaculdadeCountOutputTypeCountFaculdadesEmpresasArgs
-    perguntas?: boolean | FaculdadeCountOutputTypeCountPerguntasArgs
+  export type EmpresaCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    recrutadores?: boolean | EmpresaCountOutputTypeCountRecrutadoresArgs
   }
 
   // Custom InputTypes
   /**
-   * FaculdadeCountOutputType without action
+   * EmpresaCountOutputType without action
    */
-  export type FaculdadeCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the FaculdadeCountOutputType
+     * Select specific fields to fetch from the EmpresaCountOutputType
      */
-    select?: FaculdadeCountOutputTypeSelect<ExtArgs> | null
+    select?: EmpresaCountOutputTypeSelect<ExtArgs> | null
   }
 
   /**
-   * FaculdadeCountOutputType without action
+   * EmpresaCountOutputType without action
    */
-  export type FaculdadeCountOutputTypeCountUsuariosArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: UsuarioWhereInput
-  }
-
-  /**
-   * FaculdadeCountOutputType without action
-   */
-  export type FaculdadeCountOutputTypeCountFaculdadesEmpresasArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: Faculdade_EmpresaWhereInput
-  }
-
-  /**
-   * FaculdadeCountOutputType without action
-   */
-  export type FaculdadeCountOutputTypeCountPerguntasArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: PerguntaWhereInput
+  export type EmpresaCountOutputTypeCountRecrutadoresArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: RecrutadorWhereInput
   }
 
 
   /**
-   * Count Type PerguntaCountOutputType
+   * Count Type AlunoCountOutputType
    */
 
-  export type PerguntaCountOutputType = {
-    opcoes: number
-    acertos: number
+  export type AlunoCountOutputType = {
+    contratacoes: number
+    notas: number
+    aptidoes: number
   }
 
-  export type PerguntaCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    opcoes?: boolean | PerguntaCountOutputTypeCountOpcoesArgs
-    acertos?: boolean | PerguntaCountOutputTypeCountAcertosArgs
+  export type AlunoCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contratacoes?: boolean | AlunoCountOutputTypeCountContratacoesArgs
+    notas?: boolean | AlunoCountOutputTypeCountNotasArgs
+    aptidoes?: boolean | AlunoCountOutputTypeCountAptidoesArgs
   }
 
   // Custom InputTypes
   /**
-   * PerguntaCountOutputType without action
+   * AlunoCountOutputType without action
    */
-  export type PerguntaCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the PerguntaCountOutputType
+     * Select specific fields to fetch from the AlunoCountOutputType
      */
-    select?: PerguntaCountOutputTypeSelect<ExtArgs> | null
+    select?: AlunoCountOutputTypeSelect<ExtArgs> | null
   }
 
   /**
-   * PerguntaCountOutputType without action
+   * AlunoCountOutputType without action
    */
-  export type PerguntaCountOutputTypeCountOpcoesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: OpcaoRespostaWhereInput
+  export type AlunoCountOutputTypeCountContratacoesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContratacaoWhereInput
   }
 
   /**
-   * PerguntaCountOutputType without action
+   * AlunoCountOutputType without action
    */
-  export type PerguntaCountOutputTypeCountAcertosArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: Usuario_AcertosWhereInput
+  export type AlunoCountOutputTypeCountNotasArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: NotaWhereInput
+  }
+
+  /**
+   * AlunoCountOutputType without action
+   */
+  export type AlunoCountOutputTypeCountAptidoesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AptidaoWhereInput
   }
 
 
@@ -1444,2515 +1435,404 @@ export namespace Prisma {
    */
 
   /**
-   * Model Usuario
+   * Model Recrutador
    */
 
-  export type AggregateUsuario = {
-    _count: UsuarioCountAggregateOutputType | null
-    _min: UsuarioMinAggregateOutputType | null
-    _max: UsuarioMaxAggregateOutputType | null
+  export type AggregateRecrutador = {
+    _count: RecrutadorCountAggregateOutputType | null
+    _min: RecrutadorMinAggregateOutputType | null
+    _max: RecrutadorMaxAggregateOutputType | null
   }
 
-  export type UsuarioMinAggregateOutputType = {
-    id_usuario: string | null
+  export type RecrutadorMinAggregateOutputType = {
+    id_recrutador: string | null
     nome: string | null
     email: string | null
     senha: string | null
-    id_faculdade: string | null
+    cargo: string | null
+    telefone: string | null
+    id_empresa: string | null
+    data_criacao: Date | null
+    data_atualizacao: Date | null
   }
 
-  export type UsuarioMaxAggregateOutputType = {
-    id_usuario: string | null
+  export type RecrutadorMaxAggregateOutputType = {
+    id_recrutador: string | null
     nome: string | null
     email: string | null
     senha: string | null
-    id_faculdade: string | null
+    cargo: string | null
+    telefone: string | null
+    id_empresa: string | null
+    data_criacao: Date | null
+    data_atualizacao: Date | null
   }
 
-  export type UsuarioCountAggregateOutputType = {
-    id_usuario: number
+  export type RecrutadorCountAggregateOutputType = {
+    id_recrutador: number
     nome: number
     email: number
     senha: number
-    id_faculdade: number
+    cargo: number
+    telefone: number
+    id_empresa: number
+    data_criacao: number
+    data_atualizacao: number
     _all: number
   }
 
 
-  export type UsuarioMinAggregateInputType = {
-    id_usuario?: true
+  export type RecrutadorMinAggregateInputType = {
+    id_recrutador?: true
     nome?: true
     email?: true
     senha?: true
-    id_faculdade?: true
+    cargo?: true
+    telefone?: true
+    id_empresa?: true
+    data_criacao?: true
+    data_atualizacao?: true
   }
 
-  export type UsuarioMaxAggregateInputType = {
-    id_usuario?: true
+  export type RecrutadorMaxAggregateInputType = {
+    id_recrutador?: true
     nome?: true
     email?: true
     senha?: true
-    id_faculdade?: true
+    cargo?: true
+    telefone?: true
+    id_empresa?: true
+    data_criacao?: true
+    data_atualizacao?: true
   }
 
-  export type UsuarioCountAggregateInputType = {
-    id_usuario?: true
+  export type RecrutadorCountAggregateInputType = {
+    id_recrutador?: true
     nome?: true
     email?: true
     senha?: true
-    id_faculdade?: true
+    cargo?: true
+    telefone?: true
+    id_empresa?: true
+    data_criacao?: true
+    data_atualizacao?: true
     _all?: true
   }
 
-  export type UsuarioAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Usuario to aggregate.
+     * Filter which Recrutador to aggregate.
      */
-    where?: UsuarioWhereInput
+    where?: RecrutadorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Usuarios to fetch.
+     * Determine the order of Recrutadors to fetch.
      */
-    orderBy?: UsuarioOrderByWithRelationInput | UsuarioOrderByWithRelationInput[]
+    orderBy?: RecrutadorOrderByWithRelationInput | RecrutadorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: UsuarioWhereUniqueInput
+    cursor?: RecrutadorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Usuarios from the position of the cursor.
+     * Take `±n` Recrutadors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Usuarios.
+     * Skip the first `n` Recrutadors.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Usuarios
+     * Count returned Recrutadors
     **/
-    _count?: true | UsuarioCountAggregateInputType
+    _count?: true | RecrutadorCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: UsuarioMinAggregateInputType
+    _min?: RecrutadorMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: UsuarioMaxAggregateInputType
+    _max?: RecrutadorMaxAggregateInputType
   }
 
-  export type GetUsuarioAggregateType<T extends UsuarioAggregateArgs> = {
-        [P in keyof T & keyof AggregateUsuario]: P extends '_count' | 'count'
+  export type GetRecrutadorAggregateType<T extends RecrutadorAggregateArgs> = {
+        [P in keyof T & keyof AggregateRecrutador]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateUsuario[P]>
-      : GetScalarType<T[P], AggregateUsuario[P]>
+        : GetScalarType<T[P], AggregateRecrutador[P]>
+      : GetScalarType<T[P], AggregateRecrutador[P]>
   }
 
 
 
 
-  export type UsuarioGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: UsuarioWhereInput
-    orderBy?: UsuarioOrderByWithAggregationInput | UsuarioOrderByWithAggregationInput[]
-    by: UsuarioScalarFieldEnum[] | UsuarioScalarFieldEnum
-    having?: UsuarioScalarWhereWithAggregatesInput
+  export type RecrutadorGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: RecrutadorWhereInput
+    orderBy?: RecrutadorOrderByWithAggregationInput | RecrutadorOrderByWithAggregationInput[]
+    by: RecrutadorScalarFieldEnum[] | RecrutadorScalarFieldEnum
+    having?: RecrutadorScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: UsuarioCountAggregateInputType | true
-    _min?: UsuarioMinAggregateInputType
-    _max?: UsuarioMaxAggregateInputType
+    _count?: RecrutadorCountAggregateInputType | true
+    _min?: RecrutadorMinAggregateInputType
+    _max?: RecrutadorMaxAggregateInputType
   }
 
-  export type UsuarioGroupByOutputType = {
-    id_usuario: string
+  export type RecrutadorGroupByOutputType = {
+    id_recrutador: string
     nome: string
     email: string
     senha: string
-    id_faculdade: string
-    _count: UsuarioCountAggregateOutputType | null
-    _min: UsuarioMinAggregateOutputType | null
-    _max: UsuarioMaxAggregateOutputType | null
+    cargo: string
+    telefone: string
+    id_empresa: string
+    data_criacao: Date
+    data_atualizacao: Date
+    _count: RecrutadorCountAggregateOutputType | null
+    _min: RecrutadorMinAggregateOutputType | null
+    _max: RecrutadorMaxAggregateOutputType | null
   }
 
-  type GetUsuarioGroupByPayload<T extends UsuarioGroupByArgs> = Prisma.PrismaPromise<
+  type GetRecrutadorGroupByPayload<T extends RecrutadorGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<UsuarioGroupByOutputType, T['by']> &
+      PickEnumerable<RecrutadorGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof UsuarioGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof RecrutadorGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], UsuarioGroupByOutputType[P]>
-            : GetScalarType<T[P], UsuarioGroupByOutputType[P]>
+              : GetScalarType<T[P], RecrutadorGroupByOutputType[P]>
+            : GetScalarType<T[P], RecrutadorGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type UsuarioSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_usuario?: boolean
+  export type RecrutadorSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_recrutador?: boolean
     nome?: boolean
     email?: boolean
     senha?: boolean
-    id_faculdade?: boolean
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
-    acertos?: boolean | Usuario$acertosArgs<ExtArgs>
-    _count?: boolean | UsuarioCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["usuario"]>
+    cargo?: boolean
+    telefone?: boolean
+    id_empresa?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+    empresa?: boolean | EmpresaDefaultArgs<ExtArgs>
+    contratacoes?: boolean | Recrutador$contratacoesArgs<ExtArgs>
+    _count?: boolean | RecrutadorCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["recrutador"]>
 
-  export type UsuarioSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_usuario?: boolean
+  export type RecrutadorSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_recrutador?: boolean
     nome?: boolean
     email?: boolean
     senha?: boolean
-    id_faculdade?: boolean
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["usuario"]>
+    cargo?: boolean
+    telefone?: boolean
+    id_empresa?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+    empresa?: boolean | EmpresaDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["recrutador"]>
 
-  export type UsuarioSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_usuario?: boolean
+  export type RecrutadorSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_recrutador?: boolean
     nome?: boolean
     email?: boolean
     senha?: boolean
-    id_faculdade?: boolean
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["usuario"]>
+    cargo?: boolean
+    telefone?: boolean
+    id_empresa?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+    empresa?: boolean | EmpresaDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["recrutador"]>
 
-  export type UsuarioSelectScalar = {
-    id_usuario?: boolean
+  export type RecrutadorSelectScalar = {
+    id_recrutador?: boolean
     nome?: boolean
     email?: boolean
     senha?: boolean
-    id_faculdade?: boolean
+    cargo?: boolean
+    telefone?: boolean
+    id_empresa?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
   }
 
-  export type UsuarioOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_usuario" | "nome" | "email" | "senha" | "id_faculdade", ExtArgs["result"]["usuario"]>
-  export type UsuarioInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
-    acertos?: boolean | Usuario$acertosArgs<ExtArgs>
-    _count?: boolean | UsuarioCountOutputTypeDefaultArgs<ExtArgs>
+  export type RecrutadorOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_recrutador" | "nome" | "email" | "senha" | "cargo" | "telefone" | "id_empresa" | "data_criacao" | "data_atualizacao", ExtArgs["result"]["recrutador"]>
+  export type RecrutadorInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    empresa?: boolean | EmpresaDefaultArgs<ExtArgs>
+    contratacoes?: boolean | Recrutador$contratacoesArgs<ExtArgs>
+    _count?: boolean | RecrutadorCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type UsuarioIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
+  export type RecrutadorIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    empresa?: boolean | EmpresaDefaultArgs<ExtArgs>
   }
-  export type UsuarioIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
+  export type RecrutadorIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    empresa?: boolean | EmpresaDefaultArgs<ExtArgs>
   }
 
-  export type $UsuarioPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Usuario"
+  export type $RecrutadorPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Recrutador"
     objects: {
-      faculdade: Prisma.$FaculdadePayload<ExtArgs>
-      acertos: Prisma.$Usuario_AcertosPayload<ExtArgs>[]
+      empresa: Prisma.$EmpresaPayload<ExtArgs>
+      contratacoes: Prisma.$ContratacaoPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id_usuario: string
+      id_recrutador: string
       nome: string
       email: string
       senha: string
-      id_faculdade: string
-    }, ExtArgs["result"]["usuario"]>
-    composites: {}
-  }
-
-  type UsuarioGetPayload<S extends boolean | null | undefined | UsuarioDefaultArgs> = $Result.GetResult<Prisma.$UsuarioPayload, S>
-
-  type UsuarioCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<UsuarioFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: UsuarioCountAggregateInputType | true
-    }
-
-  export interface UsuarioDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Usuario'], meta: { name: 'Usuario' } }
-    /**
-     * Find zero or one Usuario that matches the filter.
-     * @param {UsuarioFindUniqueArgs} args - Arguments to find a Usuario
-     * @example
-     * // Get one Usuario
-     * const usuario = await prisma.usuario.findUnique({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findUnique<T extends UsuarioFindUniqueArgs>(args: SelectSubset<T, UsuarioFindUniqueArgs<ExtArgs>>): Prisma__UsuarioClient<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find one Usuario that matches the filter or throw an error with `error.code='P2025'`
-     * if no matches were found.
-     * @param {UsuarioFindUniqueOrThrowArgs} args - Arguments to find a Usuario
-     * @example
-     * // Get one Usuario
-     * const usuario = await prisma.usuario.findUniqueOrThrow({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findUniqueOrThrow<T extends UsuarioFindUniqueOrThrowArgs>(args: SelectSubset<T, UsuarioFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UsuarioClient<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find the first Usuario that matches the filter.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsuarioFindFirstArgs} args - Arguments to find a Usuario
-     * @example
-     * // Get one Usuario
-     * const usuario = await prisma.usuario.findFirst({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findFirst<T extends UsuarioFindFirstArgs>(args?: SelectSubset<T, UsuarioFindFirstArgs<ExtArgs>>): Prisma__UsuarioClient<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find the first Usuario that matches the filter or
-     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsuarioFindFirstOrThrowArgs} args - Arguments to find a Usuario
-     * @example
-     * // Get one Usuario
-     * const usuario = await prisma.usuario.findFirstOrThrow({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findFirstOrThrow<T extends UsuarioFindFirstOrThrowArgs>(args?: SelectSubset<T, UsuarioFindFirstOrThrowArgs<ExtArgs>>): Prisma__UsuarioClient<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find zero or more Usuarios that matches the filter.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsuarioFindManyArgs} args - Arguments to filter and select certain fields only.
-     * @example
-     * // Get all Usuarios
-     * const usuarios = await prisma.usuario.findMany()
-     * 
-     * // Get first 10 Usuarios
-     * const usuarios = await prisma.usuario.findMany({ take: 10 })
-     * 
-     * // Only select the `id_usuario`
-     * const usuarioWithId_usuarioOnly = await prisma.usuario.findMany({ select: { id_usuario: true } })
-     * 
-     */
-    findMany<T extends UsuarioFindManyArgs>(args?: SelectSubset<T, UsuarioFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
-
-    /**
-     * Create a Usuario.
-     * @param {UsuarioCreateArgs} args - Arguments to create a Usuario.
-     * @example
-     * // Create one Usuario
-     * const Usuario = await prisma.usuario.create({
-     *   data: {
-     *     // ... data to create a Usuario
-     *   }
-     * })
-     * 
-     */
-    create<T extends UsuarioCreateArgs>(args: SelectSubset<T, UsuarioCreateArgs<ExtArgs>>): Prisma__UsuarioClient<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Create many Usuarios.
-     * @param {UsuarioCreateManyArgs} args - Arguments to create many Usuarios.
-     * @example
-     * // Create many Usuarios
-     * const usuario = await prisma.usuario.createMany({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     *     
-     */
-    createMany<T extends UsuarioCreateManyArgs>(args?: SelectSubset<T, UsuarioCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Create many Usuarios and returns the data saved in the database.
-     * @param {UsuarioCreateManyAndReturnArgs} args - Arguments to create many Usuarios.
-     * @example
-     * // Create many Usuarios
-     * const usuario = await prisma.usuario.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Usuarios and only return the `id_usuario`
-     * const usuarioWithId_usuarioOnly = await prisma.usuario.createManyAndReturn({
-     *   select: { id_usuario: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends UsuarioCreateManyAndReturnArgs>(args?: SelectSubset<T, UsuarioCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
-     * Delete a Usuario.
-     * @param {UsuarioDeleteArgs} args - Arguments to delete one Usuario.
-     * @example
-     * // Delete one Usuario
-     * const Usuario = await prisma.usuario.delete({
-     *   where: {
-     *     // ... filter to delete one Usuario
-     *   }
-     * })
-     * 
-     */
-    delete<T extends UsuarioDeleteArgs>(args: SelectSubset<T, UsuarioDeleteArgs<ExtArgs>>): Prisma__UsuarioClient<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Update one Usuario.
-     * @param {UsuarioUpdateArgs} args - Arguments to update one Usuario.
-     * @example
-     * // Update one Usuario
-     * const usuario = await prisma.usuario.update({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: {
-     *     // ... provide data here
-     *   }
-     * })
-     * 
-     */
-    update<T extends UsuarioUpdateArgs>(args: SelectSubset<T, UsuarioUpdateArgs<ExtArgs>>): Prisma__UsuarioClient<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Delete zero or more Usuarios.
-     * @param {UsuarioDeleteManyArgs} args - Arguments to filter Usuarios to delete.
-     * @example
-     * // Delete a few Usuarios
-     * const { count } = await prisma.usuario.deleteMany({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     * 
-     */
-    deleteMany<T extends UsuarioDeleteManyArgs>(args?: SelectSubset<T, UsuarioDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Usuarios.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsuarioUpdateManyArgs} args - Arguments to update one or more rows.
-     * @example
-     * // Update many Usuarios
-     * const usuario = await prisma.usuario.updateMany({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: {
-     *     // ... provide data here
-     *   }
-     * })
-     * 
-     */
-    updateMany<T extends UsuarioUpdateManyArgs>(args: SelectSubset<T, UsuarioUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Usuarios and returns the data updated in the database.
-     * @param {UsuarioUpdateManyAndReturnArgs} args - Arguments to update many Usuarios.
-     * @example
-     * // Update many Usuarios
-     * const usuario = await prisma.usuario.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Usuarios and only return the `id_usuario`
-     * const usuarioWithId_usuarioOnly = await prisma.usuario.updateManyAndReturn({
-     *   select: { id_usuario: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends UsuarioUpdateManyAndReturnArgs>(args: SelectSubset<T, UsuarioUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
-
-    /**
-     * Create or update one Usuario.
-     * @param {UsuarioUpsertArgs} args - Arguments to update or create a Usuario.
-     * @example
-     * // Update or create a Usuario
-     * const usuario = await prisma.usuario.upsert({
-     *   create: {
-     *     // ... data to create a Usuario
-     *   },
-     *   update: {
-     *     // ... in case it already exists, update
-     *   },
-     *   where: {
-     *     // ... the filter for the Usuario we want to update
-     *   }
-     * })
-     */
-    upsert<T extends UsuarioUpsertArgs>(args: SelectSubset<T, UsuarioUpsertArgs<ExtArgs>>): Prisma__UsuarioClient<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-
-    /**
-     * Count the number of Usuarios.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsuarioCountArgs} args - Arguments to filter Usuarios to count.
-     * @example
-     * // Count the number of Usuarios
-     * const count = await prisma.usuario.count({
-     *   where: {
-     *     // ... the filter for the Usuarios we want to count
-     *   }
-     * })
-    **/
-    count<T extends UsuarioCountArgs>(
-      args?: Subset<T, UsuarioCountArgs>,
-    ): Prisma.PrismaPromise<
-      T extends $Utils.Record<'select', any>
-        ? T['select'] extends true
-          ? number
-          : GetScalarType<T['select'], UsuarioCountAggregateOutputType>
-        : number
-    >
-
-    /**
-     * Allows you to perform aggregations operations on a Usuario.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsuarioAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
-     * @example
-     * // Ordered by age ascending
-     * // Where email contains prisma.io
-     * // Limited to the 10 users
-     * const aggregations = await prisma.user.aggregate({
-     *   _avg: {
-     *     age: true,
-     *   },
-     *   where: {
-     *     email: {
-     *       contains: "prisma.io",
-     *     },
-     *   },
-     *   orderBy: {
-     *     age: "asc",
-     *   },
-     *   take: 10,
-     * })
-    **/
-    aggregate<T extends UsuarioAggregateArgs>(args: Subset<T, UsuarioAggregateArgs>): Prisma.PrismaPromise<GetUsuarioAggregateType<T>>
-
-    /**
-     * Group by Usuario.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {UsuarioGroupByArgs} args - Group by arguments.
-     * @example
-     * // Group by city, order by createdAt, get count
-     * const result = await prisma.user.groupBy({
-     *   by: ['city', 'createdAt'],
-     *   orderBy: {
-     *     createdAt: true
-     *   },
-     *   _count: {
-     *     _all: true
-     *   },
-     * })
-     * 
-    **/
-    groupBy<
-      T extends UsuarioGroupByArgs,
-      HasSelectOrTake extends Or<
-        Extends<'skip', Keys<T>>,
-        Extends<'take', Keys<T>>
-      >,
-      OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: UsuarioGroupByArgs['orderBy'] }
-        : { orderBy?: UsuarioGroupByArgs['orderBy'] },
-      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
-      ByFields extends MaybeTupleToUnion<T['by']>,
-      ByValid extends Has<ByFields, OrderFields>,
-      HavingFields extends GetHavingFields<T['having']>,
-      HavingValid extends Has<ByFields, HavingFields>,
-      ByEmpty extends T['by'] extends never[] ? True : False,
-      InputErrors extends ByEmpty extends True
-      ? `Error: "by" must not be empty.`
-      : HavingValid extends False
-      ? {
-          [P in HavingFields]: P extends ByFields
-            ? never
-            : P extends string
-            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
-            : [
-                Error,
-                'Field ',
-                P,
-                ` in "having" needs to be provided in "by"`,
-              ]
-        }[HavingFields]
-      : 'take' extends Keys<T>
-      ? 'orderBy' extends Keys<T>
-        ? ByValid extends True
-          ? {}
-          : {
-              [P in OrderFields]: P extends ByFields
-                ? never
-                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-            }[OrderFields]
-        : 'Error: If you provide "take", you also need to provide "orderBy"'
-      : 'skip' extends Keys<T>
-      ? 'orderBy' extends Keys<T>
-        ? ByValid extends True
-          ? {}
-          : {
-              [P in OrderFields]: P extends ByFields
-                ? never
-                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-            }[OrderFields]
-        : 'Error: If you provide "skip", you also need to provide "orderBy"'
-      : ByValid extends True
-      ? {}
-      : {
-          [P in OrderFields]: P extends ByFields
-            ? never
-            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-        }[OrderFields]
-    >(args: SubsetIntersection<T, UsuarioGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUsuarioGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
-  /**
-   * Fields of the Usuario model
-   */
-  readonly fields: UsuarioFieldRefs;
-  }
-
-  /**
-   * The delegate class that acts as a "Promise-like" for Usuario.
-   * Why is this prefixed with `Prisma__`?
-   * Because we want to prevent naming conflicts as mentioned in
-   * https://github.com/prisma/prisma-client-js/issues/707
-   */
-  export interface Prisma__UsuarioClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
-    readonly [Symbol.toStringTag]: "PrismaPromise"
-    faculdade<T extends FaculdadeDefaultArgs<ExtArgs> = {}>(args?: Subset<T, FaculdadeDefaultArgs<ExtArgs>>): Prisma__FaculdadeClient<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    acertos<T extends Usuario$acertosArgs<ExtArgs> = {}>(args?: Subset<T, Usuario$acertosArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    /**
-     * Attaches callbacks for the resolution and/or rejection of the Promise.
-     * @param onfulfilled The callback to execute when the Promise is resolved.
-     * @param onrejected The callback to execute when the Promise is rejected.
-     * @returns A Promise for the completion of which ever callback is executed.
-     */
-    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
-    /**
-     * Attaches a callback for only the rejection of the Promise.
-     * @param onrejected The callback to execute when the Promise is rejected.
-     * @returns A Promise for the completion of the callback.
-     */
-    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
-    /**
-     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
-     * resolved value cannot be modified from the callback.
-     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
-     * @returns A Promise for the completion of the callback.
-     */
-    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
-  }
-
-
-
-
-  /**
-   * Fields of the Usuario model
-   */
-  interface UsuarioFieldRefs {
-    readonly id_usuario: FieldRef<"Usuario", 'String'>
-    readonly nome: FieldRef<"Usuario", 'String'>
-    readonly email: FieldRef<"Usuario", 'String'>
-    readonly senha: FieldRef<"Usuario", 'String'>
-    readonly id_faculdade: FieldRef<"Usuario", 'String'>
-  }
-    
-
-  // Custom InputTypes
-  /**
-   * Usuario findUnique
-   */
-  export type UsuarioFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioInclude<ExtArgs> | null
-    /**
-     * Filter, which Usuario to fetch.
-     */
-    where: UsuarioWhereUniqueInput
-  }
-
-  /**
-   * Usuario findUniqueOrThrow
-   */
-  export type UsuarioFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioInclude<ExtArgs> | null
-    /**
-     * Filter, which Usuario to fetch.
-     */
-    where: UsuarioWhereUniqueInput
-  }
-
-  /**
-   * Usuario findFirst
-   */
-  export type UsuarioFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioInclude<ExtArgs> | null
-    /**
-     * Filter, which Usuario to fetch.
-     */
-    where?: UsuarioWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of Usuarios to fetch.
-     */
-    orderBy?: UsuarioOrderByWithRelationInput | UsuarioOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the position for searching for Usuarios.
-     */
-    cursor?: UsuarioWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` Usuarios from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` Usuarios.
-     */
-    skip?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
-     * 
-     * Filter by unique combinations of Usuarios.
-     */
-    distinct?: UsuarioScalarFieldEnum | UsuarioScalarFieldEnum[]
-  }
-
-  /**
-   * Usuario findFirstOrThrow
-   */
-  export type UsuarioFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioInclude<ExtArgs> | null
-    /**
-     * Filter, which Usuario to fetch.
-     */
-    where?: UsuarioWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of Usuarios to fetch.
-     */
-    orderBy?: UsuarioOrderByWithRelationInput | UsuarioOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the position for searching for Usuarios.
-     */
-    cursor?: UsuarioWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` Usuarios from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` Usuarios.
-     */
-    skip?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
-     * 
-     * Filter by unique combinations of Usuarios.
-     */
-    distinct?: UsuarioScalarFieldEnum | UsuarioScalarFieldEnum[]
-  }
-
-  /**
-   * Usuario findMany
-   */
-  export type UsuarioFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioInclude<ExtArgs> | null
-    /**
-     * Filter, which Usuarios to fetch.
-     */
-    where?: UsuarioWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of Usuarios to fetch.
-     */
-    orderBy?: UsuarioOrderByWithRelationInput | UsuarioOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the position for listing Usuarios.
-     */
-    cursor?: UsuarioWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` Usuarios from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` Usuarios.
-     */
-    skip?: number
-    distinct?: UsuarioScalarFieldEnum | UsuarioScalarFieldEnum[]
-  }
-
-  /**
-   * Usuario create
-   */
-  export type UsuarioCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioInclude<ExtArgs> | null
-    /**
-     * The data needed to create a Usuario.
-     */
-    data: XOR<UsuarioCreateInput, UsuarioUncheckedCreateInput>
-  }
-
-  /**
-   * Usuario createMany
-   */
-  export type UsuarioCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * The data used to create many Usuarios.
-     */
-    data: UsuarioCreateManyInput | UsuarioCreateManyInput[]
-    skipDuplicates?: boolean
-  }
-
-  /**
-   * Usuario createManyAndReturn
-   */
-  export type UsuarioCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * The data used to create many Usuarios.
-     */
-    data: UsuarioCreateManyInput | UsuarioCreateManyInput[]
-    skipDuplicates?: boolean
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioIncludeCreateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
-   * Usuario update
-   */
-  export type UsuarioUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioInclude<ExtArgs> | null
-    /**
-     * The data needed to update a Usuario.
-     */
-    data: XOR<UsuarioUpdateInput, UsuarioUncheckedUpdateInput>
-    /**
-     * Choose, which Usuario to update.
-     */
-    where: UsuarioWhereUniqueInput
-  }
-
-  /**
-   * Usuario updateMany
-   */
-  export type UsuarioUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * The data used to update Usuarios.
-     */
-    data: XOR<UsuarioUpdateManyMutationInput, UsuarioUncheckedUpdateManyInput>
-    /**
-     * Filter which Usuarios to update
-     */
-    where?: UsuarioWhereInput
-    /**
-     * Limit how many Usuarios to update.
-     */
-    limit?: number
-  }
-
-  /**
-   * Usuario updateManyAndReturn
-   */
-  export type UsuarioUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * The data used to update Usuarios.
-     */
-    data: XOR<UsuarioUpdateManyMutationInput, UsuarioUncheckedUpdateManyInput>
-    /**
-     * Filter which Usuarios to update
-     */
-    where?: UsuarioWhereInput
-    /**
-     * Limit how many Usuarios to update.
-     */
-    limit?: number
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioIncludeUpdateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
-   * Usuario upsert
-   */
-  export type UsuarioUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioInclude<ExtArgs> | null
-    /**
-     * The filter to search for the Usuario to update in case it exists.
-     */
-    where: UsuarioWhereUniqueInput
-    /**
-     * In case the Usuario found by the `where` argument doesn't exist, create a new Usuario with this data.
-     */
-    create: XOR<UsuarioCreateInput, UsuarioUncheckedCreateInput>
-    /**
-     * In case the Usuario was found with the provided `where` argument, update it with this data.
-     */
-    update: XOR<UsuarioUpdateInput, UsuarioUncheckedUpdateInput>
-  }
-
-  /**
-   * Usuario delete
-   */
-  export type UsuarioDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioInclude<ExtArgs> | null
-    /**
-     * Filter which Usuario to delete.
-     */
-    where: UsuarioWhereUniqueInput
-  }
-
-  /**
-   * Usuario deleteMany
-   */
-  export type UsuarioDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Filter which Usuarios to delete
-     */
-    where?: UsuarioWhereInput
-    /**
-     * Limit how many Usuarios to delete.
-     */
-    limit?: number
-  }
-
-  /**
-   * Usuario.acertos
-   */
-  export type Usuario$acertosArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario_Acertos
-     */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario_Acertos
-     */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
-    where?: Usuario_AcertosWhereInput
-    orderBy?: Usuario_AcertosOrderByWithRelationInput | Usuario_AcertosOrderByWithRelationInput[]
-    cursor?: Usuario_AcertosWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: Usuario_AcertosScalarFieldEnum | Usuario_AcertosScalarFieldEnum[]
-  }
-
-  /**
-   * Usuario without action
-   */
-  export type UsuarioDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioInclude<ExtArgs> | null
-  }
-
-
-  /**
-   * Model Faculdade
-   */
-
-  export type AggregateFaculdade = {
-    _count: FaculdadeCountAggregateOutputType | null
-    _min: FaculdadeMinAggregateOutputType | null
-    _max: FaculdadeMaxAggregateOutputType | null
-  }
-
-  export type FaculdadeMinAggregateOutputType = {
-    id_faculdade: string | null
-    nome: string | null
-    endereco: string | null
-  }
-
-  export type FaculdadeMaxAggregateOutputType = {
-    id_faculdade: string | null
-    nome: string | null
-    endereco: string | null
-  }
-
-  export type FaculdadeCountAggregateOutputType = {
-    id_faculdade: number
-    nome: number
-    endereco: number
-    _all: number
-  }
-
-
-  export type FaculdadeMinAggregateInputType = {
-    id_faculdade?: true
-    nome?: true
-    endereco?: true
-  }
-
-  export type FaculdadeMaxAggregateInputType = {
-    id_faculdade?: true
-    nome?: true
-    endereco?: true
-  }
-
-  export type FaculdadeCountAggregateInputType = {
-    id_faculdade?: true
-    nome?: true
-    endereco?: true
-    _all?: true
-  }
-
-  export type FaculdadeAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Filter which Faculdade to aggregate.
-     */
-    where?: FaculdadeWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of Faculdades to fetch.
-     */
-    orderBy?: FaculdadeOrderByWithRelationInput | FaculdadeOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the start position
-     */
-    cursor?: FaculdadeWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` Faculdades from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` Faculdades.
-     */
-    skip?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Count returned Faculdades
-    **/
-    _count?: true | FaculdadeCountAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to find the minimum value
-    **/
-    _min?: FaculdadeMinAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to find the maximum value
-    **/
-    _max?: FaculdadeMaxAggregateInputType
-  }
-
-  export type GetFaculdadeAggregateType<T extends FaculdadeAggregateArgs> = {
-        [P in keyof T & keyof AggregateFaculdade]: P extends '_count' | 'count'
-      ? T[P] extends true
-        ? number
-        : GetScalarType<T[P], AggregateFaculdade[P]>
-      : GetScalarType<T[P], AggregateFaculdade[P]>
-  }
-
-
-
-
-  export type FaculdadeGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: FaculdadeWhereInput
-    orderBy?: FaculdadeOrderByWithAggregationInput | FaculdadeOrderByWithAggregationInput[]
-    by: FaculdadeScalarFieldEnum[] | FaculdadeScalarFieldEnum
-    having?: FaculdadeScalarWhereWithAggregatesInput
-    take?: number
-    skip?: number
-    _count?: FaculdadeCountAggregateInputType | true
-    _min?: FaculdadeMinAggregateInputType
-    _max?: FaculdadeMaxAggregateInputType
-  }
-
-  export type FaculdadeGroupByOutputType = {
-    id_faculdade: string
-    nome: string
-    endereco: string
-    _count: FaculdadeCountAggregateOutputType | null
-    _min: FaculdadeMinAggregateOutputType | null
-    _max: FaculdadeMaxAggregateOutputType | null
-  }
-
-  type GetFaculdadeGroupByPayload<T extends FaculdadeGroupByArgs> = Prisma.PrismaPromise<
-    Array<
-      PickEnumerable<FaculdadeGroupByOutputType, T['by']> &
-        {
-          [P in ((keyof T) & (keyof FaculdadeGroupByOutputType))]: P extends '_count'
-            ? T[P] extends boolean
-              ? number
-              : GetScalarType<T[P], FaculdadeGroupByOutputType[P]>
-            : GetScalarType<T[P], FaculdadeGroupByOutputType[P]>
-        }
-      >
-    >
-
-
-  export type FaculdadeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_faculdade?: boolean
-    nome?: boolean
-    endereco?: boolean
-    usuarios?: boolean | Faculdade$usuariosArgs<ExtArgs>
-    faculdadesEmpresas?: boolean | Faculdade$faculdadesEmpresasArgs<ExtArgs>
-    perguntas?: boolean | Faculdade$perguntasArgs<ExtArgs>
-    _count?: boolean | FaculdadeCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["faculdade"]>
-
-  export type FaculdadeSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_faculdade?: boolean
-    nome?: boolean
-    endereco?: boolean
-  }, ExtArgs["result"]["faculdade"]>
-
-  export type FaculdadeSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_faculdade?: boolean
-    nome?: boolean
-    endereco?: boolean
-  }, ExtArgs["result"]["faculdade"]>
-
-  export type FaculdadeSelectScalar = {
-    id_faculdade?: boolean
-    nome?: boolean
-    endereco?: boolean
-  }
-
-  export type FaculdadeOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_faculdade" | "nome" | "endereco", ExtArgs["result"]["faculdade"]>
-  export type FaculdadeInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    usuarios?: boolean | Faculdade$usuariosArgs<ExtArgs>
-    faculdadesEmpresas?: boolean | Faculdade$faculdadesEmpresasArgs<ExtArgs>
-    perguntas?: boolean | Faculdade$perguntasArgs<ExtArgs>
-    _count?: boolean | FaculdadeCountOutputTypeDefaultArgs<ExtArgs>
-  }
-  export type FaculdadeIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type FaculdadeIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-
-  export type $FaculdadePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Faculdade"
-    objects: {
-      usuarios: Prisma.$UsuarioPayload<ExtArgs>[]
-      faculdadesEmpresas: Prisma.$Faculdade_EmpresaPayload<ExtArgs>[]
-      perguntas: Prisma.$PerguntaPayload<ExtArgs>[]
-    }
-    scalars: $Extensions.GetPayloadResult<{
-      id_faculdade: string
-      nome: string
-      endereco: string
-    }, ExtArgs["result"]["faculdade"]>
-    composites: {}
-  }
-
-  type FaculdadeGetPayload<S extends boolean | null | undefined | FaculdadeDefaultArgs> = $Result.GetResult<Prisma.$FaculdadePayload, S>
-
-  type FaculdadeCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<FaculdadeFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: FaculdadeCountAggregateInputType | true
-    }
-
-  export interface FaculdadeDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Faculdade'], meta: { name: 'Faculdade' } }
-    /**
-     * Find zero or one Faculdade that matches the filter.
-     * @param {FaculdadeFindUniqueArgs} args - Arguments to find a Faculdade
-     * @example
-     * // Get one Faculdade
-     * const faculdade = await prisma.faculdade.findUnique({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findUnique<T extends FaculdadeFindUniqueArgs>(args: SelectSubset<T, FaculdadeFindUniqueArgs<ExtArgs>>): Prisma__FaculdadeClient<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find one Faculdade that matches the filter or throw an error with `error.code='P2025'`
-     * if no matches were found.
-     * @param {FaculdadeFindUniqueOrThrowArgs} args - Arguments to find a Faculdade
-     * @example
-     * // Get one Faculdade
-     * const faculdade = await prisma.faculdade.findUniqueOrThrow({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findUniqueOrThrow<T extends FaculdadeFindUniqueOrThrowArgs>(args: SelectSubset<T, FaculdadeFindUniqueOrThrowArgs<ExtArgs>>): Prisma__FaculdadeClient<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find the first Faculdade that matches the filter.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {FaculdadeFindFirstArgs} args - Arguments to find a Faculdade
-     * @example
-     * // Get one Faculdade
-     * const faculdade = await prisma.faculdade.findFirst({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findFirst<T extends FaculdadeFindFirstArgs>(args?: SelectSubset<T, FaculdadeFindFirstArgs<ExtArgs>>): Prisma__FaculdadeClient<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find the first Faculdade that matches the filter or
-     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {FaculdadeFindFirstOrThrowArgs} args - Arguments to find a Faculdade
-     * @example
-     * // Get one Faculdade
-     * const faculdade = await prisma.faculdade.findFirstOrThrow({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     */
-    findFirstOrThrow<T extends FaculdadeFindFirstOrThrowArgs>(args?: SelectSubset<T, FaculdadeFindFirstOrThrowArgs<ExtArgs>>): Prisma__FaculdadeClient<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Find zero or more Faculdades that matches the filter.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {FaculdadeFindManyArgs} args - Arguments to filter and select certain fields only.
-     * @example
-     * // Get all Faculdades
-     * const faculdades = await prisma.faculdade.findMany()
-     * 
-     * // Get first 10 Faculdades
-     * const faculdades = await prisma.faculdade.findMany({ take: 10 })
-     * 
-     * // Only select the `id_faculdade`
-     * const faculdadeWithId_faculdadeOnly = await prisma.faculdade.findMany({ select: { id_faculdade: true } })
-     * 
-     */
-    findMany<T extends FaculdadeFindManyArgs>(args?: SelectSubset<T, FaculdadeFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
-
-    /**
-     * Create a Faculdade.
-     * @param {FaculdadeCreateArgs} args - Arguments to create a Faculdade.
-     * @example
-     * // Create one Faculdade
-     * const Faculdade = await prisma.faculdade.create({
-     *   data: {
-     *     // ... data to create a Faculdade
-     *   }
-     * })
-     * 
-     */
-    create<T extends FaculdadeCreateArgs>(args: SelectSubset<T, FaculdadeCreateArgs<ExtArgs>>): Prisma__FaculdadeClient<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Create many Faculdades.
-     * @param {FaculdadeCreateManyArgs} args - Arguments to create many Faculdades.
-     * @example
-     * // Create many Faculdades
-     * const faculdade = await prisma.faculdade.createMany({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     *     
-     */
-    createMany<T extends FaculdadeCreateManyArgs>(args?: SelectSubset<T, FaculdadeCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Create many Faculdades and returns the data saved in the database.
-     * @param {FaculdadeCreateManyAndReturnArgs} args - Arguments to create many Faculdades.
-     * @example
-     * // Create many Faculdades
-     * const faculdade = await prisma.faculdade.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Faculdades and only return the `id_faculdade`
-     * const faculdadeWithId_faculdadeOnly = await prisma.faculdade.createManyAndReturn({
-     *   select: { id_faculdade: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends FaculdadeCreateManyAndReturnArgs>(args?: SelectSubset<T, FaculdadeCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
-     * Delete a Faculdade.
-     * @param {FaculdadeDeleteArgs} args - Arguments to delete one Faculdade.
-     * @example
-     * // Delete one Faculdade
-     * const Faculdade = await prisma.faculdade.delete({
-     *   where: {
-     *     // ... filter to delete one Faculdade
-     *   }
-     * })
-     * 
-     */
-    delete<T extends FaculdadeDeleteArgs>(args: SelectSubset<T, FaculdadeDeleteArgs<ExtArgs>>): Prisma__FaculdadeClient<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Update one Faculdade.
-     * @param {FaculdadeUpdateArgs} args - Arguments to update one Faculdade.
-     * @example
-     * // Update one Faculdade
-     * const faculdade = await prisma.faculdade.update({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: {
-     *     // ... provide data here
-     *   }
-     * })
-     * 
-     */
-    update<T extends FaculdadeUpdateArgs>(args: SelectSubset<T, FaculdadeUpdateArgs<ExtArgs>>): Prisma__FaculdadeClient<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-    /**
-     * Delete zero or more Faculdades.
-     * @param {FaculdadeDeleteManyArgs} args - Arguments to filter Faculdades to delete.
-     * @example
-     * // Delete a few Faculdades
-     * const { count } = await prisma.faculdade.deleteMany({
-     *   where: {
-     *     // ... provide filter here
-     *   }
-     * })
-     * 
-     */
-    deleteMany<T extends FaculdadeDeleteManyArgs>(args?: SelectSubset<T, FaculdadeDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Faculdades.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {FaculdadeUpdateManyArgs} args - Arguments to update one or more rows.
-     * @example
-     * // Update many Faculdades
-     * const faculdade = await prisma.faculdade.updateMany({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: {
-     *     // ... provide data here
-     *   }
-     * })
-     * 
-     */
-    updateMany<T extends FaculdadeUpdateManyArgs>(args: SelectSubset<T, FaculdadeUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Faculdades and returns the data updated in the database.
-     * @param {FaculdadeUpdateManyAndReturnArgs} args - Arguments to update many Faculdades.
-     * @example
-     * // Update many Faculdades
-     * const faculdade = await prisma.faculdade.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Faculdades and only return the `id_faculdade`
-     * const faculdadeWithId_faculdadeOnly = await prisma.faculdade.updateManyAndReturn({
-     *   select: { id_faculdade: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends FaculdadeUpdateManyAndReturnArgs>(args: SelectSubset<T, FaculdadeUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
-
-    /**
-     * Create or update one Faculdade.
-     * @param {FaculdadeUpsertArgs} args - Arguments to update or create a Faculdade.
-     * @example
-     * // Update or create a Faculdade
-     * const faculdade = await prisma.faculdade.upsert({
-     *   create: {
-     *     // ... data to create a Faculdade
-     *   },
-     *   update: {
-     *     // ... in case it already exists, update
-     *   },
-     *   where: {
-     *     // ... the filter for the Faculdade we want to update
-     *   }
-     * })
-     */
-    upsert<T extends FaculdadeUpsertArgs>(args: SelectSubset<T, FaculdadeUpsertArgs<ExtArgs>>): Prisma__FaculdadeClient<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
-
-
-    /**
-     * Count the number of Faculdades.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {FaculdadeCountArgs} args - Arguments to filter Faculdades to count.
-     * @example
-     * // Count the number of Faculdades
-     * const count = await prisma.faculdade.count({
-     *   where: {
-     *     // ... the filter for the Faculdades we want to count
-     *   }
-     * })
-    **/
-    count<T extends FaculdadeCountArgs>(
-      args?: Subset<T, FaculdadeCountArgs>,
-    ): Prisma.PrismaPromise<
-      T extends $Utils.Record<'select', any>
-        ? T['select'] extends true
-          ? number
-          : GetScalarType<T['select'], FaculdadeCountAggregateOutputType>
-        : number
-    >
-
-    /**
-     * Allows you to perform aggregations operations on a Faculdade.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {FaculdadeAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
-     * @example
-     * // Ordered by age ascending
-     * // Where email contains prisma.io
-     * // Limited to the 10 users
-     * const aggregations = await prisma.user.aggregate({
-     *   _avg: {
-     *     age: true,
-     *   },
-     *   where: {
-     *     email: {
-     *       contains: "prisma.io",
-     *     },
-     *   },
-     *   orderBy: {
-     *     age: "asc",
-     *   },
-     *   take: 10,
-     * })
-    **/
-    aggregate<T extends FaculdadeAggregateArgs>(args: Subset<T, FaculdadeAggregateArgs>): Prisma.PrismaPromise<GetFaculdadeAggregateType<T>>
-
-    /**
-     * Group by Faculdade.
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * @param {FaculdadeGroupByArgs} args - Group by arguments.
-     * @example
-     * // Group by city, order by createdAt, get count
-     * const result = await prisma.user.groupBy({
-     *   by: ['city', 'createdAt'],
-     *   orderBy: {
-     *     createdAt: true
-     *   },
-     *   _count: {
-     *     _all: true
-     *   },
-     * })
-     * 
-    **/
-    groupBy<
-      T extends FaculdadeGroupByArgs,
-      HasSelectOrTake extends Or<
-        Extends<'skip', Keys<T>>,
-        Extends<'take', Keys<T>>
-      >,
-      OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: FaculdadeGroupByArgs['orderBy'] }
-        : { orderBy?: FaculdadeGroupByArgs['orderBy'] },
-      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
-      ByFields extends MaybeTupleToUnion<T['by']>,
-      ByValid extends Has<ByFields, OrderFields>,
-      HavingFields extends GetHavingFields<T['having']>,
-      HavingValid extends Has<ByFields, HavingFields>,
-      ByEmpty extends T['by'] extends never[] ? True : False,
-      InputErrors extends ByEmpty extends True
-      ? `Error: "by" must not be empty.`
-      : HavingValid extends False
-      ? {
-          [P in HavingFields]: P extends ByFields
-            ? never
-            : P extends string
-            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
-            : [
-                Error,
-                'Field ',
-                P,
-                ` in "having" needs to be provided in "by"`,
-              ]
-        }[HavingFields]
-      : 'take' extends Keys<T>
-      ? 'orderBy' extends Keys<T>
-        ? ByValid extends True
-          ? {}
-          : {
-              [P in OrderFields]: P extends ByFields
-                ? never
-                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-            }[OrderFields]
-        : 'Error: If you provide "take", you also need to provide "orderBy"'
-      : 'skip' extends Keys<T>
-      ? 'orderBy' extends Keys<T>
-        ? ByValid extends True
-          ? {}
-          : {
-              [P in OrderFields]: P extends ByFields
-                ? never
-                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-            }[OrderFields]
-        : 'Error: If you provide "skip", you also need to provide "orderBy"'
-      : ByValid extends True
-      ? {}
-      : {
-          [P in OrderFields]: P extends ByFields
-            ? never
-            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
-        }[OrderFields]
-    >(args: SubsetIntersection<T, FaculdadeGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetFaculdadeGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
-  /**
-   * Fields of the Faculdade model
-   */
-  readonly fields: FaculdadeFieldRefs;
-  }
-
-  /**
-   * The delegate class that acts as a "Promise-like" for Faculdade.
-   * Why is this prefixed with `Prisma__`?
-   * Because we want to prevent naming conflicts as mentioned in
-   * https://github.com/prisma/prisma-client-js/issues/707
-   */
-  export interface Prisma__FaculdadeClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
-    readonly [Symbol.toStringTag]: "PrismaPromise"
-    usuarios<T extends Faculdade$usuariosArgs<ExtArgs> = {}>(args?: Subset<T, Faculdade$usuariosArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    faculdadesEmpresas<T extends Faculdade$faculdadesEmpresasArgs<ExtArgs> = {}>(args?: Subset<T, Faculdade$faculdadesEmpresasArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    perguntas<T extends Faculdade$perguntasArgs<ExtArgs> = {}>(args?: Subset<T, Faculdade$perguntasArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    /**
-     * Attaches callbacks for the resolution and/or rejection of the Promise.
-     * @param onfulfilled The callback to execute when the Promise is resolved.
-     * @param onrejected The callback to execute when the Promise is rejected.
-     * @returns A Promise for the completion of which ever callback is executed.
-     */
-    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
-    /**
-     * Attaches a callback for only the rejection of the Promise.
-     * @param onrejected The callback to execute when the Promise is rejected.
-     * @returns A Promise for the completion of the callback.
-     */
-    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
-    /**
-     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
-     * resolved value cannot be modified from the callback.
-     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
-     * @returns A Promise for the completion of the callback.
-     */
-    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
-  }
-
-
-
-
-  /**
-   * Fields of the Faculdade model
-   */
-  interface FaculdadeFieldRefs {
-    readonly id_faculdade: FieldRef<"Faculdade", 'String'>
-    readonly nome: FieldRef<"Faculdade", 'String'>
-    readonly endereco: FieldRef<"Faculdade", 'String'>
-  }
-    
-
-  // Custom InputTypes
-  /**
-   * Faculdade findUnique
-   */
-  export type FaculdadeFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FaculdadeInclude<ExtArgs> | null
-    /**
-     * Filter, which Faculdade to fetch.
-     */
-    where: FaculdadeWhereUniqueInput
-  }
-
-  /**
-   * Faculdade findUniqueOrThrow
-   */
-  export type FaculdadeFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FaculdadeInclude<ExtArgs> | null
-    /**
-     * Filter, which Faculdade to fetch.
-     */
-    where: FaculdadeWhereUniqueInput
-  }
-
-  /**
-   * Faculdade findFirst
-   */
-  export type FaculdadeFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FaculdadeInclude<ExtArgs> | null
-    /**
-     * Filter, which Faculdade to fetch.
-     */
-    where?: FaculdadeWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of Faculdades to fetch.
-     */
-    orderBy?: FaculdadeOrderByWithRelationInput | FaculdadeOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the position for searching for Faculdades.
-     */
-    cursor?: FaculdadeWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` Faculdades from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` Faculdades.
-     */
-    skip?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
-     * 
-     * Filter by unique combinations of Faculdades.
-     */
-    distinct?: FaculdadeScalarFieldEnum | FaculdadeScalarFieldEnum[]
-  }
-
-  /**
-   * Faculdade findFirstOrThrow
-   */
-  export type FaculdadeFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FaculdadeInclude<ExtArgs> | null
-    /**
-     * Filter, which Faculdade to fetch.
-     */
-    where?: FaculdadeWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of Faculdades to fetch.
-     */
-    orderBy?: FaculdadeOrderByWithRelationInput | FaculdadeOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the position for searching for Faculdades.
-     */
-    cursor?: FaculdadeWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` Faculdades from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` Faculdades.
-     */
-    skip?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
-     * 
-     * Filter by unique combinations of Faculdades.
-     */
-    distinct?: FaculdadeScalarFieldEnum | FaculdadeScalarFieldEnum[]
-  }
-
-  /**
-   * Faculdade findMany
-   */
-  export type FaculdadeFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FaculdadeInclude<ExtArgs> | null
-    /**
-     * Filter, which Faculdades to fetch.
-     */
-    where?: FaculdadeWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of Faculdades to fetch.
-     */
-    orderBy?: FaculdadeOrderByWithRelationInput | FaculdadeOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the position for listing Faculdades.
-     */
-    cursor?: FaculdadeWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` Faculdades from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` Faculdades.
-     */
-    skip?: number
-    distinct?: FaculdadeScalarFieldEnum | FaculdadeScalarFieldEnum[]
-  }
-
-  /**
-   * Faculdade create
-   */
-  export type FaculdadeCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FaculdadeInclude<ExtArgs> | null
-    /**
-     * The data needed to create a Faculdade.
-     */
-    data: XOR<FaculdadeCreateInput, FaculdadeUncheckedCreateInput>
-  }
-
-  /**
-   * Faculdade createMany
-   */
-  export type FaculdadeCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * The data used to create many Faculdades.
-     */
-    data: FaculdadeCreateManyInput | FaculdadeCreateManyInput[]
-    skipDuplicates?: boolean
-  }
-
-  /**
-   * Faculdade createManyAndReturn
-   */
-  export type FaculdadeCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * The data used to create many Faculdades.
-     */
-    data: FaculdadeCreateManyInput | FaculdadeCreateManyInput[]
-    skipDuplicates?: boolean
-  }
-
-  /**
-   * Faculdade update
-   */
-  export type FaculdadeUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FaculdadeInclude<ExtArgs> | null
-    /**
-     * The data needed to update a Faculdade.
-     */
-    data: XOR<FaculdadeUpdateInput, FaculdadeUncheckedUpdateInput>
-    /**
-     * Choose, which Faculdade to update.
-     */
-    where: FaculdadeWhereUniqueInput
-  }
-
-  /**
-   * Faculdade updateMany
-   */
-  export type FaculdadeUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * The data used to update Faculdades.
-     */
-    data: XOR<FaculdadeUpdateManyMutationInput, FaculdadeUncheckedUpdateManyInput>
-    /**
-     * Filter which Faculdades to update
-     */
-    where?: FaculdadeWhereInput
-    /**
-     * Limit how many Faculdades to update.
-     */
-    limit?: number
-  }
-
-  /**
-   * Faculdade updateManyAndReturn
-   */
-  export type FaculdadeUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * The data used to update Faculdades.
-     */
-    data: XOR<FaculdadeUpdateManyMutationInput, FaculdadeUncheckedUpdateManyInput>
-    /**
-     * Filter which Faculdades to update
-     */
-    where?: FaculdadeWhereInput
-    /**
-     * Limit how many Faculdades to update.
-     */
-    limit?: number
-  }
-
-  /**
-   * Faculdade upsert
-   */
-  export type FaculdadeUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FaculdadeInclude<ExtArgs> | null
-    /**
-     * The filter to search for the Faculdade to update in case it exists.
-     */
-    where: FaculdadeWhereUniqueInput
-    /**
-     * In case the Faculdade found by the `where` argument doesn't exist, create a new Faculdade with this data.
-     */
-    create: XOR<FaculdadeCreateInput, FaculdadeUncheckedCreateInput>
-    /**
-     * In case the Faculdade was found with the provided `where` argument, update it with this data.
-     */
-    update: XOR<FaculdadeUpdateInput, FaculdadeUncheckedUpdateInput>
-  }
-
-  /**
-   * Faculdade delete
-   */
-  export type FaculdadeDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FaculdadeInclude<ExtArgs> | null
-    /**
-     * Filter which Faculdade to delete.
-     */
-    where: FaculdadeWhereUniqueInput
-  }
-
-  /**
-   * Faculdade deleteMany
-   */
-  export type FaculdadeDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Filter which Faculdades to delete
-     */
-    where?: FaculdadeWhereInput
-    /**
-     * Limit how many Faculdades to delete.
-     */
-    limit?: number
-  }
-
-  /**
-   * Faculdade.usuarios
-   */
-  export type Faculdade$usuariosArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Usuario
-     */
-    select?: UsuarioSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Usuario
-     */
-    omit?: UsuarioOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: UsuarioInclude<ExtArgs> | null
-    where?: UsuarioWhereInput
-    orderBy?: UsuarioOrderByWithRelationInput | UsuarioOrderByWithRelationInput[]
-    cursor?: UsuarioWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: UsuarioScalarFieldEnum | UsuarioScalarFieldEnum[]
-  }
-
-  /**
-   * Faculdade.faculdadesEmpresas
-   */
-  export type Faculdade$faculdadesEmpresasArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade_Empresa
-     */
-    select?: Faculdade_EmpresaSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade_Empresa
-     */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: Faculdade_EmpresaInclude<ExtArgs> | null
-    where?: Faculdade_EmpresaWhereInput
-    orderBy?: Faculdade_EmpresaOrderByWithRelationInput | Faculdade_EmpresaOrderByWithRelationInput[]
-    cursor?: Faculdade_EmpresaWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: Faculdade_EmpresaScalarFieldEnum | Faculdade_EmpresaScalarFieldEnum[]
-  }
-
-  /**
-   * Faculdade.perguntas
-   */
-  export type Faculdade$perguntasArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Pergunta
-     */
-    select?: PerguntaSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Pergunta
-     */
-    omit?: PerguntaOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: PerguntaInclude<ExtArgs> | null
-    where?: PerguntaWhereInput
-    orderBy?: PerguntaOrderByWithRelationInput | PerguntaOrderByWithRelationInput[]
-    cursor?: PerguntaWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: PerguntaScalarFieldEnum | PerguntaScalarFieldEnum[]
-  }
-
-  /**
-   * Faculdade without action
-   */
-  export type FaculdadeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FaculdadeInclude<ExtArgs> | null
-  }
-
-
-  /**
-   * Model Faculdade_Empresa
-   */
-
-  export type AggregateFaculdade_Empresa = {
-    _count: Faculdade_EmpresaCountAggregateOutputType | null
-    _min: Faculdade_EmpresaMinAggregateOutputType | null
-    _max: Faculdade_EmpresaMaxAggregateOutputType | null
-  }
-
-  export type Faculdade_EmpresaMinAggregateOutputType = {
-    id_faculdade_: string | null
-    id_faculdade: string | null
-    id_empresa: string | null
-  }
-
-  export type Faculdade_EmpresaMaxAggregateOutputType = {
-    id_faculdade_: string | null
-    id_faculdade: string | null
-    id_empresa: string | null
-  }
-
-  export type Faculdade_EmpresaCountAggregateOutputType = {
-    id_faculdade_: number
-    id_faculdade: number
-    id_empresa: number
-    _all: number
-  }
-
-
-  export type Faculdade_EmpresaMinAggregateInputType = {
-    id_faculdade_?: true
-    id_faculdade?: true
-    id_empresa?: true
-  }
-
-  export type Faculdade_EmpresaMaxAggregateInputType = {
-    id_faculdade_?: true
-    id_faculdade?: true
-    id_empresa?: true
-  }
-
-  export type Faculdade_EmpresaCountAggregateInputType = {
-    id_faculdade_?: true
-    id_faculdade?: true
-    id_empresa?: true
-    _all?: true
-  }
-
-  export type Faculdade_EmpresaAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Filter which Faculdade_Empresa to aggregate.
-     */
-    where?: Faculdade_EmpresaWhereInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
-     * 
-     * Determine the order of Faculdade_Empresas to fetch.
-     */
-    orderBy?: Faculdade_EmpresaOrderByWithRelationInput | Faculdade_EmpresaOrderByWithRelationInput[]
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
-     * 
-     * Sets the start position
-     */
-    cursor?: Faculdade_EmpresaWhereUniqueInput
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Take `±n` Faculdade_Empresas from the position of the cursor.
-     */
-    take?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
-     * 
-     * Skip the first `n` Faculdade_Empresas.
-     */
-    skip?: number
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Count returned Faculdade_Empresas
-    **/
-    _count?: true | Faculdade_EmpresaCountAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to find the minimum value
-    **/
-    _min?: Faculdade_EmpresaMinAggregateInputType
-    /**
-     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
-     * 
-     * Select which fields to find the maximum value
-    **/
-    _max?: Faculdade_EmpresaMaxAggregateInputType
-  }
-
-  export type GetFaculdade_EmpresaAggregateType<T extends Faculdade_EmpresaAggregateArgs> = {
-        [P in keyof T & keyof AggregateFaculdade_Empresa]: P extends '_count' | 'count'
-      ? T[P] extends true
-        ? number
-        : GetScalarType<T[P], AggregateFaculdade_Empresa[P]>
-      : GetScalarType<T[P], AggregateFaculdade_Empresa[P]>
-  }
-
-
-
-
-  export type Faculdade_EmpresaGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: Faculdade_EmpresaWhereInput
-    orderBy?: Faculdade_EmpresaOrderByWithAggregationInput | Faculdade_EmpresaOrderByWithAggregationInput[]
-    by: Faculdade_EmpresaScalarFieldEnum[] | Faculdade_EmpresaScalarFieldEnum
-    having?: Faculdade_EmpresaScalarWhereWithAggregatesInput
-    take?: number
-    skip?: number
-    _count?: Faculdade_EmpresaCountAggregateInputType | true
-    _min?: Faculdade_EmpresaMinAggregateInputType
-    _max?: Faculdade_EmpresaMaxAggregateInputType
-  }
-
-  export type Faculdade_EmpresaGroupByOutputType = {
-    id_faculdade_: string
-    id_faculdade: string
-    id_empresa: string
-    _count: Faculdade_EmpresaCountAggregateOutputType | null
-    _min: Faculdade_EmpresaMinAggregateOutputType | null
-    _max: Faculdade_EmpresaMaxAggregateOutputType | null
-  }
-
-  type GetFaculdade_EmpresaGroupByPayload<T extends Faculdade_EmpresaGroupByArgs> = Prisma.PrismaPromise<
-    Array<
-      PickEnumerable<Faculdade_EmpresaGroupByOutputType, T['by']> &
-        {
-          [P in ((keyof T) & (keyof Faculdade_EmpresaGroupByOutputType))]: P extends '_count'
-            ? T[P] extends boolean
-              ? number
-              : GetScalarType<T[P], Faculdade_EmpresaGroupByOutputType[P]>
-            : GetScalarType<T[P], Faculdade_EmpresaGroupByOutputType[P]>
-        }
-      >
-    >
-
-
-  export type Faculdade_EmpresaSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_faculdade_?: boolean
-    id_faculdade?: boolean
-    id_empresa?: boolean
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["faculdade_Empresa"]>
-
-  export type Faculdade_EmpresaSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_faculdade_?: boolean
-    id_faculdade?: boolean
-    id_empresa?: boolean
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["faculdade_Empresa"]>
-
-  export type Faculdade_EmpresaSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_faculdade_?: boolean
-    id_faculdade?: boolean
-    id_empresa?: boolean
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["faculdade_Empresa"]>
-
-  export type Faculdade_EmpresaSelectScalar = {
-    id_faculdade_?: boolean
-    id_faculdade?: boolean
-    id_empresa?: boolean
-  }
-
-  export type Faculdade_EmpresaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_faculdade_" | "id_faculdade" | "id_empresa", ExtArgs["result"]["faculdade_Empresa"]>
-  export type Faculdade_EmpresaInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
-  }
-  export type Faculdade_EmpresaIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
-  }
-  export type Faculdade_EmpresaIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    faculdade?: boolean | FaculdadeDefaultArgs<ExtArgs>
-  }
-
-  export type $Faculdade_EmpresaPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Faculdade_Empresa"
-    objects: {
-      faculdade: Prisma.$FaculdadePayload<ExtArgs>
-    }
-    scalars: $Extensions.GetPayloadResult<{
-      id_faculdade_: string
-      id_faculdade: string
+      cargo: string
+      telefone: string
       id_empresa: string
-    }, ExtArgs["result"]["faculdade_Empresa"]>
+      data_criacao: Date
+      data_atualizacao: Date
+    }, ExtArgs["result"]["recrutador"]>
     composites: {}
   }
 
-  type Faculdade_EmpresaGetPayload<S extends boolean | null | undefined | Faculdade_EmpresaDefaultArgs> = $Result.GetResult<Prisma.$Faculdade_EmpresaPayload, S>
+  type RecrutadorGetPayload<S extends boolean | null | undefined | RecrutadorDefaultArgs> = $Result.GetResult<Prisma.$RecrutadorPayload, S>
 
-  type Faculdade_EmpresaCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<Faculdade_EmpresaFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: Faculdade_EmpresaCountAggregateInputType | true
+  type RecrutadorCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<RecrutadorFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: RecrutadorCountAggregateInputType | true
     }
 
-  export interface Faculdade_EmpresaDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Faculdade_Empresa'], meta: { name: 'Faculdade_Empresa' } }
+  export interface RecrutadorDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Recrutador'], meta: { name: 'Recrutador' } }
     /**
-     * Find zero or one Faculdade_Empresa that matches the filter.
-     * @param {Faculdade_EmpresaFindUniqueArgs} args - Arguments to find a Faculdade_Empresa
+     * Find zero or one Recrutador that matches the filter.
+     * @param {RecrutadorFindUniqueArgs} args - Arguments to find a Recrutador
      * @example
-     * // Get one Faculdade_Empresa
-     * const faculdade_Empresa = await prisma.faculdade_Empresa.findUnique({
+     * // Get one Recrutador
+     * const recrutador = await prisma.recrutador.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends Faculdade_EmpresaFindUniqueArgs>(args: SelectSubset<T, Faculdade_EmpresaFindUniqueArgs<ExtArgs>>): Prisma__Faculdade_EmpresaClient<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends RecrutadorFindUniqueArgs>(args: SelectSubset<T, RecrutadorFindUniqueArgs<ExtArgs>>): Prisma__RecrutadorClient<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Faculdade_Empresa that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Recrutador that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {Faculdade_EmpresaFindUniqueOrThrowArgs} args - Arguments to find a Faculdade_Empresa
+     * @param {RecrutadorFindUniqueOrThrowArgs} args - Arguments to find a Recrutador
      * @example
-     * // Get one Faculdade_Empresa
-     * const faculdade_Empresa = await prisma.faculdade_Empresa.findUniqueOrThrow({
+     * // Get one Recrutador
+     * const recrutador = await prisma.recrutador.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends Faculdade_EmpresaFindUniqueOrThrowArgs>(args: SelectSubset<T, Faculdade_EmpresaFindUniqueOrThrowArgs<ExtArgs>>): Prisma__Faculdade_EmpresaClient<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends RecrutadorFindUniqueOrThrowArgs>(args: SelectSubset<T, RecrutadorFindUniqueOrThrowArgs<ExtArgs>>): Prisma__RecrutadorClient<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Faculdade_Empresa that matches the filter.
+     * Find the first Recrutador that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Faculdade_EmpresaFindFirstArgs} args - Arguments to find a Faculdade_Empresa
+     * @param {RecrutadorFindFirstArgs} args - Arguments to find a Recrutador
      * @example
-     * // Get one Faculdade_Empresa
-     * const faculdade_Empresa = await prisma.faculdade_Empresa.findFirst({
+     * // Get one Recrutador
+     * const recrutador = await prisma.recrutador.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends Faculdade_EmpresaFindFirstArgs>(args?: SelectSubset<T, Faculdade_EmpresaFindFirstArgs<ExtArgs>>): Prisma__Faculdade_EmpresaClient<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends RecrutadorFindFirstArgs>(args?: SelectSubset<T, RecrutadorFindFirstArgs<ExtArgs>>): Prisma__RecrutadorClient<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Faculdade_Empresa that matches the filter or
+     * Find the first Recrutador that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Faculdade_EmpresaFindFirstOrThrowArgs} args - Arguments to find a Faculdade_Empresa
+     * @param {RecrutadorFindFirstOrThrowArgs} args - Arguments to find a Recrutador
      * @example
-     * // Get one Faculdade_Empresa
-     * const faculdade_Empresa = await prisma.faculdade_Empresa.findFirstOrThrow({
+     * // Get one Recrutador
+     * const recrutador = await prisma.recrutador.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends Faculdade_EmpresaFindFirstOrThrowArgs>(args?: SelectSubset<T, Faculdade_EmpresaFindFirstOrThrowArgs<ExtArgs>>): Prisma__Faculdade_EmpresaClient<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends RecrutadorFindFirstOrThrowArgs>(args?: SelectSubset<T, RecrutadorFindFirstOrThrowArgs<ExtArgs>>): Prisma__RecrutadorClient<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Faculdade_Empresas that matches the filter.
+     * Find zero or more Recrutadors that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Faculdade_EmpresaFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {RecrutadorFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Faculdade_Empresas
-     * const faculdade_Empresas = await prisma.faculdade_Empresa.findMany()
+     * // Get all Recrutadors
+     * const recrutadors = await prisma.recrutador.findMany()
      * 
-     * // Get first 10 Faculdade_Empresas
-     * const faculdade_Empresas = await prisma.faculdade_Empresa.findMany({ take: 10 })
+     * // Get first 10 Recrutadors
+     * const recrutadors = await prisma.recrutador.findMany({ take: 10 })
      * 
-     * // Only select the `id_faculdade_`
-     * const faculdade_EmpresaWithId_faculdade_Only = await prisma.faculdade_Empresa.findMany({ select: { id_faculdade_: true } })
+     * // Only select the `id_recrutador`
+     * const recrutadorWithId_recrutadorOnly = await prisma.recrutador.findMany({ select: { id_recrutador: true } })
      * 
      */
-    findMany<T extends Faculdade_EmpresaFindManyArgs>(args?: SelectSubset<T, Faculdade_EmpresaFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends RecrutadorFindManyArgs>(args?: SelectSubset<T, RecrutadorFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Faculdade_Empresa.
-     * @param {Faculdade_EmpresaCreateArgs} args - Arguments to create a Faculdade_Empresa.
+     * Create a Recrutador.
+     * @param {RecrutadorCreateArgs} args - Arguments to create a Recrutador.
      * @example
-     * // Create one Faculdade_Empresa
-     * const Faculdade_Empresa = await prisma.faculdade_Empresa.create({
+     * // Create one Recrutador
+     * const Recrutador = await prisma.recrutador.create({
      *   data: {
-     *     // ... data to create a Faculdade_Empresa
+     *     // ... data to create a Recrutador
      *   }
      * })
      * 
      */
-    create<T extends Faculdade_EmpresaCreateArgs>(args: SelectSubset<T, Faculdade_EmpresaCreateArgs<ExtArgs>>): Prisma__Faculdade_EmpresaClient<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends RecrutadorCreateArgs>(args: SelectSubset<T, RecrutadorCreateArgs<ExtArgs>>): Prisma__RecrutadorClient<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Faculdade_Empresas.
-     * @param {Faculdade_EmpresaCreateManyArgs} args - Arguments to create many Faculdade_Empresas.
+     * Create many Recrutadors.
+     * @param {RecrutadorCreateManyArgs} args - Arguments to create many Recrutadors.
      * @example
-     * // Create many Faculdade_Empresas
-     * const faculdade_Empresa = await prisma.faculdade_Empresa.createMany({
+     * // Create many Recrutadors
+     * const recrutador = await prisma.recrutador.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends Faculdade_EmpresaCreateManyArgs>(args?: SelectSubset<T, Faculdade_EmpresaCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends RecrutadorCreateManyArgs>(args?: SelectSubset<T, RecrutadorCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Faculdade_Empresas and returns the data saved in the database.
-     * @param {Faculdade_EmpresaCreateManyAndReturnArgs} args - Arguments to create many Faculdade_Empresas.
+     * Create many Recrutadors and returns the data saved in the database.
+     * @param {RecrutadorCreateManyAndReturnArgs} args - Arguments to create many Recrutadors.
      * @example
-     * // Create many Faculdade_Empresas
-     * const faculdade_Empresa = await prisma.faculdade_Empresa.createManyAndReturn({
+     * // Create many Recrutadors
+     * const recrutador = await prisma.recrutador.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Faculdade_Empresas and only return the `id_faculdade_`
-     * const faculdade_EmpresaWithId_faculdade_Only = await prisma.faculdade_Empresa.createManyAndReturn({
-     *   select: { id_faculdade_: true },
+     * // Create many Recrutadors and only return the `id_recrutador`
+     * const recrutadorWithId_recrutadorOnly = await prisma.recrutador.createManyAndReturn({
+     *   select: { id_recrutador: true },
      *   data: [
      *     // ... provide data here
      *   ]
@@ -3961,28 +1841,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends Faculdade_EmpresaCreateManyAndReturnArgs>(args?: SelectSubset<T, Faculdade_EmpresaCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends RecrutadorCreateManyAndReturnArgs>(args?: SelectSubset<T, RecrutadorCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Faculdade_Empresa.
-     * @param {Faculdade_EmpresaDeleteArgs} args - Arguments to delete one Faculdade_Empresa.
+     * Delete a Recrutador.
+     * @param {RecrutadorDeleteArgs} args - Arguments to delete one Recrutador.
      * @example
-     * // Delete one Faculdade_Empresa
-     * const Faculdade_Empresa = await prisma.faculdade_Empresa.delete({
+     * // Delete one Recrutador
+     * const Recrutador = await prisma.recrutador.delete({
      *   where: {
-     *     // ... filter to delete one Faculdade_Empresa
+     *     // ... filter to delete one Recrutador
      *   }
      * })
      * 
      */
-    delete<T extends Faculdade_EmpresaDeleteArgs>(args: SelectSubset<T, Faculdade_EmpresaDeleteArgs<ExtArgs>>): Prisma__Faculdade_EmpresaClient<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends RecrutadorDeleteArgs>(args: SelectSubset<T, RecrutadorDeleteArgs<ExtArgs>>): Prisma__RecrutadorClient<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Faculdade_Empresa.
-     * @param {Faculdade_EmpresaUpdateArgs} args - Arguments to update one Faculdade_Empresa.
+     * Update one Recrutador.
+     * @param {RecrutadorUpdateArgs} args - Arguments to update one Recrutador.
      * @example
-     * // Update one Faculdade_Empresa
-     * const faculdade_Empresa = await prisma.faculdade_Empresa.update({
+     * // Update one Recrutador
+     * const recrutador = await prisma.recrutador.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3992,30 +1872,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends Faculdade_EmpresaUpdateArgs>(args: SelectSubset<T, Faculdade_EmpresaUpdateArgs<ExtArgs>>): Prisma__Faculdade_EmpresaClient<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends RecrutadorUpdateArgs>(args: SelectSubset<T, RecrutadorUpdateArgs<ExtArgs>>): Prisma__RecrutadorClient<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Faculdade_Empresas.
-     * @param {Faculdade_EmpresaDeleteManyArgs} args - Arguments to filter Faculdade_Empresas to delete.
+     * Delete zero or more Recrutadors.
+     * @param {RecrutadorDeleteManyArgs} args - Arguments to filter Recrutadors to delete.
      * @example
-     * // Delete a few Faculdade_Empresas
-     * const { count } = await prisma.faculdade_Empresa.deleteMany({
+     * // Delete a few Recrutadors
+     * const { count } = await prisma.recrutador.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends Faculdade_EmpresaDeleteManyArgs>(args?: SelectSubset<T, Faculdade_EmpresaDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends RecrutadorDeleteManyArgs>(args?: SelectSubset<T, RecrutadorDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Faculdade_Empresas.
+     * Update zero or more Recrutadors.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Faculdade_EmpresaUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {RecrutadorUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Faculdade_Empresas
-     * const faculdade_Empresa = await prisma.faculdade_Empresa.updateMany({
+     * // Update many Recrutadors
+     * const recrutador = await prisma.recrutador.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4025,14 +1905,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends Faculdade_EmpresaUpdateManyArgs>(args: SelectSubset<T, Faculdade_EmpresaUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends RecrutadorUpdateManyArgs>(args: SelectSubset<T, RecrutadorUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Faculdade_Empresas and returns the data updated in the database.
-     * @param {Faculdade_EmpresaUpdateManyAndReturnArgs} args - Arguments to update many Faculdade_Empresas.
+     * Update zero or more Recrutadors and returns the data updated in the database.
+     * @param {RecrutadorUpdateManyAndReturnArgs} args - Arguments to update many Recrutadors.
      * @example
-     * // Update many Faculdade_Empresas
-     * const faculdade_Empresa = await prisma.faculdade_Empresa.updateManyAndReturn({
+     * // Update many Recrutadors
+     * const recrutador = await prisma.recrutador.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4041,9 +1921,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Faculdade_Empresas and only return the `id_faculdade_`
-     * const faculdade_EmpresaWithId_faculdade_Only = await prisma.faculdade_Empresa.updateManyAndReturn({
-     *   select: { id_faculdade_: true },
+     * // Update zero or more Recrutadors and only return the `id_recrutador`
+     * const recrutadorWithId_recrutadorOnly = await prisma.recrutador.updateManyAndReturn({
+     *   select: { id_recrutador: true },
      *   where: {
      *     // ... provide filter here
      *   },
@@ -4055,56 +1935,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends Faculdade_EmpresaUpdateManyAndReturnArgs>(args: SelectSubset<T, Faculdade_EmpresaUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends RecrutadorUpdateManyAndReturnArgs>(args: SelectSubset<T, RecrutadorUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Faculdade_Empresa.
-     * @param {Faculdade_EmpresaUpsertArgs} args - Arguments to update or create a Faculdade_Empresa.
+     * Create or update one Recrutador.
+     * @param {RecrutadorUpsertArgs} args - Arguments to update or create a Recrutador.
      * @example
-     * // Update or create a Faculdade_Empresa
-     * const faculdade_Empresa = await prisma.faculdade_Empresa.upsert({
+     * // Update or create a Recrutador
+     * const recrutador = await prisma.recrutador.upsert({
      *   create: {
-     *     // ... data to create a Faculdade_Empresa
+     *     // ... data to create a Recrutador
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Faculdade_Empresa we want to update
+     *     // ... the filter for the Recrutador we want to update
      *   }
      * })
      */
-    upsert<T extends Faculdade_EmpresaUpsertArgs>(args: SelectSubset<T, Faculdade_EmpresaUpsertArgs<ExtArgs>>): Prisma__Faculdade_EmpresaClient<$Result.GetResult<Prisma.$Faculdade_EmpresaPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends RecrutadorUpsertArgs>(args: SelectSubset<T, RecrutadorUpsertArgs<ExtArgs>>): Prisma__RecrutadorClient<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Faculdade_Empresas.
+     * Count the number of Recrutadors.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Faculdade_EmpresaCountArgs} args - Arguments to filter Faculdade_Empresas to count.
+     * @param {RecrutadorCountArgs} args - Arguments to filter Recrutadors to count.
      * @example
-     * // Count the number of Faculdade_Empresas
-     * const count = await prisma.faculdade_Empresa.count({
+     * // Count the number of Recrutadors
+     * const count = await prisma.recrutador.count({
      *   where: {
-     *     // ... the filter for the Faculdade_Empresas we want to count
+     *     // ... the filter for the Recrutadors we want to count
      *   }
      * })
     **/
-    count<T extends Faculdade_EmpresaCountArgs>(
-      args?: Subset<T, Faculdade_EmpresaCountArgs>,
+    count<T extends RecrutadorCountArgs>(
+      args?: Subset<T, RecrutadorCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], Faculdade_EmpresaCountAggregateOutputType>
+          : GetScalarType<T['select'], RecrutadorCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Faculdade_Empresa.
+     * Allows you to perform aggregations operations on a Recrutador.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Faculdade_EmpresaAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {RecrutadorAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -4124,13 +2004,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends Faculdade_EmpresaAggregateArgs>(args: Subset<T, Faculdade_EmpresaAggregateArgs>): Prisma.PrismaPromise<GetFaculdade_EmpresaAggregateType<T>>
+    aggregate<T extends RecrutadorAggregateArgs>(args: Subset<T, RecrutadorAggregateArgs>): Prisma.PrismaPromise<GetRecrutadorAggregateType<T>>
 
     /**
-     * Group by Faculdade_Empresa.
+     * Group by Recrutador.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Faculdade_EmpresaGroupByArgs} args - Group by arguments.
+     * @param {RecrutadorGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -4145,14 +2025,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends Faculdade_EmpresaGroupByArgs,
+      T extends RecrutadorGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: Faculdade_EmpresaGroupByArgs['orderBy'] }
-        : { orderBy?: Faculdade_EmpresaGroupByArgs['orderBy'] },
+        ? { orderBy: RecrutadorGroupByArgs['orderBy'] }
+        : { orderBy?: RecrutadorGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -4201,22 +2081,23 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, Faculdade_EmpresaGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetFaculdade_EmpresaGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, RecrutadorGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetRecrutadorGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Faculdade_Empresa model
+   * Fields of the Recrutador model
    */
-  readonly fields: Faculdade_EmpresaFieldRefs;
+  readonly fields: RecrutadorFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Faculdade_Empresa.
+   * The delegate class that acts as a "Promise-like" for Recrutador.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__Faculdade_EmpresaClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__RecrutadorClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    faculdade<T extends FaculdadeDefaultArgs<ExtArgs> = {}>(args?: Subset<T, FaculdadeDefaultArgs<ExtArgs>>): Prisma__FaculdadeClient<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    empresa<T extends EmpresaDefaultArgs<ExtArgs> = {}>(args?: Subset<T, EmpresaDefaultArgs<ExtArgs>>): Prisma__EmpresaClient<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    contratacoes<T extends Recrutador$contratacoesArgs<ExtArgs> = {}>(args?: Subset<T, Recrutador$contratacoesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4243,768 +2124,846 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Faculdade_Empresa model
+   * Fields of the Recrutador model
    */
-  interface Faculdade_EmpresaFieldRefs {
-    readonly id_faculdade_: FieldRef<"Faculdade_Empresa", 'String'>
-    readonly id_faculdade: FieldRef<"Faculdade_Empresa", 'String'>
-    readonly id_empresa: FieldRef<"Faculdade_Empresa", 'String'>
+  interface RecrutadorFieldRefs {
+    readonly id_recrutador: FieldRef<"Recrutador", 'String'>
+    readonly nome: FieldRef<"Recrutador", 'String'>
+    readonly email: FieldRef<"Recrutador", 'String'>
+    readonly senha: FieldRef<"Recrutador", 'String'>
+    readonly cargo: FieldRef<"Recrutador", 'String'>
+    readonly telefone: FieldRef<"Recrutador", 'String'>
+    readonly id_empresa: FieldRef<"Recrutador", 'String'>
+    readonly data_criacao: FieldRef<"Recrutador", 'DateTime'>
+    readonly data_atualizacao: FieldRef<"Recrutador", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * Faculdade_Empresa findUnique
+   * Recrutador findUnique
    */
-  export type Faculdade_EmpresaFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Recrutador
      */
-    select?: Faculdade_EmpresaSelect<ExtArgs> | null
+    select?: RecrutadorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Recrutador
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: RecrutadorOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaInclude<ExtArgs> | null
+    include?: RecrutadorInclude<ExtArgs> | null
     /**
-     * Filter, which Faculdade_Empresa to fetch.
+     * Filter, which Recrutador to fetch.
      */
-    where: Faculdade_EmpresaWhereUniqueInput
+    where: RecrutadorWhereUniqueInput
   }
 
   /**
-   * Faculdade_Empresa findUniqueOrThrow
+   * Recrutador findUniqueOrThrow
    */
-  export type Faculdade_EmpresaFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Recrutador
      */
-    select?: Faculdade_EmpresaSelect<ExtArgs> | null
+    select?: RecrutadorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Recrutador
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: RecrutadorOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaInclude<ExtArgs> | null
+    include?: RecrutadorInclude<ExtArgs> | null
     /**
-     * Filter, which Faculdade_Empresa to fetch.
+     * Filter, which Recrutador to fetch.
      */
-    where: Faculdade_EmpresaWhereUniqueInput
+    where: RecrutadorWhereUniqueInput
   }
 
   /**
-   * Faculdade_Empresa findFirst
+   * Recrutador findFirst
    */
-  export type Faculdade_EmpresaFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Recrutador
      */
-    select?: Faculdade_EmpresaSelect<ExtArgs> | null
+    select?: RecrutadorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Recrutador
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: RecrutadorOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaInclude<ExtArgs> | null
+    include?: RecrutadorInclude<ExtArgs> | null
     /**
-     * Filter, which Faculdade_Empresa to fetch.
+     * Filter, which Recrutador to fetch.
      */
-    where?: Faculdade_EmpresaWhereInput
+    where?: RecrutadorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Faculdade_Empresas to fetch.
+     * Determine the order of Recrutadors to fetch.
      */
-    orderBy?: Faculdade_EmpresaOrderByWithRelationInput | Faculdade_EmpresaOrderByWithRelationInput[]
+    orderBy?: RecrutadorOrderByWithRelationInput | RecrutadorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Faculdade_Empresas.
+     * Sets the position for searching for Recrutadors.
      */
-    cursor?: Faculdade_EmpresaWhereUniqueInput
+    cursor?: RecrutadorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Faculdade_Empresas from the position of the cursor.
+     * Take `±n` Recrutadors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Faculdade_Empresas.
+     * Skip the first `n` Recrutadors.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Faculdade_Empresas.
+     * Filter by unique combinations of Recrutadors.
      */
-    distinct?: Faculdade_EmpresaScalarFieldEnum | Faculdade_EmpresaScalarFieldEnum[]
+    distinct?: RecrutadorScalarFieldEnum | RecrutadorScalarFieldEnum[]
   }
 
   /**
-   * Faculdade_Empresa findFirstOrThrow
+   * Recrutador findFirstOrThrow
    */
-  export type Faculdade_EmpresaFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Recrutador
      */
-    select?: Faculdade_EmpresaSelect<ExtArgs> | null
+    select?: RecrutadorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Recrutador
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: RecrutadorOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaInclude<ExtArgs> | null
+    include?: RecrutadorInclude<ExtArgs> | null
     /**
-     * Filter, which Faculdade_Empresa to fetch.
+     * Filter, which Recrutador to fetch.
      */
-    where?: Faculdade_EmpresaWhereInput
+    where?: RecrutadorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Faculdade_Empresas to fetch.
+     * Determine the order of Recrutadors to fetch.
      */
-    orderBy?: Faculdade_EmpresaOrderByWithRelationInput | Faculdade_EmpresaOrderByWithRelationInput[]
+    orderBy?: RecrutadorOrderByWithRelationInput | RecrutadorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Faculdade_Empresas.
+     * Sets the position for searching for Recrutadors.
      */
-    cursor?: Faculdade_EmpresaWhereUniqueInput
+    cursor?: RecrutadorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Faculdade_Empresas from the position of the cursor.
+     * Take `±n` Recrutadors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Faculdade_Empresas.
+     * Skip the first `n` Recrutadors.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Faculdade_Empresas.
+     * Filter by unique combinations of Recrutadors.
      */
-    distinct?: Faculdade_EmpresaScalarFieldEnum | Faculdade_EmpresaScalarFieldEnum[]
+    distinct?: RecrutadorScalarFieldEnum | RecrutadorScalarFieldEnum[]
   }
 
   /**
-   * Faculdade_Empresa findMany
+   * Recrutador findMany
    */
-  export type Faculdade_EmpresaFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Recrutador
      */
-    select?: Faculdade_EmpresaSelect<ExtArgs> | null
+    select?: RecrutadorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Recrutador
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: RecrutadorOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaInclude<ExtArgs> | null
+    include?: RecrutadorInclude<ExtArgs> | null
     /**
-     * Filter, which Faculdade_Empresas to fetch.
+     * Filter, which Recrutadors to fetch.
      */
-    where?: Faculdade_EmpresaWhereInput
+    where?: RecrutadorWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Faculdade_Empresas to fetch.
+     * Determine the order of Recrutadors to fetch.
      */
-    orderBy?: Faculdade_EmpresaOrderByWithRelationInput | Faculdade_EmpresaOrderByWithRelationInput[]
+    orderBy?: RecrutadorOrderByWithRelationInput | RecrutadorOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Faculdade_Empresas.
+     * Sets the position for listing Recrutadors.
      */
-    cursor?: Faculdade_EmpresaWhereUniqueInput
+    cursor?: RecrutadorWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Faculdade_Empresas from the position of the cursor.
+     * Take `±n` Recrutadors from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Faculdade_Empresas.
+     * Skip the first `n` Recrutadors.
      */
     skip?: number
-    distinct?: Faculdade_EmpresaScalarFieldEnum | Faculdade_EmpresaScalarFieldEnum[]
+    distinct?: RecrutadorScalarFieldEnum | RecrutadorScalarFieldEnum[]
   }
 
   /**
-   * Faculdade_Empresa create
+   * Recrutador create
    */
-  export type Faculdade_EmpresaCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Recrutador
      */
-    select?: Faculdade_EmpresaSelect<ExtArgs> | null
+    select?: RecrutadorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Recrutador
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: RecrutadorOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaInclude<ExtArgs> | null
+    include?: RecrutadorInclude<ExtArgs> | null
     /**
-     * The data needed to create a Faculdade_Empresa.
+     * The data needed to create a Recrutador.
      */
-    data: XOR<Faculdade_EmpresaCreateInput, Faculdade_EmpresaUncheckedCreateInput>
+    data: XOR<RecrutadorCreateInput, RecrutadorUncheckedCreateInput>
   }
 
   /**
-   * Faculdade_Empresa createMany
+   * Recrutador createMany
    */
-  export type Faculdade_EmpresaCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Faculdade_Empresas.
+     * The data used to create many Recrutadors.
      */
-    data: Faculdade_EmpresaCreateManyInput | Faculdade_EmpresaCreateManyInput[]
+    data: RecrutadorCreateManyInput | RecrutadorCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Faculdade_Empresa createManyAndReturn
+   * Recrutador createManyAndReturn
    */
-  export type Faculdade_EmpresaCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Recrutador
      */
-    select?: Faculdade_EmpresaSelectCreateManyAndReturn<ExtArgs> | null
+    select?: RecrutadorSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Recrutador
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: RecrutadorOmit<ExtArgs> | null
     /**
-     * The data used to create many Faculdade_Empresas.
+     * The data used to create many Recrutadors.
      */
-    data: Faculdade_EmpresaCreateManyInput | Faculdade_EmpresaCreateManyInput[]
+    data: RecrutadorCreateManyInput | RecrutadorCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: RecrutadorIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Faculdade_Empresa update
+   * Recrutador update
    */
-  export type Faculdade_EmpresaUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Recrutador
      */
-    select?: Faculdade_EmpresaSelect<ExtArgs> | null
+    select?: RecrutadorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Recrutador
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: RecrutadorOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaInclude<ExtArgs> | null
+    include?: RecrutadorInclude<ExtArgs> | null
     /**
-     * The data needed to update a Faculdade_Empresa.
+     * The data needed to update a Recrutador.
      */
-    data: XOR<Faculdade_EmpresaUpdateInput, Faculdade_EmpresaUncheckedUpdateInput>
+    data: XOR<RecrutadorUpdateInput, RecrutadorUncheckedUpdateInput>
     /**
-     * Choose, which Faculdade_Empresa to update.
+     * Choose, which Recrutador to update.
      */
-    where: Faculdade_EmpresaWhereUniqueInput
+    where: RecrutadorWhereUniqueInput
   }
 
   /**
-   * Faculdade_Empresa updateMany
+   * Recrutador updateMany
    */
-  export type Faculdade_EmpresaUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Faculdade_Empresas.
+     * The data used to update Recrutadors.
      */
-    data: XOR<Faculdade_EmpresaUpdateManyMutationInput, Faculdade_EmpresaUncheckedUpdateManyInput>
+    data: XOR<RecrutadorUpdateManyMutationInput, RecrutadorUncheckedUpdateManyInput>
     /**
-     * Filter which Faculdade_Empresas to update
+     * Filter which Recrutadors to update
      */
-    where?: Faculdade_EmpresaWhereInput
+    where?: RecrutadorWhereInput
     /**
-     * Limit how many Faculdade_Empresas to update.
+     * Limit how many Recrutadors to update.
      */
     limit?: number
   }
 
   /**
-   * Faculdade_Empresa updateManyAndReturn
+   * Recrutador updateManyAndReturn
    */
-  export type Faculdade_EmpresaUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Recrutador
      */
-    select?: Faculdade_EmpresaSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: RecrutadorSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Recrutador
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: RecrutadorOmit<ExtArgs> | null
     /**
-     * The data used to update Faculdade_Empresas.
+     * The data used to update Recrutadors.
      */
-    data: XOR<Faculdade_EmpresaUpdateManyMutationInput, Faculdade_EmpresaUncheckedUpdateManyInput>
+    data: XOR<RecrutadorUpdateManyMutationInput, RecrutadorUncheckedUpdateManyInput>
     /**
-     * Filter which Faculdade_Empresas to update
+     * Filter which Recrutadors to update
      */
-    where?: Faculdade_EmpresaWhereInput
+    where?: RecrutadorWhereInput
     /**
-     * Limit how many Faculdade_Empresas to update.
+     * Limit how many Recrutadors to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: RecrutadorIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Faculdade_Empresa upsert
+   * Recrutador upsert
    */
-  export type Faculdade_EmpresaUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Recrutador
      */
-    select?: Faculdade_EmpresaSelect<ExtArgs> | null
+    select?: RecrutadorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Recrutador
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: RecrutadorOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaInclude<ExtArgs> | null
+    include?: RecrutadorInclude<ExtArgs> | null
     /**
-     * The filter to search for the Faculdade_Empresa to update in case it exists.
+     * The filter to search for the Recrutador to update in case it exists.
      */
-    where: Faculdade_EmpresaWhereUniqueInput
+    where: RecrutadorWhereUniqueInput
     /**
-     * In case the Faculdade_Empresa found by the `where` argument doesn't exist, create a new Faculdade_Empresa with this data.
+     * In case the Recrutador found by the `where` argument doesn't exist, create a new Recrutador with this data.
      */
-    create: XOR<Faculdade_EmpresaCreateInput, Faculdade_EmpresaUncheckedCreateInput>
+    create: XOR<RecrutadorCreateInput, RecrutadorUncheckedCreateInput>
     /**
-     * In case the Faculdade_Empresa was found with the provided `where` argument, update it with this data.
+     * In case the Recrutador was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<Faculdade_EmpresaUpdateInput, Faculdade_EmpresaUncheckedUpdateInput>
+    update: XOR<RecrutadorUpdateInput, RecrutadorUncheckedUpdateInput>
   }
 
   /**
-   * Faculdade_Empresa delete
+   * Recrutador delete
    */
-  export type Faculdade_EmpresaDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Recrutador
      */
-    select?: Faculdade_EmpresaSelect<ExtArgs> | null
+    select?: RecrutadorSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Recrutador
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: RecrutadorOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaInclude<ExtArgs> | null
+    include?: RecrutadorInclude<ExtArgs> | null
     /**
-     * Filter which Faculdade_Empresa to delete.
+     * Filter which Recrutador to delete.
      */
-    where: Faculdade_EmpresaWhereUniqueInput
+    where: RecrutadorWhereUniqueInput
   }
 
   /**
-   * Faculdade_Empresa deleteMany
+   * Recrutador deleteMany
    */
-  export type Faculdade_EmpresaDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type RecrutadorDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Faculdade_Empresas to delete
+     * Filter which Recrutadors to delete
      */
-    where?: Faculdade_EmpresaWhereInput
+    where?: RecrutadorWhereInput
     /**
-     * Limit how many Faculdade_Empresas to delete.
+     * Limit how many Recrutadors to delete.
      */
     limit?: number
   }
 
   /**
-   * Faculdade_Empresa without action
+   * Recrutador.contratacoes
    */
-  export type Faculdade_EmpresaDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Recrutador$contratacoesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Faculdade_Empresa
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Faculdade_EmpresaSelect<ExtArgs> | null
+    select?: ContratacaoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Faculdade_Empresa
+     * Omit specific fields from the Contratacao
      */
-    omit?: Faculdade_EmpresaOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Faculdade_EmpresaInclude<ExtArgs> | null
+    include?: ContratacaoInclude<ExtArgs> | null
+    where?: ContratacaoWhereInput
+    orderBy?: ContratacaoOrderByWithRelationInput | ContratacaoOrderByWithRelationInput[]
+    cursor?: ContratacaoWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ContratacaoScalarFieldEnum | ContratacaoScalarFieldEnum[]
+  }
+
+  /**
+   * Recrutador without action
+   */
+  export type RecrutadorDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Recrutador
+     */
+    select?: RecrutadorSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Recrutador
+     */
+    omit?: RecrutadorOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecrutadorInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model Pergunta
+   * Model Empresa
    */
 
-  export type AggregatePergunta = {
-    _count: PerguntaCountAggregateOutputType | null
-    _min: PerguntaMinAggregateOutputType | null
-    _max: PerguntaMaxAggregateOutputType | null
+  export type AggregateEmpresa = {
+    _count: EmpresaCountAggregateOutputType | null
+    _min: EmpresaMinAggregateOutputType | null
+    _max: EmpresaMaxAggregateOutputType | null
   }
 
-  export type PerguntaMinAggregateOutputType = {
-    id_pergunta: string | null
-    id_faculdade: string | null
-    enunciado: string | null
-    data_criação: Date | null
+  export type EmpresaMinAggregateOutputType = {
+    id_empresa: string | null
+    nome: string | null
+    cnpj: string | null
+    endereco: string | null
+    setor: string | null
+    descricao: string | null
+    website: string | null
+    data_criacao: Date | null
+    data_atualizacao: Date | null
   }
 
-  export type PerguntaMaxAggregateOutputType = {
-    id_pergunta: string | null
-    id_faculdade: string | null
-    enunciado: string | null
-    data_criação: Date | null
+  export type EmpresaMaxAggregateOutputType = {
+    id_empresa: string | null
+    nome: string | null
+    cnpj: string | null
+    endereco: string | null
+    setor: string | null
+    descricao: string | null
+    website: string | null
+    data_criacao: Date | null
+    data_atualizacao: Date | null
   }
 
-  export type PerguntaCountAggregateOutputType = {
-    id_pergunta: number
-    id_faculdade: number
-    enunciado: number
-    data_criação: number
+  export type EmpresaCountAggregateOutputType = {
+    id_empresa: number
+    nome: number
+    cnpj: number
+    endereco: number
+    setor: number
+    descricao: number
+    website: number
+    data_criacao: number
+    data_atualizacao: number
     _all: number
   }
 
 
-  export type PerguntaMinAggregateInputType = {
-    id_pergunta?: true
-    id_faculdade?: true
-    enunciado?: true
-    data_criação?: true
+  export type EmpresaMinAggregateInputType = {
+    id_empresa?: true
+    nome?: true
+    cnpj?: true
+    endereco?: true
+    setor?: true
+    descricao?: true
+    website?: true
+    data_criacao?: true
+    data_atualizacao?: true
   }
 
-  export type PerguntaMaxAggregateInputType = {
-    id_pergunta?: true
-    id_faculdade?: true
-    enunciado?: true
-    data_criação?: true
+  export type EmpresaMaxAggregateInputType = {
+    id_empresa?: true
+    nome?: true
+    cnpj?: true
+    endereco?: true
+    setor?: true
+    descricao?: true
+    website?: true
+    data_criacao?: true
+    data_atualizacao?: true
   }
 
-  export type PerguntaCountAggregateInputType = {
-    id_pergunta?: true
-    id_faculdade?: true
-    enunciado?: true
-    data_criação?: true
+  export type EmpresaCountAggregateInputType = {
+    id_empresa?: true
+    nome?: true
+    cnpj?: true
+    endereco?: true
+    setor?: true
+    descricao?: true
+    website?: true
+    data_criacao?: true
+    data_atualizacao?: true
     _all?: true
   }
 
-  export type PerguntaAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Pergunta to aggregate.
+     * Filter which Empresa to aggregate.
      */
-    where?: PerguntaWhereInput
+    where?: EmpresaWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Perguntas to fetch.
+     * Determine the order of Empresas to fetch.
      */
-    orderBy?: PerguntaOrderByWithRelationInput | PerguntaOrderByWithRelationInput[]
+    orderBy?: EmpresaOrderByWithRelationInput | EmpresaOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: PerguntaWhereUniqueInput
+    cursor?: EmpresaWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Perguntas from the position of the cursor.
+     * Take `±n` Empresas from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Perguntas.
+     * Skip the first `n` Empresas.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Perguntas
+     * Count returned Empresas
     **/
-    _count?: true | PerguntaCountAggregateInputType
+    _count?: true | EmpresaCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: PerguntaMinAggregateInputType
+    _min?: EmpresaMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: PerguntaMaxAggregateInputType
+    _max?: EmpresaMaxAggregateInputType
   }
 
-  export type GetPerguntaAggregateType<T extends PerguntaAggregateArgs> = {
-        [P in keyof T & keyof AggregatePergunta]: P extends '_count' | 'count'
+  export type GetEmpresaAggregateType<T extends EmpresaAggregateArgs> = {
+        [P in keyof T & keyof AggregateEmpresa]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregatePergunta[P]>
-      : GetScalarType<T[P], AggregatePergunta[P]>
+        : GetScalarType<T[P], AggregateEmpresa[P]>
+      : GetScalarType<T[P], AggregateEmpresa[P]>
   }
 
 
 
 
-  export type PerguntaGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: PerguntaWhereInput
-    orderBy?: PerguntaOrderByWithAggregationInput | PerguntaOrderByWithAggregationInput[]
-    by: PerguntaScalarFieldEnum[] | PerguntaScalarFieldEnum
-    having?: PerguntaScalarWhereWithAggregatesInput
+  export type EmpresaGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: EmpresaWhereInput
+    orderBy?: EmpresaOrderByWithAggregationInput | EmpresaOrderByWithAggregationInput[]
+    by: EmpresaScalarFieldEnum[] | EmpresaScalarFieldEnum
+    having?: EmpresaScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: PerguntaCountAggregateInputType | true
-    _min?: PerguntaMinAggregateInputType
-    _max?: PerguntaMaxAggregateInputType
+    _count?: EmpresaCountAggregateInputType | true
+    _min?: EmpresaMinAggregateInputType
+    _max?: EmpresaMaxAggregateInputType
   }
 
-  export type PerguntaGroupByOutputType = {
-    id_pergunta: string
-    id_faculdade: string
-    enunciado: string
-    data_criação: Date
-    _count: PerguntaCountAggregateOutputType | null
-    _min: PerguntaMinAggregateOutputType | null
-    _max: PerguntaMaxAggregateOutputType | null
+  export type EmpresaGroupByOutputType = {
+    id_empresa: string
+    nome: string
+    cnpj: string
+    endereco: string
+    setor: string
+    descricao: string | null
+    website: string | null
+    data_criacao: Date
+    data_atualizacao: Date
+    _count: EmpresaCountAggregateOutputType | null
+    _min: EmpresaMinAggregateOutputType | null
+    _max: EmpresaMaxAggregateOutputType | null
   }
 
-  type GetPerguntaGroupByPayload<T extends PerguntaGroupByArgs> = Prisma.PrismaPromise<
+  type GetEmpresaGroupByPayload<T extends EmpresaGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<PerguntaGroupByOutputType, T['by']> &
+      PickEnumerable<EmpresaGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof PerguntaGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof EmpresaGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], PerguntaGroupByOutputType[P]>
-            : GetScalarType<T[P], PerguntaGroupByOutputType[P]>
+              : GetScalarType<T[P], EmpresaGroupByOutputType[P]>
+            : GetScalarType<T[P], EmpresaGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type PerguntaSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_pergunta?: boolean
-    id_faculdade?: boolean
-    enunciado?: boolean
-    data_criação?: boolean
-    opcoes?: boolean | Pergunta$opcoesArgs<ExtArgs>
-    acertos?: boolean | Pergunta$acertosArgs<ExtArgs>
-    faculdade?: boolean | Pergunta$faculdadeArgs<ExtArgs>
-    _count?: boolean | PerguntaCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["pergunta"]>
+  export type EmpresaSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_empresa?: boolean
+    nome?: boolean
+    cnpj?: boolean
+    endereco?: boolean
+    setor?: boolean
+    descricao?: boolean
+    website?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+    recrutadores?: boolean | Empresa$recrutadoresArgs<ExtArgs>
+    _count?: boolean | EmpresaCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["empresa"]>
 
-  export type PerguntaSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_pergunta?: boolean
-    id_faculdade?: boolean
-    enunciado?: boolean
-    data_criação?: boolean
-    faculdade?: boolean | Pergunta$faculdadeArgs<ExtArgs>
-  }, ExtArgs["result"]["pergunta"]>
+  export type EmpresaSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_empresa?: boolean
+    nome?: boolean
+    cnpj?: boolean
+    endereco?: boolean
+    setor?: boolean
+    descricao?: boolean
+    website?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+  }, ExtArgs["result"]["empresa"]>
 
-  export type PerguntaSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_pergunta?: boolean
-    id_faculdade?: boolean
-    enunciado?: boolean
-    data_criação?: boolean
-    faculdade?: boolean | Pergunta$faculdadeArgs<ExtArgs>
-  }, ExtArgs["result"]["pergunta"]>
+  export type EmpresaSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_empresa?: boolean
+    nome?: boolean
+    cnpj?: boolean
+    endereco?: boolean
+    setor?: boolean
+    descricao?: boolean
+    website?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+  }, ExtArgs["result"]["empresa"]>
 
-  export type PerguntaSelectScalar = {
-    id_pergunta?: boolean
-    id_faculdade?: boolean
-    enunciado?: boolean
-    data_criação?: boolean
+  export type EmpresaSelectScalar = {
+    id_empresa?: boolean
+    nome?: boolean
+    cnpj?: boolean
+    endereco?: boolean
+    setor?: boolean
+    descricao?: boolean
+    website?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
   }
 
-  export type PerguntaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_pergunta" | "id_faculdade" | "enunciado" | "data_criação", ExtArgs["result"]["pergunta"]>
-  export type PerguntaInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    opcoes?: boolean | Pergunta$opcoesArgs<ExtArgs>
-    acertos?: boolean | Pergunta$acertosArgs<ExtArgs>
-    faculdade?: boolean | Pergunta$faculdadeArgs<ExtArgs>
-    _count?: boolean | PerguntaCountOutputTypeDefaultArgs<ExtArgs>
+  export type EmpresaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_empresa" | "nome" | "cnpj" | "endereco" | "setor" | "descricao" | "website" | "data_criacao" | "data_atualizacao", ExtArgs["result"]["empresa"]>
+  export type EmpresaInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    recrutadores?: boolean | Empresa$recrutadoresArgs<ExtArgs>
+    _count?: boolean | EmpresaCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type PerguntaIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    faculdade?: boolean | Pergunta$faculdadeArgs<ExtArgs>
-  }
-  export type PerguntaIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    faculdade?: boolean | Pergunta$faculdadeArgs<ExtArgs>
-  }
+  export type EmpresaIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type EmpresaIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
-  export type $PerguntaPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Pergunta"
+  export type $EmpresaPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Empresa"
     objects: {
-      opcoes: Prisma.$OpcaoRespostaPayload<ExtArgs>[]
-      acertos: Prisma.$Usuario_AcertosPayload<ExtArgs>[]
-      faculdade: Prisma.$FaculdadePayload<ExtArgs> | null
+      recrutadores: Prisma.$RecrutadorPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id_pergunta: string
-      id_faculdade: string
-      enunciado: string
-      data_criação: Date
-    }, ExtArgs["result"]["pergunta"]>
+      id_empresa: string
+      nome: string
+      cnpj: string
+      endereco: string
+      setor: string
+      descricao: string | null
+      website: string | null
+      data_criacao: Date
+      data_atualizacao: Date
+    }, ExtArgs["result"]["empresa"]>
     composites: {}
   }
 
-  type PerguntaGetPayload<S extends boolean | null | undefined | PerguntaDefaultArgs> = $Result.GetResult<Prisma.$PerguntaPayload, S>
+  type EmpresaGetPayload<S extends boolean | null | undefined | EmpresaDefaultArgs> = $Result.GetResult<Prisma.$EmpresaPayload, S>
 
-  type PerguntaCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<PerguntaFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: PerguntaCountAggregateInputType | true
+  type EmpresaCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<EmpresaFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: EmpresaCountAggregateInputType | true
     }
 
-  export interface PerguntaDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Pergunta'], meta: { name: 'Pergunta' } }
+  export interface EmpresaDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Empresa'], meta: { name: 'Empresa' } }
     /**
-     * Find zero or one Pergunta that matches the filter.
-     * @param {PerguntaFindUniqueArgs} args - Arguments to find a Pergunta
+     * Find zero or one Empresa that matches the filter.
+     * @param {EmpresaFindUniqueArgs} args - Arguments to find a Empresa
      * @example
-     * // Get one Pergunta
-     * const pergunta = await prisma.pergunta.findUnique({
+     * // Get one Empresa
+     * const empresa = await prisma.empresa.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends PerguntaFindUniqueArgs>(args: SelectSubset<T, PerguntaFindUniqueArgs<ExtArgs>>): Prisma__PerguntaClient<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends EmpresaFindUniqueArgs>(args: SelectSubset<T, EmpresaFindUniqueArgs<ExtArgs>>): Prisma__EmpresaClient<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Pergunta that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Empresa that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {PerguntaFindUniqueOrThrowArgs} args - Arguments to find a Pergunta
+     * @param {EmpresaFindUniqueOrThrowArgs} args - Arguments to find a Empresa
      * @example
-     * // Get one Pergunta
-     * const pergunta = await prisma.pergunta.findUniqueOrThrow({
+     * // Get one Empresa
+     * const empresa = await prisma.empresa.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends PerguntaFindUniqueOrThrowArgs>(args: SelectSubset<T, PerguntaFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PerguntaClient<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends EmpresaFindUniqueOrThrowArgs>(args: SelectSubset<T, EmpresaFindUniqueOrThrowArgs<ExtArgs>>): Prisma__EmpresaClient<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Pergunta that matches the filter.
+     * Find the first Empresa that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PerguntaFindFirstArgs} args - Arguments to find a Pergunta
+     * @param {EmpresaFindFirstArgs} args - Arguments to find a Empresa
      * @example
-     * // Get one Pergunta
-     * const pergunta = await prisma.pergunta.findFirst({
+     * // Get one Empresa
+     * const empresa = await prisma.empresa.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends PerguntaFindFirstArgs>(args?: SelectSubset<T, PerguntaFindFirstArgs<ExtArgs>>): Prisma__PerguntaClient<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends EmpresaFindFirstArgs>(args?: SelectSubset<T, EmpresaFindFirstArgs<ExtArgs>>): Prisma__EmpresaClient<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Pergunta that matches the filter or
+     * Find the first Empresa that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PerguntaFindFirstOrThrowArgs} args - Arguments to find a Pergunta
+     * @param {EmpresaFindFirstOrThrowArgs} args - Arguments to find a Empresa
      * @example
-     * // Get one Pergunta
-     * const pergunta = await prisma.pergunta.findFirstOrThrow({
+     * // Get one Empresa
+     * const empresa = await prisma.empresa.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends PerguntaFindFirstOrThrowArgs>(args?: SelectSubset<T, PerguntaFindFirstOrThrowArgs<ExtArgs>>): Prisma__PerguntaClient<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends EmpresaFindFirstOrThrowArgs>(args?: SelectSubset<T, EmpresaFindFirstOrThrowArgs<ExtArgs>>): Prisma__EmpresaClient<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Perguntas that matches the filter.
+     * Find zero or more Empresas that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PerguntaFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {EmpresaFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Perguntas
-     * const perguntas = await prisma.pergunta.findMany()
+     * // Get all Empresas
+     * const empresas = await prisma.empresa.findMany()
      * 
-     * // Get first 10 Perguntas
-     * const perguntas = await prisma.pergunta.findMany({ take: 10 })
+     * // Get first 10 Empresas
+     * const empresas = await prisma.empresa.findMany({ take: 10 })
      * 
-     * // Only select the `id_pergunta`
-     * const perguntaWithId_perguntaOnly = await prisma.pergunta.findMany({ select: { id_pergunta: true } })
+     * // Only select the `id_empresa`
+     * const empresaWithId_empresaOnly = await prisma.empresa.findMany({ select: { id_empresa: true } })
      * 
      */
-    findMany<T extends PerguntaFindManyArgs>(args?: SelectSubset<T, PerguntaFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends EmpresaFindManyArgs>(args?: SelectSubset<T, EmpresaFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Pergunta.
-     * @param {PerguntaCreateArgs} args - Arguments to create a Pergunta.
+     * Create a Empresa.
+     * @param {EmpresaCreateArgs} args - Arguments to create a Empresa.
      * @example
-     * // Create one Pergunta
-     * const Pergunta = await prisma.pergunta.create({
+     * // Create one Empresa
+     * const Empresa = await prisma.empresa.create({
      *   data: {
-     *     // ... data to create a Pergunta
+     *     // ... data to create a Empresa
      *   }
      * })
      * 
      */
-    create<T extends PerguntaCreateArgs>(args: SelectSubset<T, PerguntaCreateArgs<ExtArgs>>): Prisma__PerguntaClient<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends EmpresaCreateArgs>(args: SelectSubset<T, EmpresaCreateArgs<ExtArgs>>): Prisma__EmpresaClient<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Perguntas.
-     * @param {PerguntaCreateManyArgs} args - Arguments to create many Perguntas.
+     * Create many Empresas.
+     * @param {EmpresaCreateManyArgs} args - Arguments to create many Empresas.
      * @example
-     * // Create many Perguntas
-     * const pergunta = await prisma.pergunta.createMany({
+     * // Create many Empresas
+     * const empresa = await prisma.empresa.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends PerguntaCreateManyArgs>(args?: SelectSubset<T, PerguntaCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends EmpresaCreateManyArgs>(args?: SelectSubset<T, EmpresaCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Perguntas and returns the data saved in the database.
-     * @param {PerguntaCreateManyAndReturnArgs} args - Arguments to create many Perguntas.
+     * Create many Empresas and returns the data saved in the database.
+     * @param {EmpresaCreateManyAndReturnArgs} args - Arguments to create many Empresas.
      * @example
-     * // Create many Perguntas
-     * const pergunta = await prisma.pergunta.createManyAndReturn({
+     * // Create many Empresas
+     * const empresa = await prisma.empresa.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Perguntas and only return the `id_pergunta`
-     * const perguntaWithId_perguntaOnly = await prisma.pergunta.createManyAndReturn({
-     *   select: { id_pergunta: true },
+     * // Create many Empresas and only return the `id_empresa`
+     * const empresaWithId_empresaOnly = await prisma.empresa.createManyAndReturn({
+     *   select: { id_empresa: true },
      *   data: [
      *     // ... provide data here
      *   ]
@@ -5013,28 +2972,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends PerguntaCreateManyAndReturnArgs>(args?: SelectSubset<T, PerguntaCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends EmpresaCreateManyAndReturnArgs>(args?: SelectSubset<T, EmpresaCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Pergunta.
-     * @param {PerguntaDeleteArgs} args - Arguments to delete one Pergunta.
+     * Delete a Empresa.
+     * @param {EmpresaDeleteArgs} args - Arguments to delete one Empresa.
      * @example
-     * // Delete one Pergunta
-     * const Pergunta = await prisma.pergunta.delete({
+     * // Delete one Empresa
+     * const Empresa = await prisma.empresa.delete({
      *   where: {
-     *     // ... filter to delete one Pergunta
+     *     // ... filter to delete one Empresa
      *   }
      * })
      * 
      */
-    delete<T extends PerguntaDeleteArgs>(args: SelectSubset<T, PerguntaDeleteArgs<ExtArgs>>): Prisma__PerguntaClient<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends EmpresaDeleteArgs>(args: SelectSubset<T, EmpresaDeleteArgs<ExtArgs>>): Prisma__EmpresaClient<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Pergunta.
-     * @param {PerguntaUpdateArgs} args - Arguments to update one Pergunta.
+     * Update one Empresa.
+     * @param {EmpresaUpdateArgs} args - Arguments to update one Empresa.
      * @example
-     * // Update one Pergunta
-     * const pergunta = await prisma.pergunta.update({
+     * // Update one Empresa
+     * const empresa = await prisma.empresa.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -5044,30 +3003,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends PerguntaUpdateArgs>(args: SelectSubset<T, PerguntaUpdateArgs<ExtArgs>>): Prisma__PerguntaClient<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends EmpresaUpdateArgs>(args: SelectSubset<T, EmpresaUpdateArgs<ExtArgs>>): Prisma__EmpresaClient<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Perguntas.
-     * @param {PerguntaDeleteManyArgs} args - Arguments to filter Perguntas to delete.
+     * Delete zero or more Empresas.
+     * @param {EmpresaDeleteManyArgs} args - Arguments to filter Empresas to delete.
      * @example
-     * // Delete a few Perguntas
-     * const { count } = await prisma.pergunta.deleteMany({
+     * // Delete a few Empresas
+     * const { count } = await prisma.empresa.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends PerguntaDeleteManyArgs>(args?: SelectSubset<T, PerguntaDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends EmpresaDeleteManyArgs>(args?: SelectSubset<T, EmpresaDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Perguntas.
+     * Update zero or more Empresas.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PerguntaUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {EmpresaUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Perguntas
-     * const pergunta = await prisma.pergunta.updateMany({
+     * // Update many Empresas
+     * const empresa = await prisma.empresa.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -5077,14 +3036,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends PerguntaUpdateManyArgs>(args: SelectSubset<T, PerguntaUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends EmpresaUpdateManyArgs>(args: SelectSubset<T, EmpresaUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Perguntas and returns the data updated in the database.
-     * @param {PerguntaUpdateManyAndReturnArgs} args - Arguments to update many Perguntas.
+     * Update zero or more Empresas and returns the data updated in the database.
+     * @param {EmpresaUpdateManyAndReturnArgs} args - Arguments to update many Empresas.
      * @example
-     * // Update many Perguntas
-     * const pergunta = await prisma.pergunta.updateManyAndReturn({
+     * // Update many Empresas
+     * const empresa = await prisma.empresa.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -5093,9 +3052,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Perguntas and only return the `id_pergunta`
-     * const perguntaWithId_perguntaOnly = await prisma.pergunta.updateManyAndReturn({
-     *   select: { id_pergunta: true },
+     * // Update zero or more Empresas and only return the `id_empresa`
+     * const empresaWithId_empresaOnly = await prisma.empresa.updateManyAndReturn({
+     *   select: { id_empresa: true },
      *   where: {
      *     // ... provide filter here
      *   },
@@ -5107,56 +3066,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends PerguntaUpdateManyAndReturnArgs>(args: SelectSubset<T, PerguntaUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends EmpresaUpdateManyAndReturnArgs>(args: SelectSubset<T, EmpresaUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Pergunta.
-     * @param {PerguntaUpsertArgs} args - Arguments to update or create a Pergunta.
+     * Create or update one Empresa.
+     * @param {EmpresaUpsertArgs} args - Arguments to update or create a Empresa.
      * @example
-     * // Update or create a Pergunta
-     * const pergunta = await prisma.pergunta.upsert({
+     * // Update or create a Empresa
+     * const empresa = await prisma.empresa.upsert({
      *   create: {
-     *     // ... data to create a Pergunta
+     *     // ... data to create a Empresa
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Pergunta we want to update
+     *     // ... the filter for the Empresa we want to update
      *   }
      * })
      */
-    upsert<T extends PerguntaUpsertArgs>(args: SelectSubset<T, PerguntaUpsertArgs<ExtArgs>>): Prisma__PerguntaClient<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends EmpresaUpsertArgs>(args: SelectSubset<T, EmpresaUpsertArgs<ExtArgs>>): Prisma__EmpresaClient<$Result.GetResult<Prisma.$EmpresaPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Perguntas.
+     * Count the number of Empresas.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PerguntaCountArgs} args - Arguments to filter Perguntas to count.
+     * @param {EmpresaCountArgs} args - Arguments to filter Empresas to count.
      * @example
-     * // Count the number of Perguntas
-     * const count = await prisma.pergunta.count({
+     * // Count the number of Empresas
+     * const count = await prisma.empresa.count({
      *   where: {
-     *     // ... the filter for the Perguntas we want to count
+     *     // ... the filter for the Empresas we want to count
      *   }
      * })
     **/
-    count<T extends PerguntaCountArgs>(
-      args?: Subset<T, PerguntaCountArgs>,
+    count<T extends EmpresaCountArgs>(
+      args?: Subset<T, EmpresaCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], PerguntaCountAggregateOutputType>
+          : GetScalarType<T['select'], EmpresaCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Pergunta.
+     * Allows you to perform aggregations operations on a Empresa.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PerguntaAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {EmpresaAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -5176,13 +3135,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends PerguntaAggregateArgs>(args: Subset<T, PerguntaAggregateArgs>): Prisma.PrismaPromise<GetPerguntaAggregateType<T>>
+    aggregate<T extends EmpresaAggregateArgs>(args: Subset<T, EmpresaAggregateArgs>): Prisma.PrismaPromise<GetEmpresaAggregateType<T>>
 
     /**
-     * Group by Pergunta.
+     * Group by Empresa.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PerguntaGroupByArgs} args - Group by arguments.
+     * @param {EmpresaGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -5197,14 +3156,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends PerguntaGroupByArgs,
+      T extends EmpresaGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: PerguntaGroupByArgs['orderBy'] }
-        : { orderBy?: PerguntaGroupByArgs['orderBy'] },
+        ? { orderBy: EmpresaGroupByArgs['orderBy'] }
+        : { orderBy?: EmpresaGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -5253,24 +3212,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, PerguntaGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPerguntaGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, EmpresaGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetEmpresaGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Pergunta model
+   * Fields of the Empresa model
    */
-  readonly fields: PerguntaFieldRefs;
+  readonly fields: EmpresaFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Pergunta.
+   * The delegate class that acts as a "Promise-like" for Empresa.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__PerguntaClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__EmpresaClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    opcoes<T extends Pergunta$opcoesArgs<ExtArgs> = {}>(args?: Subset<T, Pergunta$opcoesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    acertos<T extends Pergunta$acertosArgs<ExtArgs> = {}>(args?: Subset<T, Pergunta$acertosArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-    faculdade<T extends Pergunta$faculdadeArgs<ExtArgs> = {}>(args?: Subset<T, Pergunta$faculdadeArgs<ExtArgs>>): Prisma__FaculdadeClient<$Result.GetResult<Prisma.$FaculdadePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    recrutadores<T extends Empresa$recrutadoresArgs<ExtArgs> = {}>(args?: Subset<T, Empresa$recrutadoresArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -5297,828 +3254,978 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Pergunta model
+   * Fields of the Empresa model
    */
-  interface PerguntaFieldRefs {
-    readonly id_pergunta: FieldRef<"Pergunta", 'String'>
-    readonly id_faculdade: FieldRef<"Pergunta", 'String'>
-    readonly enunciado: FieldRef<"Pergunta", 'String'>
-    readonly data_criação: FieldRef<"Pergunta", 'DateTime'>
+  interface EmpresaFieldRefs {
+    readonly id_empresa: FieldRef<"Empresa", 'String'>
+    readonly nome: FieldRef<"Empresa", 'String'>
+    readonly cnpj: FieldRef<"Empresa", 'String'>
+    readonly endereco: FieldRef<"Empresa", 'String'>
+    readonly setor: FieldRef<"Empresa", 'String'>
+    readonly descricao: FieldRef<"Empresa", 'String'>
+    readonly website: FieldRef<"Empresa", 'String'>
+    readonly data_criacao: FieldRef<"Empresa", 'DateTime'>
+    readonly data_atualizacao: FieldRef<"Empresa", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * Pergunta findUnique
+   * Empresa findUnique
    */
-  export type PerguntaFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pergunta
+     * Select specific fields to fetch from the Empresa
      */
-    select?: PerguntaSelect<ExtArgs> | null
+    select?: EmpresaSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Pergunta
+     * Omit specific fields from the Empresa
      */
-    omit?: PerguntaOmit<ExtArgs> | null
+    omit?: EmpresaOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PerguntaInclude<ExtArgs> | null
+    include?: EmpresaInclude<ExtArgs> | null
     /**
-     * Filter, which Pergunta to fetch.
+     * Filter, which Empresa to fetch.
      */
-    where: PerguntaWhereUniqueInput
+    where: EmpresaWhereUniqueInput
   }
 
   /**
-   * Pergunta findUniqueOrThrow
+   * Empresa findUniqueOrThrow
    */
-  export type PerguntaFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pergunta
+     * Select specific fields to fetch from the Empresa
      */
-    select?: PerguntaSelect<ExtArgs> | null
+    select?: EmpresaSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Pergunta
+     * Omit specific fields from the Empresa
      */
-    omit?: PerguntaOmit<ExtArgs> | null
+    omit?: EmpresaOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PerguntaInclude<ExtArgs> | null
+    include?: EmpresaInclude<ExtArgs> | null
     /**
-     * Filter, which Pergunta to fetch.
+     * Filter, which Empresa to fetch.
      */
-    where: PerguntaWhereUniqueInput
+    where: EmpresaWhereUniqueInput
   }
 
   /**
-   * Pergunta findFirst
+   * Empresa findFirst
    */
-  export type PerguntaFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pergunta
+     * Select specific fields to fetch from the Empresa
      */
-    select?: PerguntaSelect<ExtArgs> | null
+    select?: EmpresaSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Pergunta
+     * Omit specific fields from the Empresa
      */
-    omit?: PerguntaOmit<ExtArgs> | null
+    omit?: EmpresaOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PerguntaInclude<ExtArgs> | null
+    include?: EmpresaInclude<ExtArgs> | null
     /**
-     * Filter, which Pergunta to fetch.
+     * Filter, which Empresa to fetch.
      */
-    where?: PerguntaWhereInput
+    where?: EmpresaWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Perguntas to fetch.
+     * Determine the order of Empresas to fetch.
      */
-    orderBy?: PerguntaOrderByWithRelationInput | PerguntaOrderByWithRelationInput[]
+    orderBy?: EmpresaOrderByWithRelationInput | EmpresaOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Perguntas.
+     * Sets the position for searching for Empresas.
      */
-    cursor?: PerguntaWhereUniqueInput
+    cursor?: EmpresaWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Perguntas from the position of the cursor.
+     * Take `±n` Empresas from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Perguntas.
+     * Skip the first `n` Empresas.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Perguntas.
+     * Filter by unique combinations of Empresas.
      */
-    distinct?: PerguntaScalarFieldEnum | PerguntaScalarFieldEnum[]
+    distinct?: EmpresaScalarFieldEnum | EmpresaScalarFieldEnum[]
   }
 
   /**
-   * Pergunta findFirstOrThrow
+   * Empresa findFirstOrThrow
    */
-  export type PerguntaFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pergunta
+     * Select specific fields to fetch from the Empresa
      */
-    select?: PerguntaSelect<ExtArgs> | null
+    select?: EmpresaSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Pergunta
+     * Omit specific fields from the Empresa
      */
-    omit?: PerguntaOmit<ExtArgs> | null
+    omit?: EmpresaOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PerguntaInclude<ExtArgs> | null
+    include?: EmpresaInclude<ExtArgs> | null
     /**
-     * Filter, which Pergunta to fetch.
+     * Filter, which Empresa to fetch.
      */
-    where?: PerguntaWhereInput
+    where?: EmpresaWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Perguntas to fetch.
+     * Determine the order of Empresas to fetch.
      */
-    orderBy?: PerguntaOrderByWithRelationInput | PerguntaOrderByWithRelationInput[]
+    orderBy?: EmpresaOrderByWithRelationInput | EmpresaOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Perguntas.
+     * Sets the position for searching for Empresas.
      */
-    cursor?: PerguntaWhereUniqueInput
+    cursor?: EmpresaWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Perguntas from the position of the cursor.
+     * Take `±n` Empresas from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Perguntas.
+     * Skip the first `n` Empresas.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Perguntas.
+     * Filter by unique combinations of Empresas.
      */
-    distinct?: PerguntaScalarFieldEnum | PerguntaScalarFieldEnum[]
+    distinct?: EmpresaScalarFieldEnum | EmpresaScalarFieldEnum[]
   }
 
   /**
-   * Pergunta findMany
+   * Empresa findMany
    */
-  export type PerguntaFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pergunta
+     * Select specific fields to fetch from the Empresa
      */
-    select?: PerguntaSelect<ExtArgs> | null
+    select?: EmpresaSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Pergunta
+     * Omit specific fields from the Empresa
      */
-    omit?: PerguntaOmit<ExtArgs> | null
+    omit?: EmpresaOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PerguntaInclude<ExtArgs> | null
+    include?: EmpresaInclude<ExtArgs> | null
     /**
-     * Filter, which Perguntas to fetch.
+     * Filter, which Empresas to fetch.
      */
-    where?: PerguntaWhereInput
+    where?: EmpresaWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Perguntas to fetch.
+     * Determine the order of Empresas to fetch.
      */
-    orderBy?: PerguntaOrderByWithRelationInput | PerguntaOrderByWithRelationInput[]
+    orderBy?: EmpresaOrderByWithRelationInput | EmpresaOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Perguntas.
+     * Sets the position for listing Empresas.
      */
-    cursor?: PerguntaWhereUniqueInput
+    cursor?: EmpresaWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Perguntas from the position of the cursor.
+     * Take `±n` Empresas from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Perguntas.
+     * Skip the first `n` Empresas.
      */
     skip?: number
-    distinct?: PerguntaScalarFieldEnum | PerguntaScalarFieldEnum[]
+    distinct?: EmpresaScalarFieldEnum | EmpresaScalarFieldEnum[]
   }
 
   /**
-   * Pergunta create
+   * Empresa create
    */
-  export type PerguntaCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pergunta
+     * Select specific fields to fetch from the Empresa
      */
-    select?: PerguntaSelect<ExtArgs> | null
+    select?: EmpresaSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Pergunta
+     * Omit specific fields from the Empresa
      */
-    omit?: PerguntaOmit<ExtArgs> | null
+    omit?: EmpresaOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PerguntaInclude<ExtArgs> | null
+    include?: EmpresaInclude<ExtArgs> | null
     /**
-     * The data needed to create a Pergunta.
+     * The data needed to create a Empresa.
      */
-    data: XOR<PerguntaCreateInput, PerguntaUncheckedCreateInput>
+    data: XOR<EmpresaCreateInput, EmpresaUncheckedCreateInput>
   }
 
   /**
-   * Pergunta createMany
+   * Empresa createMany
    */
-  export type PerguntaCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Perguntas.
+     * The data used to create many Empresas.
      */
-    data: PerguntaCreateManyInput | PerguntaCreateManyInput[]
+    data: EmpresaCreateManyInput | EmpresaCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Pergunta createManyAndReturn
+   * Empresa createManyAndReturn
    */
-  export type PerguntaCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pergunta
+     * Select specific fields to fetch from the Empresa
      */
-    select?: PerguntaSelectCreateManyAndReturn<ExtArgs> | null
+    select?: EmpresaSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Pergunta
+     * Omit specific fields from the Empresa
      */
-    omit?: PerguntaOmit<ExtArgs> | null
+    omit?: EmpresaOmit<ExtArgs> | null
     /**
-     * The data used to create many Perguntas.
+     * The data used to create many Empresas.
      */
-    data: PerguntaCreateManyInput | PerguntaCreateManyInput[]
+    data: EmpresaCreateManyInput | EmpresaCreateManyInput[]
     skipDuplicates?: boolean
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: PerguntaIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Pergunta update
+   * Empresa update
    */
-  export type PerguntaUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pergunta
+     * Select specific fields to fetch from the Empresa
      */
-    select?: PerguntaSelect<ExtArgs> | null
+    select?: EmpresaSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Pergunta
+     * Omit specific fields from the Empresa
      */
-    omit?: PerguntaOmit<ExtArgs> | null
+    omit?: EmpresaOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PerguntaInclude<ExtArgs> | null
+    include?: EmpresaInclude<ExtArgs> | null
     /**
-     * The data needed to update a Pergunta.
+     * The data needed to update a Empresa.
      */
-    data: XOR<PerguntaUpdateInput, PerguntaUncheckedUpdateInput>
+    data: XOR<EmpresaUpdateInput, EmpresaUncheckedUpdateInput>
     /**
-     * Choose, which Pergunta to update.
+     * Choose, which Empresa to update.
      */
-    where: PerguntaWhereUniqueInput
+    where: EmpresaWhereUniqueInput
   }
 
   /**
-   * Pergunta updateMany
+   * Empresa updateMany
    */
-  export type PerguntaUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Perguntas.
+     * The data used to update Empresas.
      */
-    data: XOR<PerguntaUpdateManyMutationInput, PerguntaUncheckedUpdateManyInput>
+    data: XOR<EmpresaUpdateManyMutationInput, EmpresaUncheckedUpdateManyInput>
     /**
-     * Filter which Perguntas to update
+     * Filter which Empresas to update
      */
-    where?: PerguntaWhereInput
+    where?: EmpresaWhereInput
     /**
-     * Limit how many Perguntas to update.
+     * Limit how many Empresas to update.
      */
     limit?: number
   }
 
   /**
-   * Pergunta updateManyAndReturn
+   * Empresa updateManyAndReturn
    */
-  export type PerguntaUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Pergunta
+     * Select specific fields to fetch from the Empresa
      */
-    select?: PerguntaSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: EmpresaSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Pergunta
+     * Omit specific fields from the Empresa
      */
-    omit?: PerguntaOmit<ExtArgs> | null
+    omit?: EmpresaOmit<ExtArgs> | null
     /**
-     * The data used to update Perguntas.
+     * The data used to update Empresas.
      */
-    data: XOR<PerguntaUpdateManyMutationInput, PerguntaUncheckedUpdateManyInput>
+    data: XOR<EmpresaUpdateManyMutationInput, EmpresaUncheckedUpdateManyInput>
     /**
-     * Filter which Perguntas to update
+     * Filter which Empresas to update
      */
-    where?: PerguntaWhereInput
+    where?: EmpresaWhereInput
     /**
-     * Limit how many Perguntas to update.
-     */
-    limit?: number
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: PerguntaIncludeUpdateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
-   * Pergunta upsert
-   */
-  export type PerguntaUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Pergunta
-     */
-    select?: PerguntaSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Pergunta
-     */
-    omit?: PerguntaOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: PerguntaInclude<ExtArgs> | null
-    /**
-     * The filter to search for the Pergunta to update in case it exists.
-     */
-    where: PerguntaWhereUniqueInput
-    /**
-     * In case the Pergunta found by the `where` argument doesn't exist, create a new Pergunta with this data.
-     */
-    create: XOR<PerguntaCreateInput, PerguntaUncheckedCreateInput>
-    /**
-     * In case the Pergunta was found with the provided `where` argument, update it with this data.
-     */
-    update: XOR<PerguntaUpdateInput, PerguntaUncheckedUpdateInput>
-  }
-
-  /**
-   * Pergunta delete
-   */
-  export type PerguntaDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Pergunta
-     */
-    select?: PerguntaSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Pergunta
-     */
-    omit?: PerguntaOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: PerguntaInclude<ExtArgs> | null
-    /**
-     * Filter which Pergunta to delete.
-     */
-    where: PerguntaWhereUniqueInput
-  }
-
-  /**
-   * Pergunta deleteMany
-   */
-  export type PerguntaDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Filter which Perguntas to delete
-     */
-    where?: PerguntaWhereInput
-    /**
-     * Limit how many Perguntas to delete.
+     * Limit how many Empresas to update.
      */
     limit?: number
   }
 
   /**
-   * Pergunta.opcoes
+   * Empresa upsert
    */
-  export type Pergunta$opcoesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the OpcaoResposta
+     * Select specific fields to fetch from the Empresa
      */
-    select?: OpcaoRespostaSelect<ExtArgs> | null
+    select?: EmpresaSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the OpcaoResposta
+     * Omit specific fields from the Empresa
      */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
+    omit?: EmpresaOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: OpcaoRespostaInclude<ExtArgs> | null
-    where?: OpcaoRespostaWhereInput
-    orderBy?: OpcaoRespostaOrderByWithRelationInput | OpcaoRespostaOrderByWithRelationInput[]
-    cursor?: OpcaoRespostaWhereUniqueInput
+    include?: EmpresaInclude<ExtArgs> | null
+    /**
+     * The filter to search for the Empresa to update in case it exists.
+     */
+    where: EmpresaWhereUniqueInput
+    /**
+     * In case the Empresa found by the `where` argument doesn't exist, create a new Empresa with this data.
+     */
+    create: XOR<EmpresaCreateInput, EmpresaUncheckedCreateInput>
+    /**
+     * In case the Empresa was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<EmpresaUpdateInput, EmpresaUncheckedUpdateInput>
+  }
+
+  /**
+   * Empresa delete
+   */
+  export type EmpresaDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Empresa
+     */
+    select?: EmpresaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Empresa
+     */
+    omit?: EmpresaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: EmpresaInclude<ExtArgs> | null
+    /**
+     * Filter which Empresa to delete.
+     */
+    where: EmpresaWhereUniqueInput
+  }
+
+  /**
+   * Empresa deleteMany
+   */
+  export type EmpresaDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Empresas to delete
+     */
+    where?: EmpresaWhereInput
+    /**
+     * Limit how many Empresas to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * Empresa.recrutadores
+   */
+  export type Empresa$recrutadoresArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Recrutador
+     */
+    select?: RecrutadorSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Recrutador
+     */
+    omit?: RecrutadorOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: RecrutadorInclude<ExtArgs> | null
+    where?: RecrutadorWhereInput
+    orderBy?: RecrutadorOrderByWithRelationInput | RecrutadorOrderByWithRelationInput[]
+    cursor?: RecrutadorWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: OpcaoRespostaScalarFieldEnum | OpcaoRespostaScalarFieldEnum[]
+    distinct?: RecrutadorScalarFieldEnum | RecrutadorScalarFieldEnum[]
   }
 
   /**
-   * Pergunta.acertos
+   * Empresa without action
    */
-  export type Pergunta$acertosArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EmpresaDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Empresa
      */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
+    select?: EmpresaSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Empresa
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: EmpresaOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
-    where?: Usuario_AcertosWhereInput
-    orderBy?: Usuario_AcertosOrderByWithRelationInput | Usuario_AcertosOrderByWithRelationInput[]
-    cursor?: Usuario_AcertosWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: Usuario_AcertosScalarFieldEnum | Usuario_AcertosScalarFieldEnum[]
-  }
-
-  /**
-   * Pergunta.faculdade
-   */
-  export type Pergunta$faculdadeArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Faculdade
-     */
-    select?: FaculdadeSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Faculdade
-     */
-    omit?: FaculdadeOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FaculdadeInclude<ExtArgs> | null
-    where?: FaculdadeWhereInput
-  }
-
-  /**
-   * Pergunta without action
-   */
-  export type PerguntaDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Pergunta
-     */
-    select?: PerguntaSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Pergunta
-     */
-    omit?: PerguntaOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: PerguntaInclude<ExtArgs> | null
+    include?: EmpresaInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model OpcaoResposta
+   * Model Aluno
    */
 
-  export type AggregateOpcaoResposta = {
-    _count: OpcaoRespostaCountAggregateOutputType | null
-    _min: OpcaoRespostaMinAggregateOutputType | null
-    _max: OpcaoRespostaMaxAggregateOutputType | null
+  export type AggregateAluno = {
+    _count: AlunoCountAggregateOutputType | null
+    _avg: AlunoAvgAggregateOutputType | null
+    _sum: AlunoSumAggregateOutputType | null
+    _min: AlunoMinAggregateOutputType | null
+    _max: AlunoMaxAggregateOutputType | null
   }
 
-  export type OpcaoRespostaMinAggregateOutputType = {
-    id_opcao_resposta: string | null
-    id_pergunta: string | null
-    texto_resposta: string | null
-    correta: boolean | null
+  export type AlunoAvgAggregateOutputType = {
+    semestre_atual: number | null
+    solicitacoes: number | null
   }
 
-  export type OpcaoRespostaMaxAggregateOutputType = {
-    id_opcao_resposta: string | null
-    id_pergunta: string | null
-    texto_resposta: string | null
-    correta: boolean | null
+  export type AlunoSumAggregateOutputType = {
+    semestre_atual: number | null
+    solicitacoes: number | null
   }
 
-  export type OpcaoRespostaCountAggregateOutputType = {
-    id_opcao_resposta: number
-    id_pergunta: number
-    texto_resposta: number
-    correta: number
+  export type AlunoMinAggregateOutputType = {
+    id_aluno: string | null
+    nome: string | null
+    email: string | null
+    senha: string | null
+    matricula: string | null
+    curso: string | null
+    semestre_atual: number | null
+    cpf: string | null
+    telefone: string | null
+    data_nascimento: Date | null
+    endereco: string | null
+    linkedin: string | null
+    github: string | null
+    portfolio: string | null
+    solicitacoes: number | null
+    data_criacao: Date | null
+    data_atualizacao: Date | null
+  }
+
+  export type AlunoMaxAggregateOutputType = {
+    id_aluno: string | null
+    nome: string | null
+    email: string | null
+    senha: string | null
+    matricula: string | null
+    curso: string | null
+    semestre_atual: number | null
+    cpf: string | null
+    telefone: string | null
+    data_nascimento: Date | null
+    endereco: string | null
+    linkedin: string | null
+    github: string | null
+    portfolio: string | null
+    solicitacoes: number | null
+    data_criacao: Date | null
+    data_atualizacao: Date | null
+  }
+
+  export type AlunoCountAggregateOutputType = {
+    id_aluno: number
+    nome: number
+    email: number
+    senha: number
+    matricula: number
+    curso: number
+    semestre_atual: number
+    cpf: number
+    telefone: number
+    data_nascimento: number
+    endereco: number
+    linkedin: number
+    github: number
+    portfolio: number
+    solicitacoes: number
+    data_criacao: number
+    data_atualizacao: number
     _all: number
   }
 
 
-  export type OpcaoRespostaMinAggregateInputType = {
-    id_opcao_resposta?: true
-    id_pergunta?: true
-    texto_resposta?: true
-    correta?: true
+  export type AlunoAvgAggregateInputType = {
+    semestre_atual?: true
+    solicitacoes?: true
   }
 
-  export type OpcaoRespostaMaxAggregateInputType = {
-    id_opcao_resposta?: true
-    id_pergunta?: true
-    texto_resposta?: true
-    correta?: true
+  export type AlunoSumAggregateInputType = {
+    semestre_atual?: true
+    solicitacoes?: true
   }
 
-  export type OpcaoRespostaCountAggregateInputType = {
-    id_opcao_resposta?: true
-    id_pergunta?: true
-    texto_resposta?: true
-    correta?: true
+  export type AlunoMinAggregateInputType = {
+    id_aluno?: true
+    nome?: true
+    email?: true
+    senha?: true
+    matricula?: true
+    curso?: true
+    semestre_atual?: true
+    cpf?: true
+    telefone?: true
+    data_nascimento?: true
+    endereco?: true
+    linkedin?: true
+    github?: true
+    portfolio?: true
+    solicitacoes?: true
+    data_criacao?: true
+    data_atualizacao?: true
+  }
+
+  export type AlunoMaxAggregateInputType = {
+    id_aluno?: true
+    nome?: true
+    email?: true
+    senha?: true
+    matricula?: true
+    curso?: true
+    semestre_atual?: true
+    cpf?: true
+    telefone?: true
+    data_nascimento?: true
+    endereco?: true
+    linkedin?: true
+    github?: true
+    portfolio?: true
+    solicitacoes?: true
+    data_criacao?: true
+    data_atualizacao?: true
+  }
+
+  export type AlunoCountAggregateInputType = {
+    id_aluno?: true
+    nome?: true
+    email?: true
+    senha?: true
+    matricula?: true
+    curso?: true
+    semestre_atual?: true
+    cpf?: true
+    telefone?: true
+    data_nascimento?: true
+    endereco?: true
+    linkedin?: true
+    github?: true
+    portfolio?: true
+    solicitacoes?: true
+    data_criacao?: true
+    data_atualizacao?: true
     _all?: true
   }
 
-  export type OpcaoRespostaAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which OpcaoResposta to aggregate.
+     * Filter which Aluno to aggregate.
      */
-    where?: OpcaoRespostaWhereInput
+    where?: AlunoWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of OpcaoRespostas to fetch.
+     * Determine the order of Alunos to fetch.
      */
-    orderBy?: OpcaoRespostaOrderByWithRelationInput | OpcaoRespostaOrderByWithRelationInput[]
+    orderBy?: AlunoOrderByWithRelationInput | AlunoOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: OpcaoRespostaWhereUniqueInput
+    cursor?: AlunoWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` OpcaoRespostas from the position of the cursor.
+     * Take `±n` Alunos from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` OpcaoRespostas.
+     * Skip the first `n` Alunos.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned OpcaoRespostas
+     * Count returned Alunos
     **/
-    _count?: true | OpcaoRespostaCountAggregateInputType
+    _count?: true | AlunoCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: AlunoAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: AlunoSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: OpcaoRespostaMinAggregateInputType
+    _min?: AlunoMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: OpcaoRespostaMaxAggregateInputType
+    _max?: AlunoMaxAggregateInputType
   }
 
-  export type GetOpcaoRespostaAggregateType<T extends OpcaoRespostaAggregateArgs> = {
-        [P in keyof T & keyof AggregateOpcaoResposta]: P extends '_count' | 'count'
+  export type GetAlunoAggregateType<T extends AlunoAggregateArgs> = {
+        [P in keyof T & keyof AggregateAluno]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateOpcaoResposta[P]>
-      : GetScalarType<T[P], AggregateOpcaoResposta[P]>
+        : GetScalarType<T[P], AggregateAluno[P]>
+      : GetScalarType<T[P], AggregateAluno[P]>
   }
 
 
 
 
-  export type OpcaoRespostaGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: OpcaoRespostaWhereInput
-    orderBy?: OpcaoRespostaOrderByWithAggregationInput | OpcaoRespostaOrderByWithAggregationInput[]
-    by: OpcaoRespostaScalarFieldEnum[] | OpcaoRespostaScalarFieldEnum
-    having?: OpcaoRespostaScalarWhereWithAggregatesInput
+  export type AlunoGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AlunoWhereInput
+    orderBy?: AlunoOrderByWithAggregationInput | AlunoOrderByWithAggregationInput[]
+    by: AlunoScalarFieldEnum[] | AlunoScalarFieldEnum
+    having?: AlunoScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: OpcaoRespostaCountAggregateInputType | true
-    _min?: OpcaoRespostaMinAggregateInputType
-    _max?: OpcaoRespostaMaxAggregateInputType
+    _count?: AlunoCountAggregateInputType | true
+    _avg?: AlunoAvgAggregateInputType
+    _sum?: AlunoSumAggregateInputType
+    _min?: AlunoMinAggregateInputType
+    _max?: AlunoMaxAggregateInputType
   }
 
-  export type OpcaoRespostaGroupByOutputType = {
-    id_opcao_resposta: string
-    id_pergunta: string
-    texto_resposta: string
-    correta: boolean
-    _count: OpcaoRespostaCountAggregateOutputType | null
-    _min: OpcaoRespostaMinAggregateOutputType | null
-    _max: OpcaoRespostaMaxAggregateOutputType | null
+  export type AlunoGroupByOutputType = {
+    id_aluno: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date
+    endereco: string
+    linkedin: string | null
+    github: string | null
+    portfolio: string | null
+    solicitacoes: number
+    data_criacao: Date
+    data_atualizacao: Date
+    _count: AlunoCountAggregateOutputType | null
+    _avg: AlunoAvgAggregateOutputType | null
+    _sum: AlunoSumAggregateOutputType | null
+    _min: AlunoMinAggregateOutputType | null
+    _max: AlunoMaxAggregateOutputType | null
   }
 
-  type GetOpcaoRespostaGroupByPayload<T extends OpcaoRespostaGroupByArgs> = Prisma.PrismaPromise<
+  type GetAlunoGroupByPayload<T extends AlunoGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<OpcaoRespostaGroupByOutputType, T['by']> &
+      PickEnumerable<AlunoGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof OpcaoRespostaGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof AlunoGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], OpcaoRespostaGroupByOutputType[P]>
-            : GetScalarType<T[P], OpcaoRespostaGroupByOutputType[P]>
+              : GetScalarType<T[P], AlunoGroupByOutputType[P]>
+            : GetScalarType<T[P], AlunoGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type OpcaoRespostaSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_opcao_resposta?: boolean
-    id_pergunta?: boolean
-    texto_resposta?: boolean
-    correta?: boolean
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["opcaoResposta"]>
+  export type AlunoSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_aluno?: boolean
+    nome?: boolean
+    email?: boolean
+    senha?: boolean
+    matricula?: boolean
+    curso?: boolean
+    semestre_atual?: boolean
+    cpf?: boolean
+    telefone?: boolean
+    data_nascimento?: boolean
+    endereco?: boolean
+    linkedin?: boolean
+    github?: boolean
+    portfolio?: boolean
+    solicitacoes?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+    contratacoes?: boolean | Aluno$contratacoesArgs<ExtArgs>
+    notas?: boolean | Aluno$notasArgs<ExtArgs>
+    aptidoes?: boolean | Aluno$aptidoesArgs<ExtArgs>
+    _count?: boolean | AlunoCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["aluno"]>
 
-  export type OpcaoRespostaSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_opcao_resposta?: boolean
-    id_pergunta?: boolean
-    texto_resposta?: boolean
-    correta?: boolean
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["opcaoResposta"]>
+  export type AlunoSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_aluno?: boolean
+    nome?: boolean
+    email?: boolean
+    senha?: boolean
+    matricula?: boolean
+    curso?: boolean
+    semestre_atual?: boolean
+    cpf?: boolean
+    telefone?: boolean
+    data_nascimento?: boolean
+    endereco?: boolean
+    linkedin?: boolean
+    github?: boolean
+    portfolio?: boolean
+    solicitacoes?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+  }, ExtArgs["result"]["aluno"]>
 
-  export type OpcaoRespostaSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_opcao_resposta?: boolean
-    id_pergunta?: boolean
-    texto_resposta?: boolean
-    correta?: boolean
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["opcaoResposta"]>
+  export type AlunoSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_aluno?: boolean
+    nome?: boolean
+    email?: boolean
+    senha?: boolean
+    matricula?: boolean
+    curso?: boolean
+    semestre_atual?: boolean
+    cpf?: boolean
+    telefone?: boolean
+    data_nascimento?: boolean
+    endereco?: boolean
+    linkedin?: boolean
+    github?: boolean
+    portfolio?: boolean
+    solicitacoes?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+  }, ExtArgs["result"]["aluno"]>
 
-  export type OpcaoRespostaSelectScalar = {
-    id_opcao_resposta?: boolean
-    id_pergunta?: boolean
-    texto_resposta?: boolean
-    correta?: boolean
+  export type AlunoSelectScalar = {
+    id_aluno?: boolean
+    nome?: boolean
+    email?: boolean
+    senha?: boolean
+    matricula?: boolean
+    curso?: boolean
+    semestre_atual?: boolean
+    cpf?: boolean
+    telefone?: boolean
+    data_nascimento?: boolean
+    endereco?: boolean
+    linkedin?: boolean
+    github?: boolean
+    portfolio?: boolean
+    solicitacoes?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
   }
 
-  export type OpcaoRespostaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_opcao_resposta" | "id_pergunta" | "texto_resposta" | "correta", ExtArgs["result"]["opcaoResposta"]>
-  export type OpcaoRespostaInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
+  export type AlunoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_aluno" | "nome" | "email" | "senha" | "matricula" | "curso" | "semestre_atual" | "cpf" | "telefone" | "data_nascimento" | "endereco" | "linkedin" | "github" | "portfolio" | "solicitacoes" | "data_criacao" | "data_atualizacao", ExtArgs["result"]["aluno"]>
+  export type AlunoInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    contratacoes?: boolean | Aluno$contratacoesArgs<ExtArgs>
+    notas?: boolean | Aluno$notasArgs<ExtArgs>
+    aptidoes?: boolean | Aluno$aptidoesArgs<ExtArgs>
+    _count?: boolean | AlunoCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type OpcaoRespostaIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
-  }
-  export type OpcaoRespostaIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
-  }
+  export type AlunoIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type AlunoIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
-  export type $OpcaoRespostaPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "OpcaoResposta"
+  export type $AlunoPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Aluno"
     objects: {
-      pergunta: Prisma.$PerguntaPayload<ExtArgs>
+      contratacoes: Prisma.$ContratacaoPayload<ExtArgs>[]
+      notas: Prisma.$NotaPayload<ExtArgs>[]
+      aptidoes: Prisma.$AptidaoPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
-      id_opcao_resposta: string
-      id_pergunta: string
-      texto_resposta: string
-      correta: boolean
-    }, ExtArgs["result"]["opcaoResposta"]>
+      id_aluno: string
+      nome: string
+      email: string
+      senha: string
+      matricula: string
+      curso: string
+      semestre_atual: number
+      cpf: string
+      telefone: string
+      data_nascimento: Date
+      endereco: string
+      linkedin: string | null
+      github: string | null
+      portfolio: string | null
+      solicitacoes: number
+      data_criacao: Date
+      data_atualizacao: Date
+    }, ExtArgs["result"]["aluno"]>
     composites: {}
   }
 
-  type OpcaoRespostaGetPayload<S extends boolean | null | undefined | OpcaoRespostaDefaultArgs> = $Result.GetResult<Prisma.$OpcaoRespostaPayload, S>
+  type AlunoGetPayload<S extends boolean | null | undefined | AlunoDefaultArgs> = $Result.GetResult<Prisma.$AlunoPayload, S>
 
-  type OpcaoRespostaCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<OpcaoRespostaFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: OpcaoRespostaCountAggregateInputType | true
+  type AlunoCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<AlunoFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: AlunoCountAggregateInputType | true
     }
 
-  export interface OpcaoRespostaDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['OpcaoResposta'], meta: { name: 'OpcaoResposta' } }
+  export interface AlunoDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Aluno'], meta: { name: 'Aluno' } }
     /**
-     * Find zero or one OpcaoResposta that matches the filter.
-     * @param {OpcaoRespostaFindUniqueArgs} args - Arguments to find a OpcaoResposta
+     * Find zero or one Aluno that matches the filter.
+     * @param {AlunoFindUniqueArgs} args - Arguments to find a Aluno
      * @example
-     * // Get one OpcaoResposta
-     * const opcaoResposta = await prisma.opcaoResposta.findUnique({
+     * // Get one Aluno
+     * const aluno = await prisma.aluno.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends OpcaoRespostaFindUniqueArgs>(args: SelectSubset<T, OpcaoRespostaFindUniqueArgs<ExtArgs>>): Prisma__OpcaoRespostaClient<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends AlunoFindUniqueArgs>(args: SelectSubset<T, AlunoFindUniqueArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one OpcaoResposta that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Aluno that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {OpcaoRespostaFindUniqueOrThrowArgs} args - Arguments to find a OpcaoResposta
+     * @param {AlunoFindUniqueOrThrowArgs} args - Arguments to find a Aluno
      * @example
-     * // Get one OpcaoResposta
-     * const opcaoResposta = await prisma.opcaoResposta.findUniqueOrThrow({
+     * // Get one Aluno
+     * const aluno = await prisma.aluno.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends OpcaoRespostaFindUniqueOrThrowArgs>(args: SelectSubset<T, OpcaoRespostaFindUniqueOrThrowArgs<ExtArgs>>): Prisma__OpcaoRespostaClient<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends AlunoFindUniqueOrThrowArgs>(args: SelectSubset<T, AlunoFindUniqueOrThrowArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first OpcaoResposta that matches the filter.
+     * Find the first Aluno that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {OpcaoRespostaFindFirstArgs} args - Arguments to find a OpcaoResposta
+     * @param {AlunoFindFirstArgs} args - Arguments to find a Aluno
      * @example
-     * // Get one OpcaoResposta
-     * const opcaoResposta = await prisma.opcaoResposta.findFirst({
+     * // Get one Aluno
+     * const aluno = await prisma.aluno.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends OpcaoRespostaFindFirstArgs>(args?: SelectSubset<T, OpcaoRespostaFindFirstArgs<ExtArgs>>): Prisma__OpcaoRespostaClient<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends AlunoFindFirstArgs>(args?: SelectSubset<T, AlunoFindFirstArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first OpcaoResposta that matches the filter or
+     * Find the first Aluno that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {OpcaoRespostaFindFirstOrThrowArgs} args - Arguments to find a OpcaoResposta
+     * @param {AlunoFindFirstOrThrowArgs} args - Arguments to find a Aluno
      * @example
-     * // Get one OpcaoResposta
-     * const opcaoResposta = await prisma.opcaoResposta.findFirstOrThrow({
+     * // Get one Aluno
+     * const aluno = await prisma.aluno.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends OpcaoRespostaFindFirstOrThrowArgs>(args?: SelectSubset<T, OpcaoRespostaFindFirstOrThrowArgs<ExtArgs>>): Prisma__OpcaoRespostaClient<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends AlunoFindFirstOrThrowArgs>(args?: SelectSubset<T, AlunoFindFirstOrThrowArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more OpcaoRespostas that matches the filter.
+     * Find zero or more Alunos that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {OpcaoRespostaFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {AlunoFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all OpcaoRespostas
-     * const opcaoRespostas = await prisma.opcaoResposta.findMany()
+     * // Get all Alunos
+     * const alunos = await prisma.aluno.findMany()
      * 
-     * // Get first 10 OpcaoRespostas
-     * const opcaoRespostas = await prisma.opcaoResposta.findMany({ take: 10 })
+     * // Get first 10 Alunos
+     * const alunos = await prisma.aluno.findMany({ take: 10 })
      * 
-     * // Only select the `id_opcao_resposta`
-     * const opcaoRespostaWithId_opcao_respostaOnly = await prisma.opcaoResposta.findMany({ select: { id_opcao_resposta: true } })
+     * // Only select the `id_aluno`
+     * const alunoWithId_alunoOnly = await prisma.aluno.findMany({ select: { id_aluno: true } })
      * 
      */
-    findMany<T extends OpcaoRespostaFindManyArgs>(args?: SelectSubset<T, OpcaoRespostaFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends AlunoFindManyArgs>(args?: SelectSubset<T, AlunoFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a OpcaoResposta.
-     * @param {OpcaoRespostaCreateArgs} args - Arguments to create a OpcaoResposta.
+     * Create a Aluno.
+     * @param {AlunoCreateArgs} args - Arguments to create a Aluno.
      * @example
-     * // Create one OpcaoResposta
-     * const OpcaoResposta = await prisma.opcaoResposta.create({
+     * // Create one Aluno
+     * const Aluno = await prisma.aluno.create({
      *   data: {
-     *     // ... data to create a OpcaoResposta
+     *     // ... data to create a Aluno
      *   }
      * })
      * 
      */
-    create<T extends OpcaoRespostaCreateArgs>(args: SelectSubset<T, OpcaoRespostaCreateArgs<ExtArgs>>): Prisma__OpcaoRespostaClient<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends AlunoCreateArgs>(args: SelectSubset<T, AlunoCreateArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many OpcaoRespostas.
-     * @param {OpcaoRespostaCreateManyArgs} args - Arguments to create many OpcaoRespostas.
+     * Create many Alunos.
+     * @param {AlunoCreateManyArgs} args - Arguments to create many Alunos.
      * @example
-     * // Create many OpcaoRespostas
-     * const opcaoResposta = await prisma.opcaoResposta.createMany({
+     * // Create many Alunos
+     * const aluno = await prisma.aluno.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends OpcaoRespostaCreateManyArgs>(args?: SelectSubset<T, OpcaoRespostaCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends AlunoCreateManyArgs>(args?: SelectSubset<T, AlunoCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many OpcaoRespostas and returns the data saved in the database.
-     * @param {OpcaoRespostaCreateManyAndReturnArgs} args - Arguments to create many OpcaoRespostas.
+     * Create many Alunos and returns the data saved in the database.
+     * @param {AlunoCreateManyAndReturnArgs} args - Arguments to create many Alunos.
      * @example
-     * // Create many OpcaoRespostas
-     * const opcaoResposta = await prisma.opcaoResposta.createManyAndReturn({
+     * // Create many Alunos
+     * const aluno = await prisma.aluno.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many OpcaoRespostas and only return the `id_opcao_resposta`
-     * const opcaoRespostaWithId_opcao_respostaOnly = await prisma.opcaoResposta.createManyAndReturn({
-     *   select: { id_opcao_resposta: true },
+     * // Create many Alunos and only return the `id_aluno`
+     * const alunoWithId_alunoOnly = await prisma.aluno.createManyAndReturn({
+     *   select: { id_aluno: true },
      *   data: [
      *     // ... provide data here
      *   ]
@@ -6127,28 +4234,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends OpcaoRespostaCreateManyAndReturnArgs>(args?: SelectSubset<T, OpcaoRespostaCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends AlunoCreateManyAndReturnArgs>(args?: SelectSubset<T, AlunoCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a OpcaoResposta.
-     * @param {OpcaoRespostaDeleteArgs} args - Arguments to delete one OpcaoResposta.
+     * Delete a Aluno.
+     * @param {AlunoDeleteArgs} args - Arguments to delete one Aluno.
      * @example
-     * // Delete one OpcaoResposta
-     * const OpcaoResposta = await prisma.opcaoResposta.delete({
+     * // Delete one Aluno
+     * const Aluno = await prisma.aluno.delete({
      *   where: {
-     *     // ... filter to delete one OpcaoResposta
+     *     // ... filter to delete one Aluno
      *   }
      * })
      * 
      */
-    delete<T extends OpcaoRespostaDeleteArgs>(args: SelectSubset<T, OpcaoRespostaDeleteArgs<ExtArgs>>): Prisma__OpcaoRespostaClient<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends AlunoDeleteArgs>(args: SelectSubset<T, AlunoDeleteArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one OpcaoResposta.
-     * @param {OpcaoRespostaUpdateArgs} args - Arguments to update one OpcaoResposta.
+     * Update one Aluno.
+     * @param {AlunoUpdateArgs} args - Arguments to update one Aluno.
      * @example
-     * // Update one OpcaoResposta
-     * const opcaoResposta = await prisma.opcaoResposta.update({
+     * // Update one Aluno
+     * const aluno = await prisma.aluno.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6158,30 +4265,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends OpcaoRespostaUpdateArgs>(args: SelectSubset<T, OpcaoRespostaUpdateArgs<ExtArgs>>): Prisma__OpcaoRespostaClient<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends AlunoUpdateArgs>(args: SelectSubset<T, AlunoUpdateArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more OpcaoRespostas.
-     * @param {OpcaoRespostaDeleteManyArgs} args - Arguments to filter OpcaoRespostas to delete.
+     * Delete zero or more Alunos.
+     * @param {AlunoDeleteManyArgs} args - Arguments to filter Alunos to delete.
      * @example
-     * // Delete a few OpcaoRespostas
-     * const { count } = await prisma.opcaoResposta.deleteMany({
+     * // Delete a few Alunos
+     * const { count } = await prisma.aluno.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends OpcaoRespostaDeleteManyArgs>(args?: SelectSubset<T, OpcaoRespostaDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends AlunoDeleteManyArgs>(args?: SelectSubset<T, AlunoDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more OpcaoRespostas.
+     * Update zero or more Alunos.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {OpcaoRespostaUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {AlunoUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many OpcaoRespostas
-     * const opcaoResposta = await prisma.opcaoResposta.updateMany({
+     * // Update many Alunos
+     * const aluno = await prisma.aluno.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6191,14 +4298,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends OpcaoRespostaUpdateManyArgs>(args: SelectSubset<T, OpcaoRespostaUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends AlunoUpdateManyArgs>(args: SelectSubset<T, AlunoUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more OpcaoRespostas and returns the data updated in the database.
-     * @param {OpcaoRespostaUpdateManyAndReturnArgs} args - Arguments to update many OpcaoRespostas.
+     * Update zero or more Alunos and returns the data updated in the database.
+     * @param {AlunoUpdateManyAndReturnArgs} args - Arguments to update many Alunos.
      * @example
-     * // Update many OpcaoRespostas
-     * const opcaoResposta = await prisma.opcaoResposta.updateManyAndReturn({
+     * // Update many Alunos
+     * const aluno = await prisma.aluno.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6207,9 +4314,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more OpcaoRespostas and only return the `id_opcao_resposta`
-     * const opcaoRespostaWithId_opcao_respostaOnly = await prisma.opcaoResposta.updateManyAndReturn({
-     *   select: { id_opcao_resposta: true },
+     * // Update zero or more Alunos and only return the `id_aluno`
+     * const alunoWithId_alunoOnly = await prisma.aluno.updateManyAndReturn({
+     *   select: { id_aluno: true },
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6221,56 +4328,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends OpcaoRespostaUpdateManyAndReturnArgs>(args: SelectSubset<T, OpcaoRespostaUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends AlunoUpdateManyAndReturnArgs>(args: SelectSubset<T, AlunoUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one OpcaoResposta.
-     * @param {OpcaoRespostaUpsertArgs} args - Arguments to update or create a OpcaoResposta.
+     * Create or update one Aluno.
+     * @param {AlunoUpsertArgs} args - Arguments to update or create a Aluno.
      * @example
-     * // Update or create a OpcaoResposta
-     * const opcaoResposta = await prisma.opcaoResposta.upsert({
+     * // Update or create a Aluno
+     * const aluno = await prisma.aluno.upsert({
      *   create: {
-     *     // ... data to create a OpcaoResposta
+     *     // ... data to create a Aluno
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the OpcaoResposta we want to update
+     *     // ... the filter for the Aluno we want to update
      *   }
      * })
      */
-    upsert<T extends OpcaoRespostaUpsertArgs>(args: SelectSubset<T, OpcaoRespostaUpsertArgs<ExtArgs>>): Prisma__OpcaoRespostaClient<$Result.GetResult<Prisma.$OpcaoRespostaPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends AlunoUpsertArgs>(args: SelectSubset<T, AlunoUpsertArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of OpcaoRespostas.
+     * Count the number of Alunos.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {OpcaoRespostaCountArgs} args - Arguments to filter OpcaoRespostas to count.
+     * @param {AlunoCountArgs} args - Arguments to filter Alunos to count.
      * @example
-     * // Count the number of OpcaoRespostas
-     * const count = await prisma.opcaoResposta.count({
+     * // Count the number of Alunos
+     * const count = await prisma.aluno.count({
      *   where: {
-     *     // ... the filter for the OpcaoRespostas we want to count
+     *     // ... the filter for the Alunos we want to count
      *   }
      * })
     **/
-    count<T extends OpcaoRespostaCountArgs>(
-      args?: Subset<T, OpcaoRespostaCountArgs>,
+    count<T extends AlunoCountArgs>(
+      args?: Subset<T, AlunoCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], OpcaoRespostaCountAggregateOutputType>
+          : GetScalarType<T['select'], AlunoCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a OpcaoResposta.
+     * Allows you to perform aggregations operations on a Aluno.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {OpcaoRespostaAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {AlunoAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -6290,13 +4397,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends OpcaoRespostaAggregateArgs>(args: Subset<T, OpcaoRespostaAggregateArgs>): Prisma.PrismaPromise<GetOpcaoRespostaAggregateType<T>>
+    aggregate<T extends AlunoAggregateArgs>(args: Subset<T, AlunoAggregateArgs>): Prisma.PrismaPromise<GetAlunoAggregateType<T>>
 
     /**
-     * Group by OpcaoResposta.
+     * Group by Aluno.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {OpcaoRespostaGroupByArgs} args - Group by arguments.
+     * @param {AlunoGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -6311,14 +4418,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends OpcaoRespostaGroupByArgs,
+      T extends AlunoGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: OpcaoRespostaGroupByArgs['orderBy'] }
-        : { orderBy?: OpcaoRespostaGroupByArgs['orderBy'] },
+        ? { orderBy: AlunoGroupByArgs['orderBy'] }
+        : { orderBy?: AlunoGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -6367,22 +4474,24 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, OpcaoRespostaGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetOpcaoRespostaGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, AlunoGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAlunoGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the OpcaoResposta model
+   * Fields of the Aluno model
    */
-  readonly fields: OpcaoRespostaFieldRefs;
+  readonly fields: AlunoFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for OpcaoResposta.
+   * The delegate class that acts as a "Promise-like" for Aluno.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__OpcaoRespostaClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__AlunoClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    pergunta<T extends PerguntaDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PerguntaDefaultArgs<ExtArgs>>): Prisma__PerguntaClient<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    contratacoes<T extends Aluno$contratacoesArgs<ExtArgs> = {}>(args?: Subset<T, Aluno$contratacoesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    notas<T extends Aluno$notasArgs<ExtArgs> = {}>(args?: Subset<T, Aluno$notasArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    aptidoes<T extends Aluno$aptidoesArgs<ExtArgs> = {}>(args?: Subset<T, Aluno$aptidoesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -6409,780 +4518,915 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the OpcaoResposta model
+   * Fields of the Aluno model
    */
-  interface OpcaoRespostaFieldRefs {
-    readonly id_opcao_resposta: FieldRef<"OpcaoResposta", 'String'>
-    readonly id_pergunta: FieldRef<"OpcaoResposta", 'String'>
-    readonly texto_resposta: FieldRef<"OpcaoResposta", 'String'>
-    readonly correta: FieldRef<"OpcaoResposta", 'Boolean'>
+  interface AlunoFieldRefs {
+    readonly id_aluno: FieldRef<"Aluno", 'String'>
+    readonly nome: FieldRef<"Aluno", 'String'>
+    readonly email: FieldRef<"Aluno", 'String'>
+    readonly senha: FieldRef<"Aluno", 'String'>
+    readonly matricula: FieldRef<"Aluno", 'String'>
+    readonly curso: FieldRef<"Aluno", 'String'>
+    readonly semestre_atual: FieldRef<"Aluno", 'Int'>
+    readonly cpf: FieldRef<"Aluno", 'String'>
+    readonly telefone: FieldRef<"Aluno", 'String'>
+    readonly data_nascimento: FieldRef<"Aluno", 'DateTime'>
+    readonly endereco: FieldRef<"Aluno", 'String'>
+    readonly linkedin: FieldRef<"Aluno", 'String'>
+    readonly github: FieldRef<"Aluno", 'String'>
+    readonly portfolio: FieldRef<"Aluno", 'String'>
+    readonly solicitacoes: FieldRef<"Aluno", 'Int'>
+    readonly data_criacao: FieldRef<"Aluno", 'DateTime'>
+    readonly data_atualizacao: FieldRef<"Aluno", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * OpcaoResposta findUnique
+   * Aluno findUnique
    */
-  export type OpcaoRespostaFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the OpcaoResposta
+     * Select specific fields to fetch from the Aluno
      */
-    select?: OpcaoRespostaSelect<ExtArgs> | null
+    select?: AlunoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the OpcaoResposta
+     * Omit specific fields from the Aluno
      */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
+    omit?: AlunoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: OpcaoRespostaInclude<ExtArgs> | null
+    include?: AlunoInclude<ExtArgs> | null
     /**
-     * Filter, which OpcaoResposta to fetch.
+     * Filter, which Aluno to fetch.
      */
-    where: OpcaoRespostaWhereUniqueInput
+    where: AlunoWhereUniqueInput
   }
 
   /**
-   * OpcaoResposta findUniqueOrThrow
+   * Aluno findUniqueOrThrow
    */
-  export type OpcaoRespostaFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the OpcaoResposta
+     * Select specific fields to fetch from the Aluno
      */
-    select?: OpcaoRespostaSelect<ExtArgs> | null
+    select?: AlunoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the OpcaoResposta
+     * Omit specific fields from the Aluno
      */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
+    omit?: AlunoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: OpcaoRespostaInclude<ExtArgs> | null
+    include?: AlunoInclude<ExtArgs> | null
     /**
-     * Filter, which OpcaoResposta to fetch.
+     * Filter, which Aluno to fetch.
      */
-    where: OpcaoRespostaWhereUniqueInput
+    where: AlunoWhereUniqueInput
   }
 
   /**
-   * OpcaoResposta findFirst
+   * Aluno findFirst
    */
-  export type OpcaoRespostaFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the OpcaoResposta
+     * Select specific fields to fetch from the Aluno
      */
-    select?: OpcaoRespostaSelect<ExtArgs> | null
+    select?: AlunoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the OpcaoResposta
+     * Omit specific fields from the Aluno
      */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
+    omit?: AlunoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: OpcaoRespostaInclude<ExtArgs> | null
+    include?: AlunoInclude<ExtArgs> | null
     /**
-     * Filter, which OpcaoResposta to fetch.
+     * Filter, which Aluno to fetch.
      */
-    where?: OpcaoRespostaWhereInput
+    where?: AlunoWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of OpcaoRespostas to fetch.
+     * Determine the order of Alunos to fetch.
      */
-    orderBy?: OpcaoRespostaOrderByWithRelationInput | OpcaoRespostaOrderByWithRelationInput[]
+    orderBy?: AlunoOrderByWithRelationInput | AlunoOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for OpcaoRespostas.
+     * Sets the position for searching for Alunos.
      */
-    cursor?: OpcaoRespostaWhereUniqueInput
+    cursor?: AlunoWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` OpcaoRespostas from the position of the cursor.
+     * Take `±n` Alunos from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` OpcaoRespostas.
+     * Skip the first `n` Alunos.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of OpcaoRespostas.
+     * Filter by unique combinations of Alunos.
      */
-    distinct?: OpcaoRespostaScalarFieldEnum | OpcaoRespostaScalarFieldEnum[]
+    distinct?: AlunoScalarFieldEnum | AlunoScalarFieldEnum[]
   }
 
   /**
-   * OpcaoResposta findFirstOrThrow
+   * Aluno findFirstOrThrow
    */
-  export type OpcaoRespostaFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the OpcaoResposta
+     * Select specific fields to fetch from the Aluno
      */
-    select?: OpcaoRespostaSelect<ExtArgs> | null
+    select?: AlunoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the OpcaoResposta
+     * Omit specific fields from the Aluno
      */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
+    omit?: AlunoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: OpcaoRespostaInclude<ExtArgs> | null
+    include?: AlunoInclude<ExtArgs> | null
     /**
-     * Filter, which OpcaoResposta to fetch.
+     * Filter, which Aluno to fetch.
      */
-    where?: OpcaoRespostaWhereInput
+    where?: AlunoWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of OpcaoRespostas to fetch.
+     * Determine the order of Alunos to fetch.
      */
-    orderBy?: OpcaoRespostaOrderByWithRelationInput | OpcaoRespostaOrderByWithRelationInput[]
+    orderBy?: AlunoOrderByWithRelationInput | AlunoOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for OpcaoRespostas.
+     * Sets the position for searching for Alunos.
      */
-    cursor?: OpcaoRespostaWhereUniqueInput
+    cursor?: AlunoWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` OpcaoRespostas from the position of the cursor.
+     * Take `±n` Alunos from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` OpcaoRespostas.
+     * Skip the first `n` Alunos.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of OpcaoRespostas.
+     * Filter by unique combinations of Alunos.
      */
-    distinct?: OpcaoRespostaScalarFieldEnum | OpcaoRespostaScalarFieldEnum[]
+    distinct?: AlunoScalarFieldEnum | AlunoScalarFieldEnum[]
   }
 
   /**
-   * OpcaoResposta findMany
+   * Aluno findMany
    */
-  export type OpcaoRespostaFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the OpcaoResposta
+     * Select specific fields to fetch from the Aluno
      */
-    select?: OpcaoRespostaSelect<ExtArgs> | null
+    select?: AlunoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the OpcaoResposta
+     * Omit specific fields from the Aluno
      */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
+    omit?: AlunoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: OpcaoRespostaInclude<ExtArgs> | null
+    include?: AlunoInclude<ExtArgs> | null
     /**
-     * Filter, which OpcaoRespostas to fetch.
+     * Filter, which Alunos to fetch.
      */
-    where?: OpcaoRespostaWhereInput
+    where?: AlunoWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of OpcaoRespostas to fetch.
+     * Determine the order of Alunos to fetch.
      */
-    orderBy?: OpcaoRespostaOrderByWithRelationInput | OpcaoRespostaOrderByWithRelationInput[]
+    orderBy?: AlunoOrderByWithRelationInput | AlunoOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing OpcaoRespostas.
+     * Sets the position for listing Alunos.
      */
-    cursor?: OpcaoRespostaWhereUniqueInput
+    cursor?: AlunoWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` OpcaoRespostas from the position of the cursor.
+     * Take `±n` Alunos from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` OpcaoRespostas.
+     * Skip the first `n` Alunos.
      */
     skip?: number
-    distinct?: OpcaoRespostaScalarFieldEnum | OpcaoRespostaScalarFieldEnum[]
+    distinct?: AlunoScalarFieldEnum | AlunoScalarFieldEnum[]
   }
 
   /**
-   * OpcaoResposta create
+   * Aluno create
    */
-  export type OpcaoRespostaCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the OpcaoResposta
+     * Select specific fields to fetch from the Aluno
      */
-    select?: OpcaoRespostaSelect<ExtArgs> | null
+    select?: AlunoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the OpcaoResposta
+     * Omit specific fields from the Aluno
      */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
+    omit?: AlunoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: OpcaoRespostaInclude<ExtArgs> | null
+    include?: AlunoInclude<ExtArgs> | null
     /**
-     * The data needed to create a OpcaoResposta.
+     * The data needed to create a Aluno.
      */
-    data: XOR<OpcaoRespostaCreateInput, OpcaoRespostaUncheckedCreateInput>
+    data: XOR<AlunoCreateInput, AlunoUncheckedCreateInput>
   }
 
   /**
-   * OpcaoResposta createMany
+   * Aluno createMany
    */
-  export type OpcaoRespostaCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many OpcaoRespostas.
+     * The data used to create many Alunos.
      */
-    data: OpcaoRespostaCreateManyInput | OpcaoRespostaCreateManyInput[]
+    data: AlunoCreateManyInput | AlunoCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * OpcaoResposta createManyAndReturn
+   * Aluno createManyAndReturn
    */
-  export type OpcaoRespostaCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the OpcaoResposta
+     * Select specific fields to fetch from the Aluno
      */
-    select?: OpcaoRespostaSelectCreateManyAndReturn<ExtArgs> | null
+    select?: AlunoSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the OpcaoResposta
+     * Omit specific fields from the Aluno
      */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
+    omit?: AlunoOmit<ExtArgs> | null
     /**
-     * The data used to create many OpcaoRespostas.
+     * The data used to create many Alunos.
      */
-    data: OpcaoRespostaCreateManyInput | OpcaoRespostaCreateManyInput[]
+    data: AlunoCreateManyInput | AlunoCreateManyInput[]
     skipDuplicates?: boolean
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: OpcaoRespostaIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * OpcaoResposta update
+   * Aluno update
    */
-  export type OpcaoRespostaUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the OpcaoResposta
+     * Select specific fields to fetch from the Aluno
      */
-    select?: OpcaoRespostaSelect<ExtArgs> | null
+    select?: AlunoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the OpcaoResposta
+     * Omit specific fields from the Aluno
      */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
+    omit?: AlunoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: OpcaoRespostaInclude<ExtArgs> | null
+    include?: AlunoInclude<ExtArgs> | null
     /**
-     * The data needed to update a OpcaoResposta.
+     * The data needed to update a Aluno.
      */
-    data: XOR<OpcaoRespostaUpdateInput, OpcaoRespostaUncheckedUpdateInput>
+    data: XOR<AlunoUpdateInput, AlunoUncheckedUpdateInput>
     /**
-     * Choose, which OpcaoResposta to update.
+     * Choose, which Aluno to update.
      */
-    where: OpcaoRespostaWhereUniqueInput
+    where: AlunoWhereUniqueInput
   }
 
   /**
-   * OpcaoResposta updateMany
+   * Aluno updateMany
    */
-  export type OpcaoRespostaUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update OpcaoRespostas.
+     * The data used to update Alunos.
      */
-    data: XOR<OpcaoRespostaUpdateManyMutationInput, OpcaoRespostaUncheckedUpdateManyInput>
+    data: XOR<AlunoUpdateManyMutationInput, AlunoUncheckedUpdateManyInput>
     /**
-     * Filter which OpcaoRespostas to update
+     * Filter which Alunos to update
      */
-    where?: OpcaoRespostaWhereInput
+    where?: AlunoWhereInput
     /**
-     * Limit how many OpcaoRespostas to update.
+     * Limit how many Alunos to update.
      */
     limit?: number
   }
 
   /**
-   * OpcaoResposta updateManyAndReturn
+   * Aluno updateManyAndReturn
    */
-  export type OpcaoRespostaUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the OpcaoResposta
+     * Select specific fields to fetch from the Aluno
      */
-    select?: OpcaoRespostaSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: AlunoSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the OpcaoResposta
+     * Omit specific fields from the Aluno
      */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
+    omit?: AlunoOmit<ExtArgs> | null
     /**
-     * The data used to update OpcaoRespostas.
+     * The data used to update Alunos.
      */
-    data: XOR<OpcaoRespostaUpdateManyMutationInput, OpcaoRespostaUncheckedUpdateManyInput>
+    data: XOR<AlunoUpdateManyMutationInput, AlunoUncheckedUpdateManyInput>
     /**
-     * Filter which OpcaoRespostas to update
+     * Filter which Alunos to update
      */
-    where?: OpcaoRespostaWhereInput
+    where?: AlunoWhereInput
     /**
-     * Limit how many OpcaoRespostas to update.
-     */
-    limit?: number
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: OpcaoRespostaIncludeUpdateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
-   * OpcaoResposta upsert
-   */
-  export type OpcaoRespostaUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the OpcaoResposta
-     */
-    select?: OpcaoRespostaSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the OpcaoResposta
-     */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: OpcaoRespostaInclude<ExtArgs> | null
-    /**
-     * The filter to search for the OpcaoResposta to update in case it exists.
-     */
-    where: OpcaoRespostaWhereUniqueInput
-    /**
-     * In case the OpcaoResposta found by the `where` argument doesn't exist, create a new OpcaoResposta with this data.
-     */
-    create: XOR<OpcaoRespostaCreateInput, OpcaoRespostaUncheckedCreateInput>
-    /**
-     * In case the OpcaoResposta was found with the provided `where` argument, update it with this data.
-     */
-    update: XOR<OpcaoRespostaUpdateInput, OpcaoRespostaUncheckedUpdateInput>
-  }
-
-  /**
-   * OpcaoResposta delete
-   */
-  export type OpcaoRespostaDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the OpcaoResposta
-     */
-    select?: OpcaoRespostaSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the OpcaoResposta
-     */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: OpcaoRespostaInclude<ExtArgs> | null
-    /**
-     * Filter which OpcaoResposta to delete.
-     */
-    where: OpcaoRespostaWhereUniqueInput
-  }
-
-  /**
-   * OpcaoResposta deleteMany
-   */
-  export type OpcaoRespostaDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Filter which OpcaoRespostas to delete
-     */
-    where?: OpcaoRespostaWhereInput
-    /**
-     * Limit how many OpcaoRespostas to delete.
+     * Limit how many Alunos to update.
      */
     limit?: number
   }
 
   /**
-   * OpcaoResposta without action
+   * Aluno upsert
    */
-  export type OpcaoRespostaDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type AlunoUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the OpcaoResposta
+     * Select specific fields to fetch from the Aluno
      */
-    select?: OpcaoRespostaSelect<ExtArgs> | null
+    select?: AlunoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the OpcaoResposta
+     * Omit specific fields from the Aluno
      */
-    omit?: OpcaoRespostaOmit<ExtArgs> | null
+    omit?: AlunoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: OpcaoRespostaInclude<ExtArgs> | null
+    include?: AlunoInclude<ExtArgs> | null
+    /**
+     * The filter to search for the Aluno to update in case it exists.
+     */
+    where: AlunoWhereUniqueInput
+    /**
+     * In case the Aluno found by the `where` argument doesn't exist, create a new Aluno with this data.
+     */
+    create: XOR<AlunoCreateInput, AlunoUncheckedCreateInput>
+    /**
+     * In case the Aluno was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<AlunoUpdateInput, AlunoUncheckedUpdateInput>
+  }
+
+  /**
+   * Aluno delete
+   */
+  export type AlunoDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aluno
+     */
+    select?: AlunoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aluno
+     */
+    omit?: AlunoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AlunoInclude<ExtArgs> | null
+    /**
+     * Filter which Aluno to delete.
+     */
+    where: AlunoWhereUniqueInput
+  }
+
+  /**
+   * Aluno deleteMany
+   */
+  export type AlunoDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Alunos to delete
+     */
+    where?: AlunoWhereInput
+    /**
+     * Limit how many Alunos to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * Aluno.contratacoes
+   */
+  export type Aluno$contratacoesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Contratacao
+     */
+    select?: ContratacaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Contratacao
+     */
+    omit?: ContratacaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: ContratacaoInclude<ExtArgs> | null
+    where?: ContratacaoWhereInput
+    orderBy?: ContratacaoOrderByWithRelationInput | ContratacaoOrderByWithRelationInput[]
+    cursor?: ContratacaoWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: ContratacaoScalarFieldEnum | ContratacaoScalarFieldEnum[]
+  }
+
+  /**
+   * Aluno.notas
+   */
+  export type Aluno$notasArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaInclude<ExtArgs> | null
+    where?: NotaWhereInput
+    orderBy?: NotaOrderByWithRelationInput | NotaOrderByWithRelationInput[]
+    cursor?: NotaWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: NotaScalarFieldEnum | NotaScalarFieldEnum[]
+  }
+
+  /**
+   * Aluno.aptidoes
+   */
+  export type Aluno$aptidoesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoInclude<ExtArgs> | null
+    where?: AptidaoWhereInput
+    orderBy?: AptidaoOrderByWithRelationInput | AptidaoOrderByWithRelationInput[]
+    cursor?: AptidaoWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: AptidaoScalarFieldEnum | AptidaoScalarFieldEnum[]
+  }
+
+  /**
+   * Aluno without action
+   */
+  export type AlunoDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aluno
+     */
+    select?: AlunoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aluno
+     */
+    omit?: AlunoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AlunoInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model Usuario_Acertos
+   * Model Contratacao
    */
 
-  export type AggregateUsuario_Acertos = {
-    _count: Usuario_AcertosCountAggregateOutputType | null
-    _min: Usuario_AcertosMinAggregateOutputType | null
-    _max: Usuario_AcertosMaxAggregateOutputType | null
+  export type AggregateContratacao = {
+    _count: ContratacaoCountAggregateOutputType | null
+    _avg: ContratacaoAvgAggregateOutputType | null
+    _sum: ContratacaoSumAggregateOutputType | null
+    _min: ContratacaoMinAggregateOutputType | null
+    _max: ContratacaoMaxAggregateOutputType | null
   }
 
-  export type Usuario_AcertosMinAggregateOutputType = {
-    id_usuario_acerto: string | null
-    id_usuario: string | null
-    id_pergunta: string | null
-    id_opcao_resposta: string | null
-    acertou: boolean | null
+  export type ContratacaoAvgAggregateOutputType = {
+    salario: number | null
   }
 
-  export type Usuario_AcertosMaxAggregateOutputType = {
-    id_usuario_acerto: string | null
-    id_usuario: string | null
-    id_pergunta: string | null
-    id_opcao_resposta: string | null
-    acertou: boolean | null
+  export type ContratacaoSumAggregateOutputType = {
+    salario: number | null
   }
 
-  export type Usuario_AcertosCountAggregateOutputType = {
-    id_usuario_acerto: number
-    id_usuario: number
-    id_pergunta: number
-    id_opcao_resposta: number
-    acertou: number
+  export type ContratacaoMinAggregateOutputType = {
+    id_contratacao: string | null
+    id_recrutador: string | null
+    id_aluno: string | null
+    data_contratacao: Date | null
+    cargo: string | null
+    salario: number | null
+    status: string | null
+  }
+
+  export type ContratacaoMaxAggregateOutputType = {
+    id_contratacao: string | null
+    id_recrutador: string | null
+    id_aluno: string | null
+    data_contratacao: Date | null
+    cargo: string | null
+    salario: number | null
+    status: string | null
+  }
+
+  export type ContratacaoCountAggregateOutputType = {
+    id_contratacao: number
+    id_recrutador: number
+    id_aluno: number
+    data_contratacao: number
+    cargo: number
+    salario: number
+    status: number
     _all: number
   }
 
 
-  export type Usuario_AcertosMinAggregateInputType = {
-    id_usuario_acerto?: true
-    id_usuario?: true
-    id_pergunta?: true
-    id_opcao_resposta?: true
-    acertou?: true
+  export type ContratacaoAvgAggregateInputType = {
+    salario?: true
   }
 
-  export type Usuario_AcertosMaxAggregateInputType = {
-    id_usuario_acerto?: true
-    id_usuario?: true
-    id_pergunta?: true
-    id_opcao_resposta?: true
-    acertou?: true
+  export type ContratacaoSumAggregateInputType = {
+    salario?: true
   }
 
-  export type Usuario_AcertosCountAggregateInputType = {
-    id_usuario_acerto?: true
-    id_usuario?: true
-    id_pergunta?: true
-    id_opcao_resposta?: true
-    acertou?: true
+  export type ContratacaoMinAggregateInputType = {
+    id_contratacao?: true
+    id_recrutador?: true
+    id_aluno?: true
+    data_contratacao?: true
+    cargo?: true
+    salario?: true
+    status?: true
+  }
+
+  export type ContratacaoMaxAggregateInputType = {
+    id_contratacao?: true
+    id_recrutador?: true
+    id_aluno?: true
+    data_contratacao?: true
+    cargo?: true
+    salario?: true
+    status?: true
+  }
+
+  export type ContratacaoCountAggregateInputType = {
+    id_contratacao?: true
+    id_recrutador?: true
+    id_aluno?: true
+    data_contratacao?: true
+    cargo?: true
+    salario?: true
+    status?: true
     _all?: true
   }
 
-  export type Usuario_AcertosAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Usuario_Acertos to aggregate.
+     * Filter which Contratacao to aggregate.
      */
-    where?: Usuario_AcertosWhereInput
+    where?: ContratacaoWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Usuario_Acertos to fetch.
+     * Determine the order of Contratacaos to fetch.
      */
-    orderBy?: Usuario_AcertosOrderByWithRelationInput | Usuario_AcertosOrderByWithRelationInput[]
+    orderBy?: ContratacaoOrderByWithRelationInput | ContratacaoOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: Usuario_AcertosWhereUniqueInput
+    cursor?: ContratacaoWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Usuario_Acertos from the position of the cursor.
+     * Take `±n` Contratacaos from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Usuario_Acertos.
+     * Skip the first `n` Contratacaos.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Usuario_Acertos
+     * Count returned Contratacaos
     **/
-    _count?: true | Usuario_AcertosCountAggregateInputType
+    _count?: true | ContratacaoCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: ContratacaoAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: ContratacaoSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: Usuario_AcertosMinAggregateInputType
+    _min?: ContratacaoMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: Usuario_AcertosMaxAggregateInputType
+    _max?: ContratacaoMaxAggregateInputType
   }
 
-  export type GetUsuario_AcertosAggregateType<T extends Usuario_AcertosAggregateArgs> = {
-        [P in keyof T & keyof AggregateUsuario_Acertos]: P extends '_count' | 'count'
+  export type GetContratacaoAggregateType<T extends ContratacaoAggregateArgs> = {
+        [P in keyof T & keyof AggregateContratacao]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateUsuario_Acertos[P]>
-      : GetScalarType<T[P], AggregateUsuario_Acertos[P]>
+        : GetScalarType<T[P], AggregateContratacao[P]>
+      : GetScalarType<T[P], AggregateContratacao[P]>
   }
 
 
 
 
-  export type Usuario_AcertosGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: Usuario_AcertosWhereInput
-    orderBy?: Usuario_AcertosOrderByWithAggregationInput | Usuario_AcertosOrderByWithAggregationInput[]
-    by: Usuario_AcertosScalarFieldEnum[] | Usuario_AcertosScalarFieldEnum
-    having?: Usuario_AcertosScalarWhereWithAggregatesInput
+  export type ContratacaoGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: ContratacaoWhereInput
+    orderBy?: ContratacaoOrderByWithAggregationInput | ContratacaoOrderByWithAggregationInput[]
+    by: ContratacaoScalarFieldEnum[] | ContratacaoScalarFieldEnum
+    having?: ContratacaoScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: Usuario_AcertosCountAggregateInputType | true
-    _min?: Usuario_AcertosMinAggregateInputType
-    _max?: Usuario_AcertosMaxAggregateInputType
+    _count?: ContratacaoCountAggregateInputType | true
+    _avg?: ContratacaoAvgAggregateInputType
+    _sum?: ContratacaoSumAggregateInputType
+    _min?: ContratacaoMinAggregateInputType
+    _max?: ContratacaoMaxAggregateInputType
   }
 
-  export type Usuario_AcertosGroupByOutputType = {
-    id_usuario_acerto: string
-    id_usuario: string
-    id_pergunta: string
-    id_opcao_resposta: string
-    acertou: boolean
-    _count: Usuario_AcertosCountAggregateOutputType | null
-    _min: Usuario_AcertosMinAggregateOutputType | null
-    _max: Usuario_AcertosMaxAggregateOutputType | null
+  export type ContratacaoGroupByOutputType = {
+    id_contratacao: string
+    id_recrutador: string
+    id_aluno: string
+    data_contratacao: Date
+    cargo: string
+    salario: number | null
+    status: string
+    _count: ContratacaoCountAggregateOutputType | null
+    _avg: ContratacaoAvgAggregateOutputType | null
+    _sum: ContratacaoSumAggregateOutputType | null
+    _min: ContratacaoMinAggregateOutputType | null
+    _max: ContratacaoMaxAggregateOutputType | null
   }
 
-  type GetUsuario_AcertosGroupByPayload<T extends Usuario_AcertosGroupByArgs> = Prisma.PrismaPromise<
+  type GetContratacaoGroupByPayload<T extends ContratacaoGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<Usuario_AcertosGroupByOutputType, T['by']> &
+      PickEnumerable<ContratacaoGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof Usuario_AcertosGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof ContratacaoGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], Usuario_AcertosGroupByOutputType[P]>
-            : GetScalarType<T[P], Usuario_AcertosGroupByOutputType[P]>
+              : GetScalarType<T[P], ContratacaoGroupByOutputType[P]>
+            : GetScalarType<T[P], ContratacaoGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type Usuario_AcertosSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_usuario_acerto?: boolean
-    id_usuario?: boolean
-    id_pergunta?: boolean
-    id_opcao_resposta?: boolean
-    acertou?: boolean
-    usuario?: boolean | UsuarioDefaultArgs<ExtArgs>
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["usuario_Acertos"]>
+  export type ContratacaoSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_contratacao?: boolean
+    id_recrutador?: boolean
+    id_aluno?: boolean
+    data_contratacao?: boolean
+    cargo?: boolean
+    salario?: boolean
+    status?: boolean
+    recrutador?: boolean | RecrutadorDefaultArgs<ExtArgs>
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contratacao"]>
 
-  export type Usuario_AcertosSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_usuario_acerto?: boolean
-    id_usuario?: boolean
-    id_pergunta?: boolean
-    id_opcao_resposta?: boolean
-    acertou?: boolean
-    usuario?: boolean | UsuarioDefaultArgs<ExtArgs>
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["usuario_Acertos"]>
+  export type ContratacaoSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_contratacao?: boolean
+    id_recrutador?: boolean
+    id_aluno?: boolean
+    data_contratacao?: boolean
+    cargo?: boolean
+    salario?: boolean
+    status?: boolean
+    recrutador?: boolean | RecrutadorDefaultArgs<ExtArgs>
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contratacao"]>
 
-  export type Usuario_AcertosSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id_usuario_acerto?: boolean
-    id_usuario?: boolean
-    id_pergunta?: boolean
-    id_opcao_resposta?: boolean
-    acertou?: boolean
-    usuario?: boolean | UsuarioDefaultArgs<ExtArgs>
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["usuario_Acertos"]>
+  export type ContratacaoSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_contratacao?: boolean
+    id_recrutador?: boolean
+    id_aluno?: boolean
+    data_contratacao?: boolean
+    cargo?: boolean
+    salario?: boolean
+    status?: boolean
+    recrutador?: boolean | RecrutadorDefaultArgs<ExtArgs>
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["contratacao"]>
 
-  export type Usuario_AcertosSelectScalar = {
-    id_usuario_acerto?: boolean
-    id_usuario?: boolean
-    id_pergunta?: boolean
-    id_opcao_resposta?: boolean
-    acertou?: boolean
+  export type ContratacaoSelectScalar = {
+    id_contratacao?: boolean
+    id_recrutador?: boolean
+    id_aluno?: boolean
+    data_contratacao?: boolean
+    cargo?: boolean
+    salario?: boolean
+    status?: boolean
   }
 
-  export type Usuario_AcertosOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_usuario_acerto" | "id_usuario" | "id_pergunta" | "id_opcao_resposta" | "acertou", ExtArgs["result"]["usuario_Acertos"]>
-  export type Usuario_AcertosInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    usuario?: boolean | UsuarioDefaultArgs<ExtArgs>
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
+  export type ContratacaoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_contratacao" | "id_recrutador" | "id_aluno" | "data_contratacao" | "cargo" | "salario" | "status", ExtArgs["result"]["contratacao"]>
+  export type ContratacaoInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    recrutador?: boolean | RecrutadorDefaultArgs<ExtArgs>
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
   }
-  export type Usuario_AcertosIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    usuario?: boolean | UsuarioDefaultArgs<ExtArgs>
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
+  export type ContratacaoIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    recrutador?: boolean | RecrutadorDefaultArgs<ExtArgs>
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
   }
-  export type Usuario_AcertosIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    usuario?: boolean | UsuarioDefaultArgs<ExtArgs>
-    pergunta?: boolean | PerguntaDefaultArgs<ExtArgs>
+  export type ContratacaoIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    recrutador?: boolean | RecrutadorDefaultArgs<ExtArgs>
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
   }
 
-  export type $Usuario_AcertosPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Usuario_Acertos"
+  export type $ContratacaoPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Contratacao"
     objects: {
-      usuario: Prisma.$UsuarioPayload<ExtArgs>
-      pergunta: Prisma.$PerguntaPayload<ExtArgs>
+      recrutador: Prisma.$RecrutadorPayload<ExtArgs>
+      aluno: Prisma.$AlunoPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
-      id_usuario_acerto: string
-      id_usuario: string
-      id_pergunta: string
-      id_opcao_resposta: string
-      acertou: boolean
-    }, ExtArgs["result"]["usuario_Acertos"]>
+      id_contratacao: string
+      id_recrutador: string
+      id_aluno: string
+      data_contratacao: Date
+      cargo: string
+      salario: number | null
+      status: string
+    }, ExtArgs["result"]["contratacao"]>
     composites: {}
   }
 
-  type Usuario_AcertosGetPayload<S extends boolean | null | undefined | Usuario_AcertosDefaultArgs> = $Result.GetResult<Prisma.$Usuario_AcertosPayload, S>
+  type ContratacaoGetPayload<S extends boolean | null | undefined | ContratacaoDefaultArgs> = $Result.GetResult<Prisma.$ContratacaoPayload, S>
 
-  type Usuario_AcertosCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<Usuario_AcertosFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: Usuario_AcertosCountAggregateInputType | true
+  type ContratacaoCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<ContratacaoFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: ContratacaoCountAggregateInputType | true
     }
 
-  export interface Usuario_AcertosDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Usuario_Acertos'], meta: { name: 'Usuario_Acertos' } }
+  export interface ContratacaoDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Contratacao'], meta: { name: 'Contratacao' } }
     /**
-     * Find zero or one Usuario_Acertos that matches the filter.
-     * @param {Usuario_AcertosFindUniqueArgs} args - Arguments to find a Usuario_Acertos
+     * Find zero or one Contratacao that matches the filter.
+     * @param {ContratacaoFindUniqueArgs} args - Arguments to find a Contratacao
      * @example
-     * // Get one Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.findUnique({
+     * // Get one Contratacao
+     * const contratacao = await prisma.contratacao.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends Usuario_AcertosFindUniqueArgs>(args: SelectSubset<T, Usuario_AcertosFindUniqueArgs<ExtArgs>>): Prisma__Usuario_AcertosClient<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends ContratacaoFindUniqueArgs>(args: SelectSubset<T, ContratacaoFindUniqueArgs<ExtArgs>>): Prisma__ContratacaoClient<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Usuario_Acertos that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Contratacao that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {Usuario_AcertosFindUniqueOrThrowArgs} args - Arguments to find a Usuario_Acertos
+     * @param {ContratacaoFindUniqueOrThrowArgs} args - Arguments to find a Contratacao
      * @example
-     * // Get one Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.findUniqueOrThrow({
+     * // Get one Contratacao
+     * const contratacao = await prisma.contratacao.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends Usuario_AcertosFindUniqueOrThrowArgs>(args: SelectSubset<T, Usuario_AcertosFindUniqueOrThrowArgs<ExtArgs>>): Prisma__Usuario_AcertosClient<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends ContratacaoFindUniqueOrThrowArgs>(args: SelectSubset<T, ContratacaoFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ContratacaoClient<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Usuario_Acertos that matches the filter.
+     * Find the first Contratacao that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Usuario_AcertosFindFirstArgs} args - Arguments to find a Usuario_Acertos
+     * @param {ContratacaoFindFirstArgs} args - Arguments to find a Contratacao
      * @example
-     * // Get one Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.findFirst({
+     * // Get one Contratacao
+     * const contratacao = await prisma.contratacao.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends Usuario_AcertosFindFirstArgs>(args?: SelectSubset<T, Usuario_AcertosFindFirstArgs<ExtArgs>>): Prisma__Usuario_AcertosClient<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends ContratacaoFindFirstArgs>(args?: SelectSubset<T, ContratacaoFindFirstArgs<ExtArgs>>): Prisma__ContratacaoClient<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Usuario_Acertos that matches the filter or
+     * Find the first Contratacao that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Usuario_AcertosFindFirstOrThrowArgs} args - Arguments to find a Usuario_Acertos
+     * @param {ContratacaoFindFirstOrThrowArgs} args - Arguments to find a Contratacao
      * @example
-     * // Get one Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.findFirstOrThrow({
+     * // Get one Contratacao
+     * const contratacao = await prisma.contratacao.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends Usuario_AcertosFindFirstOrThrowArgs>(args?: SelectSubset<T, Usuario_AcertosFindFirstOrThrowArgs<ExtArgs>>): Prisma__Usuario_AcertosClient<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends ContratacaoFindFirstOrThrowArgs>(args?: SelectSubset<T, ContratacaoFindFirstOrThrowArgs<ExtArgs>>): Prisma__ContratacaoClient<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Usuario_Acertos that matches the filter.
+     * Find zero or more Contratacaos that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Usuario_AcertosFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {ContratacaoFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.findMany()
+     * // Get all Contratacaos
+     * const contratacaos = await prisma.contratacao.findMany()
      * 
-     * // Get first 10 Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.findMany({ take: 10 })
+     * // Get first 10 Contratacaos
+     * const contratacaos = await prisma.contratacao.findMany({ take: 10 })
      * 
-     * // Only select the `id_usuario_acerto`
-     * const usuario_AcertosWithId_usuario_acertoOnly = await prisma.usuario_Acertos.findMany({ select: { id_usuario_acerto: true } })
+     * // Only select the `id_contratacao`
+     * const contratacaoWithId_contratacaoOnly = await prisma.contratacao.findMany({ select: { id_contratacao: true } })
      * 
      */
-    findMany<T extends Usuario_AcertosFindManyArgs>(args?: SelectSubset<T, Usuario_AcertosFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends ContratacaoFindManyArgs>(args?: SelectSubset<T, ContratacaoFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Usuario_Acertos.
-     * @param {Usuario_AcertosCreateArgs} args - Arguments to create a Usuario_Acertos.
+     * Create a Contratacao.
+     * @param {ContratacaoCreateArgs} args - Arguments to create a Contratacao.
      * @example
-     * // Create one Usuario_Acertos
-     * const Usuario_Acertos = await prisma.usuario_Acertos.create({
+     * // Create one Contratacao
+     * const Contratacao = await prisma.contratacao.create({
      *   data: {
-     *     // ... data to create a Usuario_Acertos
+     *     // ... data to create a Contratacao
      *   }
      * })
      * 
      */
-    create<T extends Usuario_AcertosCreateArgs>(args: SelectSubset<T, Usuario_AcertosCreateArgs<ExtArgs>>): Prisma__Usuario_AcertosClient<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends ContratacaoCreateArgs>(args: SelectSubset<T, ContratacaoCreateArgs<ExtArgs>>): Prisma__ContratacaoClient<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Usuario_Acertos.
-     * @param {Usuario_AcertosCreateManyArgs} args - Arguments to create many Usuario_Acertos.
+     * Create many Contratacaos.
+     * @param {ContratacaoCreateManyArgs} args - Arguments to create many Contratacaos.
      * @example
-     * // Create many Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.createMany({
+     * // Create many Contratacaos
+     * const contratacao = await prisma.contratacao.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends Usuario_AcertosCreateManyArgs>(args?: SelectSubset<T, Usuario_AcertosCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends ContratacaoCreateManyArgs>(args?: SelectSubset<T, ContratacaoCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Usuario_Acertos and returns the data saved in the database.
-     * @param {Usuario_AcertosCreateManyAndReturnArgs} args - Arguments to create many Usuario_Acertos.
+     * Create many Contratacaos and returns the data saved in the database.
+     * @param {ContratacaoCreateManyAndReturnArgs} args - Arguments to create many Contratacaos.
      * @example
-     * // Create many Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.createManyAndReturn({
+     * // Create many Contratacaos
+     * const contratacao = await prisma.contratacao.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Usuario_Acertos and only return the `id_usuario_acerto`
-     * const usuario_AcertosWithId_usuario_acertoOnly = await prisma.usuario_Acertos.createManyAndReturn({
-     *   select: { id_usuario_acerto: true },
+     * // Create many Contratacaos and only return the `id_contratacao`
+     * const contratacaoWithId_contratacaoOnly = await prisma.contratacao.createManyAndReturn({
+     *   select: { id_contratacao: true },
      *   data: [
      *     // ... provide data here
      *   ]
@@ -7191,28 +5435,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends Usuario_AcertosCreateManyAndReturnArgs>(args?: SelectSubset<T, Usuario_AcertosCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends ContratacaoCreateManyAndReturnArgs>(args?: SelectSubset<T, ContratacaoCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Usuario_Acertos.
-     * @param {Usuario_AcertosDeleteArgs} args - Arguments to delete one Usuario_Acertos.
+     * Delete a Contratacao.
+     * @param {ContratacaoDeleteArgs} args - Arguments to delete one Contratacao.
      * @example
-     * // Delete one Usuario_Acertos
-     * const Usuario_Acertos = await prisma.usuario_Acertos.delete({
+     * // Delete one Contratacao
+     * const Contratacao = await prisma.contratacao.delete({
      *   where: {
-     *     // ... filter to delete one Usuario_Acertos
+     *     // ... filter to delete one Contratacao
      *   }
      * })
      * 
      */
-    delete<T extends Usuario_AcertosDeleteArgs>(args: SelectSubset<T, Usuario_AcertosDeleteArgs<ExtArgs>>): Prisma__Usuario_AcertosClient<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends ContratacaoDeleteArgs>(args: SelectSubset<T, ContratacaoDeleteArgs<ExtArgs>>): Prisma__ContratacaoClient<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Usuario_Acertos.
-     * @param {Usuario_AcertosUpdateArgs} args - Arguments to update one Usuario_Acertos.
+     * Update one Contratacao.
+     * @param {ContratacaoUpdateArgs} args - Arguments to update one Contratacao.
      * @example
-     * // Update one Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.update({
+     * // Update one Contratacao
+     * const contratacao = await prisma.contratacao.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -7222,30 +5466,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends Usuario_AcertosUpdateArgs>(args: SelectSubset<T, Usuario_AcertosUpdateArgs<ExtArgs>>): Prisma__Usuario_AcertosClient<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends ContratacaoUpdateArgs>(args: SelectSubset<T, ContratacaoUpdateArgs<ExtArgs>>): Prisma__ContratacaoClient<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Usuario_Acertos.
-     * @param {Usuario_AcertosDeleteManyArgs} args - Arguments to filter Usuario_Acertos to delete.
+     * Delete zero or more Contratacaos.
+     * @param {ContratacaoDeleteManyArgs} args - Arguments to filter Contratacaos to delete.
      * @example
-     * // Delete a few Usuario_Acertos
-     * const { count } = await prisma.usuario_Acertos.deleteMany({
+     * // Delete a few Contratacaos
+     * const { count } = await prisma.contratacao.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends Usuario_AcertosDeleteManyArgs>(args?: SelectSubset<T, Usuario_AcertosDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends ContratacaoDeleteManyArgs>(args?: SelectSubset<T, ContratacaoDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Usuario_Acertos.
+     * Update zero or more Contratacaos.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Usuario_AcertosUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {ContratacaoUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.updateMany({
+     * // Update many Contratacaos
+     * const contratacao = await prisma.contratacao.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -7255,14 +5499,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends Usuario_AcertosUpdateManyArgs>(args: SelectSubset<T, Usuario_AcertosUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends ContratacaoUpdateManyArgs>(args: SelectSubset<T, ContratacaoUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Usuario_Acertos and returns the data updated in the database.
-     * @param {Usuario_AcertosUpdateManyAndReturnArgs} args - Arguments to update many Usuario_Acertos.
+     * Update zero or more Contratacaos and returns the data updated in the database.
+     * @param {ContratacaoUpdateManyAndReturnArgs} args - Arguments to update many Contratacaos.
      * @example
-     * // Update many Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.updateManyAndReturn({
+     * // Update many Contratacaos
+     * const contratacao = await prisma.contratacao.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -7271,9 +5515,9 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Usuario_Acertos and only return the `id_usuario_acerto`
-     * const usuario_AcertosWithId_usuario_acertoOnly = await prisma.usuario_Acertos.updateManyAndReturn({
-     *   select: { id_usuario_acerto: true },
+     * // Update zero or more Contratacaos and only return the `id_contratacao`
+     * const contratacaoWithId_contratacaoOnly = await prisma.contratacao.updateManyAndReturn({
+     *   select: { id_contratacao: true },
      *   where: {
      *     // ... provide filter here
      *   },
@@ -7285,56 +5529,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends Usuario_AcertosUpdateManyAndReturnArgs>(args: SelectSubset<T, Usuario_AcertosUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends ContratacaoUpdateManyAndReturnArgs>(args: SelectSubset<T, ContratacaoUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Usuario_Acertos.
-     * @param {Usuario_AcertosUpsertArgs} args - Arguments to update or create a Usuario_Acertos.
+     * Create or update one Contratacao.
+     * @param {ContratacaoUpsertArgs} args - Arguments to update or create a Contratacao.
      * @example
-     * // Update or create a Usuario_Acertos
-     * const usuario_Acertos = await prisma.usuario_Acertos.upsert({
+     * // Update or create a Contratacao
+     * const contratacao = await prisma.contratacao.upsert({
      *   create: {
-     *     // ... data to create a Usuario_Acertos
+     *     // ... data to create a Contratacao
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Usuario_Acertos we want to update
+     *     // ... the filter for the Contratacao we want to update
      *   }
      * })
      */
-    upsert<T extends Usuario_AcertosUpsertArgs>(args: SelectSubset<T, Usuario_AcertosUpsertArgs<ExtArgs>>): Prisma__Usuario_AcertosClient<$Result.GetResult<Prisma.$Usuario_AcertosPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends ContratacaoUpsertArgs>(args: SelectSubset<T, ContratacaoUpsertArgs<ExtArgs>>): Prisma__ContratacaoClient<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Usuario_Acertos.
+     * Count the number of Contratacaos.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Usuario_AcertosCountArgs} args - Arguments to filter Usuario_Acertos to count.
+     * @param {ContratacaoCountArgs} args - Arguments to filter Contratacaos to count.
      * @example
-     * // Count the number of Usuario_Acertos
-     * const count = await prisma.usuario_Acertos.count({
+     * // Count the number of Contratacaos
+     * const count = await prisma.contratacao.count({
      *   where: {
-     *     // ... the filter for the Usuario_Acertos we want to count
+     *     // ... the filter for the Contratacaos we want to count
      *   }
      * })
     **/
-    count<T extends Usuario_AcertosCountArgs>(
-      args?: Subset<T, Usuario_AcertosCountArgs>,
+    count<T extends ContratacaoCountArgs>(
+      args?: Subset<T, ContratacaoCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], Usuario_AcertosCountAggregateOutputType>
+          : GetScalarType<T['select'], ContratacaoCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Usuario_Acertos.
+     * Allows you to perform aggregations operations on a Contratacao.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Usuario_AcertosAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {ContratacaoAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -7354,13 +5598,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends Usuario_AcertosAggregateArgs>(args: Subset<T, Usuario_AcertosAggregateArgs>): Prisma.PrismaPromise<GetUsuario_AcertosAggregateType<T>>
+    aggregate<T extends ContratacaoAggregateArgs>(args: Subset<T, ContratacaoAggregateArgs>): Prisma.PrismaPromise<GetContratacaoAggregateType<T>>
 
     /**
-     * Group by Usuario_Acertos.
+     * Group by Contratacao.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {Usuario_AcertosGroupByArgs} args - Group by arguments.
+     * @param {ContratacaoGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -7375,14 +5619,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends Usuario_AcertosGroupByArgs,
+      T extends ContratacaoGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: Usuario_AcertosGroupByArgs['orderBy'] }
-        : { orderBy?: Usuario_AcertosGroupByArgs['orderBy'] },
+        ? { orderBy: ContratacaoGroupByArgs['orderBy'] }
+        : { orderBy?: ContratacaoGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -7431,23 +5675,23 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, Usuario_AcertosGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUsuario_AcertosGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, ContratacaoGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetContratacaoGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Usuario_Acertos model
+   * Fields of the Contratacao model
    */
-  readonly fields: Usuario_AcertosFieldRefs;
+  readonly fields: ContratacaoFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Usuario_Acertos.
+   * The delegate class that acts as a "Promise-like" for Contratacao.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__Usuario_AcertosClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__ContratacaoClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    usuario<T extends UsuarioDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UsuarioDefaultArgs<ExtArgs>>): Prisma__UsuarioClient<$Result.GetResult<Prisma.$UsuarioPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
-    pergunta<T extends PerguntaDefaultArgs<ExtArgs> = {}>(args?: Subset<T, PerguntaDefaultArgs<ExtArgs>>): Prisma__PerguntaClient<$Result.GetResult<Prisma.$PerguntaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    recrutador<T extends RecrutadorDefaultArgs<ExtArgs> = {}>(args?: Subset<T, RecrutadorDefaultArgs<ExtArgs>>): Prisma__RecrutadorClient<$Result.GetResult<Prisma.$RecrutadorPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    aluno<T extends AlunoDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AlunoDefaultArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -7474,425 +5718,2615 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Usuario_Acertos model
+   * Fields of the Contratacao model
    */
-  interface Usuario_AcertosFieldRefs {
-    readonly id_usuario_acerto: FieldRef<"Usuario_Acertos", 'String'>
-    readonly id_usuario: FieldRef<"Usuario_Acertos", 'String'>
-    readonly id_pergunta: FieldRef<"Usuario_Acertos", 'String'>
-    readonly id_opcao_resposta: FieldRef<"Usuario_Acertos", 'String'>
-    readonly acertou: FieldRef<"Usuario_Acertos", 'Boolean'>
+  interface ContratacaoFieldRefs {
+    readonly id_contratacao: FieldRef<"Contratacao", 'String'>
+    readonly id_recrutador: FieldRef<"Contratacao", 'String'>
+    readonly id_aluno: FieldRef<"Contratacao", 'String'>
+    readonly data_contratacao: FieldRef<"Contratacao", 'DateTime'>
+    readonly cargo: FieldRef<"Contratacao", 'String'>
+    readonly salario: FieldRef<"Contratacao", 'Float'>
+    readonly status: FieldRef<"Contratacao", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Usuario_Acertos findUnique
+   * Contratacao findUnique
    */
-  export type Usuario_AcertosFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
+    select?: ContratacaoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
+    include?: ContratacaoInclude<ExtArgs> | null
     /**
-     * Filter, which Usuario_Acertos to fetch.
+     * Filter, which Contratacao to fetch.
      */
-    where: Usuario_AcertosWhereUniqueInput
+    where: ContratacaoWhereUniqueInput
   }
 
   /**
-   * Usuario_Acertos findUniqueOrThrow
+   * Contratacao findUniqueOrThrow
    */
-  export type Usuario_AcertosFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
+    select?: ContratacaoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
+    include?: ContratacaoInclude<ExtArgs> | null
     /**
-     * Filter, which Usuario_Acertos to fetch.
+     * Filter, which Contratacao to fetch.
      */
-    where: Usuario_AcertosWhereUniqueInput
+    where: ContratacaoWhereUniqueInput
   }
 
   /**
-   * Usuario_Acertos findFirst
+   * Contratacao findFirst
    */
-  export type Usuario_AcertosFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
+    select?: ContratacaoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
+    include?: ContratacaoInclude<ExtArgs> | null
     /**
-     * Filter, which Usuario_Acertos to fetch.
+     * Filter, which Contratacao to fetch.
      */
-    where?: Usuario_AcertosWhereInput
+    where?: ContratacaoWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Usuario_Acertos to fetch.
+     * Determine the order of Contratacaos to fetch.
      */
-    orderBy?: Usuario_AcertosOrderByWithRelationInput | Usuario_AcertosOrderByWithRelationInput[]
+    orderBy?: ContratacaoOrderByWithRelationInput | ContratacaoOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Usuario_Acertos.
+     * Sets the position for searching for Contratacaos.
      */
-    cursor?: Usuario_AcertosWhereUniqueInput
+    cursor?: ContratacaoWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Usuario_Acertos from the position of the cursor.
+     * Take `±n` Contratacaos from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Usuario_Acertos.
+     * Skip the first `n` Contratacaos.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Usuario_Acertos.
+     * Filter by unique combinations of Contratacaos.
      */
-    distinct?: Usuario_AcertosScalarFieldEnum | Usuario_AcertosScalarFieldEnum[]
+    distinct?: ContratacaoScalarFieldEnum | ContratacaoScalarFieldEnum[]
   }
 
   /**
-   * Usuario_Acertos findFirstOrThrow
+   * Contratacao findFirstOrThrow
    */
-  export type Usuario_AcertosFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
+    select?: ContratacaoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
+    include?: ContratacaoInclude<ExtArgs> | null
     /**
-     * Filter, which Usuario_Acertos to fetch.
+     * Filter, which Contratacao to fetch.
      */
-    where?: Usuario_AcertosWhereInput
+    where?: ContratacaoWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Usuario_Acertos to fetch.
+     * Determine the order of Contratacaos to fetch.
      */
-    orderBy?: Usuario_AcertosOrderByWithRelationInput | Usuario_AcertosOrderByWithRelationInput[]
+    orderBy?: ContratacaoOrderByWithRelationInput | ContratacaoOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Usuario_Acertos.
+     * Sets the position for searching for Contratacaos.
      */
-    cursor?: Usuario_AcertosWhereUniqueInput
+    cursor?: ContratacaoWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Usuario_Acertos from the position of the cursor.
+     * Take `±n` Contratacaos from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Usuario_Acertos.
+     * Skip the first `n` Contratacaos.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Usuario_Acertos.
+     * Filter by unique combinations of Contratacaos.
      */
-    distinct?: Usuario_AcertosScalarFieldEnum | Usuario_AcertosScalarFieldEnum[]
+    distinct?: ContratacaoScalarFieldEnum | ContratacaoScalarFieldEnum[]
   }
 
   /**
-   * Usuario_Acertos findMany
+   * Contratacao findMany
    */
-  export type Usuario_AcertosFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
+    select?: ContratacaoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
+    include?: ContratacaoInclude<ExtArgs> | null
     /**
-     * Filter, which Usuario_Acertos to fetch.
+     * Filter, which Contratacaos to fetch.
      */
-    where?: Usuario_AcertosWhereInput
+    where?: ContratacaoWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Usuario_Acertos to fetch.
+     * Determine the order of Contratacaos to fetch.
      */
-    orderBy?: Usuario_AcertosOrderByWithRelationInput | Usuario_AcertosOrderByWithRelationInput[]
+    orderBy?: ContratacaoOrderByWithRelationInput | ContratacaoOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Usuario_Acertos.
+     * Sets the position for listing Contratacaos.
      */
-    cursor?: Usuario_AcertosWhereUniqueInput
+    cursor?: ContratacaoWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Usuario_Acertos from the position of the cursor.
+     * Take `±n` Contratacaos from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Usuario_Acertos.
+     * Skip the first `n` Contratacaos.
      */
     skip?: number
-    distinct?: Usuario_AcertosScalarFieldEnum | Usuario_AcertosScalarFieldEnum[]
+    distinct?: ContratacaoScalarFieldEnum | ContratacaoScalarFieldEnum[]
   }
 
   /**
-   * Usuario_Acertos create
+   * Contratacao create
    */
-  export type Usuario_AcertosCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
+    select?: ContratacaoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
+    include?: ContratacaoInclude<ExtArgs> | null
     /**
-     * The data needed to create a Usuario_Acertos.
+     * The data needed to create a Contratacao.
      */
-    data: XOR<Usuario_AcertosCreateInput, Usuario_AcertosUncheckedCreateInput>
+    data: XOR<ContratacaoCreateInput, ContratacaoUncheckedCreateInput>
   }
 
   /**
-   * Usuario_Acertos createMany
+   * Contratacao createMany
    */
-  export type Usuario_AcertosCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Usuario_Acertos.
+     * The data used to create many Contratacaos.
      */
-    data: Usuario_AcertosCreateManyInput | Usuario_AcertosCreateManyInput[]
+    data: ContratacaoCreateManyInput | ContratacaoCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Usuario_Acertos createManyAndReturn
+   * Contratacao createManyAndReturn
    */
-  export type Usuario_AcertosCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelectCreateManyAndReturn<ExtArgs> | null
+    select?: ContratacaoSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
-     * The data used to create many Usuario_Acertos.
+     * The data used to create many Contratacaos.
      */
-    data: Usuario_AcertosCreateManyInput | Usuario_AcertosCreateManyInput[]
+    data: ContratacaoCreateManyInput | ContratacaoCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: ContratacaoIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Usuario_Acertos update
+   * Contratacao update
    */
-  export type Usuario_AcertosUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
+    select?: ContratacaoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
+    include?: ContratacaoInclude<ExtArgs> | null
     /**
-     * The data needed to update a Usuario_Acertos.
+     * The data needed to update a Contratacao.
      */
-    data: XOR<Usuario_AcertosUpdateInput, Usuario_AcertosUncheckedUpdateInput>
+    data: XOR<ContratacaoUpdateInput, ContratacaoUncheckedUpdateInput>
     /**
-     * Choose, which Usuario_Acertos to update.
+     * Choose, which Contratacao to update.
      */
-    where: Usuario_AcertosWhereUniqueInput
+    where: ContratacaoWhereUniqueInput
   }
 
   /**
-   * Usuario_Acertos updateMany
+   * Contratacao updateMany
    */
-  export type Usuario_AcertosUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Usuario_Acertos.
+     * The data used to update Contratacaos.
      */
-    data: XOR<Usuario_AcertosUpdateManyMutationInput, Usuario_AcertosUncheckedUpdateManyInput>
+    data: XOR<ContratacaoUpdateManyMutationInput, ContratacaoUncheckedUpdateManyInput>
     /**
-     * Filter which Usuario_Acertos to update
+     * Filter which Contratacaos to update
      */
-    where?: Usuario_AcertosWhereInput
+    where?: ContratacaoWhereInput
     /**
-     * Limit how many Usuario_Acertos to update.
+     * Limit how many Contratacaos to update.
      */
     limit?: number
   }
 
   /**
-   * Usuario_Acertos updateManyAndReturn
+   * Contratacao updateManyAndReturn
    */
-  export type Usuario_AcertosUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: ContratacaoSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
-     * The data used to update Usuario_Acertos.
+     * The data used to update Contratacaos.
      */
-    data: XOR<Usuario_AcertosUpdateManyMutationInput, Usuario_AcertosUncheckedUpdateManyInput>
+    data: XOR<ContratacaoUpdateManyMutationInput, ContratacaoUncheckedUpdateManyInput>
     /**
-     * Filter which Usuario_Acertos to update
+     * Filter which Contratacaos to update
      */
-    where?: Usuario_AcertosWhereInput
+    where?: ContratacaoWhereInput
     /**
-     * Limit how many Usuario_Acertos to update.
+     * Limit how many Contratacaos to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: ContratacaoIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Usuario_Acertos upsert
+   * Contratacao upsert
    */
-  export type Usuario_AcertosUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
+    select?: ContratacaoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
+    include?: ContratacaoInclude<ExtArgs> | null
     /**
-     * The filter to search for the Usuario_Acertos to update in case it exists.
+     * The filter to search for the Contratacao to update in case it exists.
      */
-    where: Usuario_AcertosWhereUniqueInput
+    where: ContratacaoWhereUniqueInput
     /**
-     * In case the Usuario_Acertos found by the `where` argument doesn't exist, create a new Usuario_Acertos with this data.
+     * In case the Contratacao found by the `where` argument doesn't exist, create a new Contratacao with this data.
      */
-    create: XOR<Usuario_AcertosCreateInput, Usuario_AcertosUncheckedCreateInput>
+    create: XOR<ContratacaoCreateInput, ContratacaoUncheckedCreateInput>
     /**
-     * In case the Usuario_Acertos was found with the provided `where` argument, update it with this data.
+     * In case the Contratacao was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<Usuario_AcertosUpdateInput, Usuario_AcertosUncheckedUpdateInput>
+    update: XOR<ContratacaoUpdateInput, ContratacaoUncheckedUpdateInput>
   }
 
   /**
-   * Usuario_Acertos delete
+   * Contratacao delete
    */
-  export type Usuario_AcertosDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
+    select?: ContratacaoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
+    include?: ContratacaoInclude<ExtArgs> | null
     /**
-     * Filter which Usuario_Acertos to delete.
+     * Filter which Contratacao to delete.
      */
-    where: Usuario_AcertosWhereUniqueInput
+    where: ContratacaoWhereUniqueInput
   }
 
   /**
-   * Usuario_Acertos deleteMany
+   * Contratacao deleteMany
    */
-  export type Usuario_AcertosDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Usuario_Acertos to delete
+     * Filter which Contratacaos to delete
      */
-    where?: Usuario_AcertosWhereInput
+    where?: ContratacaoWhereInput
     /**
-     * Limit how many Usuario_Acertos to delete.
+     * Limit how many Contratacaos to delete.
      */
     limit?: number
   }
 
   /**
-   * Usuario_Acertos without action
+   * Contratacao without action
    */
-  export type Usuario_AcertosDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ContratacaoDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Usuario_Acertos
+     * Select specific fields to fetch from the Contratacao
      */
-    select?: Usuario_AcertosSelect<ExtArgs> | null
+    select?: ContratacaoSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Usuario_Acertos
+     * Omit specific fields from the Contratacao
      */
-    omit?: Usuario_AcertosOmit<ExtArgs> | null
+    omit?: ContratacaoOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Usuario_AcertosInclude<ExtArgs> | null
+    include?: ContratacaoInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model Nota
+   */
+
+  export type AggregateNota = {
+    _count: NotaCountAggregateOutputType | null
+    _avg: NotaAvgAggregateOutputType | null
+    _sum: NotaSumAggregateOutputType | null
+    _min: NotaMinAggregateOutputType | null
+    _max: NotaMaxAggregateOutputType | null
+  }
+
+  export type NotaAvgAggregateOutputType = {
+    nota: number | null
+    semestre: number | null
+  }
+
+  export type NotaSumAggregateOutputType = {
+    nota: number | null
+    semestre: number | null
+  }
+
+  export type NotaMinAggregateOutputType = {
+    id_nota: string | null
+    id_aluno: string | null
+    disciplina: string | null
+    nota: number | null
+    semestre: number | null
+  }
+
+  export type NotaMaxAggregateOutputType = {
+    id_nota: string | null
+    id_aluno: string | null
+    disciplina: string | null
+    nota: number | null
+    semestre: number | null
+  }
+
+  export type NotaCountAggregateOutputType = {
+    id_nota: number
+    id_aluno: number
+    disciplina: number
+    nota: number
+    semestre: number
+    _all: number
+  }
+
+
+  export type NotaAvgAggregateInputType = {
+    nota?: true
+    semestre?: true
+  }
+
+  export type NotaSumAggregateInputType = {
+    nota?: true
+    semestre?: true
+  }
+
+  export type NotaMinAggregateInputType = {
+    id_nota?: true
+    id_aluno?: true
+    disciplina?: true
+    nota?: true
+    semestre?: true
+  }
+
+  export type NotaMaxAggregateInputType = {
+    id_nota?: true
+    id_aluno?: true
+    disciplina?: true
+    nota?: true
+    semestre?: true
+  }
+
+  export type NotaCountAggregateInputType = {
+    id_nota?: true
+    id_aluno?: true
+    disciplina?: true
+    nota?: true
+    semestre?: true
+    _all?: true
+  }
+
+  export type NotaAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Nota to aggregate.
+     */
+    where?: NotaWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Notas to fetch.
+     */
+    orderBy?: NotaOrderByWithRelationInput | NotaOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: NotaWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Notas from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Notas.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned Notas
+    **/
+    _count?: true | NotaCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: NotaAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: NotaSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: NotaMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: NotaMaxAggregateInputType
+  }
+
+  export type GetNotaAggregateType<T extends NotaAggregateArgs> = {
+        [P in keyof T & keyof AggregateNota]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateNota[P]>
+      : GetScalarType<T[P], AggregateNota[P]>
+  }
+
+
+
+
+  export type NotaGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: NotaWhereInput
+    orderBy?: NotaOrderByWithAggregationInput | NotaOrderByWithAggregationInput[]
+    by: NotaScalarFieldEnum[] | NotaScalarFieldEnum
+    having?: NotaScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: NotaCountAggregateInputType | true
+    _avg?: NotaAvgAggregateInputType
+    _sum?: NotaSumAggregateInputType
+    _min?: NotaMinAggregateInputType
+    _max?: NotaMaxAggregateInputType
+  }
+
+  export type NotaGroupByOutputType = {
+    id_nota: string
+    id_aluno: string
+    disciplina: string
+    nota: number
+    semestre: number
+    _count: NotaCountAggregateOutputType | null
+    _avg: NotaAvgAggregateOutputType | null
+    _sum: NotaSumAggregateOutputType | null
+    _min: NotaMinAggregateOutputType | null
+    _max: NotaMaxAggregateOutputType | null
+  }
+
+  type GetNotaGroupByPayload<T extends NotaGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<NotaGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof NotaGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], NotaGroupByOutputType[P]>
+            : GetScalarType<T[P], NotaGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type NotaSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_nota?: boolean
+    id_aluno?: boolean
+    disciplina?: boolean
+    nota?: boolean
+    semestre?: boolean
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["nota"]>
+
+  export type NotaSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_nota?: boolean
+    id_aluno?: boolean
+    disciplina?: boolean
+    nota?: boolean
+    semestre?: boolean
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["nota"]>
+
+  export type NotaSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_nota?: boolean
+    id_aluno?: boolean
+    disciplina?: boolean
+    nota?: boolean
+    semestre?: boolean
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["nota"]>
+
+  export type NotaSelectScalar = {
+    id_nota?: boolean
+    id_aluno?: boolean
+    disciplina?: boolean
+    nota?: boolean
+    semestre?: boolean
+  }
+
+  export type NotaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_nota" | "id_aluno" | "disciplina" | "nota" | "semestre", ExtArgs["result"]["nota"]>
+  export type NotaInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }
+  export type NotaIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }
+  export type NotaIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }
+
+  export type $NotaPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Nota"
+    objects: {
+      aluno: Prisma.$AlunoPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id_nota: string
+      id_aluno: string
+      disciplina: string
+      nota: number
+      semestre: number
+    }, ExtArgs["result"]["nota"]>
+    composites: {}
+  }
+
+  type NotaGetPayload<S extends boolean | null | undefined | NotaDefaultArgs> = $Result.GetResult<Prisma.$NotaPayload, S>
+
+  type NotaCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<NotaFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: NotaCountAggregateInputType | true
+    }
+
+  export interface NotaDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Nota'], meta: { name: 'Nota' } }
+    /**
+     * Find zero or one Nota that matches the filter.
+     * @param {NotaFindUniqueArgs} args - Arguments to find a Nota
+     * @example
+     * // Get one Nota
+     * const nota = await prisma.nota.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends NotaFindUniqueArgs>(args: SelectSubset<T, NotaFindUniqueArgs<ExtArgs>>): Prisma__NotaClient<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one Nota that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {NotaFindUniqueOrThrowArgs} args - Arguments to find a Nota
+     * @example
+     * // Get one Nota
+     * const nota = await prisma.nota.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends NotaFindUniqueOrThrowArgs>(args: SelectSubset<T, NotaFindUniqueOrThrowArgs<ExtArgs>>): Prisma__NotaClient<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Nota that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NotaFindFirstArgs} args - Arguments to find a Nota
+     * @example
+     * // Get one Nota
+     * const nota = await prisma.nota.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends NotaFindFirstArgs>(args?: SelectSubset<T, NotaFindFirstArgs<ExtArgs>>): Prisma__NotaClient<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Nota that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NotaFindFirstOrThrowArgs} args - Arguments to find a Nota
+     * @example
+     * // Get one Nota
+     * const nota = await prisma.nota.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends NotaFindFirstOrThrowArgs>(args?: SelectSubset<T, NotaFindFirstOrThrowArgs<ExtArgs>>): Prisma__NotaClient<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more Notas that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NotaFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Notas
+     * const notas = await prisma.nota.findMany()
+     * 
+     * // Get first 10 Notas
+     * const notas = await prisma.nota.findMany({ take: 10 })
+     * 
+     * // Only select the `id_nota`
+     * const notaWithId_notaOnly = await prisma.nota.findMany({ select: { id_nota: true } })
+     * 
+     */
+    findMany<T extends NotaFindManyArgs>(args?: SelectSubset<T, NotaFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a Nota.
+     * @param {NotaCreateArgs} args - Arguments to create a Nota.
+     * @example
+     * // Create one Nota
+     * const Nota = await prisma.nota.create({
+     *   data: {
+     *     // ... data to create a Nota
+     *   }
+     * })
+     * 
+     */
+    create<T extends NotaCreateArgs>(args: SelectSubset<T, NotaCreateArgs<ExtArgs>>): Prisma__NotaClient<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many Notas.
+     * @param {NotaCreateManyArgs} args - Arguments to create many Notas.
+     * @example
+     * // Create many Notas
+     * const nota = await prisma.nota.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends NotaCreateManyArgs>(args?: SelectSubset<T, NotaCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many Notas and returns the data saved in the database.
+     * @param {NotaCreateManyAndReturnArgs} args - Arguments to create many Notas.
+     * @example
+     * // Create many Notas
+     * const nota = await prisma.nota.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Notas and only return the `id_nota`
+     * const notaWithId_notaOnly = await prisma.nota.createManyAndReturn({
+     *   select: { id_nota: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends NotaCreateManyAndReturnArgs>(args?: SelectSubset<T, NotaCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a Nota.
+     * @param {NotaDeleteArgs} args - Arguments to delete one Nota.
+     * @example
+     * // Delete one Nota
+     * const Nota = await prisma.nota.delete({
+     *   where: {
+     *     // ... filter to delete one Nota
+     *   }
+     * })
+     * 
+     */
+    delete<T extends NotaDeleteArgs>(args: SelectSubset<T, NotaDeleteArgs<ExtArgs>>): Prisma__NotaClient<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one Nota.
+     * @param {NotaUpdateArgs} args - Arguments to update one Nota.
+     * @example
+     * // Update one Nota
+     * const nota = await prisma.nota.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends NotaUpdateArgs>(args: SelectSubset<T, NotaUpdateArgs<ExtArgs>>): Prisma__NotaClient<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more Notas.
+     * @param {NotaDeleteManyArgs} args - Arguments to filter Notas to delete.
+     * @example
+     * // Delete a few Notas
+     * const { count } = await prisma.nota.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends NotaDeleteManyArgs>(args?: SelectSubset<T, NotaDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Notas.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NotaUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Notas
+     * const nota = await prisma.nota.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends NotaUpdateManyArgs>(args: SelectSubset<T, NotaUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Notas and returns the data updated in the database.
+     * @param {NotaUpdateManyAndReturnArgs} args - Arguments to update many Notas.
+     * @example
+     * // Update many Notas
+     * const nota = await prisma.nota.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Notas and only return the `id_nota`
+     * const notaWithId_notaOnly = await prisma.nota.updateManyAndReturn({
+     *   select: { id_nota: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends NotaUpdateManyAndReturnArgs>(args: SelectSubset<T, NotaUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one Nota.
+     * @param {NotaUpsertArgs} args - Arguments to update or create a Nota.
+     * @example
+     * // Update or create a Nota
+     * const nota = await prisma.nota.upsert({
+     *   create: {
+     *     // ... data to create a Nota
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Nota we want to update
+     *   }
+     * })
+     */
+    upsert<T extends NotaUpsertArgs>(args: SelectSubset<T, NotaUpsertArgs<ExtArgs>>): Prisma__NotaClient<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of Notas.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NotaCountArgs} args - Arguments to filter Notas to count.
+     * @example
+     * // Count the number of Notas
+     * const count = await prisma.nota.count({
+     *   where: {
+     *     // ... the filter for the Notas we want to count
+     *   }
+     * })
+    **/
+    count<T extends NotaCountArgs>(
+      args?: Subset<T, NotaCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], NotaCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Nota.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NotaAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends NotaAggregateArgs>(args: Subset<T, NotaAggregateArgs>): Prisma.PrismaPromise<GetNotaAggregateType<T>>
+
+    /**
+     * Group by Nota.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {NotaGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends NotaGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: NotaGroupByArgs['orderBy'] }
+        : { orderBy?: NotaGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, NotaGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetNotaGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the Nota model
+   */
+  readonly fields: NotaFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for Nota.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__NotaClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    aluno<T extends AlunoDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AlunoDefaultArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the Nota model
+   */
+  interface NotaFieldRefs {
+    readonly id_nota: FieldRef<"Nota", 'String'>
+    readonly id_aluno: FieldRef<"Nota", 'String'>
+    readonly disciplina: FieldRef<"Nota", 'String'>
+    readonly nota: FieldRef<"Nota", 'Float'>
+    readonly semestre: FieldRef<"Nota", 'Int'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * Nota findUnique
+   */
+  export type NotaFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaInclude<ExtArgs> | null
+    /**
+     * Filter, which Nota to fetch.
+     */
+    where: NotaWhereUniqueInput
+  }
+
+  /**
+   * Nota findUniqueOrThrow
+   */
+  export type NotaFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaInclude<ExtArgs> | null
+    /**
+     * Filter, which Nota to fetch.
+     */
+    where: NotaWhereUniqueInput
+  }
+
+  /**
+   * Nota findFirst
+   */
+  export type NotaFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaInclude<ExtArgs> | null
+    /**
+     * Filter, which Nota to fetch.
+     */
+    where?: NotaWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Notas to fetch.
+     */
+    orderBy?: NotaOrderByWithRelationInput | NotaOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Notas.
+     */
+    cursor?: NotaWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Notas from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Notas.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Notas.
+     */
+    distinct?: NotaScalarFieldEnum | NotaScalarFieldEnum[]
+  }
+
+  /**
+   * Nota findFirstOrThrow
+   */
+  export type NotaFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaInclude<ExtArgs> | null
+    /**
+     * Filter, which Nota to fetch.
+     */
+    where?: NotaWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Notas to fetch.
+     */
+    orderBy?: NotaOrderByWithRelationInput | NotaOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Notas.
+     */
+    cursor?: NotaWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Notas from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Notas.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Notas.
+     */
+    distinct?: NotaScalarFieldEnum | NotaScalarFieldEnum[]
+  }
+
+  /**
+   * Nota findMany
+   */
+  export type NotaFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaInclude<ExtArgs> | null
+    /**
+     * Filter, which Notas to fetch.
+     */
+    where?: NotaWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Notas to fetch.
+     */
+    orderBy?: NotaOrderByWithRelationInput | NotaOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing Notas.
+     */
+    cursor?: NotaWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Notas from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Notas.
+     */
+    skip?: number
+    distinct?: NotaScalarFieldEnum | NotaScalarFieldEnum[]
+  }
+
+  /**
+   * Nota create
+   */
+  export type NotaCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaInclude<ExtArgs> | null
+    /**
+     * The data needed to create a Nota.
+     */
+    data: XOR<NotaCreateInput, NotaUncheckedCreateInput>
+  }
+
+  /**
+   * Nota createMany
+   */
+  export type NotaCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many Notas.
+     */
+    data: NotaCreateManyInput | NotaCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * Nota createManyAndReturn
+   */
+  export type NotaCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * The data used to create many Notas.
+     */
+    data: NotaCreateManyInput | NotaCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * Nota update
+   */
+  export type NotaUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaInclude<ExtArgs> | null
+    /**
+     * The data needed to update a Nota.
+     */
+    data: XOR<NotaUpdateInput, NotaUncheckedUpdateInput>
+    /**
+     * Choose, which Nota to update.
+     */
+    where: NotaWhereUniqueInput
+  }
+
+  /**
+   * Nota updateMany
+   */
+  export type NotaUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Notas.
+     */
+    data: XOR<NotaUpdateManyMutationInput, NotaUncheckedUpdateManyInput>
+    /**
+     * Filter which Notas to update
+     */
+    where?: NotaWhereInput
+    /**
+     * Limit how many Notas to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Nota updateManyAndReturn
+   */
+  export type NotaUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * The data used to update Notas.
+     */
+    data: XOR<NotaUpdateManyMutationInput, NotaUncheckedUpdateManyInput>
+    /**
+     * Filter which Notas to update
+     */
+    where?: NotaWhereInput
+    /**
+     * Limit how many Notas to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * Nota upsert
+   */
+  export type NotaUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaInclude<ExtArgs> | null
+    /**
+     * The filter to search for the Nota to update in case it exists.
+     */
+    where: NotaWhereUniqueInput
+    /**
+     * In case the Nota found by the `where` argument doesn't exist, create a new Nota with this data.
+     */
+    create: XOR<NotaCreateInput, NotaUncheckedCreateInput>
+    /**
+     * In case the Nota was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<NotaUpdateInput, NotaUncheckedUpdateInput>
+  }
+
+  /**
+   * Nota delete
+   */
+  export type NotaDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaInclude<ExtArgs> | null
+    /**
+     * Filter which Nota to delete.
+     */
+    where: NotaWhereUniqueInput
+  }
+
+  /**
+   * Nota deleteMany
+   */
+  export type NotaDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Notas to delete
+     */
+    where?: NotaWhereInput
+    /**
+     * Limit how many Notas to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * Nota without action
+   */
+  export type NotaDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Nota
+     */
+    select?: NotaSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Nota
+     */
+    omit?: NotaOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: NotaInclude<ExtArgs> | null
+  }
+
+
+  /**
+   * Model Aptidao
+   */
+
+  export type AggregateAptidao = {
+    _count: AptidaoCountAggregateOutputType | null
+    _avg: AptidaoAvgAggregateOutputType | null
+    _sum: AptidaoSumAggregateOutputType | null
+    _min: AptidaoMinAggregateOutputType | null
+    _max: AptidaoMaxAggregateOutputType | null
+  }
+
+  export type AptidaoAvgAggregateOutputType = {
+    nivel: number | null
+  }
+
+  export type AptidaoSumAggregateOutputType = {
+    nivel: number | null
+  }
+
+  export type AptidaoMinAggregateOutputType = {
+    id_aptidao: string | null
+    id_aluno: string | null
+    nome: string | null
+    nivel: number | null
+    descricao: string | null
+  }
+
+  export type AptidaoMaxAggregateOutputType = {
+    id_aptidao: string | null
+    id_aluno: string | null
+    nome: string | null
+    nivel: number | null
+    descricao: string | null
+  }
+
+  export type AptidaoCountAggregateOutputType = {
+    id_aptidao: number
+    id_aluno: number
+    nome: number
+    nivel: number
+    descricao: number
+    _all: number
+  }
+
+
+  export type AptidaoAvgAggregateInputType = {
+    nivel?: true
+  }
+
+  export type AptidaoSumAggregateInputType = {
+    nivel?: true
+  }
+
+  export type AptidaoMinAggregateInputType = {
+    id_aptidao?: true
+    id_aluno?: true
+    nome?: true
+    nivel?: true
+    descricao?: true
+  }
+
+  export type AptidaoMaxAggregateInputType = {
+    id_aptidao?: true
+    id_aluno?: true
+    nome?: true
+    nivel?: true
+    descricao?: true
+  }
+
+  export type AptidaoCountAggregateInputType = {
+    id_aptidao?: true
+    id_aluno?: true
+    nome?: true
+    nivel?: true
+    descricao?: true
+    _all?: true
+  }
+
+  export type AptidaoAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Aptidao to aggregate.
+     */
+    where?: AptidaoWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Aptidaos to fetch.
+     */
+    orderBy?: AptidaoOrderByWithRelationInput | AptidaoOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: AptidaoWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Aptidaos from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Aptidaos.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned Aptidaos
+    **/
+    _count?: true | AptidaoCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: AptidaoAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: AptidaoSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: AptidaoMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: AptidaoMaxAggregateInputType
+  }
+
+  export type GetAptidaoAggregateType<T extends AptidaoAggregateArgs> = {
+        [P in keyof T & keyof AggregateAptidao]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateAptidao[P]>
+      : GetScalarType<T[P], AggregateAptidao[P]>
+  }
+
+
+
+
+  export type AptidaoGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: AptidaoWhereInput
+    orderBy?: AptidaoOrderByWithAggregationInput | AptidaoOrderByWithAggregationInput[]
+    by: AptidaoScalarFieldEnum[] | AptidaoScalarFieldEnum
+    having?: AptidaoScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: AptidaoCountAggregateInputType | true
+    _avg?: AptidaoAvgAggregateInputType
+    _sum?: AptidaoSumAggregateInputType
+    _min?: AptidaoMinAggregateInputType
+    _max?: AptidaoMaxAggregateInputType
+  }
+
+  export type AptidaoGroupByOutputType = {
+    id_aptidao: string
+    id_aluno: string
+    nome: string
+    nivel: number
+    descricao: string | null
+    _count: AptidaoCountAggregateOutputType | null
+    _avg: AptidaoAvgAggregateOutputType | null
+    _sum: AptidaoSumAggregateOutputType | null
+    _min: AptidaoMinAggregateOutputType | null
+    _max: AptidaoMaxAggregateOutputType | null
+  }
+
+  type GetAptidaoGroupByPayload<T extends AptidaoGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<AptidaoGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof AptidaoGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], AptidaoGroupByOutputType[P]>
+            : GetScalarType<T[P], AptidaoGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type AptidaoSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_aptidao?: boolean
+    id_aluno?: boolean
+    nome?: boolean
+    nivel?: boolean
+    descricao?: boolean
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["aptidao"]>
+
+  export type AptidaoSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_aptidao?: boolean
+    id_aluno?: boolean
+    nome?: boolean
+    nivel?: boolean
+    descricao?: boolean
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["aptidao"]>
+
+  export type AptidaoSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_aptidao?: boolean
+    id_aluno?: boolean
+    nome?: boolean
+    nivel?: boolean
+    descricao?: boolean
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["aptidao"]>
+
+  export type AptidaoSelectScalar = {
+    id_aptidao?: boolean
+    id_aluno?: boolean
+    nome?: boolean
+    nivel?: boolean
+    descricao?: boolean
+  }
+
+  export type AptidaoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_aptidao" | "id_aluno" | "nome" | "nivel" | "descricao", ExtArgs["result"]["aptidao"]>
+  export type AptidaoInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }
+  export type AptidaoIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }
+  export type AptidaoIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }
+
+  export type $AptidaoPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Aptidao"
+    objects: {
+      aluno: Prisma.$AlunoPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id_aptidao: string
+      id_aluno: string
+      nome: string
+      nivel: number
+      descricao: string | null
+    }, ExtArgs["result"]["aptidao"]>
+    composites: {}
+  }
+
+  type AptidaoGetPayload<S extends boolean | null | undefined | AptidaoDefaultArgs> = $Result.GetResult<Prisma.$AptidaoPayload, S>
+
+  type AptidaoCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<AptidaoFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: AptidaoCountAggregateInputType | true
+    }
+
+  export interface AptidaoDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Aptidao'], meta: { name: 'Aptidao' } }
+    /**
+     * Find zero or one Aptidao that matches the filter.
+     * @param {AptidaoFindUniqueArgs} args - Arguments to find a Aptidao
+     * @example
+     * // Get one Aptidao
+     * const aptidao = await prisma.aptidao.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends AptidaoFindUniqueArgs>(args: SelectSubset<T, AptidaoFindUniqueArgs<ExtArgs>>): Prisma__AptidaoClient<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one Aptidao that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {AptidaoFindUniqueOrThrowArgs} args - Arguments to find a Aptidao
+     * @example
+     * // Get one Aptidao
+     * const aptidao = await prisma.aptidao.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends AptidaoFindUniqueOrThrowArgs>(args: SelectSubset<T, AptidaoFindUniqueOrThrowArgs<ExtArgs>>): Prisma__AptidaoClient<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Aptidao that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AptidaoFindFirstArgs} args - Arguments to find a Aptidao
+     * @example
+     * // Get one Aptidao
+     * const aptidao = await prisma.aptidao.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends AptidaoFindFirstArgs>(args?: SelectSubset<T, AptidaoFindFirstArgs<ExtArgs>>): Prisma__AptidaoClient<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first Aptidao that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AptidaoFindFirstOrThrowArgs} args - Arguments to find a Aptidao
+     * @example
+     * // Get one Aptidao
+     * const aptidao = await prisma.aptidao.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends AptidaoFindFirstOrThrowArgs>(args?: SelectSubset<T, AptidaoFindFirstOrThrowArgs<ExtArgs>>): Prisma__AptidaoClient<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more Aptidaos that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AptidaoFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all Aptidaos
+     * const aptidaos = await prisma.aptidao.findMany()
+     * 
+     * // Get first 10 Aptidaos
+     * const aptidaos = await prisma.aptidao.findMany({ take: 10 })
+     * 
+     * // Only select the `id_aptidao`
+     * const aptidaoWithId_aptidaoOnly = await prisma.aptidao.findMany({ select: { id_aptidao: true } })
+     * 
+     */
+    findMany<T extends AptidaoFindManyArgs>(args?: SelectSubset<T, AptidaoFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a Aptidao.
+     * @param {AptidaoCreateArgs} args - Arguments to create a Aptidao.
+     * @example
+     * // Create one Aptidao
+     * const Aptidao = await prisma.aptidao.create({
+     *   data: {
+     *     // ... data to create a Aptidao
+     *   }
+     * })
+     * 
+     */
+    create<T extends AptidaoCreateArgs>(args: SelectSubset<T, AptidaoCreateArgs<ExtArgs>>): Prisma__AptidaoClient<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many Aptidaos.
+     * @param {AptidaoCreateManyArgs} args - Arguments to create many Aptidaos.
+     * @example
+     * // Create many Aptidaos
+     * const aptidao = await prisma.aptidao.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends AptidaoCreateManyArgs>(args?: SelectSubset<T, AptidaoCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many Aptidaos and returns the data saved in the database.
+     * @param {AptidaoCreateManyAndReturnArgs} args - Arguments to create many Aptidaos.
+     * @example
+     * // Create many Aptidaos
+     * const aptidao = await prisma.aptidao.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many Aptidaos and only return the `id_aptidao`
+     * const aptidaoWithId_aptidaoOnly = await prisma.aptidao.createManyAndReturn({
+     *   select: { id_aptidao: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends AptidaoCreateManyAndReturnArgs>(args?: SelectSubset<T, AptidaoCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a Aptidao.
+     * @param {AptidaoDeleteArgs} args - Arguments to delete one Aptidao.
+     * @example
+     * // Delete one Aptidao
+     * const Aptidao = await prisma.aptidao.delete({
+     *   where: {
+     *     // ... filter to delete one Aptidao
+     *   }
+     * })
+     * 
+     */
+    delete<T extends AptidaoDeleteArgs>(args: SelectSubset<T, AptidaoDeleteArgs<ExtArgs>>): Prisma__AptidaoClient<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one Aptidao.
+     * @param {AptidaoUpdateArgs} args - Arguments to update one Aptidao.
+     * @example
+     * // Update one Aptidao
+     * const aptidao = await prisma.aptidao.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends AptidaoUpdateArgs>(args: SelectSubset<T, AptidaoUpdateArgs<ExtArgs>>): Prisma__AptidaoClient<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more Aptidaos.
+     * @param {AptidaoDeleteManyArgs} args - Arguments to filter Aptidaos to delete.
+     * @example
+     * // Delete a few Aptidaos
+     * const { count } = await prisma.aptidao.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends AptidaoDeleteManyArgs>(args?: SelectSubset<T, AptidaoDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Aptidaos.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AptidaoUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many Aptidaos
+     * const aptidao = await prisma.aptidao.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends AptidaoUpdateManyArgs>(args: SelectSubset<T, AptidaoUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more Aptidaos and returns the data updated in the database.
+     * @param {AptidaoUpdateManyAndReturnArgs} args - Arguments to update many Aptidaos.
+     * @example
+     * // Update many Aptidaos
+     * const aptidao = await prisma.aptidao.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more Aptidaos and only return the `id_aptidao`
+     * const aptidaoWithId_aptidaoOnly = await prisma.aptidao.updateManyAndReturn({
+     *   select: { id_aptidao: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends AptidaoUpdateManyAndReturnArgs>(args: SelectSubset<T, AptidaoUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one Aptidao.
+     * @param {AptidaoUpsertArgs} args - Arguments to update or create a Aptidao.
+     * @example
+     * // Update or create a Aptidao
+     * const aptidao = await prisma.aptidao.upsert({
+     *   create: {
+     *     // ... data to create a Aptidao
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the Aptidao we want to update
+     *   }
+     * })
+     */
+    upsert<T extends AptidaoUpsertArgs>(args: SelectSubset<T, AptidaoUpsertArgs<ExtArgs>>): Prisma__AptidaoClient<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of Aptidaos.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AptidaoCountArgs} args - Arguments to filter Aptidaos to count.
+     * @example
+     * // Count the number of Aptidaos
+     * const count = await prisma.aptidao.count({
+     *   where: {
+     *     // ... the filter for the Aptidaos we want to count
+     *   }
+     * })
+    **/
+    count<T extends AptidaoCountArgs>(
+      args?: Subset<T, AptidaoCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], AptidaoCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a Aptidao.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AptidaoAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends AptidaoAggregateArgs>(args: Subset<T, AptidaoAggregateArgs>): Prisma.PrismaPromise<GetAptidaoAggregateType<T>>
+
+    /**
+     * Group by Aptidao.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {AptidaoGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends AptidaoGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: AptidaoGroupByArgs['orderBy'] }
+        : { orderBy?: AptidaoGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, AptidaoGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAptidaoGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the Aptidao model
+   */
+  readonly fields: AptidaoFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for Aptidao.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__AptidaoClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    aluno<T extends AlunoDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AlunoDefaultArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the Aptidao model
+   */
+  interface AptidaoFieldRefs {
+    readonly id_aptidao: FieldRef<"Aptidao", 'String'>
+    readonly id_aluno: FieldRef<"Aptidao", 'String'>
+    readonly nome: FieldRef<"Aptidao", 'String'>
+    readonly nivel: FieldRef<"Aptidao", 'Int'>
+    readonly descricao: FieldRef<"Aptidao", 'String'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * Aptidao findUnique
+   */
+  export type AptidaoFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoInclude<ExtArgs> | null
+    /**
+     * Filter, which Aptidao to fetch.
+     */
+    where: AptidaoWhereUniqueInput
+  }
+
+  /**
+   * Aptidao findUniqueOrThrow
+   */
+  export type AptidaoFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoInclude<ExtArgs> | null
+    /**
+     * Filter, which Aptidao to fetch.
+     */
+    where: AptidaoWhereUniqueInput
+  }
+
+  /**
+   * Aptidao findFirst
+   */
+  export type AptidaoFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoInclude<ExtArgs> | null
+    /**
+     * Filter, which Aptidao to fetch.
+     */
+    where?: AptidaoWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Aptidaos to fetch.
+     */
+    orderBy?: AptidaoOrderByWithRelationInput | AptidaoOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Aptidaos.
+     */
+    cursor?: AptidaoWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Aptidaos from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Aptidaos.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Aptidaos.
+     */
+    distinct?: AptidaoScalarFieldEnum | AptidaoScalarFieldEnum[]
+  }
+
+  /**
+   * Aptidao findFirstOrThrow
+   */
+  export type AptidaoFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoInclude<ExtArgs> | null
+    /**
+     * Filter, which Aptidao to fetch.
+     */
+    where?: AptidaoWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Aptidaos to fetch.
+     */
+    orderBy?: AptidaoOrderByWithRelationInput | AptidaoOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for Aptidaos.
+     */
+    cursor?: AptidaoWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Aptidaos from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Aptidaos.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of Aptidaos.
+     */
+    distinct?: AptidaoScalarFieldEnum | AptidaoScalarFieldEnum[]
+  }
+
+  /**
+   * Aptidao findMany
+   */
+  export type AptidaoFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoInclude<ExtArgs> | null
+    /**
+     * Filter, which Aptidaos to fetch.
+     */
+    where?: AptidaoWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of Aptidaos to fetch.
+     */
+    orderBy?: AptidaoOrderByWithRelationInput | AptidaoOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing Aptidaos.
+     */
+    cursor?: AptidaoWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` Aptidaos from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` Aptidaos.
+     */
+    skip?: number
+    distinct?: AptidaoScalarFieldEnum | AptidaoScalarFieldEnum[]
+  }
+
+  /**
+   * Aptidao create
+   */
+  export type AptidaoCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoInclude<ExtArgs> | null
+    /**
+     * The data needed to create a Aptidao.
+     */
+    data: XOR<AptidaoCreateInput, AptidaoUncheckedCreateInput>
+  }
+
+  /**
+   * Aptidao createMany
+   */
+  export type AptidaoCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many Aptidaos.
+     */
+    data: AptidaoCreateManyInput | AptidaoCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * Aptidao createManyAndReturn
+   */
+  export type AptidaoCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * The data used to create many Aptidaos.
+     */
+    data: AptidaoCreateManyInput | AptidaoCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * Aptidao update
+   */
+  export type AptidaoUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoInclude<ExtArgs> | null
+    /**
+     * The data needed to update a Aptidao.
+     */
+    data: XOR<AptidaoUpdateInput, AptidaoUncheckedUpdateInput>
+    /**
+     * Choose, which Aptidao to update.
+     */
+    where: AptidaoWhereUniqueInput
+  }
+
+  /**
+   * Aptidao updateMany
+   */
+  export type AptidaoUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update Aptidaos.
+     */
+    data: XOR<AptidaoUpdateManyMutationInput, AptidaoUncheckedUpdateManyInput>
+    /**
+     * Filter which Aptidaos to update
+     */
+    where?: AptidaoWhereInput
+    /**
+     * Limit how many Aptidaos to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * Aptidao updateManyAndReturn
+   */
+  export type AptidaoUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * The data used to update Aptidaos.
+     */
+    data: XOR<AptidaoUpdateManyMutationInput, AptidaoUncheckedUpdateManyInput>
+    /**
+     * Filter which Aptidaos to update
+     */
+    where?: AptidaoWhereInput
+    /**
+     * Limit how many Aptidaos to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * Aptidao upsert
+   */
+  export type AptidaoUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoInclude<ExtArgs> | null
+    /**
+     * The filter to search for the Aptidao to update in case it exists.
+     */
+    where: AptidaoWhereUniqueInput
+    /**
+     * In case the Aptidao found by the `where` argument doesn't exist, create a new Aptidao with this data.
+     */
+    create: XOR<AptidaoCreateInput, AptidaoUncheckedCreateInput>
+    /**
+     * In case the Aptidao was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<AptidaoUpdateInput, AptidaoUncheckedUpdateInput>
+  }
+
+  /**
+   * Aptidao delete
+   */
+  export type AptidaoDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoInclude<ExtArgs> | null
+    /**
+     * Filter which Aptidao to delete.
+     */
+    where: AptidaoWhereUniqueInput
+  }
+
+  /**
+   * Aptidao deleteMany
+   */
+  export type AptidaoDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which Aptidaos to delete
+     */
+    where?: AptidaoWhereInput
+    /**
+     * Limit how many Aptidaos to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * Aptidao without action
+   */
+  export type AptidaoDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Aptidao
+     */
+    select?: AptidaoSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Aptidao
+     */
+    omit?: AptidaoOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: AptidaoInclude<ExtArgs> | null
   }
 
 
@@ -7910,64 +8344,92 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const UsuarioScalarFieldEnum: {
-    id_usuario: 'id_usuario',
+  export const RecrutadorScalarFieldEnum: {
+    id_recrutador: 'id_recrutador',
     nome: 'nome',
     email: 'email',
     senha: 'senha',
-    id_faculdade: 'id_faculdade'
+    cargo: 'cargo',
+    telefone: 'telefone',
+    id_empresa: 'id_empresa',
+    data_criacao: 'data_criacao',
+    data_atualizacao: 'data_atualizacao'
   };
 
-  export type UsuarioScalarFieldEnum = (typeof UsuarioScalarFieldEnum)[keyof typeof UsuarioScalarFieldEnum]
+  export type RecrutadorScalarFieldEnum = (typeof RecrutadorScalarFieldEnum)[keyof typeof RecrutadorScalarFieldEnum]
 
 
-  export const FaculdadeScalarFieldEnum: {
-    id_faculdade: 'id_faculdade',
+  export const EmpresaScalarFieldEnum: {
+    id_empresa: 'id_empresa',
     nome: 'nome',
-    endereco: 'endereco'
+    cnpj: 'cnpj',
+    endereco: 'endereco',
+    setor: 'setor',
+    descricao: 'descricao',
+    website: 'website',
+    data_criacao: 'data_criacao',
+    data_atualizacao: 'data_atualizacao'
   };
 
-  export type FaculdadeScalarFieldEnum = (typeof FaculdadeScalarFieldEnum)[keyof typeof FaculdadeScalarFieldEnum]
+  export type EmpresaScalarFieldEnum = (typeof EmpresaScalarFieldEnum)[keyof typeof EmpresaScalarFieldEnum]
 
 
-  export const Faculdade_EmpresaScalarFieldEnum: {
-    id_faculdade_: 'id_faculdade_',
-    id_faculdade: 'id_faculdade',
-    id_empresa: 'id_empresa'
+  export const AlunoScalarFieldEnum: {
+    id_aluno: 'id_aluno',
+    nome: 'nome',
+    email: 'email',
+    senha: 'senha',
+    matricula: 'matricula',
+    curso: 'curso',
+    semestre_atual: 'semestre_atual',
+    cpf: 'cpf',
+    telefone: 'telefone',
+    data_nascimento: 'data_nascimento',
+    endereco: 'endereco',
+    linkedin: 'linkedin',
+    github: 'github',
+    portfolio: 'portfolio',
+    solicitacoes: 'solicitacoes',
+    data_criacao: 'data_criacao',
+    data_atualizacao: 'data_atualizacao'
   };
 
-  export type Faculdade_EmpresaScalarFieldEnum = (typeof Faculdade_EmpresaScalarFieldEnum)[keyof typeof Faculdade_EmpresaScalarFieldEnum]
+  export type AlunoScalarFieldEnum = (typeof AlunoScalarFieldEnum)[keyof typeof AlunoScalarFieldEnum]
 
 
-  export const PerguntaScalarFieldEnum: {
-    id_pergunta: 'id_pergunta',
-    id_faculdade: 'id_faculdade',
-    enunciado: 'enunciado',
-    data_criação: 'data_criação'
+  export const ContratacaoScalarFieldEnum: {
+    id_contratacao: 'id_contratacao',
+    id_recrutador: 'id_recrutador',
+    id_aluno: 'id_aluno',
+    data_contratacao: 'data_contratacao',
+    cargo: 'cargo',
+    salario: 'salario',
+    status: 'status'
   };
 
-  export type PerguntaScalarFieldEnum = (typeof PerguntaScalarFieldEnum)[keyof typeof PerguntaScalarFieldEnum]
+  export type ContratacaoScalarFieldEnum = (typeof ContratacaoScalarFieldEnum)[keyof typeof ContratacaoScalarFieldEnum]
 
 
-  export const OpcaoRespostaScalarFieldEnum: {
-    id_opcao_resposta: 'id_opcao_resposta',
-    id_pergunta: 'id_pergunta',
-    texto_resposta: 'texto_resposta',
-    correta: 'correta'
+  export const NotaScalarFieldEnum: {
+    id_nota: 'id_nota',
+    id_aluno: 'id_aluno',
+    disciplina: 'disciplina',
+    nota: 'nota',
+    semestre: 'semestre'
   };
 
-  export type OpcaoRespostaScalarFieldEnum = (typeof OpcaoRespostaScalarFieldEnum)[keyof typeof OpcaoRespostaScalarFieldEnum]
+  export type NotaScalarFieldEnum = (typeof NotaScalarFieldEnum)[keyof typeof NotaScalarFieldEnum]
 
 
-  export const Usuario_AcertosScalarFieldEnum: {
-    id_usuario_acerto: 'id_usuario_acerto',
-    id_usuario: 'id_usuario',
-    id_pergunta: 'id_pergunta',
-    id_opcao_resposta: 'id_opcao_resposta',
-    acertou: 'acertou'
+  export const AptidaoScalarFieldEnum: {
+    id_aptidao: 'id_aptidao',
+    id_aluno: 'id_aluno',
+    nome: 'nome',
+    nivel: 'nivel',
+    descricao: 'descricao'
   };
 
-  export type Usuario_AcertosScalarFieldEnum = (typeof Usuario_AcertosScalarFieldEnum)[keyof typeof Usuario_AcertosScalarFieldEnum]
+  export type AptidaoScalarFieldEnum = (typeof AptidaoScalarFieldEnum)[keyof typeof AptidaoScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -7984,6 +8446,14 @@ export namespace Prisma {
   };
 
   export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+  export const NullsOrder: {
+    first: 'first',
+    last: 'last'
+  };
+
+  export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
   /**
@@ -8020,13 +8490,6 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'Boolean'
-   */
-  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
-    
-
-
-  /**
    * Reference to a field of type 'Int'
    */
   export type IntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int'>
@@ -8038,639 +8501,988 @@ export namespace Prisma {
    */
   export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
     
+
+
+  /**
+   * Reference to a field of type 'Float'
+   */
+  export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
+    
+
+
+  /**
+   * Reference to a field of type 'Float[]'
+   */
+  export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
+    
   /**
    * Deep Input Types
    */
 
 
-  export type UsuarioWhereInput = {
-    AND?: UsuarioWhereInput | UsuarioWhereInput[]
-    OR?: UsuarioWhereInput[]
-    NOT?: UsuarioWhereInput | UsuarioWhereInput[]
-    id_usuario?: StringFilter<"Usuario"> | string
-    nome?: StringFilter<"Usuario"> | string
-    email?: StringFilter<"Usuario"> | string
-    senha?: StringFilter<"Usuario"> | string
-    id_faculdade?: StringFilter<"Usuario"> | string
-    faculdade?: XOR<FaculdadeScalarRelationFilter, FaculdadeWhereInput>
-    acertos?: Usuario_AcertosListRelationFilter
+  export type RecrutadorWhereInput = {
+    AND?: RecrutadorWhereInput | RecrutadorWhereInput[]
+    OR?: RecrutadorWhereInput[]
+    NOT?: RecrutadorWhereInput | RecrutadorWhereInput[]
+    id_recrutador?: StringFilter<"Recrutador"> | string
+    nome?: StringFilter<"Recrutador"> | string
+    email?: StringFilter<"Recrutador"> | string
+    senha?: StringFilter<"Recrutador"> | string
+    cargo?: StringFilter<"Recrutador"> | string
+    telefone?: StringFilter<"Recrutador"> | string
+    id_empresa?: StringFilter<"Recrutador"> | string
+    data_criacao?: DateTimeFilter<"Recrutador"> | Date | string
+    data_atualizacao?: DateTimeFilter<"Recrutador"> | Date | string
+    empresa?: XOR<EmpresaScalarRelationFilter, EmpresaWhereInput>
+    contratacoes?: ContratacaoListRelationFilter
   }
 
-  export type UsuarioOrderByWithRelationInput = {
-    id_usuario?: SortOrder
+  export type RecrutadorOrderByWithRelationInput = {
+    id_recrutador?: SortOrder
     nome?: SortOrder
     email?: SortOrder
     senha?: SortOrder
-    id_faculdade?: SortOrder
-    faculdade?: FaculdadeOrderByWithRelationInput
-    acertos?: Usuario_AcertosOrderByRelationAggregateInput
+    cargo?: SortOrder
+    telefone?: SortOrder
+    id_empresa?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+    empresa?: EmpresaOrderByWithRelationInput
+    contratacoes?: ContratacaoOrderByRelationAggregateInput
   }
 
-  export type UsuarioWhereUniqueInput = Prisma.AtLeast<{
-    id_usuario?: string
+  export type RecrutadorWhereUniqueInput = Prisma.AtLeast<{
+    id_recrutador?: string
     email?: string
-    AND?: UsuarioWhereInput | UsuarioWhereInput[]
-    OR?: UsuarioWhereInput[]
-    NOT?: UsuarioWhereInput | UsuarioWhereInput[]
-    nome?: StringFilter<"Usuario"> | string
-    senha?: StringFilter<"Usuario"> | string
-    id_faculdade?: StringFilter<"Usuario"> | string
-    faculdade?: XOR<FaculdadeScalarRelationFilter, FaculdadeWhereInput>
-    acertos?: Usuario_AcertosListRelationFilter
-  }, "id_usuario" | "email">
+    AND?: RecrutadorWhereInput | RecrutadorWhereInput[]
+    OR?: RecrutadorWhereInput[]
+    NOT?: RecrutadorWhereInput | RecrutadorWhereInput[]
+    nome?: StringFilter<"Recrutador"> | string
+    senha?: StringFilter<"Recrutador"> | string
+    cargo?: StringFilter<"Recrutador"> | string
+    telefone?: StringFilter<"Recrutador"> | string
+    id_empresa?: StringFilter<"Recrutador"> | string
+    data_criacao?: DateTimeFilter<"Recrutador"> | Date | string
+    data_atualizacao?: DateTimeFilter<"Recrutador"> | Date | string
+    empresa?: XOR<EmpresaScalarRelationFilter, EmpresaWhereInput>
+    contratacoes?: ContratacaoListRelationFilter
+  }, "id_recrutador" | "email">
 
-  export type UsuarioOrderByWithAggregationInput = {
-    id_usuario?: SortOrder
+  export type RecrutadorOrderByWithAggregationInput = {
+    id_recrutador?: SortOrder
     nome?: SortOrder
     email?: SortOrder
     senha?: SortOrder
-    id_faculdade?: SortOrder
-    _count?: UsuarioCountOrderByAggregateInput
-    _max?: UsuarioMaxOrderByAggregateInput
-    _min?: UsuarioMinOrderByAggregateInput
-  }
-
-  export type UsuarioScalarWhereWithAggregatesInput = {
-    AND?: UsuarioScalarWhereWithAggregatesInput | UsuarioScalarWhereWithAggregatesInput[]
-    OR?: UsuarioScalarWhereWithAggregatesInput[]
-    NOT?: UsuarioScalarWhereWithAggregatesInput | UsuarioScalarWhereWithAggregatesInput[]
-    id_usuario?: StringWithAggregatesFilter<"Usuario"> | string
-    nome?: StringWithAggregatesFilter<"Usuario"> | string
-    email?: StringWithAggregatesFilter<"Usuario"> | string
-    senha?: StringWithAggregatesFilter<"Usuario"> | string
-    id_faculdade?: StringWithAggregatesFilter<"Usuario"> | string
-  }
-
-  export type FaculdadeWhereInput = {
-    AND?: FaculdadeWhereInput | FaculdadeWhereInput[]
-    OR?: FaculdadeWhereInput[]
-    NOT?: FaculdadeWhereInput | FaculdadeWhereInput[]
-    id_faculdade?: StringFilter<"Faculdade"> | string
-    nome?: StringFilter<"Faculdade"> | string
-    endereco?: StringFilter<"Faculdade"> | string
-    usuarios?: UsuarioListRelationFilter
-    faculdadesEmpresas?: Faculdade_EmpresaListRelationFilter
-    perguntas?: PerguntaListRelationFilter
-  }
-
-  export type FaculdadeOrderByWithRelationInput = {
-    id_faculdade?: SortOrder
-    nome?: SortOrder
-    endereco?: SortOrder
-    usuarios?: UsuarioOrderByRelationAggregateInput
-    faculdadesEmpresas?: Faculdade_EmpresaOrderByRelationAggregateInput
-    perguntas?: PerguntaOrderByRelationAggregateInput
-  }
-
-  export type FaculdadeWhereUniqueInput = Prisma.AtLeast<{
-    id_faculdade?: string
-    AND?: FaculdadeWhereInput | FaculdadeWhereInput[]
-    OR?: FaculdadeWhereInput[]
-    NOT?: FaculdadeWhereInput | FaculdadeWhereInput[]
-    nome?: StringFilter<"Faculdade"> | string
-    endereco?: StringFilter<"Faculdade"> | string
-    usuarios?: UsuarioListRelationFilter
-    faculdadesEmpresas?: Faculdade_EmpresaListRelationFilter
-    perguntas?: PerguntaListRelationFilter
-  }, "id_faculdade">
-
-  export type FaculdadeOrderByWithAggregationInput = {
-    id_faculdade?: SortOrder
-    nome?: SortOrder
-    endereco?: SortOrder
-    _count?: FaculdadeCountOrderByAggregateInput
-    _max?: FaculdadeMaxOrderByAggregateInput
-    _min?: FaculdadeMinOrderByAggregateInput
-  }
-
-  export type FaculdadeScalarWhereWithAggregatesInput = {
-    AND?: FaculdadeScalarWhereWithAggregatesInput | FaculdadeScalarWhereWithAggregatesInput[]
-    OR?: FaculdadeScalarWhereWithAggregatesInput[]
-    NOT?: FaculdadeScalarWhereWithAggregatesInput | FaculdadeScalarWhereWithAggregatesInput[]
-    id_faculdade?: StringWithAggregatesFilter<"Faculdade"> | string
-    nome?: StringWithAggregatesFilter<"Faculdade"> | string
-    endereco?: StringWithAggregatesFilter<"Faculdade"> | string
-  }
-
-  export type Faculdade_EmpresaWhereInput = {
-    AND?: Faculdade_EmpresaWhereInput | Faculdade_EmpresaWhereInput[]
-    OR?: Faculdade_EmpresaWhereInput[]
-    NOT?: Faculdade_EmpresaWhereInput | Faculdade_EmpresaWhereInput[]
-    id_faculdade_?: StringFilter<"Faculdade_Empresa"> | string
-    id_faculdade?: StringFilter<"Faculdade_Empresa"> | string
-    id_empresa?: StringFilter<"Faculdade_Empresa"> | string
-    faculdade?: XOR<FaculdadeScalarRelationFilter, FaculdadeWhereInput>
-  }
-
-  export type Faculdade_EmpresaOrderByWithRelationInput = {
-    id_faculdade_?: SortOrder
-    id_faculdade?: SortOrder
+    cargo?: SortOrder
+    telefone?: SortOrder
     id_empresa?: SortOrder
-    faculdade?: FaculdadeOrderByWithRelationInput
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+    _count?: RecrutadorCountOrderByAggregateInput
+    _max?: RecrutadorMaxOrderByAggregateInput
+    _min?: RecrutadorMinOrderByAggregateInput
   }
 
-  export type Faculdade_EmpresaWhereUniqueInput = Prisma.AtLeast<{
-    id_faculdade_?: string
-    AND?: Faculdade_EmpresaWhereInput | Faculdade_EmpresaWhereInput[]
-    OR?: Faculdade_EmpresaWhereInput[]
-    NOT?: Faculdade_EmpresaWhereInput | Faculdade_EmpresaWhereInput[]
-    id_faculdade?: StringFilter<"Faculdade_Empresa"> | string
-    id_empresa?: StringFilter<"Faculdade_Empresa"> | string
-    faculdade?: XOR<FaculdadeScalarRelationFilter, FaculdadeWhereInput>
-  }, "id_faculdade_">
+  export type RecrutadorScalarWhereWithAggregatesInput = {
+    AND?: RecrutadorScalarWhereWithAggregatesInput | RecrutadorScalarWhereWithAggregatesInput[]
+    OR?: RecrutadorScalarWhereWithAggregatesInput[]
+    NOT?: RecrutadorScalarWhereWithAggregatesInput | RecrutadorScalarWhereWithAggregatesInput[]
+    id_recrutador?: StringWithAggregatesFilter<"Recrutador"> | string
+    nome?: StringWithAggregatesFilter<"Recrutador"> | string
+    email?: StringWithAggregatesFilter<"Recrutador"> | string
+    senha?: StringWithAggregatesFilter<"Recrutador"> | string
+    cargo?: StringWithAggregatesFilter<"Recrutador"> | string
+    telefone?: StringWithAggregatesFilter<"Recrutador"> | string
+    id_empresa?: StringWithAggregatesFilter<"Recrutador"> | string
+    data_criacao?: DateTimeWithAggregatesFilter<"Recrutador"> | Date | string
+    data_atualizacao?: DateTimeWithAggregatesFilter<"Recrutador"> | Date | string
+  }
 
-  export type Faculdade_EmpresaOrderByWithAggregationInput = {
-    id_faculdade_?: SortOrder
-    id_faculdade?: SortOrder
+  export type EmpresaWhereInput = {
+    AND?: EmpresaWhereInput | EmpresaWhereInput[]
+    OR?: EmpresaWhereInput[]
+    NOT?: EmpresaWhereInput | EmpresaWhereInput[]
+    id_empresa?: StringFilter<"Empresa"> | string
+    nome?: StringFilter<"Empresa"> | string
+    cnpj?: StringFilter<"Empresa"> | string
+    endereco?: StringFilter<"Empresa"> | string
+    setor?: StringFilter<"Empresa"> | string
+    descricao?: StringNullableFilter<"Empresa"> | string | null
+    website?: StringNullableFilter<"Empresa"> | string | null
+    data_criacao?: DateTimeFilter<"Empresa"> | Date | string
+    data_atualizacao?: DateTimeFilter<"Empresa"> | Date | string
+    recrutadores?: RecrutadorListRelationFilter
+  }
+
+  export type EmpresaOrderByWithRelationInput = {
     id_empresa?: SortOrder
-    _count?: Faculdade_EmpresaCountOrderByAggregateInput
-    _max?: Faculdade_EmpresaMaxOrderByAggregateInput
-    _min?: Faculdade_EmpresaMinOrderByAggregateInput
+    nome?: SortOrder
+    cnpj?: SortOrder
+    endereco?: SortOrder
+    setor?: SortOrder
+    descricao?: SortOrderInput | SortOrder
+    website?: SortOrderInput | SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+    recrutadores?: RecrutadorOrderByRelationAggregateInput
   }
 
-  export type Faculdade_EmpresaScalarWhereWithAggregatesInput = {
-    AND?: Faculdade_EmpresaScalarWhereWithAggregatesInput | Faculdade_EmpresaScalarWhereWithAggregatesInput[]
-    OR?: Faculdade_EmpresaScalarWhereWithAggregatesInput[]
-    NOT?: Faculdade_EmpresaScalarWhereWithAggregatesInput | Faculdade_EmpresaScalarWhereWithAggregatesInput[]
-    id_faculdade_?: StringWithAggregatesFilter<"Faculdade_Empresa"> | string
-    id_faculdade?: StringWithAggregatesFilter<"Faculdade_Empresa"> | string
-    id_empresa?: StringWithAggregatesFilter<"Faculdade_Empresa"> | string
+  export type EmpresaWhereUniqueInput = Prisma.AtLeast<{
+    id_empresa?: string
+    cnpj?: string
+    AND?: EmpresaWhereInput | EmpresaWhereInput[]
+    OR?: EmpresaWhereInput[]
+    NOT?: EmpresaWhereInput | EmpresaWhereInput[]
+    nome?: StringFilter<"Empresa"> | string
+    endereco?: StringFilter<"Empresa"> | string
+    setor?: StringFilter<"Empresa"> | string
+    descricao?: StringNullableFilter<"Empresa"> | string | null
+    website?: StringNullableFilter<"Empresa"> | string | null
+    data_criacao?: DateTimeFilter<"Empresa"> | Date | string
+    data_atualizacao?: DateTimeFilter<"Empresa"> | Date | string
+    recrutadores?: RecrutadorListRelationFilter
+  }, "id_empresa" | "cnpj">
+
+  export type EmpresaOrderByWithAggregationInput = {
+    id_empresa?: SortOrder
+    nome?: SortOrder
+    cnpj?: SortOrder
+    endereco?: SortOrder
+    setor?: SortOrder
+    descricao?: SortOrderInput | SortOrder
+    website?: SortOrderInput | SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+    _count?: EmpresaCountOrderByAggregateInput
+    _max?: EmpresaMaxOrderByAggregateInput
+    _min?: EmpresaMinOrderByAggregateInput
   }
 
-  export type PerguntaWhereInput = {
-    AND?: PerguntaWhereInput | PerguntaWhereInput[]
-    OR?: PerguntaWhereInput[]
-    NOT?: PerguntaWhereInput | PerguntaWhereInput[]
-    id_pergunta?: StringFilter<"Pergunta"> | string
-    id_faculdade?: StringFilter<"Pergunta"> | string
-    enunciado?: StringFilter<"Pergunta"> | string
-    data_criação?: DateTimeFilter<"Pergunta"> | Date | string
-    opcoes?: OpcaoRespostaListRelationFilter
-    acertos?: Usuario_AcertosListRelationFilter
-    faculdade?: XOR<FaculdadeNullableScalarRelationFilter, FaculdadeWhereInput> | null
+  export type EmpresaScalarWhereWithAggregatesInput = {
+    AND?: EmpresaScalarWhereWithAggregatesInput | EmpresaScalarWhereWithAggregatesInput[]
+    OR?: EmpresaScalarWhereWithAggregatesInput[]
+    NOT?: EmpresaScalarWhereWithAggregatesInput | EmpresaScalarWhereWithAggregatesInput[]
+    id_empresa?: StringWithAggregatesFilter<"Empresa"> | string
+    nome?: StringWithAggregatesFilter<"Empresa"> | string
+    cnpj?: StringWithAggregatesFilter<"Empresa"> | string
+    endereco?: StringWithAggregatesFilter<"Empresa"> | string
+    setor?: StringWithAggregatesFilter<"Empresa"> | string
+    descricao?: StringNullableWithAggregatesFilter<"Empresa"> | string | null
+    website?: StringNullableWithAggregatesFilter<"Empresa"> | string | null
+    data_criacao?: DateTimeWithAggregatesFilter<"Empresa"> | Date | string
+    data_atualizacao?: DateTimeWithAggregatesFilter<"Empresa"> | Date | string
   }
 
-  export type PerguntaOrderByWithRelationInput = {
-    id_pergunta?: SortOrder
-    id_faculdade?: SortOrder
-    enunciado?: SortOrder
-    data_criação?: SortOrder
-    opcoes?: OpcaoRespostaOrderByRelationAggregateInput
-    acertos?: Usuario_AcertosOrderByRelationAggregateInput
-    faculdade?: FaculdadeOrderByWithRelationInput
+  export type AlunoWhereInput = {
+    AND?: AlunoWhereInput | AlunoWhereInput[]
+    OR?: AlunoWhereInput[]
+    NOT?: AlunoWhereInput | AlunoWhereInput[]
+    id_aluno?: StringFilter<"Aluno"> | string
+    nome?: StringFilter<"Aluno"> | string
+    email?: StringFilter<"Aluno"> | string
+    senha?: StringFilter<"Aluno"> | string
+    matricula?: StringFilter<"Aluno"> | string
+    curso?: StringFilter<"Aluno"> | string
+    semestre_atual?: IntFilter<"Aluno"> | number
+    cpf?: StringFilter<"Aluno"> | string
+    telefone?: StringFilter<"Aluno"> | string
+    data_nascimento?: DateTimeFilter<"Aluno"> | Date | string
+    endereco?: StringFilter<"Aluno"> | string
+    linkedin?: StringNullableFilter<"Aluno"> | string | null
+    github?: StringNullableFilter<"Aluno"> | string | null
+    portfolio?: StringNullableFilter<"Aluno"> | string | null
+    solicitacoes?: IntFilter<"Aluno"> | number
+    data_criacao?: DateTimeFilter<"Aluno"> | Date | string
+    data_atualizacao?: DateTimeFilter<"Aluno"> | Date | string
+    contratacoes?: ContratacaoListRelationFilter
+    notas?: NotaListRelationFilter
+    aptidoes?: AptidaoListRelationFilter
   }
 
-  export type PerguntaWhereUniqueInput = Prisma.AtLeast<{
-    id_pergunta?: string
-    AND?: PerguntaWhereInput | PerguntaWhereInput[]
-    OR?: PerguntaWhereInput[]
-    NOT?: PerguntaWhereInput | PerguntaWhereInput[]
-    id_faculdade?: StringFilter<"Pergunta"> | string
-    enunciado?: StringFilter<"Pergunta"> | string
-    data_criação?: DateTimeFilter<"Pergunta"> | Date | string
-    opcoes?: OpcaoRespostaListRelationFilter
-    acertos?: Usuario_AcertosListRelationFilter
-    faculdade?: XOR<FaculdadeNullableScalarRelationFilter, FaculdadeWhereInput> | null
-  }, "id_pergunta">
-
-  export type PerguntaOrderByWithAggregationInput = {
-    id_pergunta?: SortOrder
-    id_faculdade?: SortOrder
-    enunciado?: SortOrder
-    data_criação?: SortOrder
-    _count?: PerguntaCountOrderByAggregateInput
-    _max?: PerguntaMaxOrderByAggregateInput
-    _min?: PerguntaMinOrderByAggregateInput
+  export type AlunoOrderByWithRelationInput = {
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    email?: SortOrder
+    senha?: SortOrder
+    matricula?: SortOrder
+    curso?: SortOrder
+    semestre_atual?: SortOrder
+    cpf?: SortOrder
+    telefone?: SortOrder
+    data_nascimento?: SortOrder
+    endereco?: SortOrder
+    linkedin?: SortOrderInput | SortOrder
+    github?: SortOrderInput | SortOrder
+    portfolio?: SortOrderInput | SortOrder
+    solicitacoes?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+    contratacoes?: ContratacaoOrderByRelationAggregateInput
+    notas?: NotaOrderByRelationAggregateInput
+    aptidoes?: AptidaoOrderByRelationAggregateInput
   }
 
-  export type PerguntaScalarWhereWithAggregatesInput = {
-    AND?: PerguntaScalarWhereWithAggregatesInput | PerguntaScalarWhereWithAggregatesInput[]
-    OR?: PerguntaScalarWhereWithAggregatesInput[]
-    NOT?: PerguntaScalarWhereWithAggregatesInput | PerguntaScalarWhereWithAggregatesInput[]
-    id_pergunta?: StringWithAggregatesFilter<"Pergunta"> | string
-    id_faculdade?: StringWithAggregatesFilter<"Pergunta"> | string
-    enunciado?: StringWithAggregatesFilter<"Pergunta"> | string
-    data_criação?: DateTimeWithAggregatesFilter<"Pergunta"> | Date | string
+  export type AlunoWhereUniqueInput = Prisma.AtLeast<{
+    id_aluno?: string
+    email?: string
+    matricula?: string
+    cpf?: string
+    AND?: AlunoWhereInput | AlunoWhereInput[]
+    OR?: AlunoWhereInput[]
+    NOT?: AlunoWhereInput | AlunoWhereInput[]
+    nome?: StringFilter<"Aluno"> | string
+    senha?: StringFilter<"Aluno"> | string
+    curso?: StringFilter<"Aluno"> | string
+    semestre_atual?: IntFilter<"Aluno"> | number
+    telefone?: StringFilter<"Aluno"> | string
+    data_nascimento?: DateTimeFilter<"Aluno"> | Date | string
+    endereco?: StringFilter<"Aluno"> | string
+    linkedin?: StringNullableFilter<"Aluno"> | string | null
+    github?: StringNullableFilter<"Aluno"> | string | null
+    portfolio?: StringNullableFilter<"Aluno"> | string | null
+    solicitacoes?: IntFilter<"Aluno"> | number
+    data_criacao?: DateTimeFilter<"Aluno"> | Date | string
+    data_atualizacao?: DateTimeFilter<"Aluno"> | Date | string
+    contratacoes?: ContratacaoListRelationFilter
+    notas?: NotaListRelationFilter
+    aptidoes?: AptidaoListRelationFilter
+  }, "id_aluno" | "email" | "matricula" | "cpf">
+
+  export type AlunoOrderByWithAggregationInput = {
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    email?: SortOrder
+    senha?: SortOrder
+    matricula?: SortOrder
+    curso?: SortOrder
+    semestre_atual?: SortOrder
+    cpf?: SortOrder
+    telefone?: SortOrder
+    data_nascimento?: SortOrder
+    endereco?: SortOrder
+    linkedin?: SortOrderInput | SortOrder
+    github?: SortOrderInput | SortOrder
+    portfolio?: SortOrderInput | SortOrder
+    solicitacoes?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+    _count?: AlunoCountOrderByAggregateInput
+    _avg?: AlunoAvgOrderByAggregateInput
+    _max?: AlunoMaxOrderByAggregateInput
+    _min?: AlunoMinOrderByAggregateInput
+    _sum?: AlunoSumOrderByAggregateInput
   }
 
-  export type OpcaoRespostaWhereInput = {
-    AND?: OpcaoRespostaWhereInput | OpcaoRespostaWhereInput[]
-    OR?: OpcaoRespostaWhereInput[]
-    NOT?: OpcaoRespostaWhereInput | OpcaoRespostaWhereInput[]
-    id_opcao_resposta?: StringFilter<"OpcaoResposta"> | string
-    id_pergunta?: StringFilter<"OpcaoResposta"> | string
-    texto_resposta?: StringFilter<"OpcaoResposta"> | string
-    correta?: BoolFilter<"OpcaoResposta"> | boolean
-    pergunta?: XOR<PerguntaScalarRelationFilter, PerguntaWhereInput>
+  export type AlunoScalarWhereWithAggregatesInput = {
+    AND?: AlunoScalarWhereWithAggregatesInput | AlunoScalarWhereWithAggregatesInput[]
+    OR?: AlunoScalarWhereWithAggregatesInput[]
+    NOT?: AlunoScalarWhereWithAggregatesInput | AlunoScalarWhereWithAggregatesInput[]
+    id_aluno?: StringWithAggregatesFilter<"Aluno"> | string
+    nome?: StringWithAggregatesFilter<"Aluno"> | string
+    email?: StringWithAggregatesFilter<"Aluno"> | string
+    senha?: StringWithAggregatesFilter<"Aluno"> | string
+    matricula?: StringWithAggregatesFilter<"Aluno"> | string
+    curso?: StringWithAggregatesFilter<"Aluno"> | string
+    semestre_atual?: IntWithAggregatesFilter<"Aluno"> | number
+    cpf?: StringWithAggregatesFilter<"Aluno"> | string
+    telefone?: StringWithAggregatesFilter<"Aluno"> | string
+    data_nascimento?: DateTimeWithAggregatesFilter<"Aluno"> | Date | string
+    endereco?: StringWithAggregatesFilter<"Aluno"> | string
+    linkedin?: StringNullableWithAggregatesFilter<"Aluno"> | string | null
+    github?: StringNullableWithAggregatesFilter<"Aluno"> | string | null
+    portfolio?: StringNullableWithAggregatesFilter<"Aluno"> | string | null
+    solicitacoes?: IntWithAggregatesFilter<"Aluno"> | number
+    data_criacao?: DateTimeWithAggregatesFilter<"Aluno"> | Date | string
+    data_atualizacao?: DateTimeWithAggregatesFilter<"Aluno"> | Date | string
   }
 
-  export type OpcaoRespostaOrderByWithRelationInput = {
-    id_opcao_resposta?: SortOrder
-    id_pergunta?: SortOrder
-    texto_resposta?: SortOrder
-    correta?: SortOrder
-    pergunta?: PerguntaOrderByWithRelationInput
+  export type ContratacaoWhereInput = {
+    AND?: ContratacaoWhereInput | ContratacaoWhereInput[]
+    OR?: ContratacaoWhereInput[]
+    NOT?: ContratacaoWhereInput | ContratacaoWhereInput[]
+    id_contratacao?: StringFilter<"Contratacao"> | string
+    id_recrutador?: StringFilter<"Contratacao"> | string
+    id_aluno?: StringFilter<"Contratacao"> | string
+    data_contratacao?: DateTimeFilter<"Contratacao"> | Date | string
+    cargo?: StringFilter<"Contratacao"> | string
+    salario?: FloatNullableFilter<"Contratacao"> | number | null
+    status?: StringFilter<"Contratacao"> | string
+    recrutador?: XOR<RecrutadorScalarRelationFilter, RecrutadorWhereInput>
+    aluno?: XOR<AlunoScalarRelationFilter, AlunoWhereInput>
   }
 
-  export type OpcaoRespostaWhereUniqueInput = Prisma.AtLeast<{
-    id_opcao_resposta?: string
-    AND?: OpcaoRespostaWhereInput | OpcaoRespostaWhereInput[]
-    OR?: OpcaoRespostaWhereInput[]
-    NOT?: OpcaoRespostaWhereInput | OpcaoRespostaWhereInput[]
-    id_pergunta?: StringFilter<"OpcaoResposta"> | string
-    texto_resposta?: StringFilter<"OpcaoResposta"> | string
-    correta?: BoolFilter<"OpcaoResposta"> | boolean
-    pergunta?: XOR<PerguntaScalarRelationFilter, PerguntaWhereInput>
-  }, "id_opcao_resposta">
-
-  export type OpcaoRespostaOrderByWithAggregationInput = {
-    id_opcao_resposta?: SortOrder
-    id_pergunta?: SortOrder
-    texto_resposta?: SortOrder
-    correta?: SortOrder
-    _count?: OpcaoRespostaCountOrderByAggregateInput
-    _max?: OpcaoRespostaMaxOrderByAggregateInput
-    _min?: OpcaoRespostaMinOrderByAggregateInput
+  export type ContratacaoOrderByWithRelationInput = {
+    id_contratacao?: SortOrder
+    id_recrutador?: SortOrder
+    id_aluno?: SortOrder
+    data_contratacao?: SortOrder
+    cargo?: SortOrder
+    salario?: SortOrderInput | SortOrder
+    status?: SortOrder
+    recrutador?: RecrutadorOrderByWithRelationInput
+    aluno?: AlunoOrderByWithRelationInput
   }
 
-  export type OpcaoRespostaScalarWhereWithAggregatesInput = {
-    AND?: OpcaoRespostaScalarWhereWithAggregatesInput | OpcaoRespostaScalarWhereWithAggregatesInput[]
-    OR?: OpcaoRespostaScalarWhereWithAggregatesInput[]
-    NOT?: OpcaoRespostaScalarWhereWithAggregatesInput | OpcaoRespostaScalarWhereWithAggregatesInput[]
-    id_opcao_resposta?: StringWithAggregatesFilter<"OpcaoResposta"> | string
-    id_pergunta?: StringWithAggregatesFilter<"OpcaoResposta"> | string
-    texto_resposta?: StringWithAggregatesFilter<"OpcaoResposta"> | string
-    correta?: BoolWithAggregatesFilter<"OpcaoResposta"> | boolean
+  export type ContratacaoWhereUniqueInput = Prisma.AtLeast<{
+    id_contratacao?: string
+    AND?: ContratacaoWhereInput | ContratacaoWhereInput[]
+    OR?: ContratacaoWhereInput[]
+    NOT?: ContratacaoWhereInput | ContratacaoWhereInput[]
+    id_recrutador?: StringFilter<"Contratacao"> | string
+    id_aluno?: StringFilter<"Contratacao"> | string
+    data_contratacao?: DateTimeFilter<"Contratacao"> | Date | string
+    cargo?: StringFilter<"Contratacao"> | string
+    salario?: FloatNullableFilter<"Contratacao"> | number | null
+    status?: StringFilter<"Contratacao"> | string
+    recrutador?: XOR<RecrutadorScalarRelationFilter, RecrutadorWhereInput>
+    aluno?: XOR<AlunoScalarRelationFilter, AlunoWhereInput>
+  }, "id_contratacao">
+
+  export type ContratacaoOrderByWithAggregationInput = {
+    id_contratacao?: SortOrder
+    id_recrutador?: SortOrder
+    id_aluno?: SortOrder
+    data_contratacao?: SortOrder
+    cargo?: SortOrder
+    salario?: SortOrderInput | SortOrder
+    status?: SortOrder
+    _count?: ContratacaoCountOrderByAggregateInput
+    _avg?: ContratacaoAvgOrderByAggregateInput
+    _max?: ContratacaoMaxOrderByAggregateInput
+    _min?: ContratacaoMinOrderByAggregateInput
+    _sum?: ContratacaoSumOrderByAggregateInput
   }
 
-  export type Usuario_AcertosWhereInput = {
-    AND?: Usuario_AcertosWhereInput | Usuario_AcertosWhereInput[]
-    OR?: Usuario_AcertosWhereInput[]
-    NOT?: Usuario_AcertosWhereInput | Usuario_AcertosWhereInput[]
-    id_usuario_acerto?: StringFilter<"Usuario_Acertos"> | string
-    id_usuario?: StringFilter<"Usuario_Acertos"> | string
-    id_pergunta?: StringFilter<"Usuario_Acertos"> | string
-    id_opcao_resposta?: StringFilter<"Usuario_Acertos"> | string
-    acertou?: BoolFilter<"Usuario_Acertos"> | boolean
-    usuario?: XOR<UsuarioScalarRelationFilter, UsuarioWhereInput>
-    pergunta?: XOR<PerguntaScalarRelationFilter, PerguntaWhereInput>
+  export type ContratacaoScalarWhereWithAggregatesInput = {
+    AND?: ContratacaoScalarWhereWithAggregatesInput | ContratacaoScalarWhereWithAggregatesInput[]
+    OR?: ContratacaoScalarWhereWithAggregatesInput[]
+    NOT?: ContratacaoScalarWhereWithAggregatesInput | ContratacaoScalarWhereWithAggregatesInput[]
+    id_contratacao?: StringWithAggregatesFilter<"Contratacao"> | string
+    id_recrutador?: StringWithAggregatesFilter<"Contratacao"> | string
+    id_aluno?: StringWithAggregatesFilter<"Contratacao"> | string
+    data_contratacao?: DateTimeWithAggregatesFilter<"Contratacao"> | Date | string
+    cargo?: StringWithAggregatesFilter<"Contratacao"> | string
+    salario?: FloatNullableWithAggregatesFilter<"Contratacao"> | number | null
+    status?: StringWithAggregatesFilter<"Contratacao"> | string
   }
 
-  export type Usuario_AcertosOrderByWithRelationInput = {
-    id_usuario_acerto?: SortOrder
-    id_usuario?: SortOrder
-    id_pergunta?: SortOrder
-    id_opcao_resposta?: SortOrder
-    acertou?: SortOrder
-    usuario?: UsuarioOrderByWithRelationInput
-    pergunta?: PerguntaOrderByWithRelationInput
+  export type NotaWhereInput = {
+    AND?: NotaWhereInput | NotaWhereInput[]
+    OR?: NotaWhereInput[]
+    NOT?: NotaWhereInput | NotaWhereInput[]
+    id_nota?: StringFilter<"Nota"> | string
+    id_aluno?: StringFilter<"Nota"> | string
+    disciplina?: StringFilter<"Nota"> | string
+    nota?: FloatFilter<"Nota"> | number
+    semestre?: IntFilter<"Nota"> | number
+    aluno?: XOR<AlunoScalarRelationFilter, AlunoWhereInput>
   }
 
-  export type Usuario_AcertosWhereUniqueInput = Prisma.AtLeast<{
-    id_usuario_acerto?: string
-    AND?: Usuario_AcertosWhereInput | Usuario_AcertosWhereInput[]
-    OR?: Usuario_AcertosWhereInput[]
-    NOT?: Usuario_AcertosWhereInput | Usuario_AcertosWhereInput[]
-    id_usuario?: StringFilter<"Usuario_Acertos"> | string
-    id_pergunta?: StringFilter<"Usuario_Acertos"> | string
-    id_opcao_resposta?: StringFilter<"Usuario_Acertos"> | string
-    acertou?: BoolFilter<"Usuario_Acertos"> | boolean
-    usuario?: XOR<UsuarioScalarRelationFilter, UsuarioWhereInput>
-    pergunta?: XOR<PerguntaScalarRelationFilter, PerguntaWhereInput>
-  }, "id_usuario_acerto">
-
-  export type Usuario_AcertosOrderByWithAggregationInput = {
-    id_usuario_acerto?: SortOrder
-    id_usuario?: SortOrder
-    id_pergunta?: SortOrder
-    id_opcao_resposta?: SortOrder
-    acertou?: SortOrder
-    _count?: Usuario_AcertosCountOrderByAggregateInput
-    _max?: Usuario_AcertosMaxOrderByAggregateInput
-    _min?: Usuario_AcertosMinOrderByAggregateInput
+  export type NotaOrderByWithRelationInput = {
+    id_nota?: SortOrder
+    id_aluno?: SortOrder
+    disciplina?: SortOrder
+    nota?: SortOrder
+    semestre?: SortOrder
+    aluno?: AlunoOrderByWithRelationInput
   }
 
-  export type Usuario_AcertosScalarWhereWithAggregatesInput = {
-    AND?: Usuario_AcertosScalarWhereWithAggregatesInput | Usuario_AcertosScalarWhereWithAggregatesInput[]
-    OR?: Usuario_AcertosScalarWhereWithAggregatesInput[]
-    NOT?: Usuario_AcertosScalarWhereWithAggregatesInput | Usuario_AcertosScalarWhereWithAggregatesInput[]
-    id_usuario_acerto?: StringWithAggregatesFilter<"Usuario_Acertos"> | string
-    id_usuario?: StringWithAggregatesFilter<"Usuario_Acertos"> | string
-    id_pergunta?: StringWithAggregatesFilter<"Usuario_Acertos"> | string
-    id_opcao_resposta?: StringWithAggregatesFilter<"Usuario_Acertos"> | string
-    acertou?: BoolWithAggregatesFilter<"Usuario_Acertos"> | boolean
+  export type NotaWhereUniqueInput = Prisma.AtLeast<{
+    id_nota?: string
+    AND?: NotaWhereInput | NotaWhereInput[]
+    OR?: NotaWhereInput[]
+    NOT?: NotaWhereInput | NotaWhereInput[]
+    id_aluno?: StringFilter<"Nota"> | string
+    disciplina?: StringFilter<"Nota"> | string
+    nota?: FloatFilter<"Nota"> | number
+    semestre?: IntFilter<"Nota"> | number
+    aluno?: XOR<AlunoScalarRelationFilter, AlunoWhereInput>
+  }, "id_nota">
+
+  export type NotaOrderByWithAggregationInput = {
+    id_nota?: SortOrder
+    id_aluno?: SortOrder
+    disciplina?: SortOrder
+    nota?: SortOrder
+    semestre?: SortOrder
+    _count?: NotaCountOrderByAggregateInput
+    _avg?: NotaAvgOrderByAggregateInput
+    _max?: NotaMaxOrderByAggregateInput
+    _min?: NotaMinOrderByAggregateInput
+    _sum?: NotaSumOrderByAggregateInput
   }
 
-  export type UsuarioCreateInput = {
-    id_usuario?: string
+  export type NotaScalarWhereWithAggregatesInput = {
+    AND?: NotaScalarWhereWithAggregatesInput | NotaScalarWhereWithAggregatesInput[]
+    OR?: NotaScalarWhereWithAggregatesInput[]
+    NOT?: NotaScalarWhereWithAggregatesInput | NotaScalarWhereWithAggregatesInput[]
+    id_nota?: StringWithAggregatesFilter<"Nota"> | string
+    id_aluno?: StringWithAggregatesFilter<"Nota"> | string
+    disciplina?: StringWithAggregatesFilter<"Nota"> | string
+    nota?: FloatWithAggregatesFilter<"Nota"> | number
+    semestre?: IntWithAggregatesFilter<"Nota"> | number
+  }
+
+  export type AptidaoWhereInput = {
+    AND?: AptidaoWhereInput | AptidaoWhereInput[]
+    OR?: AptidaoWhereInput[]
+    NOT?: AptidaoWhereInput | AptidaoWhereInput[]
+    id_aptidao?: StringFilter<"Aptidao"> | string
+    id_aluno?: StringFilter<"Aptidao"> | string
+    nome?: StringFilter<"Aptidao"> | string
+    nivel?: IntFilter<"Aptidao"> | number
+    descricao?: StringNullableFilter<"Aptidao"> | string | null
+    aluno?: XOR<AlunoScalarRelationFilter, AlunoWhereInput>
+  }
+
+  export type AptidaoOrderByWithRelationInput = {
+    id_aptidao?: SortOrder
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    nivel?: SortOrder
+    descricao?: SortOrderInput | SortOrder
+    aluno?: AlunoOrderByWithRelationInput
+  }
+
+  export type AptidaoWhereUniqueInput = Prisma.AtLeast<{
+    id_aptidao?: string
+    AND?: AptidaoWhereInput | AptidaoWhereInput[]
+    OR?: AptidaoWhereInput[]
+    NOT?: AptidaoWhereInput | AptidaoWhereInput[]
+    id_aluno?: StringFilter<"Aptidao"> | string
+    nome?: StringFilter<"Aptidao"> | string
+    nivel?: IntFilter<"Aptidao"> | number
+    descricao?: StringNullableFilter<"Aptidao"> | string | null
+    aluno?: XOR<AlunoScalarRelationFilter, AlunoWhereInput>
+  }, "id_aptidao">
+
+  export type AptidaoOrderByWithAggregationInput = {
+    id_aptidao?: SortOrder
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    nivel?: SortOrder
+    descricao?: SortOrderInput | SortOrder
+    _count?: AptidaoCountOrderByAggregateInput
+    _avg?: AptidaoAvgOrderByAggregateInput
+    _max?: AptidaoMaxOrderByAggregateInput
+    _min?: AptidaoMinOrderByAggregateInput
+    _sum?: AptidaoSumOrderByAggregateInput
+  }
+
+  export type AptidaoScalarWhereWithAggregatesInput = {
+    AND?: AptidaoScalarWhereWithAggregatesInput | AptidaoScalarWhereWithAggregatesInput[]
+    OR?: AptidaoScalarWhereWithAggregatesInput[]
+    NOT?: AptidaoScalarWhereWithAggregatesInput | AptidaoScalarWhereWithAggregatesInput[]
+    id_aptidao?: StringWithAggregatesFilter<"Aptidao"> | string
+    id_aluno?: StringWithAggregatesFilter<"Aptidao"> | string
+    nome?: StringWithAggregatesFilter<"Aptidao"> | string
+    nivel?: IntWithAggregatesFilter<"Aptidao"> | number
+    descricao?: StringNullableWithAggregatesFilter<"Aptidao"> | string | null
+  }
+
+  export type RecrutadorCreateInput = {
+    id_recrutador?: string
     nome: string
     email: string
     senha: string
-    faculdade: FaculdadeCreateNestedOneWithoutUsuariosInput
-    acertos?: Usuario_AcertosCreateNestedManyWithoutUsuarioInput
+    cargo: string
+    telefone: string
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    empresa: EmpresaCreateNestedOneWithoutRecrutadoresInput
+    contratacoes?: ContratacaoCreateNestedManyWithoutRecrutadorInput
   }
 
-  export type UsuarioUncheckedCreateInput = {
-    id_usuario?: string
+  export type RecrutadorUncheckedCreateInput = {
+    id_recrutador?: string
     nome: string
     email: string
     senha: string
-    id_faculdade: string
-    acertos?: Usuario_AcertosUncheckedCreateNestedManyWithoutUsuarioInput
+    cargo: string
+    telefone: string
+    id_empresa: string
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    contratacoes?: ContratacaoUncheckedCreateNestedManyWithoutRecrutadorInput
   }
 
-  export type UsuarioUpdateInput = {
-    id_usuario?: StringFieldUpdateOperationsInput | string
+  export type RecrutadorUpdateInput = {
+    id_recrutador?: StringFieldUpdateOperationsInput | string
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     senha?: StringFieldUpdateOperationsInput | string
-    faculdade?: FaculdadeUpdateOneRequiredWithoutUsuariosNestedInput
-    acertos?: Usuario_AcertosUpdateManyWithoutUsuarioNestedInput
+    cargo?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    empresa?: EmpresaUpdateOneRequiredWithoutRecrutadoresNestedInput
+    contratacoes?: ContratacaoUpdateManyWithoutRecrutadorNestedInput
   }
 
-  export type UsuarioUncheckedUpdateInput = {
-    id_usuario?: StringFieldUpdateOperationsInput | string
+  export type RecrutadorUncheckedUpdateInput = {
+    id_recrutador?: StringFieldUpdateOperationsInput | string
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     senha?: StringFieldUpdateOperationsInput | string
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    acertos?: Usuario_AcertosUncheckedUpdateManyWithoutUsuarioNestedInput
+    cargo?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    id_empresa?: StringFieldUpdateOperationsInput | string
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    contratacoes?: ContratacaoUncheckedUpdateManyWithoutRecrutadorNestedInput
   }
 
-  export type UsuarioCreateManyInput = {
-    id_usuario?: string
+  export type RecrutadorCreateManyInput = {
+    id_recrutador?: string
     nome: string
     email: string
     senha: string
-    id_faculdade: string
+    cargo: string
+    telefone: string
+    id_empresa: string
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
   }
 
-  export type UsuarioUpdateManyMutationInput = {
-    id_usuario?: StringFieldUpdateOperationsInput | string
+  export type RecrutadorUpdateManyMutationInput = {
+    id_recrutador?: StringFieldUpdateOperationsInput | string
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     senha?: StringFieldUpdateOperationsInput | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type UsuarioUncheckedUpdateManyInput = {
-    id_usuario?: StringFieldUpdateOperationsInput | string
+  export type RecrutadorUncheckedUpdateManyInput = {
+    id_recrutador?: StringFieldUpdateOperationsInput | string
     nome?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     senha?: StringFieldUpdateOperationsInput | string
-    id_faculdade?: StringFieldUpdateOperationsInput | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    id_empresa?: StringFieldUpdateOperationsInput | string
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type FaculdadeCreateInput = {
-    id_faculdade?: string
+  export type EmpresaCreateInput = {
+    id_empresa?: string
     nome: string
+    cnpj: string
     endereco: string
-    usuarios?: UsuarioCreateNestedManyWithoutFaculdadeInput
-    faculdadesEmpresas?: Faculdade_EmpresaCreateNestedManyWithoutFaculdadeInput
-    perguntas?: PerguntaCreateNestedManyWithoutFaculdadeInput
+    setor: string
+    descricao?: string | null
+    website?: string | null
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    recrutadores?: RecrutadorCreateNestedManyWithoutEmpresaInput
   }
 
-  export type FaculdadeUncheckedCreateInput = {
-    id_faculdade?: string
+  export type EmpresaUncheckedCreateInput = {
+    id_empresa?: string
     nome: string
+    cnpj: string
     endereco: string
-    usuarios?: UsuarioUncheckedCreateNestedManyWithoutFaculdadeInput
-    faculdadesEmpresas?: Faculdade_EmpresaUncheckedCreateNestedManyWithoutFaculdadeInput
-    perguntas?: PerguntaUncheckedCreateNestedManyWithoutFaculdadeInput
+    setor: string
+    descricao?: string | null
+    website?: string | null
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    recrutadores?: RecrutadorUncheckedCreateNestedManyWithoutEmpresaInput
   }
 
-  export type FaculdadeUpdateInput = {
-    id_faculdade?: StringFieldUpdateOperationsInput | string
+  export type EmpresaUpdateInput = {
+    id_empresa?: StringFieldUpdateOperationsInput | string
     nome?: StringFieldUpdateOperationsInput | string
+    cnpj?: StringFieldUpdateOperationsInput | string
     endereco?: StringFieldUpdateOperationsInput | string
-    usuarios?: UsuarioUpdateManyWithoutFaculdadeNestedInput
-    faculdadesEmpresas?: Faculdade_EmpresaUpdateManyWithoutFaculdadeNestedInput
-    perguntas?: PerguntaUpdateManyWithoutFaculdadeNestedInput
+    setor?: StringFieldUpdateOperationsInput | string
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    recrutadores?: RecrutadorUpdateManyWithoutEmpresaNestedInput
   }
 
-  export type FaculdadeUncheckedUpdateInput = {
-    id_faculdade?: StringFieldUpdateOperationsInput | string
+  export type EmpresaUncheckedUpdateInput = {
+    id_empresa?: StringFieldUpdateOperationsInput | string
     nome?: StringFieldUpdateOperationsInput | string
+    cnpj?: StringFieldUpdateOperationsInput | string
     endereco?: StringFieldUpdateOperationsInput | string
-    usuarios?: UsuarioUncheckedUpdateManyWithoutFaculdadeNestedInput
-    faculdadesEmpresas?: Faculdade_EmpresaUncheckedUpdateManyWithoutFaculdadeNestedInput
-    perguntas?: PerguntaUncheckedUpdateManyWithoutFaculdadeNestedInput
+    setor?: StringFieldUpdateOperationsInput | string
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    recrutadores?: RecrutadorUncheckedUpdateManyWithoutEmpresaNestedInput
   }
 
-  export type FaculdadeCreateManyInput = {
-    id_faculdade?: string
+  export type EmpresaCreateManyInput = {
+    id_empresa?: string
     nome: string
+    cnpj: string
     endereco: string
+    setor: string
+    descricao?: string | null
+    website?: string | null
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
   }
 
-  export type FaculdadeUpdateManyMutationInput = {
-    id_faculdade?: StringFieldUpdateOperationsInput | string
+  export type EmpresaUpdateManyMutationInput = {
+    id_empresa?: StringFieldUpdateOperationsInput | string
     nome?: StringFieldUpdateOperationsInput | string
+    cnpj?: StringFieldUpdateOperationsInput | string
     endereco?: StringFieldUpdateOperationsInput | string
+    setor?: StringFieldUpdateOperationsInput | string
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type FaculdadeUncheckedUpdateManyInput = {
-    id_faculdade?: StringFieldUpdateOperationsInput | string
+  export type EmpresaUncheckedUpdateManyInput = {
+    id_empresa?: StringFieldUpdateOperationsInput | string
     nome?: StringFieldUpdateOperationsInput | string
+    cnpj?: StringFieldUpdateOperationsInput | string
     endereco?: StringFieldUpdateOperationsInput | string
+    setor?: StringFieldUpdateOperationsInput | string
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type Faculdade_EmpresaCreateInput = {
-    id_faculdade_?: string
-    id_empresa: string
-    faculdade: FaculdadeCreateNestedOneWithoutFaculdadesEmpresasInput
+  export type AlunoCreateInput = {
+    id_aluno?: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date | string
+    endereco: string
+    linkedin?: string | null
+    github?: string | null
+    portfolio?: string | null
+    solicitacoes?: number
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    contratacoes?: ContratacaoCreateNestedManyWithoutAlunoInput
+    notas?: NotaCreateNestedManyWithoutAlunoInput
+    aptidoes?: AptidaoCreateNestedManyWithoutAlunoInput
   }
 
-  export type Faculdade_EmpresaUncheckedCreateInput = {
-    id_faculdade_?: string
-    id_faculdade: string
-    id_empresa: string
+  export type AlunoUncheckedCreateInput = {
+    id_aluno?: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date | string
+    endereco: string
+    linkedin?: string | null
+    github?: string | null
+    portfolio?: string | null
+    solicitacoes?: number
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    contratacoes?: ContratacaoUncheckedCreateNestedManyWithoutAlunoInput
+    notas?: NotaUncheckedCreateNestedManyWithoutAlunoInput
+    aptidoes?: AptidaoUncheckedCreateNestedManyWithoutAlunoInput
   }
 
-  export type Faculdade_EmpresaUpdateInput = {
-    id_faculdade_?: StringFieldUpdateOperationsInput | string
-    id_empresa?: StringFieldUpdateOperationsInput | string
-    faculdade?: FaculdadeUpdateOneRequiredWithoutFaculdadesEmpresasNestedInput
+  export type AlunoUpdateInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    contratacoes?: ContratacaoUpdateManyWithoutAlunoNestedInput
+    notas?: NotaUpdateManyWithoutAlunoNestedInput
+    aptidoes?: AptidaoUpdateManyWithoutAlunoNestedInput
   }
 
-  export type Faculdade_EmpresaUncheckedUpdateInput = {
-    id_faculdade_?: StringFieldUpdateOperationsInput | string
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    id_empresa?: StringFieldUpdateOperationsInput | string
+  export type AlunoUncheckedUpdateInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    contratacoes?: ContratacaoUncheckedUpdateManyWithoutAlunoNestedInput
+    notas?: NotaUncheckedUpdateManyWithoutAlunoNestedInput
+    aptidoes?: AptidaoUncheckedUpdateManyWithoutAlunoNestedInput
   }
 
-  export type Faculdade_EmpresaCreateManyInput = {
-    id_faculdade_?: string
-    id_faculdade: string
-    id_empresa: string
+  export type AlunoCreateManyInput = {
+    id_aluno?: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date | string
+    endereco: string
+    linkedin?: string | null
+    github?: string | null
+    portfolio?: string | null
+    solicitacoes?: number
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
   }
 
-  export type Faculdade_EmpresaUpdateManyMutationInput = {
-    id_faculdade_?: StringFieldUpdateOperationsInput | string
-    id_empresa?: StringFieldUpdateOperationsInput | string
+  export type AlunoUpdateManyMutationInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type Faculdade_EmpresaUncheckedUpdateManyInput = {
-    id_faculdade_?: StringFieldUpdateOperationsInput | string
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    id_empresa?: StringFieldUpdateOperationsInput | string
+  export type AlunoUncheckedUpdateManyInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type PerguntaCreateInput = {
-    id_pergunta?: string
-    enunciado: string
-    data_criação: Date | string
-    opcoes?: OpcaoRespostaCreateNestedManyWithoutPerguntaInput
-    acertos?: Usuario_AcertosCreateNestedManyWithoutPerguntaInput
-    faculdade?: FaculdadeCreateNestedOneWithoutPerguntasInput
+  export type ContratacaoCreateInput = {
+    id_contratacao?: string
+    data_contratacao?: Date | string
+    cargo: string
+    salario?: number | null
+    status: string
+    recrutador: RecrutadorCreateNestedOneWithoutContratacoesInput
+    aluno: AlunoCreateNestedOneWithoutContratacoesInput
   }
 
-  export type PerguntaUncheckedCreateInput = {
-    id_pergunta?: string
-    id_faculdade: string
-    enunciado: string
-    data_criação: Date | string
-    opcoes?: OpcaoRespostaUncheckedCreateNestedManyWithoutPerguntaInput
-    acertos?: Usuario_AcertosUncheckedCreateNestedManyWithoutPerguntaInput
+  export type ContratacaoUncheckedCreateInput = {
+    id_contratacao?: string
+    id_recrutador: string
+    id_aluno: string
+    data_contratacao?: Date | string
+    cargo: string
+    salario?: number | null
+    status: string
   }
 
-  export type PerguntaUpdateInput = {
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    enunciado?: StringFieldUpdateOperationsInput | string
-    data_criação?: DateTimeFieldUpdateOperationsInput | Date | string
-    opcoes?: OpcaoRespostaUpdateManyWithoutPerguntaNestedInput
-    acertos?: Usuario_AcertosUpdateManyWithoutPerguntaNestedInput
-    faculdade?: FaculdadeUpdateOneWithoutPerguntasNestedInput
+  export type ContratacaoUpdateInput = {
+    id_contratacao?: StringFieldUpdateOperationsInput | string
+    data_contratacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    salario?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    recrutador?: RecrutadorUpdateOneRequiredWithoutContratacoesNestedInput
+    aluno?: AlunoUpdateOneRequiredWithoutContratacoesNestedInput
   }
 
-  export type PerguntaUncheckedUpdateInput = {
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    enunciado?: StringFieldUpdateOperationsInput | string
-    data_criação?: DateTimeFieldUpdateOperationsInput | Date | string
-    opcoes?: OpcaoRespostaUncheckedUpdateManyWithoutPerguntaNestedInput
-    acertos?: Usuario_AcertosUncheckedUpdateManyWithoutPerguntaNestedInput
+  export type ContratacaoUncheckedUpdateInput = {
+    id_contratacao?: StringFieldUpdateOperationsInput | string
+    id_recrutador?: StringFieldUpdateOperationsInput | string
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    data_contratacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    salario?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
   }
 
-  export type PerguntaCreateManyInput = {
-    id_pergunta?: string
-    id_faculdade: string
-    enunciado: string
-    data_criação: Date | string
+  export type ContratacaoCreateManyInput = {
+    id_contratacao?: string
+    id_recrutador: string
+    id_aluno: string
+    data_contratacao?: Date | string
+    cargo: string
+    salario?: number | null
+    status: string
   }
 
-  export type PerguntaUpdateManyMutationInput = {
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    enunciado?: StringFieldUpdateOperationsInput | string
-    data_criação?: DateTimeFieldUpdateOperationsInput | Date | string
+  export type ContratacaoUpdateManyMutationInput = {
+    id_contratacao?: StringFieldUpdateOperationsInput | string
+    data_contratacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    salario?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
   }
 
-  export type PerguntaUncheckedUpdateManyInput = {
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    enunciado?: StringFieldUpdateOperationsInput | string
-    data_criação?: DateTimeFieldUpdateOperationsInput | Date | string
+  export type ContratacaoUncheckedUpdateManyInput = {
+    id_contratacao?: StringFieldUpdateOperationsInput | string
+    id_recrutador?: StringFieldUpdateOperationsInput | string
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    data_contratacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    salario?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
   }
 
-  export type OpcaoRespostaCreateInput = {
-    id_opcao_resposta?: string
-    texto_resposta: string
-    correta: boolean
-    pergunta: PerguntaCreateNestedOneWithoutOpcoesInput
+  export type NotaCreateInput = {
+    id_nota?: string
+    disciplina: string
+    nota: number
+    semestre: number
+    aluno: AlunoCreateNestedOneWithoutNotasInput
   }
 
-  export type OpcaoRespostaUncheckedCreateInput = {
-    id_opcao_resposta?: string
-    id_pergunta: string
-    texto_resposta: string
-    correta: boolean
+  export type NotaUncheckedCreateInput = {
+    id_nota?: string
+    id_aluno: string
+    disciplina: string
+    nota: number
+    semestre: number
   }
 
-  export type OpcaoRespostaUpdateInput = {
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    texto_resposta?: StringFieldUpdateOperationsInput | string
-    correta?: BoolFieldUpdateOperationsInput | boolean
-    pergunta?: PerguntaUpdateOneRequiredWithoutOpcoesNestedInput
+  export type NotaUpdateInput = {
+    id_nota?: StringFieldUpdateOperationsInput | string
+    disciplina?: StringFieldUpdateOperationsInput | string
+    nota?: FloatFieldUpdateOperationsInput | number
+    semestre?: IntFieldUpdateOperationsInput | number
+    aluno?: AlunoUpdateOneRequiredWithoutNotasNestedInput
   }
 
-  export type OpcaoRespostaUncheckedUpdateInput = {
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    texto_resposta?: StringFieldUpdateOperationsInput | string
-    correta?: BoolFieldUpdateOperationsInput | boolean
+  export type NotaUncheckedUpdateInput = {
+    id_nota?: StringFieldUpdateOperationsInput | string
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    disciplina?: StringFieldUpdateOperationsInput | string
+    nota?: FloatFieldUpdateOperationsInput | number
+    semestre?: IntFieldUpdateOperationsInput | number
   }
 
-  export type OpcaoRespostaCreateManyInput = {
-    id_opcao_resposta?: string
-    id_pergunta: string
-    texto_resposta: string
-    correta: boolean
+  export type NotaCreateManyInput = {
+    id_nota?: string
+    id_aluno: string
+    disciplina: string
+    nota: number
+    semestre: number
   }
 
-  export type OpcaoRespostaUpdateManyMutationInput = {
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    texto_resposta?: StringFieldUpdateOperationsInput | string
-    correta?: BoolFieldUpdateOperationsInput | boolean
+  export type NotaUpdateManyMutationInput = {
+    id_nota?: StringFieldUpdateOperationsInput | string
+    disciplina?: StringFieldUpdateOperationsInput | string
+    nota?: FloatFieldUpdateOperationsInput | number
+    semestre?: IntFieldUpdateOperationsInput | number
   }
 
-  export type OpcaoRespostaUncheckedUpdateManyInput = {
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    texto_resposta?: StringFieldUpdateOperationsInput | string
-    correta?: BoolFieldUpdateOperationsInput | boolean
+  export type NotaUncheckedUpdateManyInput = {
+    id_nota?: StringFieldUpdateOperationsInput | string
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    disciplina?: StringFieldUpdateOperationsInput | string
+    nota?: FloatFieldUpdateOperationsInput | number
+    semestre?: IntFieldUpdateOperationsInput | number
   }
 
-  export type Usuario_AcertosCreateInput = {
-    id_usuario_acerto?: string
-    id_opcao_resposta: string
-    acertou: boolean
-    usuario: UsuarioCreateNestedOneWithoutAcertosInput
-    pergunta: PerguntaCreateNestedOneWithoutAcertosInput
+  export type AptidaoCreateInput = {
+    id_aptidao?: string
+    nome: string
+    nivel: number
+    descricao?: string | null
+    aluno: AlunoCreateNestedOneWithoutAptidoesInput
   }
 
-  export type Usuario_AcertosUncheckedCreateInput = {
-    id_usuario_acerto?: string
-    id_usuario: string
-    id_pergunta: string
-    id_opcao_resposta: string
-    acertou: boolean
+  export type AptidaoUncheckedCreateInput = {
+    id_aptidao?: string
+    id_aluno: string
+    nome: string
+    nivel: number
+    descricao?: string | null
   }
 
-  export type Usuario_AcertosUpdateInput = {
-    id_usuario_acerto?: StringFieldUpdateOperationsInput | string
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    acertou?: BoolFieldUpdateOperationsInput | boolean
-    usuario?: UsuarioUpdateOneRequiredWithoutAcertosNestedInput
-    pergunta?: PerguntaUpdateOneRequiredWithoutAcertosNestedInput
+  export type AptidaoUpdateInput = {
+    id_aptidao?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    aluno?: AlunoUpdateOneRequiredWithoutAptidoesNestedInput
   }
 
-  export type Usuario_AcertosUncheckedUpdateInput = {
-    id_usuario_acerto?: StringFieldUpdateOperationsInput | string
-    id_usuario?: StringFieldUpdateOperationsInput | string
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    acertou?: BoolFieldUpdateOperationsInput | boolean
+  export type AptidaoUncheckedUpdateInput = {
+    id_aptidao?: StringFieldUpdateOperationsInput | string
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type Usuario_AcertosCreateManyInput = {
-    id_usuario_acerto?: string
-    id_usuario: string
-    id_pergunta: string
-    id_opcao_resposta: string
-    acertou: boolean
+  export type AptidaoCreateManyInput = {
+    id_aptidao?: string
+    id_aluno: string
+    nome: string
+    nivel: number
+    descricao?: string | null
   }
 
-  export type Usuario_AcertosUpdateManyMutationInput = {
-    id_usuario_acerto?: StringFieldUpdateOperationsInput | string
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    acertou?: BoolFieldUpdateOperationsInput | boolean
+  export type AptidaoUpdateManyMutationInput = {
+    id_aptidao?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type Usuario_AcertosUncheckedUpdateManyInput = {
-    id_usuario_acerto?: StringFieldUpdateOperationsInput | string
-    id_usuario?: StringFieldUpdateOperationsInput | string
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    acertou?: BoolFieldUpdateOperationsInput | boolean
+  export type AptidaoUncheckedUpdateManyInput = {
+    id_aptidao?: StringFieldUpdateOperationsInput | string
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type StringFilter<$PrismaModel = never> = {
@@ -8688,43 +9500,66 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type FaculdadeScalarRelationFilter = {
-    is?: FaculdadeWhereInput
-    isNot?: FaculdadeWhereInput
+  export type DateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type Usuario_AcertosListRelationFilter = {
-    every?: Usuario_AcertosWhereInput
-    some?: Usuario_AcertosWhereInput
-    none?: Usuario_AcertosWhereInput
+  export type EmpresaScalarRelationFilter = {
+    is?: EmpresaWhereInput
+    isNot?: EmpresaWhereInput
   }
 
-  export type Usuario_AcertosOrderByRelationAggregateInput = {
+  export type ContratacaoListRelationFilter = {
+    every?: ContratacaoWhereInput
+    some?: ContratacaoWhereInput
+    none?: ContratacaoWhereInput
+  }
+
+  export type ContratacaoOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type UsuarioCountOrderByAggregateInput = {
-    id_usuario?: SortOrder
+  export type RecrutadorCountOrderByAggregateInput = {
+    id_recrutador?: SortOrder
     nome?: SortOrder
     email?: SortOrder
     senha?: SortOrder
-    id_faculdade?: SortOrder
+    cargo?: SortOrder
+    telefone?: SortOrder
+    id_empresa?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
   }
 
-  export type UsuarioMaxOrderByAggregateInput = {
-    id_usuario?: SortOrder
+  export type RecrutadorMaxOrderByAggregateInput = {
+    id_recrutador?: SortOrder
     nome?: SortOrder
     email?: SortOrder
     senha?: SortOrder
-    id_faculdade?: SortOrder
+    cargo?: SortOrder
+    telefone?: SortOrder
+    id_empresa?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
   }
 
-  export type UsuarioMinOrderByAggregateInput = {
-    id_usuario?: SortOrder
+  export type RecrutadorMinOrderByAggregateInput = {
+    id_recrutador?: SortOrder
     nome?: SortOrder
     email?: SortOrder
     senha?: SortOrder
-    id_faculdade?: SortOrder
+    cargo?: SortOrder
+    telefone?: SortOrder
+    id_empresa?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
   }
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
@@ -8745,119 +9580,6 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type UsuarioListRelationFilter = {
-    every?: UsuarioWhereInput
-    some?: UsuarioWhereInput
-    none?: UsuarioWhereInput
-  }
-
-  export type Faculdade_EmpresaListRelationFilter = {
-    every?: Faculdade_EmpresaWhereInput
-    some?: Faculdade_EmpresaWhereInput
-    none?: Faculdade_EmpresaWhereInput
-  }
-
-  export type PerguntaListRelationFilter = {
-    every?: PerguntaWhereInput
-    some?: PerguntaWhereInput
-    none?: PerguntaWhereInput
-  }
-
-  export type UsuarioOrderByRelationAggregateInput = {
-    _count?: SortOrder
-  }
-
-  export type Faculdade_EmpresaOrderByRelationAggregateInput = {
-    _count?: SortOrder
-  }
-
-  export type PerguntaOrderByRelationAggregateInput = {
-    _count?: SortOrder
-  }
-
-  export type FaculdadeCountOrderByAggregateInput = {
-    id_faculdade?: SortOrder
-    nome?: SortOrder
-    endereco?: SortOrder
-  }
-
-  export type FaculdadeMaxOrderByAggregateInput = {
-    id_faculdade?: SortOrder
-    nome?: SortOrder
-    endereco?: SortOrder
-  }
-
-  export type FaculdadeMinOrderByAggregateInput = {
-    id_faculdade?: SortOrder
-    nome?: SortOrder
-    endereco?: SortOrder
-  }
-
-  export type Faculdade_EmpresaCountOrderByAggregateInput = {
-    id_faculdade_?: SortOrder
-    id_faculdade?: SortOrder
-    id_empresa?: SortOrder
-  }
-
-  export type Faculdade_EmpresaMaxOrderByAggregateInput = {
-    id_faculdade_?: SortOrder
-    id_faculdade?: SortOrder
-    id_empresa?: SortOrder
-  }
-
-  export type Faculdade_EmpresaMinOrderByAggregateInput = {
-    id_faculdade_?: SortOrder
-    id_faculdade?: SortOrder
-    id_empresa?: SortOrder
-  }
-
-  export type DateTimeFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
-  }
-
-  export type OpcaoRespostaListRelationFilter = {
-    every?: OpcaoRespostaWhereInput
-    some?: OpcaoRespostaWhereInput
-    none?: OpcaoRespostaWhereInput
-  }
-
-  export type FaculdadeNullableScalarRelationFilter = {
-    is?: FaculdadeWhereInput | null
-    isNot?: FaculdadeWhereInput | null
-  }
-
-  export type OpcaoRespostaOrderByRelationAggregateInput = {
-    _count?: SortOrder
-  }
-
-  export type PerguntaCountOrderByAggregateInput = {
-    id_pergunta?: SortOrder
-    id_faculdade?: SortOrder
-    enunciado?: SortOrder
-    data_criação?: SortOrder
-  }
-
-  export type PerguntaMaxOrderByAggregateInput = {
-    id_pergunta?: SortOrder
-    id_faculdade?: SortOrder
-    enunciado?: SortOrder
-    data_criação?: SortOrder
-  }
-
-  export type PerguntaMinOrderByAggregateInput = {
-    id_pergunta?: SortOrder
-    id_faculdade?: SortOrder
-    enunciado?: SortOrder
-    data_criação?: SortOrder
-  }
-
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -8872,422 +9594,689 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type BoolFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolFilter<$PrismaModel> | boolean
+  export type StringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
-  export type PerguntaScalarRelationFilter = {
-    is?: PerguntaWhereInput
-    isNot?: PerguntaWhereInput
+  export type RecrutadorListRelationFilter = {
+    every?: RecrutadorWhereInput
+    some?: RecrutadorWhereInput
+    none?: RecrutadorWhereInput
   }
 
-  export type OpcaoRespostaCountOrderByAggregateInput = {
-    id_opcao_resposta?: SortOrder
-    id_pergunta?: SortOrder
-    texto_resposta?: SortOrder
-    correta?: SortOrder
+  export type SortOrderInput = {
+    sort: SortOrder
+    nulls?: NullsOrder
   }
 
-  export type OpcaoRespostaMaxOrderByAggregateInput = {
-    id_opcao_resposta?: SortOrder
-    id_pergunta?: SortOrder
-    texto_resposta?: SortOrder
-    correta?: SortOrder
+  export type RecrutadorOrderByRelationAggregateInput = {
+    _count?: SortOrder
   }
 
-  export type OpcaoRespostaMinOrderByAggregateInput = {
-    id_opcao_resposta?: SortOrder
-    id_pergunta?: SortOrder
-    texto_resposta?: SortOrder
-    correta?: SortOrder
+  export type EmpresaCountOrderByAggregateInput = {
+    id_empresa?: SortOrder
+    nome?: SortOrder
+    cnpj?: SortOrder
+    endereco?: SortOrder
+    setor?: SortOrder
+    descricao?: SortOrder
+    website?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
   }
 
-  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+  export type EmpresaMaxOrderByAggregateInput = {
+    id_empresa?: SortOrder
+    nome?: SortOrder
+    cnpj?: SortOrder
+    endereco?: SortOrder
+    setor?: SortOrder
+    descricao?: SortOrder
+    website?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+  }
+
+  export type EmpresaMinOrderByAggregateInput = {
+    id_empresa?: SortOrder
+    nome?: SortOrder
+    cnpj?: SortOrder
+    endereco?: SortOrder
+    setor?: SortOrder
+    descricao?: SortOrder
+    website?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+  }
+
+  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type IntFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntFilter<$PrismaModel> | number
+  }
+
+  export type NotaListRelationFilter = {
+    every?: NotaWhereInput
+    some?: NotaWhereInput
+    none?: NotaWhereInput
+  }
+
+  export type AptidaoListRelationFilter = {
+    every?: AptidaoWhereInput
+    some?: AptidaoWhereInput
+    none?: AptidaoWhereInput
+  }
+
+  export type NotaOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type AptidaoOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type AlunoCountOrderByAggregateInput = {
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    email?: SortOrder
+    senha?: SortOrder
+    matricula?: SortOrder
+    curso?: SortOrder
+    semestre_atual?: SortOrder
+    cpf?: SortOrder
+    telefone?: SortOrder
+    data_nascimento?: SortOrder
+    endereco?: SortOrder
+    linkedin?: SortOrder
+    github?: SortOrder
+    portfolio?: SortOrder
+    solicitacoes?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+  }
+
+  export type AlunoAvgOrderByAggregateInput = {
+    semestre_atual?: SortOrder
+    solicitacoes?: SortOrder
+  }
+
+  export type AlunoMaxOrderByAggregateInput = {
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    email?: SortOrder
+    senha?: SortOrder
+    matricula?: SortOrder
+    curso?: SortOrder
+    semestre_atual?: SortOrder
+    cpf?: SortOrder
+    telefone?: SortOrder
+    data_nascimento?: SortOrder
+    endereco?: SortOrder
+    linkedin?: SortOrder
+    github?: SortOrder
+    portfolio?: SortOrder
+    solicitacoes?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+  }
+
+  export type AlunoMinOrderByAggregateInput = {
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    email?: SortOrder
+    senha?: SortOrder
+    matricula?: SortOrder
+    curso?: SortOrder
+    semestre_atual?: SortOrder
+    cpf?: SortOrder
+    telefone?: SortOrder
+    data_nascimento?: SortOrder
+    endereco?: SortOrder
+    linkedin?: SortOrder
+    github?: SortOrder
+    portfolio?: SortOrder
+    solicitacoes?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+  }
+
+  export type AlunoSumOrderByAggregateInput = {
+    semestre_atual?: SortOrder
+    solicitacoes?: SortOrder
+  }
+
+  export type IntWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedBoolFilter<$PrismaModel>
-    _max?: NestedBoolFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedIntFilter<$PrismaModel>
+    _min?: NestedIntFilter<$PrismaModel>
+    _max?: NestedIntFilter<$PrismaModel>
   }
 
-  export type UsuarioScalarRelationFilter = {
-    is?: UsuarioWhereInput
-    isNot?: UsuarioWhereInput
+  export type FloatNullableFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatNullableFilter<$PrismaModel> | number | null
   }
 
-  export type Usuario_AcertosCountOrderByAggregateInput = {
-    id_usuario_acerto?: SortOrder
-    id_usuario?: SortOrder
-    id_pergunta?: SortOrder
-    id_opcao_resposta?: SortOrder
-    acertou?: SortOrder
+  export type RecrutadorScalarRelationFilter = {
+    is?: RecrutadorWhereInput
+    isNot?: RecrutadorWhereInput
   }
 
-  export type Usuario_AcertosMaxOrderByAggregateInput = {
-    id_usuario_acerto?: SortOrder
-    id_usuario?: SortOrder
-    id_pergunta?: SortOrder
-    id_opcao_resposta?: SortOrder
-    acertou?: SortOrder
+  export type AlunoScalarRelationFilter = {
+    is?: AlunoWhereInput
+    isNot?: AlunoWhereInput
   }
 
-  export type Usuario_AcertosMinOrderByAggregateInput = {
-    id_usuario_acerto?: SortOrder
-    id_usuario?: SortOrder
-    id_pergunta?: SortOrder
-    id_opcao_resposta?: SortOrder
-    acertou?: SortOrder
+  export type ContratacaoCountOrderByAggregateInput = {
+    id_contratacao?: SortOrder
+    id_recrutador?: SortOrder
+    id_aluno?: SortOrder
+    data_contratacao?: SortOrder
+    cargo?: SortOrder
+    salario?: SortOrder
+    status?: SortOrder
   }
 
-  export type FaculdadeCreateNestedOneWithoutUsuariosInput = {
-    create?: XOR<FaculdadeCreateWithoutUsuariosInput, FaculdadeUncheckedCreateWithoutUsuariosInput>
-    connectOrCreate?: FaculdadeCreateOrConnectWithoutUsuariosInput
-    connect?: FaculdadeWhereUniqueInput
+  export type ContratacaoAvgOrderByAggregateInput = {
+    salario?: SortOrder
   }
 
-  export type Usuario_AcertosCreateNestedManyWithoutUsuarioInput = {
-    create?: XOR<Usuario_AcertosCreateWithoutUsuarioInput, Usuario_AcertosUncheckedCreateWithoutUsuarioInput> | Usuario_AcertosCreateWithoutUsuarioInput[] | Usuario_AcertosUncheckedCreateWithoutUsuarioInput[]
-    connectOrCreate?: Usuario_AcertosCreateOrConnectWithoutUsuarioInput | Usuario_AcertosCreateOrConnectWithoutUsuarioInput[]
-    createMany?: Usuario_AcertosCreateManyUsuarioInputEnvelope
-    connect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
+  export type ContratacaoMaxOrderByAggregateInput = {
+    id_contratacao?: SortOrder
+    id_recrutador?: SortOrder
+    id_aluno?: SortOrder
+    data_contratacao?: SortOrder
+    cargo?: SortOrder
+    salario?: SortOrder
+    status?: SortOrder
   }
 
-  export type Usuario_AcertosUncheckedCreateNestedManyWithoutUsuarioInput = {
-    create?: XOR<Usuario_AcertosCreateWithoutUsuarioInput, Usuario_AcertosUncheckedCreateWithoutUsuarioInput> | Usuario_AcertosCreateWithoutUsuarioInput[] | Usuario_AcertosUncheckedCreateWithoutUsuarioInput[]
-    connectOrCreate?: Usuario_AcertosCreateOrConnectWithoutUsuarioInput | Usuario_AcertosCreateOrConnectWithoutUsuarioInput[]
-    createMany?: Usuario_AcertosCreateManyUsuarioInputEnvelope
-    connect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
+  export type ContratacaoMinOrderByAggregateInput = {
+    id_contratacao?: SortOrder
+    id_recrutador?: SortOrder
+    id_aluno?: SortOrder
+    data_contratacao?: SortOrder
+    cargo?: SortOrder
+    salario?: SortOrder
+    status?: SortOrder
+  }
+
+  export type ContratacaoSumOrderByAggregateInput = {
+    salario?: SortOrder
+  }
+
+  export type FloatNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedFloatNullableFilter<$PrismaModel>
+    _min?: NestedFloatNullableFilter<$PrismaModel>
+    _max?: NestedFloatNullableFilter<$PrismaModel>
+  }
+
+  export type FloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
+  export type NotaCountOrderByAggregateInput = {
+    id_nota?: SortOrder
+    id_aluno?: SortOrder
+    disciplina?: SortOrder
+    nota?: SortOrder
+    semestre?: SortOrder
+  }
+
+  export type NotaAvgOrderByAggregateInput = {
+    nota?: SortOrder
+    semestre?: SortOrder
+  }
+
+  export type NotaMaxOrderByAggregateInput = {
+    id_nota?: SortOrder
+    id_aluno?: SortOrder
+    disciplina?: SortOrder
+    nota?: SortOrder
+    semestre?: SortOrder
+  }
+
+  export type NotaMinOrderByAggregateInput = {
+    id_nota?: SortOrder
+    id_aluno?: SortOrder
+    disciplina?: SortOrder
+    nota?: SortOrder
+    semestre?: SortOrder
+  }
+
+  export type NotaSumOrderByAggregateInput = {
+    nota?: SortOrder
+    semestre?: SortOrder
+  }
+
+  export type FloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
+  }
+
+  export type AptidaoCountOrderByAggregateInput = {
+    id_aptidao?: SortOrder
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    nivel?: SortOrder
+    descricao?: SortOrder
+  }
+
+  export type AptidaoAvgOrderByAggregateInput = {
+    nivel?: SortOrder
+  }
+
+  export type AptidaoMaxOrderByAggregateInput = {
+    id_aptidao?: SortOrder
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    nivel?: SortOrder
+    descricao?: SortOrder
+  }
+
+  export type AptidaoMinOrderByAggregateInput = {
+    id_aptidao?: SortOrder
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    nivel?: SortOrder
+    descricao?: SortOrder
+  }
+
+  export type AptidaoSumOrderByAggregateInput = {
+    nivel?: SortOrder
+  }
+
+  export type EmpresaCreateNestedOneWithoutRecrutadoresInput = {
+    create?: XOR<EmpresaCreateWithoutRecrutadoresInput, EmpresaUncheckedCreateWithoutRecrutadoresInput>
+    connectOrCreate?: EmpresaCreateOrConnectWithoutRecrutadoresInput
+    connect?: EmpresaWhereUniqueInput
+  }
+
+  export type ContratacaoCreateNestedManyWithoutRecrutadorInput = {
+    create?: XOR<ContratacaoCreateWithoutRecrutadorInput, ContratacaoUncheckedCreateWithoutRecrutadorInput> | ContratacaoCreateWithoutRecrutadorInput[] | ContratacaoUncheckedCreateWithoutRecrutadorInput[]
+    connectOrCreate?: ContratacaoCreateOrConnectWithoutRecrutadorInput | ContratacaoCreateOrConnectWithoutRecrutadorInput[]
+    createMany?: ContratacaoCreateManyRecrutadorInputEnvelope
+    connect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+  }
+
+  export type ContratacaoUncheckedCreateNestedManyWithoutRecrutadorInput = {
+    create?: XOR<ContratacaoCreateWithoutRecrutadorInput, ContratacaoUncheckedCreateWithoutRecrutadorInput> | ContratacaoCreateWithoutRecrutadorInput[] | ContratacaoUncheckedCreateWithoutRecrutadorInput[]
+    connectOrCreate?: ContratacaoCreateOrConnectWithoutRecrutadorInput | ContratacaoCreateOrConnectWithoutRecrutadorInput[]
+    createMany?: ContratacaoCreateManyRecrutadorInputEnvelope
+    connect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
     set?: string
   }
 
-  export type FaculdadeUpdateOneRequiredWithoutUsuariosNestedInput = {
-    create?: XOR<FaculdadeCreateWithoutUsuariosInput, FaculdadeUncheckedCreateWithoutUsuariosInput>
-    connectOrCreate?: FaculdadeCreateOrConnectWithoutUsuariosInput
-    upsert?: FaculdadeUpsertWithoutUsuariosInput
-    connect?: FaculdadeWhereUniqueInput
-    update?: XOR<XOR<FaculdadeUpdateToOneWithWhereWithoutUsuariosInput, FaculdadeUpdateWithoutUsuariosInput>, FaculdadeUncheckedUpdateWithoutUsuariosInput>
-  }
-
-  export type Usuario_AcertosUpdateManyWithoutUsuarioNestedInput = {
-    create?: XOR<Usuario_AcertosCreateWithoutUsuarioInput, Usuario_AcertosUncheckedCreateWithoutUsuarioInput> | Usuario_AcertosCreateWithoutUsuarioInput[] | Usuario_AcertosUncheckedCreateWithoutUsuarioInput[]
-    connectOrCreate?: Usuario_AcertosCreateOrConnectWithoutUsuarioInput | Usuario_AcertosCreateOrConnectWithoutUsuarioInput[]
-    upsert?: Usuario_AcertosUpsertWithWhereUniqueWithoutUsuarioInput | Usuario_AcertosUpsertWithWhereUniqueWithoutUsuarioInput[]
-    createMany?: Usuario_AcertosCreateManyUsuarioInputEnvelope
-    set?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    disconnect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    delete?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    connect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    update?: Usuario_AcertosUpdateWithWhereUniqueWithoutUsuarioInput | Usuario_AcertosUpdateWithWhereUniqueWithoutUsuarioInput[]
-    updateMany?: Usuario_AcertosUpdateManyWithWhereWithoutUsuarioInput | Usuario_AcertosUpdateManyWithWhereWithoutUsuarioInput[]
-    deleteMany?: Usuario_AcertosScalarWhereInput | Usuario_AcertosScalarWhereInput[]
-  }
-
-  export type Usuario_AcertosUncheckedUpdateManyWithoutUsuarioNestedInput = {
-    create?: XOR<Usuario_AcertosCreateWithoutUsuarioInput, Usuario_AcertosUncheckedCreateWithoutUsuarioInput> | Usuario_AcertosCreateWithoutUsuarioInput[] | Usuario_AcertosUncheckedCreateWithoutUsuarioInput[]
-    connectOrCreate?: Usuario_AcertosCreateOrConnectWithoutUsuarioInput | Usuario_AcertosCreateOrConnectWithoutUsuarioInput[]
-    upsert?: Usuario_AcertosUpsertWithWhereUniqueWithoutUsuarioInput | Usuario_AcertosUpsertWithWhereUniqueWithoutUsuarioInput[]
-    createMany?: Usuario_AcertosCreateManyUsuarioInputEnvelope
-    set?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    disconnect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    delete?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    connect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    update?: Usuario_AcertosUpdateWithWhereUniqueWithoutUsuarioInput | Usuario_AcertosUpdateWithWhereUniqueWithoutUsuarioInput[]
-    updateMany?: Usuario_AcertosUpdateManyWithWhereWithoutUsuarioInput | Usuario_AcertosUpdateManyWithWhereWithoutUsuarioInput[]
-    deleteMany?: Usuario_AcertosScalarWhereInput | Usuario_AcertosScalarWhereInput[]
-  }
-
-  export type UsuarioCreateNestedManyWithoutFaculdadeInput = {
-    create?: XOR<UsuarioCreateWithoutFaculdadeInput, UsuarioUncheckedCreateWithoutFaculdadeInput> | UsuarioCreateWithoutFaculdadeInput[] | UsuarioUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: UsuarioCreateOrConnectWithoutFaculdadeInput | UsuarioCreateOrConnectWithoutFaculdadeInput[]
-    createMany?: UsuarioCreateManyFaculdadeInputEnvelope
-    connect?: UsuarioWhereUniqueInput | UsuarioWhereUniqueInput[]
-  }
-
-  export type Faculdade_EmpresaCreateNestedManyWithoutFaculdadeInput = {
-    create?: XOR<Faculdade_EmpresaCreateWithoutFaculdadeInput, Faculdade_EmpresaUncheckedCreateWithoutFaculdadeInput> | Faculdade_EmpresaCreateWithoutFaculdadeInput[] | Faculdade_EmpresaUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: Faculdade_EmpresaCreateOrConnectWithoutFaculdadeInput | Faculdade_EmpresaCreateOrConnectWithoutFaculdadeInput[]
-    createMany?: Faculdade_EmpresaCreateManyFaculdadeInputEnvelope
-    connect?: Faculdade_EmpresaWhereUniqueInput | Faculdade_EmpresaWhereUniqueInput[]
-  }
-
-  export type PerguntaCreateNestedManyWithoutFaculdadeInput = {
-    create?: XOR<PerguntaCreateWithoutFaculdadeInput, PerguntaUncheckedCreateWithoutFaculdadeInput> | PerguntaCreateWithoutFaculdadeInput[] | PerguntaUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: PerguntaCreateOrConnectWithoutFaculdadeInput | PerguntaCreateOrConnectWithoutFaculdadeInput[]
-    createMany?: PerguntaCreateManyFaculdadeInputEnvelope
-    connect?: PerguntaWhereUniqueInput | PerguntaWhereUniqueInput[]
-  }
-
-  export type UsuarioUncheckedCreateNestedManyWithoutFaculdadeInput = {
-    create?: XOR<UsuarioCreateWithoutFaculdadeInput, UsuarioUncheckedCreateWithoutFaculdadeInput> | UsuarioCreateWithoutFaculdadeInput[] | UsuarioUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: UsuarioCreateOrConnectWithoutFaculdadeInput | UsuarioCreateOrConnectWithoutFaculdadeInput[]
-    createMany?: UsuarioCreateManyFaculdadeInputEnvelope
-    connect?: UsuarioWhereUniqueInput | UsuarioWhereUniqueInput[]
-  }
-
-  export type Faculdade_EmpresaUncheckedCreateNestedManyWithoutFaculdadeInput = {
-    create?: XOR<Faculdade_EmpresaCreateWithoutFaculdadeInput, Faculdade_EmpresaUncheckedCreateWithoutFaculdadeInput> | Faculdade_EmpresaCreateWithoutFaculdadeInput[] | Faculdade_EmpresaUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: Faculdade_EmpresaCreateOrConnectWithoutFaculdadeInput | Faculdade_EmpresaCreateOrConnectWithoutFaculdadeInput[]
-    createMany?: Faculdade_EmpresaCreateManyFaculdadeInputEnvelope
-    connect?: Faculdade_EmpresaWhereUniqueInput | Faculdade_EmpresaWhereUniqueInput[]
-  }
-
-  export type PerguntaUncheckedCreateNestedManyWithoutFaculdadeInput = {
-    create?: XOR<PerguntaCreateWithoutFaculdadeInput, PerguntaUncheckedCreateWithoutFaculdadeInput> | PerguntaCreateWithoutFaculdadeInput[] | PerguntaUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: PerguntaCreateOrConnectWithoutFaculdadeInput | PerguntaCreateOrConnectWithoutFaculdadeInput[]
-    createMany?: PerguntaCreateManyFaculdadeInputEnvelope
-    connect?: PerguntaWhereUniqueInput | PerguntaWhereUniqueInput[]
-  }
-
-  export type UsuarioUpdateManyWithoutFaculdadeNestedInput = {
-    create?: XOR<UsuarioCreateWithoutFaculdadeInput, UsuarioUncheckedCreateWithoutFaculdadeInput> | UsuarioCreateWithoutFaculdadeInput[] | UsuarioUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: UsuarioCreateOrConnectWithoutFaculdadeInput | UsuarioCreateOrConnectWithoutFaculdadeInput[]
-    upsert?: UsuarioUpsertWithWhereUniqueWithoutFaculdadeInput | UsuarioUpsertWithWhereUniqueWithoutFaculdadeInput[]
-    createMany?: UsuarioCreateManyFaculdadeInputEnvelope
-    set?: UsuarioWhereUniqueInput | UsuarioWhereUniqueInput[]
-    disconnect?: UsuarioWhereUniqueInput | UsuarioWhereUniqueInput[]
-    delete?: UsuarioWhereUniqueInput | UsuarioWhereUniqueInput[]
-    connect?: UsuarioWhereUniqueInput | UsuarioWhereUniqueInput[]
-    update?: UsuarioUpdateWithWhereUniqueWithoutFaculdadeInput | UsuarioUpdateWithWhereUniqueWithoutFaculdadeInput[]
-    updateMany?: UsuarioUpdateManyWithWhereWithoutFaculdadeInput | UsuarioUpdateManyWithWhereWithoutFaculdadeInput[]
-    deleteMany?: UsuarioScalarWhereInput | UsuarioScalarWhereInput[]
-  }
-
-  export type Faculdade_EmpresaUpdateManyWithoutFaculdadeNestedInput = {
-    create?: XOR<Faculdade_EmpresaCreateWithoutFaculdadeInput, Faculdade_EmpresaUncheckedCreateWithoutFaculdadeInput> | Faculdade_EmpresaCreateWithoutFaculdadeInput[] | Faculdade_EmpresaUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: Faculdade_EmpresaCreateOrConnectWithoutFaculdadeInput | Faculdade_EmpresaCreateOrConnectWithoutFaculdadeInput[]
-    upsert?: Faculdade_EmpresaUpsertWithWhereUniqueWithoutFaculdadeInput | Faculdade_EmpresaUpsertWithWhereUniqueWithoutFaculdadeInput[]
-    createMany?: Faculdade_EmpresaCreateManyFaculdadeInputEnvelope
-    set?: Faculdade_EmpresaWhereUniqueInput | Faculdade_EmpresaWhereUniqueInput[]
-    disconnect?: Faculdade_EmpresaWhereUniqueInput | Faculdade_EmpresaWhereUniqueInput[]
-    delete?: Faculdade_EmpresaWhereUniqueInput | Faculdade_EmpresaWhereUniqueInput[]
-    connect?: Faculdade_EmpresaWhereUniqueInput | Faculdade_EmpresaWhereUniqueInput[]
-    update?: Faculdade_EmpresaUpdateWithWhereUniqueWithoutFaculdadeInput | Faculdade_EmpresaUpdateWithWhereUniqueWithoutFaculdadeInput[]
-    updateMany?: Faculdade_EmpresaUpdateManyWithWhereWithoutFaculdadeInput | Faculdade_EmpresaUpdateManyWithWhereWithoutFaculdadeInput[]
-    deleteMany?: Faculdade_EmpresaScalarWhereInput | Faculdade_EmpresaScalarWhereInput[]
-  }
-
-  export type PerguntaUpdateManyWithoutFaculdadeNestedInput = {
-    create?: XOR<PerguntaCreateWithoutFaculdadeInput, PerguntaUncheckedCreateWithoutFaculdadeInput> | PerguntaCreateWithoutFaculdadeInput[] | PerguntaUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: PerguntaCreateOrConnectWithoutFaculdadeInput | PerguntaCreateOrConnectWithoutFaculdadeInput[]
-    upsert?: PerguntaUpsertWithWhereUniqueWithoutFaculdadeInput | PerguntaUpsertWithWhereUniqueWithoutFaculdadeInput[]
-    createMany?: PerguntaCreateManyFaculdadeInputEnvelope
-    set?: PerguntaWhereUniqueInput | PerguntaWhereUniqueInput[]
-    disconnect?: PerguntaWhereUniqueInput | PerguntaWhereUniqueInput[]
-    delete?: PerguntaWhereUniqueInput | PerguntaWhereUniqueInput[]
-    connect?: PerguntaWhereUniqueInput | PerguntaWhereUniqueInput[]
-    update?: PerguntaUpdateWithWhereUniqueWithoutFaculdadeInput | PerguntaUpdateWithWhereUniqueWithoutFaculdadeInput[]
-    updateMany?: PerguntaUpdateManyWithWhereWithoutFaculdadeInput | PerguntaUpdateManyWithWhereWithoutFaculdadeInput[]
-    deleteMany?: PerguntaScalarWhereInput | PerguntaScalarWhereInput[]
-  }
-
-  export type UsuarioUncheckedUpdateManyWithoutFaculdadeNestedInput = {
-    create?: XOR<UsuarioCreateWithoutFaculdadeInput, UsuarioUncheckedCreateWithoutFaculdadeInput> | UsuarioCreateWithoutFaculdadeInput[] | UsuarioUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: UsuarioCreateOrConnectWithoutFaculdadeInput | UsuarioCreateOrConnectWithoutFaculdadeInput[]
-    upsert?: UsuarioUpsertWithWhereUniqueWithoutFaculdadeInput | UsuarioUpsertWithWhereUniqueWithoutFaculdadeInput[]
-    createMany?: UsuarioCreateManyFaculdadeInputEnvelope
-    set?: UsuarioWhereUniqueInput | UsuarioWhereUniqueInput[]
-    disconnect?: UsuarioWhereUniqueInput | UsuarioWhereUniqueInput[]
-    delete?: UsuarioWhereUniqueInput | UsuarioWhereUniqueInput[]
-    connect?: UsuarioWhereUniqueInput | UsuarioWhereUniqueInput[]
-    update?: UsuarioUpdateWithWhereUniqueWithoutFaculdadeInput | UsuarioUpdateWithWhereUniqueWithoutFaculdadeInput[]
-    updateMany?: UsuarioUpdateManyWithWhereWithoutFaculdadeInput | UsuarioUpdateManyWithWhereWithoutFaculdadeInput[]
-    deleteMany?: UsuarioScalarWhereInput | UsuarioScalarWhereInput[]
-  }
-
-  export type Faculdade_EmpresaUncheckedUpdateManyWithoutFaculdadeNestedInput = {
-    create?: XOR<Faculdade_EmpresaCreateWithoutFaculdadeInput, Faculdade_EmpresaUncheckedCreateWithoutFaculdadeInput> | Faculdade_EmpresaCreateWithoutFaculdadeInput[] | Faculdade_EmpresaUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: Faculdade_EmpresaCreateOrConnectWithoutFaculdadeInput | Faculdade_EmpresaCreateOrConnectWithoutFaculdadeInput[]
-    upsert?: Faculdade_EmpresaUpsertWithWhereUniqueWithoutFaculdadeInput | Faculdade_EmpresaUpsertWithWhereUniqueWithoutFaculdadeInput[]
-    createMany?: Faculdade_EmpresaCreateManyFaculdadeInputEnvelope
-    set?: Faculdade_EmpresaWhereUniqueInput | Faculdade_EmpresaWhereUniqueInput[]
-    disconnect?: Faculdade_EmpresaWhereUniqueInput | Faculdade_EmpresaWhereUniqueInput[]
-    delete?: Faculdade_EmpresaWhereUniqueInput | Faculdade_EmpresaWhereUniqueInput[]
-    connect?: Faculdade_EmpresaWhereUniqueInput | Faculdade_EmpresaWhereUniqueInput[]
-    update?: Faculdade_EmpresaUpdateWithWhereUniqueWithoutFaculdadeInput | Faculdade_EmpresaUpdateWithWhereUniqueWithoutFaculdadeInput[]
-    updateMany?: Faculdade_EmpresaUpdateManyWithWhereWithoutFaculdadeInput | Faculdade_EmpresaUpdateManyWithWhereWithoutFaculdadeInput[]
-    deleteMany?: Faculdade_EmpresaScalarWhereInput | Faculdade_EmpresaScalarWhereInput[]
-  }
-
-  export type PerguntaUncheckedUpdateManyWithoutFaculdadeNestedInput = {
-    create?: XOR<PerguntaCreateWithoutFaculdadeInput, PerguntaUncheckedCreateWithoutFaculdadeInput> | PerguntaCreateWithoutFaculdadeInput[] | PerguntaUncheckedCreateWithoutFaculdadeInput[]
-    connectOrCreate?: PerguntaCreateOrConnectWithoutFaculdadeInput | PerguntaCreateOrConnectWithoutFaculdadeInput[]
-    upsert?: PerguntaUpsertWithWhereUniqueWithoutFaculdadeInput | PerguntaUpsertWithWhereUniqueWithoutFaculdadeInput[]
-    createMany?: PerguntaCreateManyFaculdadeInputEnvelope
-    set?: PerguntaWhereUniqueInput | PerguntaWhereUniqueInput[]
-    disconnect?: PerguntaWhereUniqueInput | PerguntaWhereUniqueInput[]
-    delete?: PerguntaWhereUniqueInput | PerguntaWhereUniqueInput[]
-    connect?: PerguntaWhereUniqueInput | PerguntaWhereUniqueInput[]
-    update?: PerguntaUpdateWithWhereUniqueWithoutFaculdadeInput | PerguntaUpdateWithWhereUniqueWithoutFaculdadeInput[]
-    updateMany?: PerguntaUpdateManyWithWhereWithoutFaculdadeInput | PerguntaUpdateManyWithWhereWithoutFaculdadeInput[]
-    deleteMany?: PerguntaScalarWhereInput | PerguntaScalarWhereInput[]
-  }
-
-  export type FaculdadeCreateNestedOneWithoutFaculdadesEmpresasInput = {
-    create?: XOR<FaculdadeCreateWithoutFaculdadesEmpresasInput, FaculdadeUncheckedCreateWithoutFaculdadesEmpresasInput>
-    connectOrCreate?: FaculdadeCreateOrConnectWithoutFaculdadesEmpresasInput
-    connect?: FaculdadeWhereUniqueInput
-  }
-
-  export type FaculdadeUpdateOneRequiredWithoutFaculdadesEmpresasNestedInput = {
-    create?: XOR<FaculdadeCreateWithoutFaculdadesEmpresasInput, FaculdadeUncheckedCreateWithoutFaculdadesEmpresasInput>
-    connectOrCreate?: FaculdadeCreateOrConnectWithoutFaculdadesEmpresasInput
-    upsert?: FaculdadeUpsertWithoutFaculdadesEmpresasInput
-    connect?: FaculdadeWhereUniqueInput
-    update?: XOR<XOR<FaculdadeUpdateToOneWithWhereWithoutFaculdadesEmpresasInput, FaculdadeUpdateWithoutFaculdadesEmpresasInput>, FaculdadeUncheckedUpdateWithoutFaculdadesEmpresasInput>
-  }
-
-  export type OpcaoRespostaCreateNestedManyWithoutPerguntaInput = {
-    create?: XOR<OpcaoRespostaCreateWithoutPerguntaInput, OpcaoRespostaUncheckedCreateWithoutPerguntaInput> | OpcaoRespostaCreateWithoutPerguntaInput[] | OpcaoRespostaUncheckedCreateWithoutPerguntaInput[]
-    connectOrCreate?: OpcaoRespostaCreateOrConnectWithoutPerguntaInput | OpcaoRespostaCreateOrConnectWithoutPerguntaInput[]
-    createMany?: OpcaoRespostaCreateManyPerguntaInputEnvelope
-    connect?: OpcaoRespostaWhereUniqueInput | OpcaoRespostaWhereUniqueInput[]
-  }
-
-  export type Usuario_AcertosCreateNestedManyWithoutPerguntaInput = {
-    create?: XOR<Usuario_AcertosCreateWithoutPerguntaInput, Usuario_AcertosUncheckedCreateWithoutPerguntaInput> | Usuario_AcertosCreateWithoutPerguntaInput[] | Usuario_AcertosUncheckedCreateWithoutPerguntaInput[]
-    connectOrCreate?: Usuario_AcertosCreateOrConnectWithoutPerguntaInput | Usuario_AcertosCreateOrConnectWithoutPerguntaInput[]
-    createMany?: Usuario_AcertosCreateManyPerguntaInputEnvelope
-    connect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-  }
-
-  export type FaculdadeCreateNestedOneWithoutPerguntasInput = {
-    create?: XOR<FaculdadeCreateWithoutPerguntasInput, FaculdadeUncheckedCreateWithoutPerguntasInput>
-    connectOrCreate?: FaculdadeCreateOrConnectWithoutPerguntasInput
-    connect?: FaculdadeWhereUniqueInput
-  }
-
-  export type OpcaoRespostaUncheckedCreateNestedManyWithoutPerguntaInput = {
-    create?: XOR<OpcaoRespostaCreateWithoutPerguntaInput, OpcaoRespostaUncheckedCreateWithoutPerguntaInput> | OpcaoRespostaCreateWithoutPerguntaInput[] | OpcaoRespostaUncheckedCreateWithoutPerguntaInput[]
-    connectOrCreate?: OpcaoRespostaCreateOrConnectWithoutPerguntaInput | OpcaoRespostaCreateOrConnectWithoutPerguntaInput[]
-    createMany?: OpcaoRespostaCreateManyPerguntaInputEnvelope
-    connect?: OpcaoRespostaWhereUniqueInput | OpcaoRespostaWhereUniqueInput[]
-  }
-
-  export type Usuario_AcertosUncheckedCreateNestedManyWithoutPerguntaInput = {
-    create?: XOR<Usuario_AcertosCreateWithoutPerguntaInput, Usuario_AcertosUncheckedCreateWithoutPerguntaInput> | Usuario_AcertosCreateWithoutPerguntaInput[] | Usuario_AcertosUncheckedCreateWithoutPerguntaInput[]
-    connectOrCreate?: Usuario_AcertosCreateOrConnectWithoutPerguntaInput | Usuario_AcertosCreateOrConnectWithoutPerguntaInput[]
-    createMany?: Usuario_AcertosCreateManyPerguntaInputEnvelope
-    connect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-  }
-
   export type DateTimeFieldUpdateOperationsInput = {
     set?: Date | string
   }
 
-  export type OpcaoRespostaUpdateManyWithoutPerguntaNestedInput = {
-    create?: XOR<OpcaoRespostaCreateWithoutPerguntaInput, OpcaoRespostaUncheckedCreateWithoutPerguntaInput> | OpcaoRespostaCreateWithoutPerguntaInput[] | OpcaoRespostaUncheckedCreateWithoutPerguntaInput[]
-    connectOrCreate?: OpcaoRespostaCreateOrConnectWithoutPerguntaInput | OpcaoRespostaCreateOrConnectWithoutPerguntaInput[]
-    upsert?: OpcaoRespostaUpsertWithWhereUniqueWithoutPerguntaInput | OpcaoRespostaUpsertWithWhereUniqueWithoutPerguntaInput[]
-    createMany?: OpcaoRespostaCreateManyPerguntaInputEnvelope
-    set?: OpcaoRespostaWhereUniqueInput | OpcaoRespostaWhereUniqueInput[]
-    disconnect?: OpcaoRespostaWhereUniqueInput | OpcaoRespostaWhereUniqueInput[]
-    delete?: OpcaoRespostaWhereUniqueInput | OpcaoRespostaWhereUniqueInput[]
-    connect?: OpcaoRespostaWhereUniqueInput | OpcaoRespostaWhereUniqueInput[]
-    update?: OpcaoRespostaUpdateWithWhereUniqueWithoutPerguntaInput | OpcaoRespostaUpdateWithWhereUniqueWithoutPerguntaInput[]
-    updateMany?: OpcaoRespostaUpdateManyWithWhereWithoutPerguntaInput | OpcaoRespostaUpdateManyWithWhereWithoutPerguntaInput[]
-    deleteMany?: OpcaoRespostaScalarWhereInput | OpcaoRespostaScalarWhereInput[]
+  export type EmpresaUpdateOneRequiredWithoutRecrutadoresNestedInput = {
+    create?: XOR<EmpresaCreateWithoutRecrutadoresInput, EmpresaUncheckedCreateWithoutRecrutadoresInput>
+    connectOrCreate?: EmpresaCreateOrConnectWithoutRecrutadoresInput
+    upsert?: EmpresaUpsertWithoutRecrutadoresInput
+    connect?: EmpresaWhereUniqueInput
+    update?: XOR<XOR<EmpresaUpdateToOneWithWhereWithoutRecrutadoresInput, EmpresaUpdateWithoutRecrutadoresInput>, EmpresaUncheckedUpdateWithoutRecrutadoresInput>
   }
 
-  export type Usuario_AcertosUpdateManyWithoutPerguntaNestedInput = {
-    create?: XOR<Usuario_AcertosCreateWithoutPerguntaInput, Usuario_AcertosUncheckedCreateWithoutPerguntaInput> | Usuario_AcertosCreateWithoutPerguntaInput[] | Usuario_AcertosUncheckedCreateWithoutPerguntaInput[]
-    connectOrCreate?: Usuario_AcertosCreateOrConnectWithoutPerguntaInput | Usuario_AcertosCreateOrConnectWithoutPerguntaInput[]
-    upsert?: Usuario_AcertosUpsertWithWhereUniqueWithoutPerguntaInput | Usuario_AcertosUpsertWithWhereUniqueWithoutPerguntaInput[]
-    createMany?: Usuario_AcertosCreateManyPerguntaInputEnvelope
-    set?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    disconnect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    delete?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    connect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    update?: Usuario_AcertosUpdateWithWhereUniqueWithoutPerguntaInput | Usuario_AcertosUpdateWithWhereUniqueWithoutPerguntaInput[]
-    updateMany?: Usuario_AcertosUpdateManyWithWhereWithoutPerguntaInput | Usuario_AcertosUpdateManyWithWhereWithoutPerguntaInput[]
-    deleteMany?: Usuario_AcertosScalarWhereInput | Usuario_AcertosScalarWhereInput[]
+  export type ContratacaoUpdateManyWithoutRecrutadorNestedInput = {
+    create?: XOR<ContratacaoCreateWithoutRecrutadorInput, ContratacaoUncheckedCreateWithoutRecrutadorInput> | ContratacaoCreateWithoutRecrutadorInput[] | ContratacaoUncheckedCreateWithoutRecrutadorInput[]
+    connectOrCreate?: ContratacaoCreateOrConnectWithoutRecrutadorInput | ContratacaoCreateOrConnectWithoutRecrutadorInput[]
+    upsert?: ContratacaoUpsertWithWhereUniqueWithoutRecrutadorInput | ContratacaoUpsertWithWhereUniqueWithoutRecrutadorInput[]
+    createMany?: ContratacaoCreateManyRecrutadorInputEnvelope
+    set?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    disconnect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    delete?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    connect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    update?: ContratacaoUpdateWithWhereUniqueWithoutRecrutadorInput | ContratacaoUpdateWithWhereUniqueWithoutRecrutadorInput[]
+    updateMany?: ContratacaoUpdateManyWithWhereWithoutRecrutadorInput | ContratacaoUpdateManyWithWhereWithoutRecrutadorInput[]
+    deleteMany?: ContratacaoScalarWhereInput | ContratacaoScalarWhereInput[]
   }
 
-  export type FaculdadeUpdateOneWithoutPerguntasNestedInput = {
-    create?: XOR<FaculdadeCreateWithoutPerguntasInput, FaculdadeUncheckedCreateWithoutPerguntasInput>
-    connectOrCreate?: FaculdadeCreateOrConnectWithoutPerguntasInput
-    upsert?: FaculdadeUpsertWithoutPerguntasInput
-    disconnect?: FaculdadeWhereInput | boolean
-    delete?: FaculdadeWhereInput | boolean
-    connect?: FaculdadeWhereUniqueInput
-    update?: XOR<XOR<FaculdadeUpdateToOneWithWhereWithoutPerguntasInput, FaculdadeUpdateWithoutPerguntasInput>, FaculdadeUncheckedUpdateWithoutPerguntasInput>
+  export type ContratacaoUncheckedUpdateManyWithoutRecrutadorNestedInput = {
+    create?: XOR<ContratacaoCreateWithoutRecrutadorInput, ContratacaoUncheckedCreateWithoutRecrutadorInput> | ContratacaoCreateWithoutRecrutadorInput[] | ContratacaoUncheckedCreateWithoutRecrutadorInput[]
+    connectOrCreate?: ContratacaoCreateOrConnectWithoutRecrutadorInput | ContratacaoCreateOrConnectWithoutRecrutadorInput[]
+    upsert?: ContratacaoUpsertWithWhereUniqueWithoutRecrutadorInput | ContratacaoUpsertWithWhereUniqueWithoutRecrutadorInput[]
+    createMany?: ContratacaoCreateManyRecrutadorInputEnvelope
+    set?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    disconnect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    delete?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    connect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    update?: ContratacaoUpdateWithWhereUniqueWithoutRecrutadorInput | ContratacaoUpdateWithWhereUniqueWithoutRecrutadorInput[]
+    updateMany?: ContratacaoUpdateManyWithWhereWithoutRecrutadorInput | ContratacaoUpdateManyWithWhereWithoutRecrutadorInput[]
+    deleteMany?: ContratacaoScalarWhereInput | ContratacaoScalarWhereInput[]
   }
 
-  export type OpcaoRespostaUncheckedUpdateManyWithoutPerguntaNestedInput = {
-    create?: XOR<OpcaoRespostaCreateWithoutPerguntaInput, OpcaoRespostaUncheckedCreateWithoutPerguntaInput> | OpcaoRespostaCreateWithoutPerguntaInput[] | OpcaoRespostaUncheckedCreateWithoutPerguntaInput[]
-    connectOrCreate?: OpcaoRespostaCreateOrConnectWithoutPerguntaInput | OpcaoRespostaCreateOrConnectWithoutPerguntaInput[]
-    upsert?: OpcaoRespostaUpsertWithWhereUniqueWithoutPerguntaInput | OpcaoRespostaUpsertWithWhereUniqueWithoutPerguntaInput[]
-    createMany?: OpcaoRespostaCreateManyPerguntaInputEnvelope
-    set?: OpcaoRespostaWhereUniqueInput | OpcaoRespostaWhereUniqueInput[]
-    disconnect?: OpcaoRespostaWhereUniqueInput | OpcaoRespostaWhereUniqueInput[]
-    delete?: OpcaoRespostaWhereUniqueInput | OpcaoRespostaWhereUniqueInput[]
-    connect?: OpcaoRespostaWhereUniqueInput | OpcaoRespostaWhereUniqueInput[]
-    update?: OpcaoRespostaUpdateWithWhereUniqueWithoutPerguntaInput | OpcaoRespostaUpdateWithWhereUniqueWithoutPerguntaInput[]
-    updateMany?: OpcaoRespostaUpdateManyWithWhereWithoutPerguntaInput | OpcaoRespostaUpdateManyWithWhereWithoutPerguntaInput[]
-    deleteMany?: OpcaoRespostaScalarWhereInput | OpcaoRespostaScalarWhereInput[]
+  export type RecrutadorCreateNestedManyWithoutEmpresaInput = {
+    create?: XOR<RecrutadorCreateWithoutEmpresaInput, RecrutadorUncheckedCreateWithoutEmpresaInput> | RecrutadorCreateWithoutEmpresaInput[] | RecrutadorUncheckedCreateWithoutEmpresaInput[]
+    connectOrCreate?: RecrutadorCreateOrConnectWithoutEmpresaInput | RecrutadorCreateOrConnectWithoutEmpresaInput[]
+    createMany?: RecrutadorCreateManyEmpresaInputEnvelope
+    connect?: RecrutadorWhereUniqueInput | RecrutadorWhereUniqueInput[]
   }
 
-  export type Usuario_AcertosUncheckedUpdateManyWithoutPerguntaNestedInput = {
-    create?: XOR<Usuario_AcertosCreateWithoutPerguntaInput, Usuario_AcertosUncheckedCreateWithoutPerguntaInput> | Usuario_AcertosCreateWithoutPerguntaInput[] | Usuario_AcertosUncheckedCreateWithoutPerguntaInput[]
-    connectOrCreate?: Usuario_AcertosCreateOrConnectWithoutPerguntaInput | Usuario_AcertosCreateOrConnectWithoutPerguntaInput[]
-    upsert?: Usuario_AcertosUpsertWithWhereUniqueWithoutPerguntaInput | Usuario_AcertosUpsertWithWhereUniqueWithoutPerguntaInput[]
-    createMany?: Usuario_AcertosCreateManyPerguntaInputEnvelope
-    set?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    disconnect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    delete?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    connect?: Usuario_AcertosWhereUniqueInput | Usuario_AcertosWhereUniqueInput[]
-    update?: Usuario_AcertosUpdateWithWhereUniqueWithoutPerguntaInput | Usuario_AcertosUpdateWithWhereUniqueWithoutPerguntaInput[]
-    updateMany?: Usuario_AcertosUpdateManyWithWhereWithoutPerguntaInput | Usuario_AcertosUpdateManyWithWhereWithoutPerguntaInput[]
-    deleteMany?: Usuario_AcertosScalarWhereInput | Usuario_AcertosScalarWhereInput[]
+  export type RecrutadorUncheckedCreateNestedManyWithoutEmpresaInput = {
+    create?: XOR<RecrutadorCreateWithoutEmpresaInput, RecrutadorUncheckedCreateWithoutEmpresaInput> | RecrutadorCreateWithoutEmpresaInput[] | RecrutadorUncheckedCreateWithoutEmpresaInput[]
+    connectOrCreate?: RecrutadorCreateOrConnectWithoutEmpresaInput | RecrutadorCreateOrConnectWithoutEmpresaInput[]
+    createMany?: RecrutadorCreateManyEmpresaInputEnvelope
+    connect?: RecrutadorWhereUniqueInput | RecrutadorWhereUniqueInput[]
   }
 
-  export type PerguntaCreateNestedOneWithoutOpcoesInput = {
-    create?: XOR<PerguntaCreateWithoutOpcoesInput, PerguntaUncheckedCreateWithoutOpcoesInput>
-    connectOrCreate?: PerguntaCreateOrConnectWithoutOpcoesInput
-    connect?: PerguntaWhereUniqueInput
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
   }
 
-  export type BoolFieldUpdateOperationsInput = {
-    set?: boolean
+  export type RecrutadorUpdateManyWithoutEmpresaNestedInput = {
+    create?: XOR<RecrutadorCreateWithoutEmpresaInput, RecrutadorUncheckedCreateWithoutEmpresaInput> | RecrutadorCreateWithoutEmpresaInput[] | RecrutadorUncheckedCreateWithoutEmpresaInput[]
+    connectOrCreate?: RecrutadorCreateOrConnectWithoutEmpresaInput | RecrutadorCreateOrConnectWithoutEmpresaInput[]
+    upsert?: RecrutadorUpsertWithWhereUniqueWithoutEmpresaInput | RecrutadorUpsertWithWhereUniqueWithoutEmpresaInput[]
+    createMany?: RecrutadorCreateManyEmpresaInputEnvelope
+    set?: RecrutadorWhereUniqueInput | RecrutadorWhereUniqueInput[]
+    disconnect?: RecrutadorWhereUniqueInput | RecrutadorWhereUniqueInput[]
+    delete?: RecrutadorWhereUniqueInput | RecrutadorWhereUniqueInput[]
+    connect?: RecrutadorWhereUniqueInput | RecrutadorWhereUniqueInput[]
+    update?: RecrutadorUpdateWithWhereUniqueWithoutEmpresaInput | RecrutadorUpdateWithWhereUniqueWithoutEmpresaInput[]
+    updateMany?: RecrutadorUpdateManyWithWhereWithoutEmpresaInput | RecrutadorUpdateManyWithWhereWithoutEmpresaInput[]
+    deleteMany?: RecrutadorScalarWhereInput | RecrutadorScalarWhereInput[]
   }
 
-  export type PerguntaUpdateOneRequiredWithoutOpcoesNestedInput = {
-    create?: XOR<PerguntaCreateWithoutOpcoesInput, PerguntaUncheckedCreateWithoutOpcoesInput>
-    connectOrCreate?: PerguntaCreateOrConnectWithoutOpcoesInput
-    upsert?: PerguntaUpsertWithoutOpcoesInput
-    connect?: PerguntaWhereUniqueInput
-    update?: XOR<XOR<PerguntaUpdateToOneWithWhereWithoutOpcoesInput, PerguntaUpdateWithoutOpcoesInput>, PerguntaUncheckedUpdateWithoutOpcoesInput>
+  export type RecrutadorUncheckedUpdateManyWithoutEmpresaNestedInput = {
+    create?: XOR<RecrutadorCreateWithoutEmpresaInput, RecrutadorUncheckedCreateWithoutEmpresaInput> | RecrutadorCreateWithoutEmpresaInput[] | RecrutadorUncheckedCreateWithoutEmpresaInput[]
+    connectOrCreate?: RecrutadorCreateOrConnectWithoutEmpresaInput | RecrutadorCreateOrConnectWithoutEmpresaInput[]
+    upsert?: RecrutadorUpsertWithWhereUniqueWithoutEmpresaInput | RecrutadorUpsertWithWhereUniqueWithoutEmpresaInput[]
+    createMany?: RecrutadorCreateManyEmpresaInputEnvelope
+    set?: RecrutadorWhereUniqueInput | RecrutadorWhereUniqueInput[]
+    disconnect?: RecrutadorWhereUniqueInput | RecrutadorWhereUniqueInput[]
+    delete?: RecrutadorWhereUniqueInput | RecrutadorWhereUniqueInput[]
+    connect?: RecrutadorWhereUniqueInput | RecrutadorWhereUniqueInput[]
+    update?: RecrutadorUpdateWithWhereUniqueWithoutEmpresaInput | RecrutadorUpdateWithWhereUniqueWithoutEmpresaInput[]
+    updateMany?: RecrutadorUpdateManyWithWhereWithoutEmpresaInput | RecrutadorUpdateManyWithWhereWithoutEmpresaInput[]
+    deleteMany?: RecrutadorScalarWhereInput | RecrutadorScalarWhereInput[]
   }
 
-  export type UsuarioCreateNestedOneWithoutAcertosInput = {
-    create?: XOR<UsuarioCreateWithoutAcertosInput, UsuarioUncheckedCreateWithoutAcertosInput>
-    connectOrCreate?: UsuarioCreateOrConnectWithoutAcertosInput
-    connect?: UsuarioWhereUniqueInput
+  export type ContratacaoCreateNestedManyWithoutAlunoInput = {
+    create?: XOR<ContratacaoCreateWithoutAlunoInput, ContratacaoUncheckedCreateWithoutAlunoInput> | ContratacaoCreateWithoutAlunoInput[] | ContratacaoUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: ContratacaoCreateOrConnectWithoutAlunoInput | ContratacaoCreateOrConnectWithoutAlunoInput[]
+    createMany?: ContratacaoCreateManyAlunoInputEnvelope
+    connect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
   }
 
-  export type PerguntaCreateNestedOneWithoutAcertosInput = {
-    create?: XOR<PerguntaCreateWithoutAcertosInput, PerguntaUncheckedCreateWithoutAcertosInput>
-    connectOrCreate?: PerguntaCreateOrConnectWithoutAcertosInput
-    connect?: PerguntaWhereUniqueInput
+  export type NotaCreateNestedManyWithoutAlunoInput = {
+    create?: XOR<NotaCreateWithoutAlunoInput, NotaUncheckedCreateWithoutAlunoInput> | NotaCreateWithoutAlunoInput[] | NotaUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: NotaCreateOrConnectWithoutAlunoInput | NotaCreateOrConnectWithoutAlunoInput[]
+    createMany?: NotaCreateManyAlunoInputEnvelope
+    connect?: NotaWhereUniqueInput | NotaWhereUniqueInput[]
   }
 
-  export type UsuarioUpdateOneRequiredWithoutAcertosNestedInput = {
-    create?: XOR<UsuarioCreateWithoutAcertosInput, UsuarioUncheckedCreateWithoutAcertosInput>
-    connectOrCreate?: UsuarioCreateOrConnectWithoutAcertosInput
-    upsert?: UsuarioUpsertWithoutAcertosInput
-    connect?: UsuarioWhereUniqueInput
-    update?: XOR<XOR<UsuarioUpdateToOneWithWhereWithoutAcertosInput, UsuarioUpdateWithoutAcertosInput>, UsuarioUncheckedUpdateWithoutAcertosInput>
+  export type AptidaoCreateNestedManyWithoutAlunoInput = {
+    create?: XOR<AptidaoCreateWithoutAlunoInput, AptidaoUncheckedCreateWithoutAlunoInput> | AptidaoCreateWithoutAlunoInput[] | AptidaoUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: AptidaoCreateOrConnectWithoutAlunoInput | AptidaoCreateOrConnectWithoutAlunoInput[]
+    createMany?: AptidaoCreateManyAlunoInputEnvelope
+    connect?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
   }
 
-  export type PerguntaUpdateOneRequiredWithoutAcertosNestedInput = {
-    create?: XOR<PerguntaCreateWithoutAcertosInput, PerguntaUncheckedCreateWithoutAcertosInput>
-    connectOrCreate?: PerguntaCreateOrConnectWithoutAcertosInput
-    upsert?: PerguntaUpsertWithoutAcertosInput
-    connect?: PerguntaWhereUniqueInput
-    update?: XOR<XOR<PerguntaUpdateToOneWithWhereWithoutAcertosInput, PerguntaUpdateWithoutAcertosInput>, PerguntaUncheckedUpdateWithoutAcertosInput>
+  export type ContratacaoUncheckedCreateNestedManyWithoutAlunoInput = {
+    create?: XOR<ContratacaoCreateWithoutAlunoInput, ContratacaoUncheckedCreateWithoutAlunoInput> | ContratacaoCreateWithoutAlunoInput[] | ContratacaoUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: ContratacaoCreateOrConnectWithoutAlunoInput | ContratacaoCreateOrConnectWithoutAlunoInput[]
+    createMany?: ContratacaoCreateManyAlunoInputEnvelope
+    connect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+  }
+
+  export type NotaUncheckedCreateNestedManyWithoutAlunoInput = {
+    create?: XOR<NotaCreateWithoutAlunoInput, NotaUncheckedCreateWithoutAlunoInput> | NotaCreateWithoutAlunoInput[] | NotaUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: NotaCreateOrConnectWithoutAlunoInput | NotaCreateOrConnectWithoutAlunoInput[]
+    createMany?: NotaCreateManyAlunoInputEnvelope
+    connect?: NotaWhereUniqueInput | NotaWhereUniqueInput[]
+  }
+
+  export type AptidaoUncheckedCreateNestedManyWithoutAlunoInput = {
+    create?: XOR<AptidaoCreateWithoutAlunoInput, AptidaoUncheckedCreateWithoutAlunoInput> | AptidaoCreateWithoutAlunoInput[] | AptidaoUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: AptidaoCreateOrConnectWithoutAlunoInput | AptidaoCreateOrConnectWithoutAlunoInput[]
+    createMany?: AptidaoCreateManyAlunoInputEnvelope
+    connect?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
+  }
+
+  export type IntFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
+  export type ContratacaoUpdateManyWithoutAlunoNestedInput = {
+    create?: XOR<ContratacaoCreateWithoutAlunoInput, ContratacaoUncheckedCreateWithoutAlunoInput> | ContratacaoCreateWithoutAlunoInput[] | ContratacaoUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: ContratacaoCreateOrConnectWithoutAlunoInput | ContratacaoCreateOrConnectWithoutAlunoInput[]
+    upsert?: ContratacaoUpsertWithWhereUniqueWithoutAlunoInput | ContratacaoUpsertWithWhereUniqueWithoutAlunoInput[]
+    createMany?: ContratacaoCreateManyAlunoInputEnvelope
+    set?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    disconnect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    delete?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    connect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    update?: ContratacaoUpdateWithWhereUniqueWithoutAlunoInput | ContratacaoUpdateWithWhereUniqueWithoutAlunoInput[]
+    updateMany?: ContratacaoUpdateManyWithWhereWithoutAlunoInput | ContratacaoUpdateManyWithWhereWithoutAlunoInput[]
+    deleteMany?: ContratacaoScalarWhereInput | ContratacaoScalarWhereInput[]
+  }
+
+  export type NotaUpdateManyWithoutAlunoNestedInput = {
+    create?: XOR<NotaCreateWithoutAlunoInput, NotaUncheckedCreateWithoutAlunoInput> | NotaCreateWithoutAlunoInput[] | NotaUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: NotaCreateOrConnectWithoutAlunoInput | NotaCreateOrConnectWithoutAlunoInput[]
+    upsert?: NotaUpsertWithWhereUniqueWithoutAlunoInput | NotaUpsertWithWhereUniqueWithoutAlunoInput[]
+    createMany?: NotaCreateManyAlunoInputEnvelope
+    set?: NotaWhereUniqueInput | NotaWhereUniqueInput[]
+    disconnect?: NotaWhereUniqueInput | NotaWhereUniqueInput[]
+    delete?: NotaWhereUniqueInput | NotaWhereUniqueInput[]
+    connect?: NotaWhereUniqueInput | NotaWhereUniqueInput[]
+    update?: NotaUpdateWithWhereUniqueWithoutAlunoInput | NotaUpdateWithWhereUniqueWithoutAlunoInput[]
+    updateMany?: NotaUpdateManyWithWhereWithoutAlunoInput | NotaUpdateManyWithWhereWithoutAlunoInput[]
+    deleteMany?: NotaScalarWhereInput | NotaScalarWhereInput[]
+  }
+
+  export type AptidaoUpdateManyWithoutAlunoNestedInput = {
+    create?: XOR<AptidaoCreateWithoutAlunoInput, AptidaoUncheckedCreateWithoutAlunoInput> | AptidaoCreateWithoutAlunoInput[] | AptidaoUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: AptidaoCreateOrConnectWithoutAlunoInput | AptidaoCreateOrConnectWithoutAlunoInput[]
+    upsert?: AptidaoUpsertWithWhereUniqueWithoutAlunoInput | AptidaoUpsertWithWhereUniqueWithoutAlunoInput[]
+    createMany?: AptidaoCreateManyAlunoInputEnvelope
+    set?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
+    disconnect?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
+    delete?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
+    connect?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
+    update?: AptidaoUpdateWithWhereUniqueWithoutAlunoInput | AptidaoUpdateWithWhereUniqueWithoutAlunoInput[]
+    updateMany?: AptidaoUpdateManyWithWhereWithoutAlunoInput | AptidaoUpdateManyWithWhereWithoutAlunoInput[]
+    deleteMany?: AptidaoScalarWhereInput | AptidaoScalarWhereInput[]
+  }
+
+  export type ContratacaoUncheckedUpdateManyWithoutAlunoNestedInput = {
+    create?: XOR<ContratacaoCreateWithoutAlunoInput, ContratacaoUncheckedCreateWithoutAlunoInput> | ContratacaoCreateWithoutAlunoInput[] | ContratacaoUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: ContratacaoCreateOrConnectWithoutAlunoInput | ContratacaoCreateOrConnectWithoutAlunoInput[]
+    upsert?: ContratacaoUpsertWithWhereUniqueWithoutAlunoInput | ContratacaoUpsertWithWhereUniqueWithoutAlunoInput[]
+    createMany?: ContratacaoCreateManyAlunoInputEnvelope
+    set?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    disconnect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    delete?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    connect?: ContratacaoWhereUniqueInput | ContratacaoWhereUniqueInput[]
+    update?: ContratacaoUpdateWithWhereUniqueWithoutAlunoInput | ContratacaoUpdateWithWhereUniqueWithoutAlunoInput[]
+    updateMany?: ContratacaoUpdateManyWithWhereWithoutAlunoInput | ContratacaoUpdateManyWithWhereWithoutAlunoInput[]
+    deleteMany?: ContratacaoScalarWhereInput | ContratacaoScalarWhereInput[]
+  }
+
+  export type NotaUncheckedUpdateManyWithoutAlunoNestedInput = {
+    create?: XOR<NotaCreateWithoutAlunoInput, NotaUncheckedCreateWithoutAlunoInput> | NotaCreateWithoutAlunoInput[] | NotaUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: NotaCreateOrConnectWithoutAlunoInput | NotaCreateOrConnectWithoutAlunoInput[]
+    upsert?: NotaUpsertWithWhereUniqueWithoutAlunoInput | NotaUpsertWithWhereUniqueWithoutAlunoInput[]
+    createMany?: NotaCreateManyAlunoInputEnvelope
+    set?: NotaWhereUniqueInput | NotaWhereUniqueInput[]
+    disconnect?: NotaWhereUniqueInput | NotaWhereUniqueInput[]
+    delete?: NotaWhereUniqueInput | NotaWhereUniqueInput[]
+    connect?: NotaWhereUniqueInput | NotaWhereUniqueInput[]
+    update?: NotaUpdateWithWhereUniqueWithoutAlunoInput | NotaUpdateWithWhereUniqueWithoutAlunoInput[]
+    updateMany?: NotaUpdateManyWithWhereWithoutAlunoInput | NotaUpdateManyWithWhereWithoutAlunoInput[]
+    deleteMany?: NotaScalarWhereInput | NotaScalarWhereInput[]
+  }
+
+  export type AptidaoUncheckedUpdateManyWithoutAlunoNestedInput = {
+    create?: XOR<AptidaoCreateWithoutAlunoInput, AptidaoUncheckedCreateWithoutAlunoInput> | AptidaoCreateWithoutAlunoInput[] | AptidaoUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: AptidaoCreateOrConnectWithoutAlunoInput | AptidaoCreateOrConnectWithoutAlunoInput[]
+    upsert?: AptidaoUpsertWithWhereUniqueWithoutAlunoInput | AptidaoUpsertWithWhereUniqueWithoutAlunoInput[]
+    createMany?: AptidaoCreateManyAlunoInputEnvelope
+    set?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
+    disconnect?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
+    delete?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
+    connect?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
+    update?: AptidaoUpdateWithWhereUniqueWithoutAlunoInput | AptidaoUpdateWithWhereUniqueWithoutAlunoInput[]
+    updateMany?: AptidaoUpdateManyWithWhereWithoutAlunoInput | AptidaoUpdateManyWithWhereWithoutAlunoInput[]
+    deleteMany?: AptidaoScalarWhereInput | AptidaoScalarWhereInput[]
+  }
+
+  export type RecrutadorCreateNestedOneWithoutContratacoesInput = {
+    create?: XOR<RecrutadorCreateWithoutContratacoesInput, RecrutadorUncheckedCreateWithoutContratacoesInput>
+    connectOrCreate?: RecrutadorCreateOrConnectWithoutContratacoesInput
+    connect?: RecrutadorWhereUniqueInput
+  }
+
+  export type AlunoCreateNestedOneWithoutContratacoesInput = {
+    create?: XOR<AlunoCreateWithoutContratacoesInput, AlunoUncheckedCreateWithoutContratacoesInput>
+    connectOrCreate?: AlunoCreateOrConnectWithoutContratacoesInput
+    connect?: AlunoWhereUniqueInput
+  }
+
+  export type NullableFloatFieldUpdateOperationsInput = {
+    set?: number | null
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
+  export type RecrutadorUpdateOneRequiredWithoutContratacoesNestedInput = {
+    create?: XOR<RecrutadorCreateWithoutContratacoesInput, RecrutadorUncheckedCreateWithoutContratacoesInput>
+    connectOrCreate?: RecrutadorCreateOrConnectWithoutContratacoesInput
+    upsert?: RecrutadorUpsertWithoutContratacoesInput
+    connect?: RecrutadorWhereUniqueInput
+    update?: XOR<XOR<RecrutadorUpdateToOneWithWhereWithoutContratacoesInput, RecrutadorUpdateWithoutContratacoesInput>, RecrutadorUncheckedUpdateWithoutContratacoesInput>
+  }
+
+  export type AlunoUpdateOneRequiredWithoutContratacoesNestedInput = {
+    create?: XOR<AlunoCreateWithoutContratacoesInput, AlunoUncheckedCreateWithoutContratacoesInput>
+    connectOrCreate?: AlunoCreateOrConnectWithoutContratacoesInput
+    upsert?: AlunoUpsertWithoutContratacoesInput
+    connect?: AlunoWhereUniqueInput
+    update?: XOR<XOR<AlunoUpdateToOneWithWhereWithoutContratacoesInput, AlunoUpdateWithoutContratacoesInput>, AlunoUncheckedUpdateWithoutContratacoesInput>
+  }
+
+  export type AlunoCreateNestedOneWithoutNotasInput = {
+    create?: XOR<AlunoCreateWithoutNotasInput, AlunoUncheckedCreateWithoutNotasInput>
+    connectOrCreate?: AlunoCreateOrConnectWithoutNotasInput
+    connect?: AlunoWhereUniqueInput
+  }
+
+  export type FloatFieldUpdateOperationsInput = {
+    set?: number
+    increment?: number
+    decrement?: number
+    multiply?: number
+    divide?: number
+  }
+
+  export type AlunoUpdateOneRequiredWithoutNotasNestedInput = {
+    create?: XOR<AlunoCreateWithoutNotasInput, AlunoUncheckedCreateWithoutNotasInput>
+    connectOrCreate?: AlunoCreateOrConnectWithoutNotasInput
+    upsert?: AlunoUpsertWithoutNotasInput
+    connect?: AlunoWhereUniqueInput
+    update?: XOR<XOR<AlunoUpdateToOneWithWhereWithoutNotasInput, AlunoUpdateWithoutNotasInput>, AlunoUncheckedUpdateWithoutNotasInput>
+  }
+
+  export type AlunoCreateNestedOneWithoutAptidoesInput = {
+    create?: XOR<AlunoCreateWithoutAptidoesInput, AlunoUncheckedCreateWithoutAptidoesInput>
+    connectOrCreate?: AlunoCreateOrConnectWithoutAptidoesInput
+    connect?: AlunoWhereUniqueInput
+  }
+
+  export type AlunoUpdateOneRequiredWithoutAptidoesNestedInput = {
+    create?: XOR<AlunoCreateWithoutAptidoesInput, AlunoUncheckedCreateWithoutAptidoesInput>
+    connectOrCreate?: AlunoCreateOrConnectWithoutAptidoesInput
+    upsert?: AlunoUpsertWithoutAptidoesInput
+    connect?: AlunoWhereUniqueInput
+    update?: XOR<XOR<AlunoUpdateToOneWithWhereWithoutAptidoesInput, AlunoUpdateWithoutAptidoesInput>, AlunoUncheckedUpdateWithoutAptidoesInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -9302,6 +10291,17 @@ export namespace Prisma {
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
     not?: NestedStringFilter<$PrismaModel> | string
+  }
+
+  export type NestedDateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
@@ -9332,17 +10332,6 @@ export namespace Prisma {
     not?: NestedIntFilter<$PrismaModel> | number
   }
 
-  export type NestedDateTimeFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
-  }
-
   export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -9357,752 +10346,998 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type NestedBoolFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolFilter<$PrismaModel> | boolean
+  export type NestedStringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
-  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
-    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
+  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type NestedIntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  }
+
+  export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel>
+    in?: number[] | ListIntFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel>
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntWithAggregatesFilter<$PrismaModel> | number
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedBoolFilter<$PrismaModel>
-    _max?: NestedBoolFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedIntFilter<$PrismaModel>
+    _min?: NestedIntFilter<$PrismaModel>
+    _max?: NestedIntFilter<$PrismaModel>
   }
 
-  export type FaculdadeCreateWithoutUsuariosInput = {
-    id_faculdade?: string
+  export type NestedFloatFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
+  export type NestedFloatNullableFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatNullableFilter<$PrismaModel> | number | null
+  }
+
+  export type NestedFloatNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatNullableWithAggregatesFilter<$PrismaModel> | number | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _avg?: NestedFloatNullableFilter<$PrismaModel>
+    _sum?: NestedFloatNullableFilter<$PrismaModel>
+    _min?: NestedFloatNullableFilter<$PrismaModel>
+    _max?: NestedFloatNullableFilter<$PrismaModel>
+  }
+
+  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: number | FloatFieldRefInput<$PrismaModel>
+    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
+    lt?: number | FloatFieldRefInput<$PrismaModel>
+    lte?: number | FloatFieldRefInput<$PrismaModel>
+    gt?: number | FloatFieldRefInput<$PrismaModel>
+    gte?: number | FloatFieldRefInput<$PrismaModel>
+    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedFloatFilter<$PrismaModel>
+    _sum?: NestedFloatFilter<$PrismaModel>
+    _min?: NestedFloatFilter<$PrismaModel>
+    _max?: NestedFloatFilter<$PrismaModel>
+  }
+
+  export type EmpresaCreateWithoutRecrutadoresInput = {
+    id_empresa?: string
     nome: string
+    cnpj: string
     endereco: string
-    faculdadesEmpresas?: Faculdade_EmpresaCreateNestedManyWithoutFaculdadeInput
-    perguntas?: PerguntaCreateNestedManyWithoutFaculdadeInput
+    setor: string
+    descricao?: string | null
+    website?: string | null
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
   }
 
-  export type FaculdadeUncheckedCreateWithoutUsuariosInput = {
-    id_faculdade?: string
+  export type EmpresaUncheckedCreateWithoutRecrutadoresInput = {
+    id_empresa?: string
     nome: string
+    cnpj: string
     endereco: string
-    faculdadesEmpresas?: Faculdade_EmpresaUncheckedCreateNestedManyWithoutFaculdadeInput
-    perguntas?: PerguntaUncheckedCreateNestedManyWithoutFaculdadeInput
+    setor: string
+    descricao?: string | null
+    website?: string | null
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
   }
 
-  export type FaculdadeCreateOrConnectWithoutUsuariosInput = {
-    where: FaculdadeWhereUniqueInput
-    create: XOR<FaculdadeCreateWithoutUsuariosInput, FaculdadeUncheckedCreateWithoutUsuariosInput>
+  export type EmpresaCreateOrConnectWithoutRecrutadoresInput = {
+    where: EmpresaWhereUniqueInput
+    create: XOR<EmpresaCreateWithoutRecrutadoresInput, EmpresaUncheckedCreateWithoutRecrutadoresInput>
   }
 
-  export type Usuario_AcertosCreateWithoutUsuarioInput = {
-    id_usuario_acerto?: string
-    id_opcao_resposta: string
-    acertou: boolean
-    pergunta: PerguntaCreateNestedOneWithoutAcertosInput
+  export type ContratacaoCreateWithoutRecrutadorInput = {
+    id_contratacao?: string
+    data_contratacao?: Date | string
+    cargo: string
+    salario?: number | null
+    status: string
+    aluno: AlunoCreateNestedOneWithoutContratacoesInput
   }
 
-  export type Usuario_AcertosUncheckedCreateWithoutUsuarioInput = {
-    id_usuario_acerto?: string
-    id_pergunta: string
-    id_opcao_resposta: string
-    acertou: boolean
+  export type ContratacaoUncheckedCreateWithoutRecrutadorInput = {
+    id_contratacao?: string
+    id_aluno: string
+    data_contratacao?: Date | string
+    cargo: string
+    salario?: number | null
+    status: string
   }
 
-  export type Usuario_AcertosCreateOrConnectWithoutUsuarioInput = {
-    where: Usuario_AcertosWhereUniqueInput
-    create: XOR<Usuario_AcertosCreateWithoutUsuarioInput, Usuario_AcertosUncheckedCreateWithoutUsuarioInput>
+  export type ContratacaoCreateOrConnectWithoutRecrutadorInput = {
+    where: ContratacaoWhereUniqueInput
+    create: XOR<ContratacaoCreateWithoutRecrutadorInput, ContratacaoUncheckedCreateWithoutRecrutadorInput>
   }
 
-  export type Usuario_AcertosCreateManyUsuarioInputEnvelope = {
-    data: Usuario_AcertosCreateManyUsuarioInput | Usuario_AcertosCreateManyUsuarioInput[]
+  export type ContratacaoCreateManyRecrutadorInputEnvelope = {
+    data: ContratacaoCreateManyRecrutadorInput | ContratacaoCreateManyRecrutadorInput[]
     skipDuplicates?: boolean
   }
 
-  export type FaculdadeUpsertWithoutUsuariosInput = {
-    update: XOR<FaculdadeUpdateWithoutUsuariosInput, FaculdadeUncheckedUpdateWithoutUsuariosInput>
-    create: XOR<FaculdadeCreateWithoutUsuariosInput, FaculdadeUncheckedCreateWithoutUsuariosInput>
-    where?: FaculdadeWhereInput
+  export type EmpresaUpsertWithoutRecrutadoresInput = {
+    update: XOR<EmpresaUpdateWithoutRecrutadoresInput, EmpresaUncheckedUpdateWithoutRecrutadoresInput>
+    create: XOR<EmpresaCreateWithoutRecrutadoresInput, EmpresaUncheckedCreateWithoutRecrutadoresInput>
+    where?: EmpresaWhereInput
   }
 
-  export type FaculdadeUpdateToOneWithWhereWithoutUsuariosInput = {
-    where?: FaculdadeWhereInput
-    data: XOR<FaculdadeUpdateWithoutUsuariosInput, FaculdadeUncheckedUpdateWithoutUsuariosInput>
+  export type EmpresaUpdateToOneWithWhereWithoutRecrutadoresInput = {
+    where?: EmpresaWhereInput
+    data: XOR<EmpresaUpdateWithoutRecrutadoresInput, EmpresaUncheckedUpdateWithoutRecrutadoresInput>
   }
 
-  export type FaculdadeUpdateWithoutUsuariosInput = {
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    nome?: StringFieldUpdateOperationsInput | string
-    endereco?: StringFieldUpdateOperationsInput | string
-    faculdadesEmpresas?: Faculdade_EmpresaUpdateManyWithoutFaculdadeNestedInput
-    perguntas?: PerguntaUpdateManyWithoutFaculdadeNestedInput
-  }
-
-  export type FaculdadeUncheckedUpdateWithoutUsuariosInput = {
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    nome?: StringFieldUpdateOperationsInput | string
-    endereco?: StringFieldUpdateOperationsInput | string
-    faculdadesEmpresas?: Faculdade_EmpresaUncheckedUpdateManyWithoutFaculdadeNestedInput
-    perguntas?: PerguntaUncheckedUpdateManyWithoutFaculdadeNestedInput
-  }
-
-  export type Usuario_AcertosUpsertWithWhereUniqueWithoutUsuarioInput = {
-    where: Usuario_AcertosWhereUniqueInput
-    update: XOR<Usuario_AcertosUpdateWithoutUsuarioInput, Usuario_AcertosUncheckedUpdateWithoutUsuarioInput>
-    create: XOR<Usuario_AcertosCreateWithoutUsuarioInput, Usuario_AcertosUncheckedCreateWithoutUsuarioInput>
-  }
-
-  export type Usuario_AcertosUpdateWithWhereUniqueWithoutUsuarioInput = {
-    where: Usuario_AcertosWhereUniqueInput
-    data: XOR<Usuario_AcertosUpdateWithoutUsuarioInput, Usuario_AcertosUncheckedUpdateWithoutUsuarioInput>
-  }
-
-  export type Usuario_AcertosUpdateManyWithWhereWithoutUsuarioInput = {
-    where: Usuario_AcertosScalarWhereInput
-    data: XOR<Usuario_AcertosUpdateManyMutationInput, Usuario_AcertosUncheckedUpdateManyWithoutUsuarioInput>
-  }
-
-  export type Usuario_AcertosScalarWhereInput = {
-    AND?: Usuario_AcertosScalarWhereInput | Usuario_AcertosScalarWhereInput[]
-    OR?: Usuario_AcertosScalarWhereInput[]
-    NOT?: Usuario_AcertosScalarWhereInput | Usuario_AcertosScalarWhereInput[]
-    id_usuario_acerto?: StringFilter<"Usuario_Acertos"> | string
-    id_usuario?: StringFilter<"Usuario_Acertos"> | string
-    id_pergunta?: StringFilter<"Usuario_Acertos"> | string
-    id_opcao_resposta?: StringFilter<"Usuario_Acertos"> | string
-    acertou?: BoolFilter<"Usuario_Acertos"> | boolean
-  }
-
-  export type UsuarioCreateWithoutFaculdadeInput = {
-    id_usuario?: string
-    nome: string
-    email: string
-    senha: string
-    acertos?: Usuario_AcertosCreateNestedManyWithoutUsuarioInput
-  }
-
-  export type UsuarioUncheckedCreateWithoutFaculdadeInput = {
-    id_usuario?: string
-    nome: string
-    email: string
-    senha: string
-    acertos?: Usuario_AcertosUncheckedCreateNestedManyWithoutUsuarioInput
-  }
-
-  export type UsuarioCreateOrConnectWithoutFaculdadeInput = {
-    where: UsuarioWhereUniqueInput
-    create: XOR<UsuarioCreateWithoutFaculdadeInput, UsuarioUncheckedCreateWithoutFaculdadeInput>
-  }
-
-  export type UsuarioCreateManyFaculdadeInputEnvelope = {
-    data: UsuarioCreateManyFaculdadeInput | UsuarioCreateManyFaculdadeInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type Faculdade_EmpresaCreateWithoutFaculdadeInput = {
-    id_faculdade_?: string
-    id_empresa: string
-  }
-
-  export type Faculdade_EmpresaUncheckedCreateWithoutFaculdadeInput = {
-    id_faculdade_?: string
-    id_empresa: string
-  }
-
-  export type Faculdade_EmpresaCreateOrConnectWithoutFaculdadeInput = {
-    where: Faculdade_EmpresaWhereUniqueInput
-    create: XOR<Faculdade_EmpresaCreateWithoutFaculdadeInput, Faculdade_EmpresaUncheckedCreateWithoutFaculdadeInput>
-  }
-
-  export type Faculdade_EmpresaCreateManyFaculdadeInputEnvelope = {
-    data: Faculdade_EmpresaCreateManyFaculdadeInput | Faculdade_EmpresaCreateManyFaculdadeInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type PerguntaCreateWithoutFaculdadeInput = {
-    id_pergunta?: string
-    enunciado: string
-    data_criação: Date | string
-    opcoes?: OpcaoRespostaCreateNestedManyWithoutPerguntaInput
-    acertos?: Usuario_AcertosCreateNestedManyWithoutPerguntaInput
-  }
-
-  export type PerguntaUncheckedCreateWithoutFaculdadeInput = {
-    id_pergunta?: string
-    enunciado: string
-    data_criação: Date | string
-    opcoes?: OpcaoRespostaUncheckedCreateNestedManyWithoutPerguntaInput
-    acertos?: Usuario_AcertosUncheckedCreateNestedManyWithoutPerguntaInput
-  }
-
-  export type PerguntaCreateOrConnectWithoutFaculdadeInput = {
-    where: PerguntaWhereUniqueInput
-    create: XOR<PerguntaCreateWithoutFaculdadeInput, PerguntaUncheckedCreateWithoutFaculdadeInput>
-  }
-
-  export type PerguntaCreateManyFaculdadeInputEnvelope = {
-    data: PerguntaCreateManyFaculdadeInput | PerguntaCreateManyFaculdadeInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type UsuarioUpsertWithWhereUniqueWithoutFaculdadeInput = {
-    where: UsuarioWhereUniqueInput
-    update: XOR<UsuarioUpdateWithoutFaculdadeInput, UsuarioUncheckedUpdateWithoutFaculdadeInput>
-    create: XOR<UsuarioCreateWithoutFaculdadeInput, UsuarioUncheckedCreateWithoutFaculdadeInput>
-  }
-
-  export type UsuarioUpdateWithWhereUniqueWithoutFaculdadeInput = {
-    where: UsuarioWhereUniqueInput
-    data: XOR<UsuarioUpdateWithoutFaculdadeInput, UsuarioUncheckedUpdateWithoutFaculdadeInput>
-  }
-
-  export type UsuarioUpdateManyWithWhereWithoutFaculdadeInput = {
-    where: UsuarioScalarWhereInput
-    data: XOR<UsuarioUpdateManyMutationInput, UsuarioUncheckedUpdateManyWithoutFaculdadeInput>
-  }
-
-  export type UsuarioScalarWhereInput = {
-    AND?: UsuarioScalarWhereInput | UsuarioScalarWhereInput[]
-    OR?: UsuarioScalarWhereInput[]
-    NOT?: UsuarioScalarWhereInput | UsuarioScalarWhereInput[]
-    id_usuario?: StringFilter<"Usuario"> | string
-    nome?: StringFilter<"Usuario"> | string
-    email?: StringFilter<"Usuario"> | string
-    senha?: StringFilter<"Usuario"> | string
-    id_faculdade?: StringFilter<"Usuario"> | string
-  }
-
-  export type Faculdade_EmpresaUpsertWithWhereUniqueWithoutFaculdadeInput = {
-    where: Faculdade_EmpresaWhereUniqueInput
-    update: XOR<Faculdade_EmpresaUpdateWithoutFaculdadeInput, Faculdade_EmpresaUncheckedUpdateWithoutFaculdadeInput>
-    create: XOR<Faculdade_EmpresaCreateWithoutFaculdadeInput, Faculdade_EmpresaUncheckedCreateWithoutFaculdadeInput>
-  }
-
-  export type Faculdade_EmpresaUpdateWithWhereUniqueWithoutFaculdadeInput = {
-    where: Faculdade_EmpresaWhereUniqueInput
-    data: XOR<Faculdade_EmpresaUpdateWithoutFaculdadeInput, Faculdade_EmpresaUncheckedUpdateWithoutFaculdadeInput>
-  }
-
-  export type Faculdade_EmpresaUpdateManyWithWhereWithoutFaculdadeInput = {
-    where: Faculdade_EmpresaScalarWhereInput
-    data: XOR<Faculdade_EmpresaUpdateManyMutationInput, Faculdade_EmpresaUncheckedUpdateManyWithoutFaculdadeInput>
-  }
-
-  export type Faculdade_EmpresaScalarWhereInput = {
-    AND?: Faculdade_EmpresaScalarWhereInput | Faculdade_EmpresaScalarWhereInput[]
-    OR?: Faculdade_EmpresaScalarWhereInput[]
-    NOT?: Faculdade_EmpresaScalarWhereInput | Faculdade_EmpresaScalarWhereInput[]
-    id_faculdade_?: StringFilter<"Faculdade_Empresa"> | string
-    id_faculdade?: StringFilter<"Faculdade_Empresa"> | string
-    id_empresa?: StringFilter<"Faculdade_Empresa"> | string
-  }
-
-  export type PerguntaUpsertWithWhereUniqueWithoutFaculdadeInput = {
-    where: PerguntaWhereUniqueInput
-    update: XOR<PerguntaUpdateWithoutFaculdadeInput, PerguntaUncheckedUpdateWithoutFaculdadeInput>
-    create: XOR<PerguntaCreateWithoutFaculdadeInput, PerguntaUncheckedCreateWithoutFaculdadeInput>
-  }
-
-  export type PerguntaUpdateWithWhereUniqueWithoutFaculdadeInput = {
-    where: PerguntaWhereUniqueInput
-    data: XOR<PerguntaUpdateWithoutFaculdadeInput, PerguntaUncheckedUpdateWithoutFaculdadeInput>
-  }
-
-  export type PerguntaUpdateManyWithWhereWithoutFaculdadeInput = {
-    where: PerguntaScalarWhereInput
-    data: XOR<PerguntaUpdateManyMutationInput, PerguntaUncheckedUpdateManyWithoutFaculdadeInput>
-  }
-
-  export type PerguntaScalarWhereInput = {
-    AND?: PerguntaScalarWhereInput | PerguntaScalarWhereInput[]
-    OR?: PerguntaScalarWhereInput[]
-    NOT?: PerguntaScalarWhereInput | PerguntaScalarWhereInput[]
-    id_pergunta?: StringFilter<"Pergunta"> | string
-    id_faculdade?: StringFilter<"Pergunta"> | string
-    enunciado?: StringFilter<"Pergunta"> | string
-    data_criação?: DateTimeFilter<"Pergunta"> | Date | string
-  }
-
-  export type FaculdadeCreateWithoutFaculdadesEmpresasInput = {
-    id_faculdade?: string
-    nome: string
-    endereco: string
-    usuarios?: UsuarioCreateNestedManyWithoutFaculdadeInput
-    perguntas?: PerguntaCreateNestedManyWithoutFaculdadeInput
-  }
-
-  export type FaculdadeUncheckedCreateWithoutFaculdadesEmpresasInput = {
-    id_faculdade?: string
-    nome: string
-    endereco: string
-    usuarios?: UsuarioUncheckedCreateNestedManyWithoutFaculdadeInput
-    perguntas?: PerguntaUncheckedCreateNestedManyWithoutFaculdadeInput
-  }
-
-  export type FaculdadeCreateOrConnectWithoutFaculdadesEmpresasInput = {
-    where: FaculdadeWhereUniqueInput
-    create: XOR<FaculdadeCreateWithoutFaculdadesEmpresasInput, FaculdadeUncheckedCreateWithoutFaculdadesEmpresasInput>
-  }
-
-  export type FaculdadeUpsertWithoutFaculdadesEmpresasInput = {
-    update: XOR<FaculdadeUpdateWithoutFaculdadesEmpresasInput, FaculdadeUncheckedUpdateWithoutFaculdadesEmpresasInput>
-    create: XOR<FaculdadeCreateWithoutFaculdadesEmpresasInput, FaculdadeUncheckedCreateWithoutFaculdadesEmpresasInput>
-    where?: FaculdadeWhereInput
-  }
-
-  export type FaculdadeUpdateToOneWithWhereWithoutFaculdadesEmpresasInput = {
-    where?: FaculdadeWhereInput
-    data: XOR<FaculdadeUpdateWithoutFaculdadesEmpresasInput, FaculdadeUncheckedUpdateWithoutFaculdadesEmpresasInput>
-  }
-
-  export type FaculdadeUpdateWithoutFaculdadesEmpresasInput = {
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    nome?: StringFieldUpdateOperationsInput | string
-    endereco?: StringFieldUpdateOperationsInput | string
-    usuarios?: UsuarioUpdateManyWithoutFaculdadeNestedInput
-    perguntas?: PerguntaUpdateManyWithoutFaculdadeNestedInput
-  }
-
-  export type FaculdadeUncheckedUpdateWithoutFaculdadesEmpresasInput = {
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    nome?: StringFieldUpdateOperationsInput | string
-    endereco?: StringFieldUpdateOperationsInput | string
-    usuarios?: UsuarioUncheckedUpdateManyWithoutFaculdadeNestedInput
-    perguntas?: PerguntaUncheckedUpdateManyWithoutFaculdadeNestedInput
-  }
-
-  export type OpcaoRespostaCreateWithoutPerguntaInput = {
-    id_opcao_resposta?: string
-    texto_resposta: string
-    correta: boolean
-  }
-
-  export type OpcaoRespostaUncheckedCreateWithoutPerguntaInput = {
-    id_opcao_resposta?: string
-    texto_resposta: string
-    correta: boolean
-  }
-
-  export type OpcaoRespostaCreateOrConnectWithoutPerguntaInput = {
-    where: OpcaoRespostaWhereUniqueInput
-    create: XOR<OpcaoRespostaCreateWithoutPerguntaInput, OpcaoRespostaUncheckedCreateWithoutPerguntaInput>
-  }
-
-  export type OpcaoRespostaCreateManyPerguntaInputEnvelope = {
-    data: OpcaoRespostaCreateManyPerguntaInput | OpcaoRespostaCreateManyPerguntaInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type Usuario_AcertosCreateWithoutPerguntaInput = {
-    id_usuario_acerto?: string
-    id_opcao_resposta: string
-    acertou: boolean
-    usuario: UsuarioCreateNestedOneWithoutAcertosInput
-  }
-
-  export type Usuario_AcertosUncheckedCreateWithoutPerguntaInput = {
-    id_usuario_acerto?: string
-    id_usuario: string
-    id_opcao_resposta: string
-    acertou: boolean
-  }
-
-  export type Usuario_AcertosCreateOrConnectWithoutPerguntaInput = {
-    where: Usuario_AcertosWhereUniqueInput
-    create: XOR<Usuario_AcertosCreateWithoutPerguntaInput, Usuario_AcertosUncheckedCreateWithoutPerguntaInput>
-  }
-
-  export type Usuario_AcertosCreateManyPerguntaInputEnvelope = {
-    data: Usuario_AcertosCreateManyPerguntaInput | Usuario_AcertosCreateManyPerguntaInput[]
-    skipDuplicates?: boolean
-  }
-
-  export type FaculdadeCreateWithoutPerguntasInput = {
-    id_faculdade?: string
-    nome: string
-    endereco: string
-    usuarios?: UsuarioCreateNestedManyWithoutFaculdadeInput
-    faculdadesEmpresas?: Faculdade_EmpresaCreateNestedManyWithoutFaculdadeInput
-  }
-
-  export type FaculdadeUncheckedCreateWithoutPerguntasInput = {
-    id_faculdade?: string
-    nome: string
-    endereco: string
-    usuarios?: UsuarioUncheckedCreateNestedManyWithoutFaculdadeInput
-    faculdadesEmpresas?: Faculdade_EmpresaUncheckedCreateNestedManyWithoutFaculdadeInput
-  }
-
-  export type FaculdadeCreateOrConnectWithoutPerguntasInput = {
-    where: FaculdadeWhereUniqueInput
-    create: XOR<FaculdadeCreateWithoutPerguntasInput, FaculdadeUncheckedCreateWithoutPerguntasInput>
-  }
-
-  export type OpcaoRespostaUpsertWithWhereUniqueWithoutPerguntaInput = {
-    where: OpcaoRespostaWhereUniqueInput
-    update: XOR<OpcaoRespostaUpdateWithoutPerguntaInput, OpcaoRespostaUncheckedUpdateWithoutPerguntaInput>
-    create: XOR<OpcaoRespostaCreateWithoutPerguntaInput, OpcaoRespostaUncheckedCreateWithoutPerguntaInput>
-  }
-
-  export type OpcaoRespostaUpdateWithWhereUniqueWithoutPerguntaInput = {
-    where: OpcaoRespostaWhereUniqueInput
-    data: XOR<OpcaoRespostaUpdateWithoutPerguntaInput, OpcaoRespostaUncheckedUpdateWithoutPerguntaInput>
-  }
-
-  export type OpcaoRespostaUpdateManyWithWhereWithoutPerguntaInput = {
-    where: OpcaoRespostaScalarWhereInput
-    data: XOR<OpcaoRespostaUpdateManyMutationInput, OpcaoRespostaUncheckedUpdateManyWithoutPerguntaInput>
-  }
-
-  export type OpcaoRespostaScalarWhereInput = {
-    AND?: OpcaoRespostaScalarWhereInput | OpcaoRespostaScalarWhereInput[]
-    OR?: OpcaoRespostaScalarWhereInput[]
-    NOT?: OpcaoRespostaScalarWhereInput | OpcaoRespostaScalarWhereInput[]
-    id_opcao_resposta?: StringFilter<"OpcaoResposta"> | string
-    id_pergunta?: StringFilter<"OpcaoResposta"> | string
-    texto_resposta?: StringFilter<"OpcaoResposta"> | string
-    correta?: BoolFilter<"OpcaoResposta"> | boolean
-  }
-
-  export type Usuario_AcertosUpsertWithWhereUniqueWithoutPerguntaInput = {
-    where: Usuario_AcertosWhereUniqueInput
-    update: XOR<Usuario_AcertosUpdateWithoutPerguntaInput, Usuario_AcertosUncheckedUpdateWithoutPerguntaInput>
-    create: XOR<Usuario_AcertosCreateWithoutPerguntaInput, Usuario_AcertosUncheckedCreateWithoutPerguntaInput>
-  }
-
-  export type Usuario_AcertosUpdateWithWhereUniqueWithoutPerguntaInput = {
-    where: Usuario_AcertosWhereUniqueInput
-    data: XOR<Usuario_AcertosUpdateWithoutPerguntaInput, Usuario_AcertosUncheckedUpdateWithoutPerguntaInput>
-  }
-
-  export type Usuario_AcertosUpdateManyWithWhereWithoutPerguntaInput = {
-    where: Usuario_AcertosScalarWhereInput
-    data: XOR<Usuario_AcertosUpdateManyMutationInput, Usuario_AcertosUncheckedUpdateManyWithoutPerguntaInput>
-  }
-
-  export type FaculdadeUpsertWithoutPerguntasInput = {
-    update: XOR<FaculdadeUpdateWithoutPerguntasInput, FaculdadeUncheckedUpdateWithoutPerguntasInput>
-    create: XOR<FaculdadeCreateWithoutPerguntasInput, FaculdadeUncheckedCreateWithoutPerguntasInput>
-    where?: FaculdadeWhereInput
-  }
-
-  export type FaculdadeUpdateToOneWithWhereWithoutPerguntasInput = {
-    where?: FaculdadeWhereInput
-    data: XOR<FaculdadeUpdateWithoutPerguntasInput, FaculdadeUncheckedUpdateWithoutPerguntasInput>
-  }
-
-  export type FaculdadeUpdateWithoutPerguntasInput = {
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    nome?: StringFieldUpdateOperationsInput | string
-    endereco?: StringFieldUpdateOperationsInput | string
-    usuarios?: UsuarioUpdateManyWithoutFaculdadeNestedInput
-    faculdadesEmpresas?: Faculdade_EmpresaUpdateManyWithoutFaculdadeNestedInput
-  }
-
-  export type FaculdadeUncheckedUpdateWithoutPerguntasInput = {
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    nome?: StringFieldUpdateOperationsInput | string
-    endereco?: StringFieldUpdateOperationsInput | string
-    usuarios?: UsuarioUncheckedUpdateManyWithoutFaculdadeNestedInput
-    faculdadesEmpresas?: Faculdade_EmpresaUncheckedUpdateManyWithoutFaculdadeNestedInput
-  }
-
-  export type PerguntaCreateWithoutOpcoesInput = {
-    id_pergunta?: string
-    enunciado: string
-    data_criação: Date | string
-    acertos?: Usuario_AcertosCreateNestedManyWithoutPerguntaInput
-    faculdade?: FaculdadeCreateNestedOneWithoutPerguntasInput
-  }
-
-  export type PerguntaUncheckedCreateWithoutOpcoesInput = {
-    id_pergunta?: string
-    id_faculdade: string
-    enunciado: string
-    data_criação: Date | string
-    acertos?: Usuario_AcertosUncheckedCreateNestedManyWithoutPerguntaInput
-  }
-
-  export type PerguntaCreateOrConnectWithoutOpcoesInput = {
-    where: PerguntaWhereUniqueInput
-    create: XOR<PerguntaCreateWithoutOpcoesInput, PerguntaUncheckedCreateWithoutOpcoesInput>
-  }
-
-  export type PerguntaUpsertWithoutOpcoesInput = {
-    update: XOR<PerguntaUpdateWithoutOpcoesInput, PerguntaUncheckedUpdateWithoutOpcoesInput>
-    create: XOR<PerguntaCreateWithoutOpcoesInput, PerguntaUncheckedCreateWithoutOpcoesInput>
-    where?: PerguntaWhereInput
-  }
-
-  export type PerguntaUpdateToOneWithWhereWithoutOpcoesInput = {
-    where?: PerguntaWhereInput
-    data: XOR<PerguntaUpdateWithoutOpcoesInput, PerguntaUncheckedUpdateWithoutOpcoesInput>
-  }
-
-  export type PerguntaUpdateWithoutOpcoesInput = {
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    enunciado?: StringFieldUpdateOperationsInput | string
-    data_criação?: DateTimeFieldUpdateOperationsInput | Date | string
-    acertos?: Usuario_AcertosUpdateManyWithoutPerguntaNestedInput
-    faculdade?: FaculdadeUpdateOneWithoutPerguntasNestedInput
-  }
-
-  export type PerguntaUncheckedUpdateWithoutOpcoesInput = {
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    enunciado?: StringFieldUpdateOperationsInput | string
-    data_criação?: DateTimeFieldUpdateOperationsInput | Date | string
-    acertos?: Usuario_AcertosUncheckedUpdateManyWithoutPerguntaNestedInput
-  }
-
-  export type UsuarioCreateWithoutAcertosInput = {
-    id_usuario?: string
-    nome: string
-    email: string
-    senha: string
-    faculdade: FaculdadeCreateNestedOneWithoutUsuariosInput
-  }
-
-  export type UsuarioUncheckedCreateWithoutAcertosInput = {
-    id_usuario?: string
-    nome: string
-    email: string
-    senha: string
-    id_faculdade: string
-  }
-
-  export type UsuarioCreateOrConnectWithoutAcertosInput = {
-    where: UsuarioWhereUniqueInput
-    create: XOR<UsuarioCreateWithoutAcertosInput, UsuarioUncheckedCreateWithoutAcertosInput>
-  }
-
-  export type PerguntaCreateWithoutAcertosInput = {
-    id_pergunta?: string
-    enunciado: string
-    data_criação: Date | string
-    opcoes?: OpcaoRespostaCreateNestedManyWithoutPerguntaInput
-    faculdade?: FaculdadeCreateNestedOneWithoutPerguntasInput
-  }
-
-  export type PerguntaUncheckedCreateWithoutAcertosInput = {
-    id_pergunta?: string
-    id_faculdade: string
-    enunciado: string
-    data_criação: Date | string
-    opcoes?: OpcaoRespostaUncheckedCreateNestedManyWithoutPerguntaInput
-  }
-
-  export type PerguntaCreateOrConnectWithoutAcertosInput = {
-    where: PerguntaWhereUniqueInput
-    create: XOR<PerguntaCreateWithoutAcertosInput, PerguntaUncheckedCreateWithoutAcertosInput>
-  }
-
-  export type UsuarioUpsertWithoutAcertosInput = {
-    update: XOR<UsuarioUpdateWithoutAcertosInput, UsuarioUncheckedUpdateWithoutAcertosInput>
-    create: XOR<UsuarioCreateWithoutAcertosInput, UsuarioUncheckedCreateWithoutAcertosInput>
-    where?: UsuarioWhereInput
-  }
-
-  export type UsuarioUpdateToOneWithWhereWithoutAcertosInput = {
-    where?: UsuarioWhereInput
-    data: XOR<UsuarioUpdateWithoutAcertosInput, UsuarioUncheckedUpdateWithoutAcertosInput>
-  }
-
-  export type UsuarioUpdateWithoutAcertosInput = {
-    id_usuario?: StringFieldUpdateOperationsInput | string
-    nome?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    senha?: StringFieldUpdateOperationsInput | string
-    faculdade?: FaculdadeUpdateOneRequiredWithoutUsuariosNestedInput
-  }
-
-  export type UsuarioUncheckedUpdateWithoutAcertosInput = {
-    id_usuario?: StringFieldUpdateOperationsInput | string
-    nome?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    senha?: StringFieldUpdateOperationsInput | string
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-  }
-
-  export type PerguntaUpsertWithoutAcertosInput = {
-    update: XOR<PerguntaUpdateWithoutAcertosInput, PerguntaUncheckedUpdateWithoutAcertosInput>
-    create: XOR<PerguntaCreateWithoutAcertosInput, PerguntaUncheckedCreateWithoutAcertosInput>
-    where?: PerguntaWhereInput
-  }
-
-  export type PerguntaUpdateToOneWithWhereWithoutAcertosInput = {
-    where?: PerguntaWhereInput
-    data: XOR<PerguntaUpdateWithoutAcertosInput, PerguntaUncheckedUpdateWithoutAcertosInput>
-  }
-
-  export type PerguntaUpdateWithoutAcertosInput = {
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    enunciado?: StringFieldUpdateOperationsInput | string
-    data_criação?: DateTimeFieldUpdateOperationsInput | Date | string
-    opcoes?: OpcaoRespostaUpdateManyWithoutPerguntaNestedInput
-    faculdade?: FaculdadeUpdateOneWithoutPerguntasNestedInput
-  }
-
-  export type PerguntaUncheckedUpdateWithoutAcertosInput = {
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    id_faculdade?: StringFieldUpdateOperationsInput | string
-    enunciado?: StringFieldUpdateOperationsInput | string
-    data_criação?: DateTimeFieldUpdateOperationsInput | Date | string
-    opcoes?: OpcaoRespostaUncheckedUpdateManyWithoutPerguntaNestedInput
-  }
-
-  export type Usuario_AcertosCreateManyUsuarioInput = {
-    id_usuario_acerto?: string
-    id_pergunta: string
-    id_opcao_resposta: string
-    acertou: boolean
-  }
-
-  export type Usuario_AcertosUpdateWithoutUsuarioInput = {
-    id_usuario_acerto?: StringFieldUpdateOperationsInput | string
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    acertou?: BoolFieldUpdateOperationsInput | boolean
-    pergunta?: PerguntaUpdateOneRequiredWithoutAcertosNestedInput
-  }
-
-  export type Usuario_AcertosUncheckedUpdateWithoutUsuarioInput = {
-    id_usuario_acerto?: StringFieldUpdateOperationsInput | string
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    acertou?: BoolFieldUpdateOperationsInput | boolean
-  }
-
-  export type Usuario_AcertosUncheckedUpdateManyWithoutUsuarioInput = {
-    id_usuario_acerto?: StringFieldUpdateOperationsInput | string
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    acertou?: BoolFieldUpdateOperationsInput | boolean
-  }
-
-  export type UsuarioCreateManyFaculdadeInput = {
-    id_usuario?: string
-    nome: string
-    email: string
-    senha: string
-  }
-
-  export type Faculdade_EmpresaCreateManyFaculdadeInput = {
-    id_faculdade_?: string
-    id_empresa: string
-  }
-
-  export type PerguntaCreateManyFaculdadeInput = {
-    id_pergunta?: string
-    enunciado: string
-    data_criação: Date | string
-  }
-
-  export type UsuarioUpdateWithoutFaculdadeInput = {
-    id_usuario?: StringFieldUpdateOperationsInput | string
-    nome?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    senha?: StringFieldUpdateOperationsInput | string
-    acertos?: Usuario_AcertosUpdateManyWithoutUsuarioNestedInput
-  }
-
-  export type UsuarioUncheckedUpdateWithoutFaculdadeInput = {
-    id_usuario?: StringFieldUpdateOperationsInput | string
-    nome?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    senha?: StringFieldUpdateOperationsInput | string
-    acertos?: Usuario_AcertosUncheckedUpdateManyWithoutUsuarioNestedInput
-  }
-
-  export type UsuarioUncheckedUpdateManyWithoutFaculdadeInput = {
-    id_usuario?: StringFieldUpdateOperationsInput | string
-    nome?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    senha?: StringFieldUpdateOperationsInput | string
-  }
-
-  export type Faculdade_EmpresaUpdateWithoutFaculdadeInput = {
-    id_faculdade_?: StringFieldUpdateOperationsInput | string
+  export type EmpresaUpdateWithoutRecrutadoresInput = {
     id_empresa?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    cnpj?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    setor?: StringFieldUpdateOperationsInput | string
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type Faculdade_EmpresaUncheckedUpdateWithoutFaculdadeInput = {
-    id_faculdade_?: StringFieldUpdateOperationsInput | string
+  export type EmpresaUncheckedUpdateWithoutRecrutadoresInput = {
     id_empresa?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    cnpj?: StringFieldUpdateOperationsInput | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    setor?: StringFieldUpdateOperationsInput | string
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    website?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type Faculdade_EmpresaUncheckedUpdateManyWithoutFaculdadeInput = {
-    id_faculdade_?: StringFieldUpdateOperationsInput | string
+  export type ContratacaoUpsertWithWhereUniqueWithoutRecrutadorInput = {
+    where: ContratacaoWhereUniqueInput
+    update: XOR<ContratacaoUpdateWithoutRecrutadorInput, ContratacaoUncheckedUpdateWithoutRecrutadorInput>
+    create: XOR<ContratacaoCreateWithoutRecrutadorInput, ContratacaoUncheckedCreateWithoutRecrutadorInput>
+  }
+
+  export type ContratacaoUpdateWithWhereUniqueWithoutRecrutadorInput = {
+    where: ContratacaoWhereUniqueInput
+    data: XOR<ContratacaoUpdateWithoutRecrutadorInput, ContratacaoUncheckedUpdateWithoutRecrutadorInput>
+  }
+
+  export type ContratacaoUpdateManyWithWhereWithoutRecrutadorInput = {
+    where: ContratacaoScalarWhereInput
+    data: XOR<ContratacaoUpdateManyMutationInput, ContratacaoUncheckedUpdateManyWithoutRecrutadorInput>
+  }
+
+  export type ContratacaoScalarWhereInput = {
+    AND?: ContratacaoScalarWhereInput | ContratacaoScalarWhereInput[]
+    OR?: ContratacaoScalarWhereInput[]
+    NOT?: ContratacaoScalarWhereInput | ContratacaoScalarWhereInput[]
+    id_contratacao?: StringFilter<"Contratacao"> | string
+    id_recrutador?: StringFilter<"Contratacao"> | string
+    id_aluno?: StringFilter<"Contratacao"> | string
+    data_contratacao?: DateTimeFilter<"Contratacao"> | Date | string
+    cargo?: StringFilter<"Contratacao"> | string
+    salario?: FloatNullableFilter<"Contratacao"> | number | null
+    status?: StringFilter<"Contratacao"> | string
+  }
+
+  export type RecrutadorCreateWithoutEmpresaInput = {
+    id_recrutador?: string
+    nome: string
+    email: string
+    senha: string
+    cargo: string
+    telefone: string
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    contratacoes?: ContratacaoCreateNestedManyWithoutRecrutadorInput
+  }
+
+  export type RecrutadorUncheckedCreateWithoutEmpresaInput = {
+    id_recrutador?: string
+    nome: string
+    email: string
+    senha: string
+    cargo: string
+    telefone: string
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    contratacoes?: ContratacaoUncheckedCreateNestedManyWithoutRecrutadorInput
+  }
+
+  export type RecrutadorCreateOrConnectWithoutEmpresaInput = {
+    where: RecrutadorWhereUniqueInput
+    create: XOR<RecrutadorCreateWithoutEmpresaInput, RecrutadorUncheckedCreateWithoutEmpresaInput>
+  }
+
+  export type RecrutadorCreateManyEmpresaInputEnvelope = {
+    data: RecrutadorCreateManyEmpresaInput | RecrutadorCreateManyEmpresaInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type RecrutadorUpsertWithWhereUniqueWithoutEmpresaInput = {
+    where: RecrutadorWhereUniqueInput
+    update: XOR<RecrutadorUpdateWithoutEmpresaInput, RecrutadorUncheckedUpdateWithoutEmpresaInput>
+    create: XOR<RecrutadorCreateWithoutEmpresaInput, RecrutadorUncheckedCreateWithoutEmpresaInput>
+  }
+
+  export type RecrutadorUpdateWithWhereUniqueWithoutEmpresaInput = {
+    where: RecrutadorWhereUniqueInput
+    data: XOR<RecrutadorUpdateWithoutEmpresaInput, RecrutadorUncheckedUpdateWithoutEmpresaInput>
+  }
+
+  export type RecrutadorUpdateManyWithWhereWithoutEmpresaInput = {
+    where: RecrutadorScalarWhereInput
+    data: XOR<RecrutadorUpdateManyMutationInput, RecrutadorUncheckedUpdateManyWithoutEmpresaInput>
+  }
+
+  export type RecrutadorScalarWhereInput = {
+    AND?: RecrutadorScalarWhereInput | RecrutadorScalarWhereInput[]
+    OR?: RecrutadorScalarWhereInput[]
+    NOT?: RecrutadorScalarWhereInput | RecrutadorScalarWhereInput[]
+    id_recrutador?: StringFilter<"Recrutador"> | string
+    nome?: StringFilter<"Recrutador"> | string
+    email?: StringFilter<"Recrutador"> | string
+    senha?: StringFilter<"Recrutador"> | string
+    cargo?: StringFilter<"Recrutador"> | string
+    telefone?: StringFilter<"Recrutador"> | string
+    id_empresa?: StringFilter<"Recrutador"> | string
+    data_criacao?: DateTimeFilter<"Recrutador"> | Date | string
+    data_atualizacao?: DateTimeFilter<"Recrutador"> | Date | string
+  }
+
+  export type ContratacaoCreateWithoutAlunoInput = {
+    id_contratacao?: string
+    data_contratacao?: Date | string
+    cargo: string
+    salario?: number | null
+    status: string
+    recrutador: RecrutadorCreateNestedOneWithoutContratacoesInput
+  }
+
+  export type ContratacaoUncheckedCreateWithoutAlunoInput = {
+    id_contratacao?: string
+    id_recrutador: string
+    data_contratacao?: Date | string
+    cargo: string
+    salario?: number | null
+    status: string
+  }
+
+  export type ContratacaoCreateOrConnectWithoutAlunoInput = {
+    where: ContratacaoWhereUniqueInput
+    create: XOR<ContratacaoCreateWithoutAlunoInput, ContratacaoUncheckedCreateWithoutAlunoInput>
+  }
+
+  export type ContratacaoCreateManyAlunoInputEnvelope = {
+    data: ContratacaoCreateManyAlunoInput | ContratacaoCreateManyAlunoInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type NotaCreateWithoutAlunoInput = {
+    id_nota?: string
+    disciplina: string
+    nota: number
+    semestre: number
+  }
+
+  export type NotaUncheckedCreateWithoutAlunoInput = {
+    id_nota?: string
+    disciplina: string
+    nota: number
+    semestre: number
+  }
+
+  export type NotaCreateOrConnectWithoutAlunoInput = {
+    where: NotaWhereUniqueInput
+    create: XOR<NotaCreateWithoutAlunoInput, NotaUncheckedCreateWithoutAlunoInput>
+  }
+
+  export type NotaCreateManyAlunoInputEnvelope = {
+    data: NotaCreateManyAlunoInput | NotaCreateManyAlunoInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type AptidaoCreateWithoutAlunoInput = {
+    id_aptidao?: string
+    nome: string
+    nivel: number
+    descricao?: string | null
+  }
+
+  export type AptidaoUncheckedCreateWithoutAlunoInput = {
+    id_aptidao?: string
+    nome: string
+    nivel: number
+    descricao?: string | null
+  }
+
+  export type AptidaoCreateOrConnectWithoutAlunoInput = {
+    where: AptidaoWhereUniqueInput
+    create: XOR<AptidaoCreateWithoutAlunoInput, AptidaoUncheckedCreateWithoutAlunoInput>
+  }
+
+  export type AptidaoCreateManyAlunoInputEnvelope = {
+    data: AptidaoCreateManyAlunoInput | AptidaoCreateManyAlunoInput[]
+    skipDuplicates?: boolean
+  }
+
+  export type ContratacaoUpsertWithWhereUniqueWithoutAlunoInput = {
+    where: ContratacaoWhereUniqueInput
+    update: XOR<ContratacaoUpdateWithoutAlunoInput, ContratacaoUncheckedUpdateWithoutAlunoInput>
+    create: XOR<ContratacaoCreateWithoutAlunoInput, ContratacaoUncheckedCreateWithoutAlunoInput>
+  }
+
+  export type ContratacaoUpdateWithWhereUniqueWithoutAlunoInput = {
+    where: ContratacaoWhereUniqueInput
+    data: XOR<ContratacaoUpdateWithoutAlunoInput, ContratacaoUncheckedUpdateWithoutAlunoInput>
+  }
+
+  export type ContratacaoUpdateManyWithWhereWithoutAlunoInput = {
+    where: ContratacaoScalarWhereInput
+    data: XOR<ContratacaoUpdateManyMutationInput, ContratacaoUncheckedUpdateManyWithoutAlunoInput>
+  }
+
+  export type NotaUpsertWithWhereUniqueWithoutAlunoInput = {
+    where: NotaWhereUniqueInput
+    update: XOR<NotaUpdateWithoutAlunoInput, NotaUncheckedUpdateWithoutAlunoInput>
+    create: XOR<NotaCreateWithoutAlunoInput, NotaUncheckedCreateWithoutAlunoInput>
+  }
+
+  export type NotaUpdateWithWhereUniqueWithoutAlunoInput = {
+    where: NotaWhereUniqueInput
+    data: XOR<NotaUpdateWithoutAlunoInput, NotaUncheckedUpdateWithoutAlunoInput>
+  }
+
+  export type NotaUpdateManyWithWhereWithoutAlunoInput = {
+    where: NotaScalarWhereInput
+    data: XOR<NotaUpdateManyMutationInput, NotaUncheckedUpdateManyWithoutAlunoInput>
+  }
+
+  export type NotaScalarWhereInput = {
+    AND?: NotaScalarWhereInput | NotaScalarWhereInput[]
+    OR?: NotaScalarWhereInput[]
+    NOT?: NotaScalarWhereInput | NotaScalarWhereInput[]
+    id_nota?: StringFilter<"Nota"> | string
+    id_aluno?: StringFilter<"Nota"> | string
+    disciplina?: StringFilter<"Nota"> | string
+    nota?: FloatFilter<"Nota"> | number
+    semestre?: IntFilter<"Nota"> | number
+  }
+
+  export type AptidaoUpsertWithWhereUniqueWithoutAlunoInput = {
+    where: AptidaoWhereUniqueInput
+    update: XOR<AptidaoUpdateWithoutAlunoInput, AptidaoUncheckedUpdateWithoutAlunoInput>
+    create: XOR<AptidaoCreateWithoutAlunoInput, AptidaoUncheckedCreateWithoutAlunoInput>
+  }
+
+  export type AptidaoUpdateWithWhereUniqueWithoutAlunoInput = {
+    where: AptidaoWhereUniqueInput
+    data: XOR<AptidaoUpdateWithoutAlunoInput, AptidaoUncheckedUpdateWithoutAlunoInput>
+  }
+
+  export type AptidaoUpdateManyWithWhereWithoutAlunoInput = {
+    where: AptidaoScalarWhereInput
+    data: XOR<AptidaoUpdateManyMutationInput, AptidaoUncheckedUpdateManyWithoutAlunoInput>
+  }
+
+  export type AptidaoScalarWhereInput = {
+    AND?: AptidaoScalarWhereInput | AptidaoScalarWhereInput[]
+    OR?: AptidaoScalarWhereInput[]
+    NOT?: AptidaoScalarWhereInput | AptidaoScalarWhereInput[]
+    id_aptidao?: StringFilter<"Aptidao"> | string
+    id_aluno?: StringFilter<"Aptidao"> | string
+    nome?: StringFilter<"Aptidao"> | string
+    nivel?: IntFilter<"Aptidao"> | number
+    descricao?: StringNullableFilter<"Aptidao"> | string | null
+  }
+
+  export type RecrutadorCreateWithoutContratacoesInput = {
+    id_recrutador?: string
+    nome: string
+    email: string
+    senha: string
+    cargo: string
+    telefone: string
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    empresa: EmpresaCreateNestedOneWithoutRecrutadoresInput
+  }
+
+  export type RecrutadorUncheckedCreateWithoutContratacoesInput = {
+    id_recrutador?: string
+    nome: string
+    email: string
+    senha: string
+    cargo: string
+    telefone: string
+    id_empresa: string
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+  }
+
+  export type RecrutadorCreateOrConnectWithoutContratacoesInput = {
+    where: RecrutadorWhereUniqueInput
+    create: XOR<RecrutadorCreateWithoutContratacoesInput, RecrutadorUncheckedCreateWithoutContratacoesInput>
+  }
+
+  export type AlunoCreateWithoutContratacoesInput = {
+    id_aluno?: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date | string
+    endereco: string
+    linkedin?: string | null
+    github?: string | null
+    portfolio?: string | null
+    solicitacoes?: number
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    notas?: NotaCreateNestedManyWithoutAlunoInput
+    aptidoes?: AptidaoCreateNestedManyWithoutAlunoInput
+  }
+
+  export type AlunoUncheckedCreateWithoutContratacoesInput = {
+    id_aluno?: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date | string
+    endereco: string
+    linkedin?: string | null
+    github?: string | null
+    portfolio?: string | null
+    solicitacoes?: number
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    notas?: NotaUncheckedCreateNestedManyWithoutAlunoInput
+    aptidoes?: AptidaoUncheckedCreateNestedManyWithoutAlunoInput
+  }
+
+  export type AlunoCreateOrConnectWithoutContratacoesInput = {
+    where: AlunoWhereUniqueInput
+    create: XOR<AlunoCreateWithoutContratacoesInput, AlunoUncheckedCreateWithoutContratacoesInput>
+  }
+
+  export type RecrutadorUpsertWithoutContratacoesInput = {
+    update: XOR<RecrutadorUpdateWithoutContratacoesInput, RecrutadorUncheckedUpdateWithoutContratacoesInput>
+    create: XOR<RecrutadorCreateWithoutContratacoesInput, RecrutadorUncheckedCreateWithoutContratacoesInput>
+    where?: RecrutadorWhereInput
+  }
+
+  export type RecrutadorUpdateToOneWithWhereWithoutContratacoesInput = {
+    where?: RecrutadorWhereInput
+    data: XOR<RecrutadorUpdateWithoutContratacoesInput, RecrutadorUncheckedUpdateWithoutContratacoesInput>
+  }
+
+  export type RecrutadorUpdateWithoutContratacoesInput = {
+    id_recrutador?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    empresa?: EmpresaUpdateOneRequiredWithoutRecrutadoresNestedInput
+  }
+
+  export type RecrutadorUncheckedUpdateWithoutContratacoesInput = {
+    id_recrutador?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
     id_empresa?: StringFieldUpdateOperationsInput | string
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type PerguntaUpdateWithoutFaculdadeInput = {
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    enunciado?: StringFieldUpdateOperationsInput | string
-    data_criação?: DateTimeFieldUpdateOperationsInput | Date | string
-    opcoes?: OpcaoRespostaUpdateManyWithoutPerguntaNestedInput
-    acertos?: Usuario_AcertosUpdateManyWithoutPerguntaNestedInput
+  export type AlunoUpsertWithoutContratacoesInput = {
+    update: XOR<AlunoUpdateWithoutContratacoesInput, AlunoUncheckedUpdateWithoutContratacoesInput>
+    create: XOR<AlunoCreateWithoutContratacoesInput, AlunoUncheckedCreateWithoutContratacoesInput>
+    where?: AlunoWhereInput
   }
 
-  export type PerguntaUncheckedUpdateWithoutFaculdadeInput = {
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    enunciado?: StringFieldUpdateOperationsInput | string
-    data_criação?: DateTimeFieldUpdateOperationsInput | Date | string
-    opcoes?: OpcaoRespostaUncheckedUpdateManyWithoutPerguntaNestedInput
-    acertos?: Usuario_AcertosUncheckedUpdateManyWithoutPerguntaNestedInput
+  export type AlunoUpdateToOneWithWhereWithoutContratacoesInput = {
+    where?: AlunoWhereInput
+    data: XOR<AlunoUpdateWithoutContratacoesInput, AlunoUncheckedUpdateWithoutContratacoesInput>
   }
 
-  export type PerguntaUncheckedUpdateManyWithoutFaculdadeInput = {
-    id_pergunta?: StringFieldUpdateOperationsInput | string
-    enunciado?: StringFieldUpdateOperationsInput | string
-    data_criação?: DateTimeFieldUpdateOperationsInput | Date | string
+  export type AlunoUpdateWithoutContratacoesInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    notas?: NotaUpdateManyWithoutAlunoNestedInput
+    aptidoes?: AptidaoUpdateManyWithoutAlunoNestedInput
   }
 
-  export type OpcaoRespostaCreateManyPerguntaInput = {
-    id_opcao_resposta?: string
-    texto_resposta: string
-    correta: boolean
+  export type AlunoUncheckedUpdateWithoutContratacoesInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    notas?: NotaUncheckedUpdateManyWithoutAlunoNestedInput
+    aptidoes?: AptidaoUncheckedUpdateManyWithoutAlunoNestedInput
   }
 
-  export type Usuario_AcertosCreateManyPerguntaInput = {
-    id_usuario_acerto?: string
-    id_usuario: string
-    id_opcao_resposta: string
-    acertou: boolean
+  export type AlunoCreateWithoutNotasInput = {
+    id_aluno?: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date | string
+    endereco: string
+    linkedin?: string | null
+    github?: string | null
+    portfolio?: string | null
+    solicitacoes?: number
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    contratacoes?: ContratacaoCreateNestedManyWithoutAlunoInput
+    aptidoes?: AptidaoCreateNestedManyWithoutAlunoInput
   }
 
-  export type OpcaoRespostaUpdateWithoutPerguntaInput = {
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    texto_resposta?: StringFieldUpdateOperationsInput | string
-    correta?: BoolFieldUpdateOperationsInput | boolean
+  export type AlunoUncheckedCreateWithoutNotasInput = {
+    id_aluno?: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date | string
+    endereco: string
+    linkedin?: string | null
+    github?: string | null
+    portfolio?: string | null
+    solicitacoes?: number
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    contratacoes?: ContratacaoUncheckedCreateNestedManyWithoutAlunoInput
+    aptidoes?: AptidaoUncheckedCreateNestedManyWithoutAlunoInput
   }
 
-  export type OpcaoRespostaUncheckedUpdateWithoutPerguntaInput = {
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    texto_resposta?: StringFieldUpdateOperationsInput | string
-    correta?: BoolFieldUpdateOperationsInput | boolean
+  export type AlunoCreateOrConnectWithoutNotasInput = {
+    where: AlunoWhereUniqueInput
+    create: XOR<AlunoCreateWithoutNotasInput, AlunoUncheckedCreateWithoutNotasInput>
   }
 
-  export type OpcaoRespostaUncheckedUpdateManyWithoutPerguntaInput = {
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    texto_resposta?: StringFieldUpdateOperationsInput | string
-    correta?: BoolFieldUpdateOperationsInput | boolean
+  export type AlunoUpsertWithoutNotasInput = {
+    update: XOR<AlunoUpdateWithoutNotasInput, AlunoUncheckedUpdateWithoutNotasInput>
+    create: XOR<AlunoCreateWithoutNotasInput, AlunoUncheckedCreateWithoutNotasInput>
+    where?: AlunoWhereInput
   }
 
-  export type Usuario_AcertosUpdateWithoutPerguntaInput = {
-    id_usuario_acerto?: StringFieldUpdateOperationsInput | string
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    acertou?: BoolFieldUpdateOperationsInput | boolean
-    usuario?: UsuarioUpdateOneRequiredWithoutAcertosNestedInput
+  export type AlunoUpdateToOneWithWhereWithoutNotasInput = {
+    where?: AlunoWhereInput
+    data: XOR<AlunoUpdateWithoutNotasInput, AlunoUncheckedUpdateWithoutNotasInput>
   }
 
-  export type Usuario_AcertosUncheckedUpdateWithoutPerguntaInput = {
-    id_usuario_acerto?: StringFieldUpdateOperationsInput | string
-    id_usuario?: StringFieldUpdateOperationsInput | string
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    acertou?: BoolFieldUpdateOperationsInput | boolean
+  export type AlunoUpdateWithoutNotasInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    contratacoes?: ContratacaoUpdateManyWithoutAlunoNestedInput
+    aptidoes?: AptidaoUpdateManyWithoutAlunoNestedInput
   }
 
-  export type Usuario_AcertosUncheckedUpdateManyWithoutPerguntaInput = {
-    id_usuario_acerto?: StringFieldUpdateOperationsInput | string
-    id_usuario?: StringFieldUpdateOperationsInput | string
-    id_opcao_resposta?: StringFieldUpdateOperationsInput | string
-    acertou?: BoolFieldUpdateOperationsInput | boolean
+  export type AlunoUncheckedUpdateWithoutNotasInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    contratacoes?: ContratacaoUncheckedUpdateManyWithoutAlunoNestedInput
+    aptidoes?: AptidaoUncheckedUpdateManyWithoutAlunoNestedInput
+  }
+
+  export type AlunoCreateWithoutAptidoesInput = {
+    id_aluno?: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date | string
+    endereco: string
+    linkedin?: string | null
+    github?: string | null
+    portfolio?: string | null
+    solicitacoes?: number
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    contratacoes?: ContratacaoCreateNestedManyWithoutAlunoInput
+    notas?: NotaCreateNestedManyWithoutAlunoInput
+  }
+
+  export type AlunoUncheckedCreateWithoutAptidoesInput = {
+    id_aluno?: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date | string
+    endereco: string
+    linkedin?: string | null
+    github?: string | null
+    portfolio?: string | null
+    solicitacoes?: number
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    contratacoes?: ContratacaoUncheckedCreateNestedManyWithoutAlunoInput
+    notas?: NotaUncheckedCreateNestedManyWithoutAlunoInput
+  }
+
+  export type AlunoCreateOrConnectWithoutAptidoesInput = {
+    where: AlunoWhereUniqueInput
+    create: XOR<AlunoCreateWithoutAptidoesInput, AlunoUncheckedCreateWithoutAptidoesInput>
+  }
+
+  export type AlunoUpsertWithoutAptidoesInput = {
+    update: XOR<AlunoUpdateWithoutAptidoesInput, AlunoUncheckedUpdateWithoutAptidoesInput>
+    create: XOR<AlunoCreateWithoutAptidoesInput, AlunoUncheckedCreateWithoutAptidoesInput>
+    where?: AlunoWhereInput
+  }
+
+  export type AlunoUpdateToOneWithWhereWithoutAptidoesInput = {
+    where?: AlunoWhereInput
+    data: XOR<AlunoUpdateWithoutAptidoesInput, AlunoUncheckedUpdateWithoutAptidoesInput>
+  }
+
+  export type AlunoUpdateWithoutAptidoesInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    contratacoes?: ContratacaoUpdateManyWithoutAlunoNestedInput
+    notas?: NotaUpdateManyWithoutAlunoNestedInput
+  }
+
+  export type AlunoUncheckedUpdateWithoutAptidoesInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    contratacoes?: ContratacaoUncheckedUpdateManyWithoutAlunoNestedInput
+    notas?: NotaUncheckedUpdateManyWithoutAlunoNestedInput
+  }
+
+  export type ContratacaoCreateManyRecrutadorInput = {
+    id_contratacao?: string
+    id_aluno: string
+    data_contratacao?: Date | string
+    cargo: string
+    salario?: number | null
+    status: string
+  }
+
+  export type ContratacaoUpdateWithoutRecrutadorInput = {
+    id_contratacao?: StringFieldUpdateOperationsInput | string
+    data_contratacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    salario?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    aluno?: AlunoUpdateOneRequiredWithoutContratacoesNestedInput
+  }
+
+  export type ContratacaoUncheckedUpdateWithoutRecrutadorInput = {
+    id_contratacao?: StringFieldUpdateOperationsInput | string
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    data_contratacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    salario?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type ContratacaoUncheckedUpdateManyWithoutRecrutadorInput = {
+    id_contratacao?: StringFieldUpdateOperationsInput | string
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    data_contratacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    salario?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type RecrutadorCreateManyEmpresaInput = {
+    id_recrutador?: string
+    nome: string
+    email: string
+    senha: string
+    cargo: string
+    telefone: string
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+  }
+
+  export type RecrutadorUpdateWithoutEmpresaInput = {
+    id_recrutador?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    contratacoes?: ContratacaoUpdateManyWithoutRecrutadorNestedInput
+  }
+
+  export type RecrutadorUncheckedUpdateWithoutEmpresaInput = {
+    id_recrutador?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    contratacoes?: ContratacaoUncheckedUpdateManyWithoutRecrutadorNestedInput
+  }
+
+  export type RecrutadorUncheckedUpdateManyWithoutEmpresaInput = {
+    id_recrutador?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type ContratacaoCreateManyAlunoInput = {
+    id_contratacao?: string
+    id_recrutador: string
+    data_contratacao?: Date | string
+    cargo: string
+    salario?: number | null
+    status: string
+  }
+
+  export type NotaCreateManyAlunoInput = {
+    id_nota?: string
+    disciplina: string
+    nota: number
+    semestre: number
+  }
+
+  export type AptidaoCreateManyAlunoInput = {
+    id_aptidao?: string
+    nome: string
+    nivel: number
+    descricao?: string | null
+  }
+
+  export type ContratacaoUpdateWithoutAlunoInput = {
+    id_contratacao?: StringFieldUpdateOperationsInput | string
+    data_contratacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    salario?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+    recrutador?: RecrutadorUpdateOneRequiredWithoutContratacoesNestedInput
+  }
+
+  export type ContratacaoUncheckedUpdateWithoutAlunoInput = {
+    id_contratacao?: StringFieldUpdateOperationsInput | string
+    id_recrutador?: StringFieldUpdateOperationsInput | string
+    data_contratacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    salario?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type ContratacaoUncheckedUpdateManyWithoutAlunoInput = {
+    id_contratacao?: StringFieldUpdateOperationsInput | string
+    id_recrutador?: StringFieldUpdateOperationsInput | string
+    data_contratacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    cargo?: StringFieldUpdateOperationsInput | string
+    salario?: NullableFloatFieldUpdateOperationsInput | number | null
+    status?: StringFieldUpdateOperationsInput | string
+  }
+
+  export type NotaUpdateWithoutAlunoInput = {
+    id_nota?: StringFieldUpdateOperationsInput | string
+    disciplina?: StringFieldUpdateOperationsInput | string
+    nota?: FloatFieldUpdateOperationsInput | number
+    semestre?: IntFieldUpdateOperationsInput | number
+  }
+
+  export type NotaUncheckedUpdateWithoutAlunoInput = {
+    id_nota?: StringFieldUpdateOperationsInput | string
+    disciplina?: StringFieldUpdateOperationsInput | string
+    nota?: FloatFieldUpdateOperationsInput | number
+    semestre?: IntFieldUpdateOperationsInput | number
+  }
+
+  export type NotaUncheckedUpdateManyWithoutAlunoInput = {
+    id_nota?: StringFieldUpdateOperationsInput | string
+    disciplina?: StringFieldUpdateOperationsInput | string
+    nota?: FloatFieldUpdateOperationsInput | number
+    semestre?: IntFieldUpdateOperationsInput | number
+  }
+
+  export type AptidaoUpdateWithoutAlunoInput = {
+    id_aptidao?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
+  export type AptidaoUncheckedUpdateWithoutAlunoInput = {
+    id_aptidao?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
+  export type AptidaoUncheckedUpdateManyWithoutAlunoInput = {
+    id_aptidao?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
 

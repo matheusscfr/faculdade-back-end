@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException, BadRequestException } from "@nestjs/common";
+/**import { Injectable, NotFoundException, BadRequestException } from "@nestjs/common";
 import { CreatePerguntaDto } from "src/dto/faculdades/create-ask.dto";
 import { CreateUniversityDto } from "src/dto/faculdades/create-university.dto";
 import { PrismaService } from "src/prisma/prisma.service";
@@ -135,4 +135,4 @@ export class UniversityService {
 
         return question;
     }
-}
+}**/

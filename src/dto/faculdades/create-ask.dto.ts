@@ -4,6 +4,7 @@ import { IsArray, IsBoolean, IsNotEmpty, IsString, IsUUID, ValidateNested } from
 import { Type } from 'class-transformer';
 
 export class CreateOpcaoRespostaDto {
+
   @IsString()
   @IsNotEmpty()
   texto_resposta: string;

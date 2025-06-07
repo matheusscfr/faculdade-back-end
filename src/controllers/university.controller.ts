@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, Post, UseGuards, Param } from "@nestjs/common";
+/**import { Body, Controller, Get, HttpCode, Post, UseGuards, Param } from "@nestjs/common";
 import { AuthGuard } from "@nestjs/passport";
 import { CreatePerguntaDto } from "src/dto/faculdades/create-ask.dto";
 import { CreateUniversityDto } from "src/dto/faculdades/create-university.dto";
@@ -46,4 +46,4 @@ export class UniversityController {
     async getQuestionById(@Param('id') id: string) {
         return this.universityService.getQuestionById(id);
     }
-}
+}**/

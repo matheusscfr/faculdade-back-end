@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, Param, Post, UseGuards } from "@nestjs/common";
+/**import { Body, Controller, Get, HttpCode, Param, Post, UseGuards } from "@nestjs/common";
 import { AuthGuard } from "@nestjs/passport";
 import { CreateUserDto } from "src/dto/users/create-user.dto";
 import { LoginDto } from "src/dto/users/login-user.dto";
@@ -28,4 +28,4 @@ export class UsersController {
     async getUser(@Param('id') id: string) {
       return this.usersService.getUser(id);
     }
-}
+}**/

@@ -2,13 +2,14 @@ import { Module } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
 import { PrismaService } from './prisma/prisma.service';
-import { UsersController } from './controllers/users.controller';
-import { UsersService } from './service/users.service';
-import { UniversityService } from './service/university.service';
-import { UniversityController } from './controllers/university.controller';
 import { LocalStrategy } from './local-strategy.service';
 import { JwtStrategy } from './service/jwt.servicve'; 
-
+import { RecrutadoresService } from './service/recrutadores.service';
+import { RecrutadoresController } from './controllers/recrutadores.controller';
+import { EmpresaController } from './controllers/empresa.controller';
+import { EmpresasService } from './service/empresas.service';
+import { AlunoController } from './controllers/aluno.controller';
+import { AlunoService } from './service/aluno.service';
 @Module({
   imports: [
     PassportModule.register({ defaultStrategy: 'jwt' }),
@@ -17,13 +18,14 @@ import { JwtStrategy } from './service/jwt.servicve';
       signOptions: { expiresIn: '1d' },
     }),
   ],
-  controllers: [UsersController, UniversityController],
+  controllers: [RecrutadoresController, EmpresaController, AlunoController],
   providers: [
     PrismaService,
-    UsersService,
-    UniversityService,
+    RecrutadoresService,
     LocalStrategy,
     JwtStrategy, 
+    EmpresasService,
+    AlunoService,
   ],
 })
 export class AppModule {}

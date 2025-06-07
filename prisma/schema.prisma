@@ -14,68 +14,94 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Usuario {
-  id_usuario     String   @id @default(uuid())
-  nome           String
-  email          String   @unique
-  senha          String
-  id_faculdade   String
-  faculdade      Faculdade @relation(fields: [id_faculdade], references: [id_faculdade])
-  acertos        Usuario_Acertos[]
+model Recrutador {
+  id_recrutador    String   @id @default(uuid())
+  nome             String
+  email            String   @unique
+  senha            String
+  cargo            String
+  telefone         String
+  id_empresa       String
+  empresa          Empresa  @relation(fields: [id_empresa], references: [id_empresa])
+  contratacoes     Contratacao[]
+  data_criacao     DateTime @default(now())
+  data_atualizacao DateTime @updatedAt
 
-  @@map("usuario")
+  @@map("recrutador")
 }
 
-model Faculdade {
-  id_faculdade    String   @id @default(uuid())
-  nome            String
-  endereco        String
-  usuarios        Usuario[]
-  faculdadesEmpresas Faculdade_Empresa[]
-  perguntas       Pergunta[]
+model Empresa {
+  id_empresa       String   @id @default(uuid())
+  nome             String
+  cnpj             String   @unique
+  endereco         String
+  setor            String
+  descricao        String?
+  website          String?
+  recrutadores     Recrutador[]
+  data_criacao     DateTime @default(now())
+  data_atualizacao DateTime @updatedAt
 
-  @@map("faculdade")
+  @@map("empresa")
 }
 
-model Faculdade_Empresa {
-  id_faculdade_ String @id @default(uuid())
-  id_faculdade  String
-  id_empresa    String
-  faculdade     Faculdade @relation(fields: [id_faculdade], references: [id_faculdade])
+model Aluno {
+  id_aluno         String   @id @default(uuid())
+  nome             String
+  email            String   @unique
+  senha            String
+  matricula        String   @unique
+  curso            String
+  semestre_atual   Int
+  cpf              String   @unique
+  telefone         String
+  data_nascimento  DateTime
+  endereco         String
+  linkedin         String?
+  github           String?
+  portfolio        String?
+  contratacoes     Contratacao[]
+  notas            Nota[]
+  aptidoes         Aptidao[]
+  solicitacoes     Int      @default(0)
+  data_criacao     DateTime @default(now())
+  data_atualizacao DateTime @updatedAt
 
-  @@map("faculdade_empresa")
+  @@map("aluno")
 }
 
-model Pergunta {
-  id_pergunta   String   @id @default(uuid())
-  id_faculdade    String
-  enunciado     String
-  data_criação  DateTime
-  opcoes        OpcaoResposta[]
-  acertos       Usuario_Acertos[]
-  faculdade     Faculdade? @relation(fields: [id_faculdade], references: [id_faculdade])
+model Contratacao {
+  id_contratacao   String   @id @default(uuid())
+  id_recrutador    String
+  id_aluno         String
+  data_contratacao DateTime @default(now())
+  cargo            String
+  salario          Float?
+  status           String   // "PENDENTE", "ACEITO", "RECUSADO"
+  recrutador       Recrutador @relation(fields: [id_recrutador], references: [id_recrutador])
+  aluno            Aluno      @relation(fields: [id_aluno], references: [id_aluno])
 
-  @@map("pergunta")
+  @@map("contratacao")
 }
 
-model OpcaoResposta {
-  id_opcao_resposta String   @id @default(uuid())
-  id_pergunta       String
-  texto_resposta    String
-  correta           Boolean
-  pergunta          Pergunta @relation(fields: [id_pergunta], references: [id_pergunta])
+model Nota {
+  id_nota          String   @id @default(uuid())
+  id_aluno         String
+  disciplina       String
+  nota             Float
+  semestre         Int
+  aluno            Aluno    @relation(fields: [id_aluno], references: [id_aluno])
 
-  @@map("opcaoresposta")
+  @@map("nota")
 }
 
-model Usuario_Acertos {
-  id_usuario_acerto String @id @default(uuid())
-  id_usuario        String
-  id_pergunta       String
-  id_opcao_resposta String
-  acertou           Boolean
-  usuario           Usuario   @relation(fields: [id_usuario], references: [id_usuario])
-  pergunta          Pergunta @relation(fields: [id_pergunta], references: [id_pergunta])
+model Aptidao {
+  id_aptidao       String   @id @default(uuid())
+  id_aluno         String
+  nome             String
+  nivel            Int      // 1-5
+  descricao        String?
+  aluno            Aluno    @relation(fields: [id_aluno], references: [id_aluno])
 
-  @@map("usuario_acertos")
+  @@map("aptidao")
 }

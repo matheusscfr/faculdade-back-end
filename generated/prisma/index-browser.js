@@ -120,46 +120,74 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.UsuarioScalarFieldEnum = {
-  id_usuario: 'id_usuario',
+exports.Prisma.RecrutadorScalarFieldEnum = {
+  id_recrutador: 'id_recrutador',
   nome: 'nome',
   email: 'email',
   senha: 'senha',
-  id_faculdade: 'id_faculdade'
+  cargo: 'cargo',
+  telefone: 'telefone',
+  id_empresa: 'id_empresa',
+  data_criacao: 'data_criacao',
+  data_atualizacao: 'data_atualizacao'
 };
 
-exports.Prisma.FaculdadeScalarFieldEnum = {
-  id_faculdade: 'id_faculdade',
+exports.Prisma.EmpresaScalarFieldEnum = {
+  id_empresa: 'id_empresa',
   nome: 'nome',
-  endereco: 'endereco'
+  cnpj: 'cnpj',
+  endereco: 'endereco',
+  setor: 'setor',
+  descricao: 'descricao',
+  website: 'website',
+  data_criacao: 'data_criacao',
+  data_atualizacao: 'data_atualizacao'
 };
 
-exports.Prisma.Faculdade_EmpresaScalarFieldEnum = {
-  id_faculdade_: 'id_faculdade_',
-  id_faculdade: 'id_faculdade',
-  id_empresa: 'id_empresa'
+exports.Prisma.AlunoScalarFieldEnum = {
+  id_aluno: 'id_aluno',
+  nome: 'nome',
+  email: 'email',
+  senha: 'senha',
+  matricula: 'matricula',
+  curso: 'curso',
+  semestre_atual: 'semestre_atual',
+  cpf: 'cpf',
+  telefone: 'telefone',
+  data_nascimento: 'data_nascimento',
+  endereco: 'endereco',
+  linkedin: 'linkedin',
+  github: 'github',
+  portfolio: 'portfolio',
+  solicitacoes: 'solicitacoes',
+  data_criacao: 'data_criacao',
+  data_atualizacao: 'data_atualizacao'
 };
 
-exports.Prisma.PerguntaScalarFieldEnum = {
-  id_pergunta: 'id_pergunta',
-  id_faculdade: 'id_faculdade',
-  enunciado: 'enunciado',
-  data_criação: 'data_criação'
+exports.Prisma.ContratacaoScalarFieldEnum = {
+  id_contratacao: 'id_contratacao',
+  id_recrutador: 'id_recrutador',
+  id_aluno: 'id_aluno',
+  data_contratacao: 'data_contratacao',
+  cargo: 'cargo',
+  salario: 'salario',
+  status: 'status'
 };
 
-exports.Prisma.OpcaoRespostaScalarFieldEnum = {
-  id_opcao_resposta: 'id_opcao_resposta',
-  id_pergunta: 'id_pergunta',
-  texto_resposta: 'texto_resposta',
-  correta: 'correta'
+exports.Prisma.NotaScalarFieldEnum = {
+  id_nota: 'id_nota',
+  id_aluno: 'id_aluno',
+  disciplina: 'disciplina',
+  nota: 'nota',
+  semestre: 'semestre'
 };
 
-exports.Prisma.Usuario_AcertosScalarFieldEnum = {
-  id_usuario_acerto: 'id_usuario_acerto',
-  id_usuario: 'id_usuario',
-  id_pergunta: 'id_pergunta',
-  id_opcao_resposta: 'id_opcao_resposta',
-  acertou: 'acertou'
+exports.Prisma.AptidaoScalarFieldEnum = {
+  id_aptidao: 'id_aptidao',
+  id_aluno: 'id_aluno',
+  nome: 'nome',
+  nivel: 'nivel',
+  descricao: 'descricao'
 };
 
 exports.Prisma.SortOrder = {
@@ -172,14 +200,19 @@ exports.Prisma.QueryMode = {
   insensitive: 'insensitive'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
-  Usuario: 'Usuario',
-  Faculdade: 'Faculdade',
-  Faculdade_Empresa: 'Faculdade_Empresa',
-  Pergunta: 'Pergunta',
-  OpcaoResposta: 'OpcaoResposta',
-  Usuario_Acertos: 'Usuario_Acertos'
+  Recrutador: 'Recrutador',
+  Empresa: 'Empresa',
+  Aluno: 'Aluno',
+  Contratacao: 'Contratacao',
+  Nota: 'Nota',
+  Aptidao: 'Aptidao'
 };
 
 /**
