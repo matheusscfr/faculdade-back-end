@@ -1,6 +1,7 @@
 import { Controller, Post, Body, HttpCode, Param, Get, UseGuards } from '@nestjs/common';
 import { AlunoService } from '../service/aluno.service';
 import { CriarAlunoDto } from '../dto/criar-aluno.dto';
+import { CriarListaAlunosDto } from '../dto/criar-lista-alunos.dto';
 import { AuthGuard } from '@nestjs/passport';
 
 @Controller('aluno')
@@ -9,8 +10,8 @@ export class AlunoController {
 
     @Post()
     @HttpCode(201)
-    async criarAluno(@Body() createAlunoDto: CriarAlunoDto) {
-        return this.alunoService.criarAluno(createAlunoDto);
+    async criarAlunos(@Body() createListaAlunosDto: CriarListaAlunosDto) {
+        return this.alunoService.criarListaAlunos(createListaAlunosDto);
     }
 
     @Get(':id')
