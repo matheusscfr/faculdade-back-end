@@ -12,40 +12,48 @@ export class AlunoService {
     }
 
     async criarAluno(createAlunoDto: CriarAlunoDto) {
-        const { aptidoes, ...dadosAluno } = createAlunoDto;
+        const { aptidoes, softskills, ...dadosAluno } = createAlunoDto;
 
         return this.prisma.aluno.create({
             data: {
                 ...dadosAluno,
                 aptidoes: {
                     create: aptidoes
+                },
+                softskills: {
+                    create: softskills
                 }
             },
             include: {
-                aptidoes: true
+                aptidoes: true,
+                softskills: true
             }
         });
     }
 
     async criarListaAlunos(criarListaAlunosDto: CriarListaAlunosDto) {
-        const resultados: any[] = [];
+        const resultados: CriarAlunoDto[] = [];
         
         for (const alunoDto of criarListaAlunosDto.alunos) {
-            const { aptidoes, ...dadosAluno } = alunoDto;
+            const { aptidoes, softskills, ...dadosAluno } = alunoDto;
             
             const aluno = await this.prisma.aluno.create({
                 data: {
                     ...dadosAluno,
                     aptidoes: {
                         create: aptidoes
+                    },
+                    softskills: {
+                        create: softskills
                     }
                 },
                 include: {
-                    aptidoes: true
+                    aptidoes: true,
+                    softskills: true
                 }
             });
             
-            resultados.push(aluno);
+            resultados.push(aluno as CriarAlunoDto);
         }
         
         return {
@@ -58,7 +66,8 @@ export class AlunoService {
         return this.prisma.aluno.findUnique({
             where: { id_aluno: id },
             include: {
-                aptidoes: true
+                aptidoes: true,
+                softskills: true
             }
         });
     }
@@ -66,7 +75,8 @@ export class AlunoService {
     async listarTodosAlunos() {
         return this.prisma.aluno.findMany({
             include: {
-                aptidoes: true
+                aptidoes: true,
+                softskills: true
             }
         });
     }

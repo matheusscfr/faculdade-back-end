@@ -1,6 +1,7 @@
 import { IsString, IsEmail, IsInt, IsDate, IsOptional, IsArray, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 import { CriarAptidaoDto } from './criar-aptidao.dto';
+import { CriarSoftSkillsDto } from './criar-softskills.dto';
 
 export class CriarAlunoDto {
     @IsString()
@@ -50,4 +51,9 @@ export class CriarAlunoDto {
     @ValidateNested({ each: true })
     @Type(() => CriarAptidaoDto)
     aptidoes: CriarAptidaoDto[];
+
+    @IsArray()
+    @ValidateNested({ each: true })
+    @Type(() => CriarSoftSkillsDto)
+    softskills: CriarSoftSkillsDto[];
 } 

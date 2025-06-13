@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, Param, Post, UseGuards } from "@nestjs/common";
+import { Body, Controller, Get, HttpCode, Param, Post } from "@nestjs/common";
 import { CriarEmpresaDto } from "src/dto/empresas/criarEmpresas.dto";
 import { EmpresasService } from "src/service/empresas.service";
 

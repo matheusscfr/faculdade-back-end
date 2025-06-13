@@ -190,6 +190,16 @@ exports.Prisma.AptidaoScalarFieldEnum = {
   descricao: 'descricao'
 };
 
+exports.Prisma.SoftSkillScalarFieldEnum = {
+  id_softskill: 'id_softskill',
+  id_aluno: 'id_aluno',
+  nome: 'nome',
+  nivel: 'nivel',
+  descricao: 'descricao',
+  data_criacao: 'data_criacao',
+  data_atualizacao: 'data_atualizacao'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -212,7 +222,8 @@ exports.Prisma.ModelName = {
   Aluno: 'Aluno',
   Contratacao: 'Contratacao',
   Nota: 'Nota',
-  Aptidao: 'Aptidao'
+  Aptidao: 'Aptidao',
+  SoftSkill: 'SoftSkill'
 };
 
 /**

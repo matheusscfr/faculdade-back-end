@@ -43,6 +43,11 @@ export type Nota = $Result.DefaultSelection<Prisma.$NotaPayload>
  * 
  */
 export type Aptidao = $Result.DefaultSelection<Prisma.$AptidaoPayload>
+/**
+ * Model SoftSkill
+ * 
+ */
+export type SoftSkill = $Result.DefaultSelection<Prisma.$SoftSkillPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -228,6 +233,16 @@ export class PrismaClient<
     * ```
     */
   get aptidao(): Prisma.AptidaoDelegate<ExtArgs, ClientOptions>;
+
+  /**
+   * `prisma.softSkill`: Exposes CRUD operations for the **SoftSkill** model.
+    * Example usage:
+    * ```ts
+    * // Fetch zero or more SoftSkills
+    * const softSkills = await prisma.softSkill.findMany()
+    * ```
+    */
+  get softSkill(): Prisma.SoftSkillDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -673,7 +688,8 @@ export namespace Prisma {
     Aluno: 'Aluno',
     Contratacao: 'Contratacao',
     Nota: 'Nota',
-    Aptidao: 'Aptidao'
+    Aptidao: 'Aptidao',
+    SoftSkill: 'SoftSkill'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -692,7 +708,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "recrutador" | "empresa" | "aluno" | "contratacao" | "nota" | "aptidao"
+      modelProps: "recrutador" | "empresa" | "aluno" | "contratacao" | "nota" | "aptidao" | "softSkill"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -1140,6 +1156,80 @@ export namespace Prisma {
           }
         }
       }
+      SoftSkill: {
+        payload: Prisma.$SoftSkillPayload<ExtArgs>
+        fields: Prisma.SoftSkillFieldRefs
+        operations: {
+          findUnique: {
+            args: Prisma.SoftSkillFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SoftSkillPayload> | null
+          }
+          findUniqueOrThrow: {
+            args: Prisma.SoftSkillFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SoftSkillPayload>
+          }
+          findFirst: {
+            args: Prisma.SoftSkillFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SoftSkillPayload> | null
+          }
+          findFirstOrThrow: {
+            args: Prisma.SoftSkillFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SoftSkillPayload>
+          }
+          findMany: {
+            args: Prisma.SoftSkillFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SoftSkillPayload>[]
+          }
+          create: {
+            args: Prisma.SoftSkillCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SoftSkillPayload>
+          }
+          createMany: {
+            args: Prisma.SoftSkillCreateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          createManyAndReturn: {
+            args: Prisma.SoftSkillCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SoftSkillPayload>[]
+          }
+          delete: {
+            args: Prisma.SoftSkillDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SoftSkillPayload>
+          }
+          update: {
+            args: Prisma.SoftSkillUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SoftSkillPayload>
+          }
+          deleteMany: {
+            args: Prisma.SoftSkillDeleteManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateMany: {
+            args: Prisma.SoftSkillUpdateManyArgs<ExtArgs>
+            result: BatchPayload
+          }
+          updateManyAndReturn: {
+            args: Prisma.SoftSkillUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SoftSkillPayload>[]
+          }
+          upsert: {
+            args: Prisma.SoftSkillUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SoftSkillPayload>
+          }
+          aggregate: {
+            args: Prisma.SoftSkillAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateSoftSkill>
+          }
+          groupBy: {
+            args: Prisma.SoftSkillGroupByArgs<ExtArgs>
+            result: $Utils.Optional<SoftSkillGroupByOutputType>[]
+          }
+          count: {
+            args: Prisma.SoftSkillCountArgs<ExtArgs>
+            result: $Utils.Optional<SoftSkillCountAggregateOutputType> | number
+          }
+        }
+      }
     }
   } & {
     other: {
@@ -1230,6 +1320,7 @@ export namespace Prisma {
     contratacao?: ContratacaoOmit
     nota?: NotaOmit
     aptidao?: AptidaoOmit
+    softSkill?: SoftSkillOmit
   }
 
   /* Types for Logging */
@@ -1389,12 +1480,14 @@ export namespace Prisma {
     contratacoes: number
     notas: number
     aptidoes: number
+    softskills: number
   }
 
   export type AlunoCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     contratacoes?: boolean | AlunoCountOutputTypeCountContratacoesArgs
     notas?: boolean | AlunoCountOutputTypeCountNotasArgs
     aptidoes?: boolean | AlunoCountOutputTypeCountAptidoesArgs
+    softskills?: boolean | AlunoCountOutputTypeCountSoftskillsArgs
   }
 
   // Custom InputTypes
@@ -1427,6 +1520,13 @@ export namespace Prisma {
    */
   export type AlunoCountOutputTypeCountAptidoesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: AptidaoWhereInput
+  }
+
+  /**
+   * AlunoCountOutputType without action
+   */
+  export type AlunoCountOutputTypeCountSoftskillsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: SoftSkillWhereInput
   }
 
 
@@ -3997,6 +4097,7 @@ export namespace Prisma {
     contratacoes?: boolean | Aluno$contratacoesArgs<ExtArgs>
     notas?: boolean | Aluno$notasArgs<ExtArgs>
     aptidoes?: boolean | Aluno$aptidoesArgs<ExtArgs>
+    softskills?: boolean | Aluno$softskillsArgs<ExtArgs>
     _count?: boolean | AlunoCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["aluno"]>
 
@@ -4065,6 +4166,7 @@ export namespace Prisma {
     contratacoes?: boolean | Aluno$contratacoesArgs<ExtArgs>
     notas?: boolean | Aluno$notasArgs<ExtArgs>
     aptidoes?: boolean | Aluno$aptidoesArgs<ExtArgs>
+    softskills?: boolean | Aluno$softskillsArgs<ExtArgs>
     _count?: boolean | AlunoCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type AlunoIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -4076,6 +4178,7 @@ export namespace Prisma {
       contratacoes: Prisma.$ContratacaoPayload<ExtArgs>[]
       notas: Prisma.$NotaPayload<ExtArgs>[]
       aptidoes: Prisma.$AptidaoPayload<ExtArgs>[]
+      softskills: Prisma.$SoftSkillPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id_aluno: string
@@ -4492,6 +4595,7 @@ export namespace Prisma {
     contratacoes<T extends Aluno$contratacoesArgs<ExtArgs> = {}>(args?: Subset<T, Aluno$contratacoesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ContratacaoPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     notas<T extends Aluno$notasArgs<ExtArgs> = {}>(args?: Subset<T, Aluno$notasArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NotaPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     aptidoes<T extends Aluno$aptidoesArgs<ExtArgs> = {}>(args?: Subset<T, Aluno$aptidoesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AptidaoPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    softskills<T extends Aluno$softskillsArgs<ExtArgs> = {}>(args?: Subset<T, Aluno$softskillsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -4995,6 +5099,30 @@ export namespace Prisma {
     take?: number
     skip?: number
     distinct?: AptidaoScalarFieldEnum | AptidaoScalarFieldEnum[]
+  }
+
+  /**
+   * Aluno.softskills
+   */
+  export type Aluno$softskillsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillInclude<ExtArgs> | null
+    where?: SoftSkillWhereInput
+    orderBy?: SoftSkillOrderByWithRelationInput | SoftSkillOrderByWithRelationInput[]
+    cursor?: SoftSkillWhereUniqueInput
+    take?: number
+    skip?: number
+    distinct?: SoftSkillScalarFieldEnum | SoftSkillScalarFieldEnum[]
   }
 
   /**
@@ -8331,6 +8459,1124 @@ export namespace Prisma {
 
 
   /**
+   * Model SoftSkill
+   */
+
+  export type AggregateSoftSkill = {
+    _count: SoftSkillCountAggregateOutputType | null
+    _avg: SoftSkillAvgAggregateOutputType | null
+    _sum: SoftSkillSumAggregateOutputType | null
+    _min: SoftSkillMinAggregateOutputType | null
+    _max: SoftSkillMaxAggregateOutputType | null
+  }
+
+  export type SoftSkillAvgAggregateOutputType = {
+    nivel: number | null
+  }
+
+  export type SoftSkillSumAggregateOutputType = {
+    nivel: number | null
+  }
+
+  export type SoftSkillMinAggregateOutputType = {
+    id_softskill: string | null
+    id_aluno: string | null
+    nome: string | null
+    nivel: number | null
+    descricao: string | null
+    data_criacao: Date | null
+    data_atualizacao: Date | null
+  }
+
+  export type SoftSkillMaxAggregateOutputType = {
+    id_softskill: string | null
+    id_aluno: string | null
+    nome: string | null
+    nivel: number | null
+    descricao: string | null
+    data_criacao: Date | null
+    data_atualizacao: Date | null
+  }
+
+  export type SoftSkillCountAggregateOutputType = {
+    id_softskill: number
+    id_aluno: number
+    nome: number
+    nivel: number
+    descricao: number
+    data_criacao: number
+    data_atualizacao: number
+    _all: number
+  }
+
+
+  export type SoftSkillAvgAggregateInputType = {
+    nivel?: true
+  }
+
+  export type SoftSkillSumAggregateInputType = {
+    nivel?: true
+  }
+
+  export type SoftSkillMinAggregateInputType = {
+    id_softskill?: true
+    id_aluno?: true
+    nome?: true
+    nivel?: true
+    descricao?: true
+    data_criacao?: true
+    data_atualizacao?: true
+  }
+
+  export type SoftSkillMaxAggregateInputType = {
+    id_softskill?: true
+    id_aluno?: true
+    nome?: true
+    nivel?: true
+    descricao?: true
+    data_criacao?: true
+    data_atualizacao?: true
+  }
+
+  export type SoftSkillCountAggregateInputType = {
+    id_softskill?: true
+    id_aluno?: true
+    nome?: true
+    nivel?: true
+    descricao?: true
+    data_criacao?: true
+    data_atualizacao?: true
+    _all?: true
+  }
+
+  export type SoftSkillAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which SoftSkill to aggregate.
+     */
+    where?: SoftSkillWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of SoftSkills to fetch.
+     */
+    orderBy?: SoftSkillOrderByWithRelationInput | SoftSkillOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the start position
+     */
+    cursor?: SoftSkillWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` SoftSkills from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` SoftSkills.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Count returned SoftSkills
+    **/
+    _count?: true | SoftSkillCountAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to average
+    **/
+    _avg?: SoftSkillAvgAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to sum
+    **/
+    _sum?: SoftSkillSumAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the minimum value
+    **/
+    _min?: SoftSkillMinAggregateInputType
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
+     * 
+     * Select which fields to find the maximum value
+    **/
+    _max?: SoftSkillMaxAggregateInputType
+  }
+
+  export type GetSoftSkillAggregateType<T extends SoftSkillAggregateArgs> = {
+        [P in keyof T & keyof AggregateSoftSkill]: P extends '_count' | 'count'
+      ? T[P] extends true
+        ? number
+        : GetScalarType<T[P], AggregateSoftSkill[P]>
+      : GetScalarType<T[P], AggregateSoftSkill[P]>
+  }
+
+
+
+
+  export type SoftSkillGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: SoftSkillWhereInput
+    orderBy?: SoftSkillOrderByWithAggregationInput | SoftSkillOrderByWithAggregationInput[]
+    by: SoftSkillScalarFieldEnum[] | SoftSkillScalarFieldEnum
+    having?: SoftSkillScalarWhereWithAggregatesInput
+    take?: number
+    skip?: number
+    _count?: SoftSkillCountAggregateInputType | true
+    _avg?: SoftSkillAvgAggregateInputType
+    _sum?: SoftSkillSumAggregateInputType
+    _min?: SoftSkillMinAggregateInputType
+    _max?: SoftSkillMaxAggregateInputType
+  }
+
+  export type SoftSkillGroupByOutputType = {
+    id_softskill: string
+    id_aluno: string
+    nome: string
+    nivel: number
+    descricao: string | null
+    data_criacao: Date
+    data_atualizacao: Date
+    _count: SoftSkillCountAggregateOutputType | null
+    _avg: SoftSkillAvgAggregateOutputType | null
+    _sum: SoftSkillSumAggregateOutputType | null
+    _min: SoftSkillMinAggregateOutputType | null
+    _max: SoftSkillMaxAggregateOutputType | null
+  }
+
+  type GetSoftSkillGroupByPayload<T extends SoftSkillGroupByArgs> = Prisma.PrismaPromise<
+    Array<
+      PickEnumerable<SoftSkillGroupByOutputType, T['by']> &
+        {
+          [P in ((keyof T) & (keyof SoftSkillGroupByOutputType))]: P extends '_count'
+            ? T[P] extends boolean
+              ? number
+              : GetScalarType<T[P], SoftSkillGroupByOutputType[P]>
+            : GetScalarType<T[P], SoftSkillGroupByOutputType[P]>
+        }
+      >
+    >
+
+
+  export type SoftSkillSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_softskill?: boolean
+    id_aluno?: boolean
+    nome?: boolean
+    nivel?: boolean
+    descricao?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["softSkill"]>
+
+  export type SoftSkillSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_softskill?: boolean
+    id_aluno?: boolean
+    nome?: boolean
+    nivel?: boolean
+    descricao?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["softSkill"]>
+
+  export type SoftSkillSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    id_softskill?: boolean
+    id_aluno?: boolean
+    nome?: boolean
+    nivel?: boolean
+    descricao?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["softSkill"]>
+
+  export type SoftSkillSelectScalar = {
+    id_softskill?: boolean
+    id_aluno?: boolean
+    nome?: boolean
+    nivel?: boolean
+    descricao?: boolean
+    data_criacao?: boolean
+    data_atualizacao?: boolean
+  }
+
+  export type SoftSkillOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id_softskill" | "id_aluno" | "nome" | "nivel" | "descricao" | "data_criacao" | "data_atualizacao", ExtArgs["result"]["softSkill"]>
+  export type SoftSkillInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }
+  export type SoftSkillIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }
+  export type SoftSkillIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    aluno?: boolean | AlunoDefaultArgs<ExtArgs>
+  }
+
+  export type $SoftSkillPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "SoftSkill"
+    objects: {
+      aluno: Prisma.$AlunoPayload<ExtArgs>
+    }
+    scalars: $Extensions.GetPayloadResult<{
+      id_softskill: string
+      id_aluno: string
+      nome: string
+      nivel: number
+      descricao: string | null
+      data_criacao: Date
+      data_atualizacao: Date
+    }, ExtArgs["result"]["softSkill"]>
+    composites: {}
+  }
+
+  type SoftSkillGetPayload<S extends boolean | null | undefined | SoftSkillDefaultArgs> = $Result.GetResult<Prisma.$SoftSkillPayload, S>
+
+  type SoftSkillCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<SoftSkillFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: SoftSkillCountAggregateInputType | true
+    }
+
+  export interface SoftSkillDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['SoftSkill'], meta: { name: 'SoftSkill' } }
+    /**
+     * Find zero or one SoftSkill that matches the filter.
+     * @param {SoftSkillFindUniqueArgs} args - Arguments to find a SoftSkill
+     * @example
+     * // Get one SoftSkill
+     * const softSkill = await prisma.softSkill.findUnique({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUnique<T extends SoftSkillFindUniqueArgs>(args: SelectSubset<T, SoftSkillFindUniqueArgs<ExtArgs>>): Prisma__SoftSkillClient<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find one SoftSkill that matches the filter or throw an error with `error.code='P2025'`
+     * if no matches were found.
+     * @param {SoftSkillFindUniqueOrThrowArgs} args - Arguments to find a SoftSkill
+     * @example
+     * // Get one SoftSkill
+     * const softSkill = await prisma.softSkill.findUniqueOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findUniqueOrThrow<T extends SoftSkillFindUniqueOrThrowArgs>(args: SelectSubset<T, SoftSkillFindUniqueOrThrowArgs<ExtArgs>>): Prisma__SoftSkillClient<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first SoftSkill that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SoftSkillFindFirstArgs} args - Arguments to find a SoftSkill
+     * @example
+     * // Get one SoftSkill
+     * const softSkill = await prisma.softSkill.findFirst({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirst<T extends SoftSkillFindFirstArgs>(args?: SelectSubset<T, SoftSkillFindFirstArgs<ExtArgs>>): Prisma__SoftSkillClient<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find the first SoftSkill that matches the filter or
+     * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SoftSkillFindFirstOrThrowArgs} args - Arguments to find a SoftSkill
+     * @example
+     * // Get one SoftSkill
+     * const softSkill = await prisma.softSkill.findFirstOrThrow({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     */
+    findFirstOrThrow<T extends SoftSkillFindFirstOrThrowArgs>(args?: SelectSubset<T, SoftSkillFindFirstOrThrowArgs<ExtArgs>>): Prisma__SoftSkillClient<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Find zero or more SoftSkills that matches the filter.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SoftSkillFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @example
+     * // Get all SoftSkills
+     * const softSkills = await prisma.softSkill.findMany()
+     * 
+     * // Get first 10 SoftSkills
+     * const softSkills = await prisma.softSkill.findMany({ take: 10 })
+     * 
+     * // Only select the `id_softskill`
+     * const softSkillWithId_softskillOnly = await prisma.softSkill.findMany({ select: { id_softskill: true } })
+     * 
+     */
+    findMany<T extends SoftSkillFindManyArgs>(args?: SelectSubset<T, SoftSkillFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+
+    /**
+     * Create a SoftSkill.
+     * @param {SoftSkillCreateArgs} args - Arguments to create a SoftSkill.
+     * @example
+     * // Create one SoftSkill
+     * const SoftSkill = await prisma.softSkill.create({
+     *   data: {
+     *     // ... data to create a SoftSkill
+     *   }
+     * })
+     * 
+     */
+    create<T extends SoftSkillCreateArgs>(args: SelectSubset<T, SoftSkillCreateArgs<ExtArgs>>): Prisma__SoftSkillClient<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Create many SoftSkills.
+     * @param {SoftSkillCreateManyArgs} args - Arguments to create many SoftSkills.
+     * @example
+     * // Create many SoftSkills
+     * const softSkill = await prisma.softSkill.createMany({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     *     
+     */
+    createMany<T extends SoftSkillCreateManyArgs>(args?: SelectSubset<T, SoftSkillCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Create many SoftSkills and returns the data saved in the database.
+     * @param {SoftSkillCreateManyAndReturnArgs} args - Arguments to create many SoftSkills.
+     * @example
+     * // Create many SoftSkills
+     * const softSkill = await prisma.softSkill.createManyAndReturn({
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Create many SoftSkills and only return the `id_softskill`
+     * const softSkillWithId_softskillOnly = await prisma.softSkill.createManyAndReturn({
+     *   select: { id_softskill: true },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    createManyAndReturn<T extends SoftSkillCreateManyAndReturnArgs>(args?: SelectSubset<T, SoftSkillCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Delete a SoftSkill.
+     * @param {SoftSkillDeleteArgs} args - Arguments to delete one SoftSkill.
+     * @example
+     * // Delete one SoftSkill
+     * const SoftSkill = await prisma.softSkill.delete({
+     *   where: {
+     *     // ... filter to delete one SoftSkill
+     *   }
+     * })
+     * 
+     */
+    delete<T extends SoftSkillDeleteArgs>(args: SelectSubset<T, SoftSkillDeleteArgs<ExtArgs>>): Prisma__SoftSkillClient<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Update one SoftSkill.
+     * @param {SoftSkillUpdateArgs} args - Arguments to update one SoftSkill.
+     * @example
+     * // Update one SoftSkill
+     * const softSkill = await prisma.softSkill.update({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    update<T extends SoftSkillUpdateArgs>(args: SelectSubset<T, SoftSkillUpdateArgs<ExtArgs>>): Prisma__SoftSkillClient<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+    /**
+     * Delete zero or more SoftSkills.
+     * @param {SoftSkillDeleteManyArgs} args - Arguments to filter SoftSkills to delete.
+     * @example
+     * // Delete a few SoftSkills
+     * const { count } = await prisma.softSkill.deleteMany({
+     *   where: {
+     *     // ... provide filter here
+     *   }
+     * })
+     * 
+     */
+    deleteMany<T extends SoftSkillDeleteManyArgs>(args?: SelectSubset<T, SoftSkillDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more SoftSkills.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SoftSkillUpdateManyArgs} args - Arguments to update one or more rows.
+     * @example
+     * // Update many SoftSkills
+     * const softSkill = await prisma.softSkill.updateMany({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: {
+     *     // ... provide data here
+     *   }
+     * })
+     * 
+     */
+    updateMany<T extends SoftSkillUpdateManyArgs>(args: SelectSubset<T, SoftSkillUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+
+    /**
+     * Update zero or more SoftSkills and returns the data updated in the database.
+     * @param {SoftSkillUpdateManyAndReturnArgs} args - Arguments to update many SoftSkills.
+     * @example
+     * // Update many SoftSkills
+     * const softSkill = await prisma.softSkill.updateManyAndReturn({
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * 
+     * // Update zero or more SoftSkills and only return the `id_softskill`
+     * const softSkillWithId_softskillOnly = await prisma.softSkill.updateManyAndReturn({
+     *   select: { id_softskill: true },
+     *   where: {
+     *     // ... provide filter here
+     *   },
+     *   data: [
+     *     // ... provide data here
+     *   ]
+     * })
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * 
+     */
+    updateManyAndReturn<T extends SoftSkillUpdateManyAndReturnArgs>(args: SelectSubset<T, SoftSkillUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+
+    /**
+     * Create or update one SoftSkill.
+     * @param {SoftSkillUpsertArgs} args - Arguments to update or create a SoftSkill.
+     * @example
+     * // Update or create a SoftSkill
+     * const softSkill = await prisma.softSkill.upsert({
+     *   create: {
+     *     // ... data to create a SoftSkill
+     *   },
+     *   update: {
+     *     // ... in case it already exists, update
+     *   },
+     *   where: {
+     *     // ... the filter for the SoftSkill we want to update
+     *   }
+     * })
+     */
+    upsert<T extends SoftSkillUpsertArgs>(args: SelectSubset<T, SoftSkillUpsertArgs<ExtArgs>>): Prisma__SoftSkillClient<$Result.GetResult<Prisma.$SoftSkillPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+
+
+    /**
+     * Count the number of SoftSkills.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SoftSkillCountArgs} args - Arguments to filter SoftSkills to count.
+     * @example
+     * // Count the number of SoftSkills
+     * const count = await prisma.softSkill.count({
+     *   where: {
+     *     // ... the filter for the SoftSkills we want to count
+     *   }
+     * })
+    **/
+    count<T extends SoftSkillCountArgs>(
+      args?: Subset<T, SoftSkillCountArgs>,
+    ): Prisma.PrismaPromise<
+      T extends $Utils.Record<'select', any>
+        ? T['select'] extends true
+          ? number
+          : GetScalarType<T['select'], SoftSkillCountAggregateOutputType>
+        : number
+    >
+
+    /**
+     * Allows you to perform aggregations operations on a SoftSkill.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SoftSkillAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @example
+     * // Ordered by age ascending
+     * // Where email contains prisma.io
+     * // Limited to the 10 users
+     * const aggregations = await prisma.user.aggregate({
+     *   _avg: {
+     *     age: true,
+     *   },
+     *   where: {
+     *     email: {
+     *       contains: "prisma.io",
+     *     },
+     *   },
+     *   orderBy: {
+     *     age: "asc",
+     *   },
+     *   take: 10,
+     * })
+    **/
+    aggregate<T extends SoftSkillAggregateArgs>(args: Subset<T, SoftSkillAggregateArgs>): Prisma.PrismaPromise<GetSoftSkillAggregateType<T>>
+
+    /**
+     * Group by SoftSkill.
+     * Note, that providing `undefined` is treated as the value not being there.
+     * Read more here: https://pris.ly/d/null-undefined
+     * @param {SoftSkillGroupByArgs} args - Group by arguments.
+     * @example
+     * // Group by city, order by createdAt, get count
+     * const result = await prisma.user.groupBy({
+     *   by: ['city', 'createdAt'],
+     *   orderBy: {
+     *     createdAt: true
+     *   },
+     *   _count: {
+     *     _all: true
+     *   },
+     * })
+     * 
+    **/
+    groupBy<
+      T extends SoftSkillGroupByArgs,
+      HasSelectOrTake extends Or<
+        Extends<'skip', Keys<T>>,
+        Extends<'take', Keys<T>>
+      >,
+      OrderByArg extends True extends HasSelectOrTake
+        ? { orderBy: SoftSkillGroupByArgs['orderBy'] }
+        : { orderBy?: SoftSkillGroupByArgs['orderBy'] },
+      OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
+      ByFields extends MaybeTupleToUnion<T['by']>,
+      ByValid extends Has<ByFields, OrderFields>,
+      HavingFields extends GetHavingFields<T['having']>,
+      HavingValid extends Has<ByFields, HavingFields>,
+      ByEmpty extends T['by'] extends never[] ? True : False,
+      InputErrors extends ByEmpty extends True
+      ? `Error: "by" must not be empty.`
+      : HavingValid extends False
+      ? {
+          [P in HavingFields]: P extends ByFields
+            ? never
+            : P extends string
+            ? `Error: Field "${P}" used in "having" needs to be provided in "by".`
+            : [
+                Error,
+                'Field ',
+                P,
+                ` in "having" needs to be provided in "by"`,
+              ]
+        }[HavingFields]
+      : 'take' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "take", you also need to provide "orderBy"'
+      : 'skip' extends Keys<T>
+      ? 'orderBy' extends Keys<T>
+        ? ByValid extends True
+          ? {}
+          : {
+              [P in OrderFields]: P extends ByFields
+                ? never
+                : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+            }[OrderFields]
+        : 'Error: If you provide "skip", you also need to provide "orderBy"'
+      : ByValid extends True
+      ? {}
+      : {
+          [P in OrderFields]: P extends ByFields
+            ? never
+            : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
+        }[OrderFields]
+    >(args: SubsetIntersection<T, SoftSkillGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetSoftSkillGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+  /**
+   * Fields of the SoftSkill model
+   */
+  readonly fields: SoftSkillFieldRefs;
+  }
+
+  /**
+   * The delegate class that acts as a "Promise-like" for SoftSkill.
+   * Why is this prefixed with `Prisma__`?
+   * Because we want to prevent naming conflicts as mentioned in
+   * https://github.com/prisma/prisma-client-js/issues/707
+   */
+  export interface Prisma__SoftSkillClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+    readonly [Symbol.toStringTag]: "PrismaPromise"
+    aluno<T extends AlunoDefaultArgs<ExtArgs> = {}>(args?: Subset<T, AlunoDefaultArgs<ExtArgs>>): Prisma__AlunoClient<$Result.GetResult<Prisma.$AlunoPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    /**
+     * Attaches callbacks for the resolution and/or rejection of the Promise.
+     * @param onfulfilled The callback to execute when the Promise is resolved.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of which ever callback is executed.
+     */
+    then<TResult1 = T, TResult2 = never>(onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null, onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): $Utils.JsPromise<TResult1 | TResult2>
+    /**
+     * Attaches a callback for only the rejection of the Promise.
+     * @param onrejected The callback to execute when the Promise is rejected.
+     * @returns A Promise for the completion of the callback.
+     */
+    catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): $Utils.JsPromise<T | TResult>
+    /**
+     * Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
+     * resolved value cannot be modified from the callback.
+     * @param onfinally The callback to execute when the Promise is settled (fulfilled or rejected).
+     * @returns A Promise for the completion of the callback.
+     */
+    finally(onfinally?: (() => void) | undefined | null): $Utils.JsPromise<T>
+  }
+
+
+
+
+  /**
+   * Fields of the SoftSkill model
+   */
+  interface SoftSkillFieldRefs {
+    readonly id_softskill: FieldRef<"SoftSkill", 'String'>
+    readonly id_aluno: FieldRef<"SoftSkill", 'String'>
+    readonly nome: FieldRef<"SoftSkill", 'String'>
+    readonly nivel: FieldRef<"SoftSkill", 'Int'>
+    readonly descricao: FieldRef<"SoftSkill", 'String'>
+    readonly data_criacao: FieldRef<"SoftSkill", 'DateTime'>
+    readonly data_atualizacao: FieldRef<"SoftSkill", 'DateTime'>
+  }
+    
+
+  // Custom InputTypes
+  /**
+   * SoftSkill findUnique
+   */
+  export type SoftSkillFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillInclude<ExtArgs> | null
+    /**
+     * Filter, which SoftSkill to fetch.
+     */
+    where: SoftSkillWhereUniqueInput
+  }
+
+  /**
+   * SoftSkill findUniqueOrThrow
+   */
+  export type SoftSkillFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillInclude<ExtArgs> | null
+    /**
+     * Filter, which SoftSkill to fetch.
+     */
+    where: SoftSkillWhereUniqueInput
+  }
+
+  /**
+   * SoftSkill findFirst
+   */
+  export type SoftSkillFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillInclude<ExtArgs> | null
+    /**
+     * Filter, which SoftSkill to fetch.
+     */
+    where?: SoftSkillWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of SoftSkills to fetch.
+     */
+    orderBy?: SoftSkillOrderByWithRelationInput | SoftSkillOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for SoftSkills.
+     */
+    cursor?: SoftSkillWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` SoftSkills from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` SoftSkills.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of SoftSkills.
+     */
+    distinct?: SoftSkillScalarFieldEnum | SoftSkillScalarFieldEnum[]
+  }
+
+  /**
+   * SoftSkill findFirstOrThrow
+   */
+  export type SoftSkillFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillInclude<ExtArgs> | null
+    /**
+     * Filter, which SoftSkill to fetch.
+     */
+    where?: SoftSkillWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of SoftSkills to fetch.
+     */
+    orderBy?: SoftSkillOrderByWithRelationInput | SoftSkillOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for searching for SoftSkills.
+     */
+    cursor?: SoftSkillWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` SoftSkills from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` SoftSkills.
+     */
+    skip?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
+     * 
+     * Filter by unique combinations of SoftSkills.
+     */
+    distinct?: SoftSkillScalarFieldEnum | SoftSkillScalarFieldEnum[]
+  }
+
+  /**
+   * SoftSkill findMany
+   */
+  export type SoftSkillFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillInclude<ExtArgs> | null
+    /**
+     * Filter, which SoftSkills to fetch.
+     */
+    where?: SoftSkillWhereInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
+     * 
+     * Determine the order of SoftSkills to fetch.
+     */
+    orderBy?: SoftSkillOrderByWithRelationInput | SoftSkillOrderByWithRelationInput[]
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
+     * 
+     * Sets the position for listing SoftSkills.
+     */
+    cursor?: SoftSkillWhereUniqueInput
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Take `±n` SoftSkills from the position of the cursor.
+     */
+    take?: number
+    /**
+     * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
+     * 
+     * Skip the first `n` SoftSkills.
+     */
+    skip?: number
+    distinct?: SoftSkillScalarFieldEnum | SoftSkillScalarFieldEnum[]
+  }
+
+  /**
+   * SoftSkill create
+   */
+  export type SoftSkillCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillInclude<ExtArgs> | null
+    /**
+     * The data needed to create a SoftSkill.
+     */
+    data: XOR<SoftSkillCreateInput, SoftSkillUncheckedCreateInput>
+  }
+
+  /**
+   * SoftSkill createMany
+   */
+  export type SoftSkillCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to create many SoftSkills.
+     */
+    data: SoftSkillCreateManyInput | SoftSkillCreateManyInput[]
+    skipDuplicates?: boolean
+  }
+
+  /**
+   * SoftSkill createManyAndReturn
+   */
+  export type SoftSkillCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelectCreateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * The data used to create many SoftSkills.
+     */
+    data: SoftSkillCreateManyInput | SoftSkillCreateManyInput[]
+    skipDuplicates?: boolean
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillIncludeCreateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * SoftSkill update
+   */
+  export type SoftSkillUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillInclude<ExtArgs> | null
+    /**
+     * The data needed to update a SoftSkill.
+     */
+    data: XOR<SoftSkillUpdateInput, SoftSkillUncheckedUpdateInput>
+    /**
+     * Choose, which SoftSkill to update.
+     */
+    where: SoftSkillWhereUniqueInput
+  }
+
+  /**
+   * SoftSkill updateMany
+   */
+  export type SoftSkillUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * The data used to update SoftSkills.
+     */
+    data: XOR<SoftSkillUpdateManyMutationInput, SoftSkillUncheckedUpdateManyInput>
+    /**
+     * Filter which SoftSkills to update
+     */
+    where?: SoftSkillWhereInput
+    /**
+     * Limit how many SoftSkills to update.
+     */
+    limit?: number
+  }
+
+  /**
+   * SoftSkill updateManyAndReturn
+   */
+  export type SoftSkillUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelectUpdateManyAndReturn<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * The data used to update SoftSkills.
+     */
+    data: XOR<SoftSkillUpdateManyMutationInput, SoftSkillUncheckedUpdateManyInput>
+    /**
+     * Filter which SoftSkills to update
+     */
+    where?: SoftSkillWhereInput
+    /**
+     * Limit how many SoftSkills to update.
+     */
+    limit?: number
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillIncludeUpdateManyAndReturn<ExtArgs> | null
+  }
+
+  /**
+   * SoftSkill upsert
+   */
+  export type SoftSkillUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillInclude<ExtArgs> | null
+    /**
+     * The filter to search for the SoftSkill to update in case it exists.
+     */
+    where: SoftSkillWhereUniqueInput
+    /**
+     * In case the SoftSkill found by the `where` argument doesn't exist, create a new SoftSkill with this data.
+     */
+    create: XOR<SoftSkillCreateInput, SoftSkillUncheckedCreateInput>
+    /**
+     * In case the SoftSkill was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<SoftSkillUpdateInput, SoftSkillUncheckedUpdateInput>
+  }
+
+  /**
+   * SoftSkill delete
+   */
+  export type SoftSkillDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillInclude<ExtArgs> | null
+    /**
+     * Filter which SoftSkill to delete.
+     */
+    where: SoftSkillWhereUniqueInput
+  }
+
+  /**
+   * SoftSkill deleteMany
+   */
+  export type SoftSkillDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Filter which SoftSkills to delete
+     */
+    where?: SoftSkillWhereInput
+    /**
+     * Limit how many SoftSkills to delete.
+     */
+    limit?: number
+  }
+
+  /**
+   * SoftSkill without action
+   */
+  export type SoftSkillDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the SoftSkill
+     */
+    select?: SoftSkillSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the SoftSkill
+     */
+    omit?: SoftSkillOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: SoftSkillInclude<ExtArgs> | null
+  }
+
+
+  /**
    * Enums
    */
 
@@ -8430,6 +9676,19 @@ export namespace Prisma {
   };
 
   export type AptidaoScalarFieldEnum = (typeof AptidaoScalarFieldEnum)[keyof typeof AptidaoScalarFieldEnum]
+
+
+  export const SoftSkillScalarFieldEnum: {
+    id_softskill: 'id_softskill',
+    id_aluno: 'id_aluno',
+    nome: 'nome',
+    nivel: 'nivel',
+    descricao: 'descricao',
+    data_criacao: 'data_criacao',
+    data_atualizacao: 'data_atualizacao'
+  };
+
+  export type SoftSkillScalarFieldEnum = (typeof SoftSkillScalarFieldEnum)[keyof typeof SoftSkillScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -8697,6 +9956,7 @@ export namespace Prisma {
     contratacoes?: ContratacaoListRelationFilter
     notas?: NotaListRelationFilter
     aptidoes?: AptidaoListRelationFilter
+    softskills?: SoftSkillListRelationFilter
   }
 
   export type AlunoOrderByWithRelationInput = {
@@ -8720,6 +9980,7 @@ export namespace Prisma {
     contratacoes?: ContratacaoOrderByRelationAggregateInput
     notas?: NotaOrderByRelationAggregateInput
     aptidoes?: AptidaoOrderByRelationAggregateInput
+    softskills?: SoftSkillOrderByRelationAggregateInput
   }
 
   export type AlunoWhereUniqueInput = Prisma.AtLeast<{
@@ -8746,6 +10007,7 @@ export namespace Prisma {
     contratacoes?: ContratacaoListRelationFilter
     notas?: NotaListRelationFilter
     aptidoes?: AptidaoListRelationFilter
+    softskills?: SoftSkillListRelationFilter
   }, "id_aluno" | "email" | "matricula" | "cpf">
 
   export type AlunoOrderByWithAggregationInput = {
@@ -8980,6 +10242,73 @@ export namespace Prisma {
     descricao?: StringNullableWithAggregatesFilter<"Aptidao"> | string | null
   }
 
+  export type SoftSkillWhereInput = {
+    AND?: SoftSkillWhereInput | SoftSkillWhereInput[]
+    OR?: SoftSkillWhereInput[]
+    NOT?: SoftSkillWhereInput | SoftSkillWhereInput[]
+    id_softskill?: StringFilter<"SoftSkill"> | string
+    id_aluno?: StringFilter<"SoftSkill"> | string
+    nome?: StringFilter<"SoftSkill"> | string
+    nivel?: IntFilter<"SoftSkill"> | number
+    descricao?: StringNullableFilter<"SoftSkill"> | string | null
+    data_criacao?: DateTimeFilter<"SoftSkill"> | Date | string
+    data_atualizacao?: DateTimeFilter<"SoftSkill"> | Date | string
+    aluno?: XOR<AlunoScalarRelationFilter, AlunoWhereInput>
+  }
+
+  export type SoftSkillOrderByWithRelationInput = {
+    id_softskill?: SortOrder
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    nivel?: SortOrder
+    descricao?: SortOrderInput | SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+    aluno?: AlunoOrderByWithRelationInput
+  }
+
+  export type SoftSkillWhereUniqueInput = Prisma.AtLeast<{
+    id_softskill?: string
+    AND?: SoftSkillWhereInput | SoftSkillWhereInput[]
+    OR?: SoftSkillWhereInput[]
+    NOT?: SoftSkillWhereInput | SoftSkillWhereInput[]
+    id_aluno?: StringFilter<"SoftSkill"> | string
+    nome?: StringFilter<"SoftSkill"> | string
+    nivel?: IntFilter<"SoftSkill"> | number
+    descricao?: StringNullableFilter<"SoftSkill"> | string | null
+    data_criacao?: DateTimeFilter<"SoftSkill"> | Date | string
+    data_atualizacao?: DateTimeFilter<"SoftSkill"> | Date | string
+    aluno?: XOR<AlunoScalarRelationFilter, AlunoWhereInput>
+  }, "id_softskill">
+
+  export type SoftSkillOrderByWithAggregationInput = {
+    id_softskill?: SortOrder
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    nivel?: SortOrder
+    descricao?: SortOrderInput | SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+    _count?: SoftSkillCountOrderByAggregateInput
+    _avg?: SoftSkillAvgOrderByAggregateInput
+    _max?: SoftSkillMaxOrderByAggregateInput
+    _min?: SoftSkillMinOrderByAggregateInput
+    _sum?: SoftSkillSumOrderByAggregateInput
+  }
+
+  export type SoftSkillScalarWhereWithAggregatesInput = {
+    AND?: SoftSkillScalarWhereWithAggregatesInput | SoftSkillScalarWhereWithAggregatesInput[]
+    OR?: SoftSkillScalarWhereWithAggregatesInput[]
+    NOT?: SoftSkillScalarWhereWithAggregatesInput | SoftSkillScalarWhereWithAggregatesInput[]
+    id_softskill?: StringWithAggregatesFilter<"SoftSkill"> | string
+    id_aluno?: StringWithAggregatesFilter<"SoftSkill"> | string
+    nome?: StringWithAggregatesFilter<"SoftSkill"> | string
+    nivel?: IntWithAggregatesFilter<"SoftSkill"> | number
+    descricao?: StringNullableWithAggregatesFilter<"SoftSkill"> | string | null
+    data_criacao?: DateTimeWithAggregatesFilter<"SoftSkill"> | Date | string
+    data_atualizacao?: DateTimeWithAggregatesFilter<"SoftSkill"> | Date | string
+  }
+
   export type RecrutadorCreateInput = {
     id_recrutador?: string
     nome: string
@@ -9176,6 +10505,7 @@ export namespace Prisma {
     contratacoes?: ContratacaoCreateNestedManyWithoutAlunoInput
     notas?: NotaCreateNestedManyWithoutAlunoInput
     aptidoes?: AptidaoCreateNestedManyWithoutAlunoInput
+    softskills?: SoftSkillCreateNestedManyWithoutAlunoInput
   }
 
   export type AlunoUncheckedCreateInput = {
@@ -9199,6 +10529,7 @@ export namespace Prisma {
     contratacoes?: ContratacaoUncheckedCreateNestedManyWithoutAlunoInput
     notas?: NotaUncheckedCreateNestedManyWithoutAlunoInput
     aptidoes?: AptidaoUncheckedCreateNestedManyWithoutAlunoInput
+    softskills?: SoftSkillUncheckedCreateNestedManyWithoutAlunoInput
   }
 
   export type AlunoUpdateInput = {
@@ -9222,6 +10553,7 @@ export namespace Prisma {
     contratacoes?: ContratacaoUpdateManyWithoutAlunoNestedInput
     notas?: NotaUpdateManyWithoutAlunoNestedInput
     aptidoes?: AptidaoUpdateManyWithoutAlunoNestedInput
+    softskills?: SoftSkillUpdateManyWithoutAlunoNestedInput
   }
 
   export type AlunoUncheckedUpdateInput = {
@@ -9245,6 +10577,7 @@ export namespace Prisma {
     contratacoes?: ContratacaoUncheckedUpdateManyWithoutAlunoNestedInput
     notas?: NotaUncheckedUpdateManyWithoutAlunoNestedInput
     aptidoes?: AptidaoUncheckedUpdateManyWithoutAlunoNestedInput
+    softskills?: SoftSkillUncheckedUpdateManyWithoutAlunoNestedInput
   }
 
   export type AlunoCreateManyInput = {
@@ -9485,6 +10818,75 @@ export namespace Prisma {
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
+  export type SoftSkillCreateInput = {
+    id_softskill?: string
+    nome: string
+    nivel: number
+    descricao?: string | null
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    aluno: AlunoCreateNestedOneWithoutSoftskillsInput
+  }
+
+  export type SoftSkillUncheckedCreateInput = {
+    id_softskill?: string
+    id_aluno: string
+    nome: string
+    nivel: number
+    descricao?: string | null
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+  }
+
+  export type SoftSkillUpdateInput = {
+    id_softskill?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    aluno?: AlunoUpdateOneRequiredWithoutSoftskillsNestedInput
+  }
+
+  export type SoftSkillUncheckedUpdateInput = {
+    id_softskill?: StringFieldUpdateOperationsInput | string
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type SoftSkillCreateManyInput = {
+    id_softskill?: string
+    id_aluno: string
+    nome: string
+    nivel: number
+    descricao?: string | null
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+  }
+
+  export type SoftSkillUpdateManyMutationInput = {
+    id_softskill?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type SoftSkillUncheckedUpdateManyInput = {
+    id_softskill?: StringFieldUpdateOperationsInput | string
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[] | ListStringFieldRefInput<$PrismaModel>
@@ -9701,11 +11103,21 @@ export namespace Prisma {
     none?: AptidaoWhereInput
   }
 
+  export type SoftSkillListRelationFilter = {
+    every?: SoftSkillWhereInput
+    some?: SoftSkillWhereInput
+    none?: SoftSkillWhereInput
+  }
+
   export type NotaOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
   export type AptidaoOrderByRelationAggregateInput = {
+    _count?: SortOrder
+  }
+
+  export type SoftSkillOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -9963,6 +11375,44 @@ export namespace Prisma {
     nivel?: SortOrder
   }
 
+  export type SoftSkillCountOrderByAggregateInput = {
+    id_softskill?: SortOrder
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    nivel?: SortOrder
+    descricao?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+  }
+
+  export type SoftSkillAvgOrderByAggregateInput = {
+    nivel?: SortOrder
+  }
+
+  export type SoftSkillMaxOrderByAggregateInput = {
+    id_softskill?: SortOrder
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    nivel?: SortOrder
+    descricao?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+  }
+
+  export type SoftSkillMinOrderByAggregateInput = {
+    id_softskill?: SortOrder
+    id_aluno?: SortOrder
+    nome?: SortOrder
+    nivel?: SortOrder
+    descricao?: SortOrder
+    data_criacao?: SortOrder
+    data_atualizacao?: SortOrder
+  }
+
+  export type SoftSkillSumOrderByAggregateInput = {
+    nivel?: SortOrder
+  }
+
   export type EmpresaCreateNestedOneWithoutRecrutadoresInput = {
     create?: XOR<EmpresaCreateWithoutRecrutadoresInput, EmpresaUncheckedCreateWithoutRecrutadoresInput>
     connectOrCreate?: EmpresaCreateOrConnectWithoutRecrutadoresInput
@@ -10094,6 +11544,13 @@ export namespace Prisma {
     connect?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
   }
 
+  export type SoftSkillCreateNestedManyWithoutAlunoInput = {
+    create?: XOR<SoftSkillCreateWithoutAlunoInput, SoftSkillUncheckedCreateWithoutAlunoInput> | SoftSkillCreateWithoutAlunoInput[] | SoftSkillUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: SoftSkillCreateOrConnectWithoutAlunoInput | SoftSkillCreateOrConnectWithoutAlunoInput[]
+    createMany?: SoftSkillCreateManyAlunoInputEnvelope
+    connect?: SoftSkillWhereUniqueInput | SoftSkillWhereUniqueInput[]
+  }
+
   export type ContratacaoUncheckedCreateNestedManyWithoutAlunoInput = {
     create?: XOR<ContratacaoCreateWithoutAlunoInput, ContratacaoUncheckedCreateWithoutAlunoInput> | ContratacaoCreateWithoutAlunoInput[] | ContratacaoUncheckedCreateWithoutAlunoInput[]
     connectOrCreate?: ContratacaoCreateOrConnectWithoutAlunoInput | ContratacaoCreateOrConnectWithoutAlunoInput[]
@@ -10113,6 +11570,13 @@ export namespace Prisma {
     connectOrCreate?: AptidaoCreateOrConnectWithoutAlunoInput | AptidaoCreateOrConnectWithoutAlunoInput[]
     createMany?: AptidaoCreateManyAlunoInputEnvelope
     connect?: AptidaoWhereUniqueInput | AptidaoWhereUniqueInput[]
+  }
+
+  export type SoftSkillUncheckedCreateNestedManyWithoutAlunoInput = {
+    create?: XOR<SoftSkillCreateWithoutAlunoInput, SoftSkillUncheckedCreateWithoutAlunoInput> | SoftSkillCreateWithoutAlunoInput[] | SoftSkillUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: SoftSkillCreateOrConnectWithoutAlunoInput | SoftSkillCreateOrConnectWithoutAlunoInput[]
+    createMany?: SoftSkillCreateManyAlunoInputEnvelope
+    connect?: SoftSkillWhereUniqueInput | SoftSkillWhereUniqueInput[]
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -10165,6 +11629,20 @@ export namespace Prisma {
     deleteMany?: AptidaoScalarWhereInput | AptidaoScalarWhereInput[]
   }
 
+  export type SoftSkillUpdateManyWithoutAlunoNestedInput = {
+    create?: XOR<SoftSkillCreateWithoutAlunoInput, SoftSkillUncheckedCreateWithoutAlunoInput> | SoftSkillCreateWithoutAlunoInput[] | SoftSkillUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: SoftSkillCreateOrConnectWithoutAlunoInput | SoftSkillCreateOrConnectWithoutAlunoInput[]
+    upsert?: SoftSkillUpsertWithWhereUniqueWithoutAlunoInput | SoftSkillUpsertWithWhereUniqueWithoutAlunoInput[]
+    createMany?: SoftSkillCreateManyAlunoInputEnvelope
+    set?: SoftSkillWhereUniqueInput | SoftSkillWhereUniqueInput[]
+    disconnect?: SoftSkillWhereUniqueInput | SoftSkillWhereUniqueInput[]
+    delete?: SoftSkillWhereUniqueInput | SoftSkillWhereUniqueInput[]
+    connect?: SoftSkillWhereUniqueInput | SoftSkillWhereUniqueInput[]
+    update?: SoftSkillUpdateWithWhereUniqueWithoutAlunoInput | SoftSkillUpdateWithWhereUniqueWithoutAlunoInput[]
+    updateMany?: SoftSkillUpdateManyWithWhereWithoutAlunoInput | SoftSkillUpdateManyWithWhereWithoutAlunoInput[]
+    deleteMany?: SoftSkillScalarWhereInput | SoftSkillScalarWhereInput[]
+  }
+
   export type ContratacaoUncheckedUpdateManyWithoutAlunoNestedInput = {
     create?: XOR<ContratacaoCreateWithoutAlunoInput, ContratacaoUncheckedCreateWithoutAlunoInput> | ContratacaoCreateWithoutAlunoInput[] | ContratacaoUncheckedCreateWithoutAlunoInput[]
     connectOrCreate?: ContratacaoCreateOrConnectWithoutAlunoInput | ContratacaoCreateOrConnectWithoutAlunoInput[]
@@ -10205,6 +11683,20 @@ export namespace Prisma {
     update?: AptidaoUpdateWithWhereUniqueWithoutAlunoInput | AptidaoUpdateWithWhereUniqueWithoutAlunoInput[]
     updateMany?: AptidaoUpdateManyWithWhereWithoutAlunoInput | AptidaoUpdateManyWithWhereWithoutAlunoInput[]
     deleteMany?: AptidaoScalarWhereInput | AptidaoScalarWhereInput[]
+  }
+
+  export type SoftSkillUncheckedUpdateManyWithoutAlunoNestedInput = {
+    create?: XOR<SoftSkillCreateWithoutAlunoInput, SoftSkillUncheckedCreateWithoutAlunoInput> | SoftSkillCreateWithoutAlunoInput[] | SoftSkillUncheckedCreateWithoutAlunoInput[]
+    connectOrCreate?: SoftSkillCreateOrConnectWithoutAlunoInput | SoftSkillCreateOrConnectWithoutAlunoInput[]
+    upsert?: SoftSkillUpsertWithWhereUniqueWithoutAlunoInput | SoftSkillUpsertWithWhereUniqueWithoutAlunoInput[]
+    createMany?: SoftSkillCreateManyAlunoInputEnvelope
+    set?: SoftSkillWhereUniqueInput | SoftSkillWhereUniqueInput[]
+    disconnect?: SoftSkillWhereUniqueInput | SoftSkillWhereUniqueInput[]
+    delete?: SoftSkillWhereUniqueInput | SoftSkillWhereUniqueInput[]
+    connect?: SoftSkillWhereUniqueInput | SoftSkillWhereUniqueInput[]
+    update?: SoftSkillUpdateWithWhereUniqueWithoutAlunoInput | SoftSkillUpdateWithWhereUniqueWithoutAlunoInput[]
+    updateMany?: SoftSkillUpdateManyWithWhereWithoutAlunoInput | SoftSkillUpdateManyWithWhereWithoutAlunoInput[]
+    deleteMany?: SoftSkillScalarWhereInput | SoftSkillScalarWhereInput[]
   }
 
   export type RecrutadorCreateNestedOneWithoutContratacoesInput = {
@@ -10277,6 +11769,20 @@ export namespace Prisma {
     upsert?: AlunoUpsertWithoutAptidoesInput
     connect?: AlunoWhereUniqueInput
     update?: XOR<XOR<AlunoUpdateToOneWithWhereWithoutAptidoesInput, AlunoUpdateWithoutAptidoesInput>, AlunoUncheckedUpdateWithoutAptidoesInput>
+  }
+
+  export type AlunoCreateNestedOneWithoutSoftskillsInput = {
+    create?: XOR<AlunoCreateWithoutSoftskillsInput, AlunoUncheckedCreateWithoutSoftskillsInput>
+    connectOrCreate?: AlunoCreateOrConnectWithoutSoftskillsInput
+    connect?: AlunoWhereUniqueInput
+  }
+
+  export type AlunoUpdateOneRequiredWithoutSoftskillsNestedInput = {
+    create?: XOR<AlunoCreateWithoutSoftskillsInput, AlunoUncheckedCreateWithoutSoftskillsInput>
+    connectOrCreate?: AlunoCreateOrConnectWithoutSoftskillsInput
+    upsert?: AlunoUpsertWithoutSoftskillsInput
+    connect?: AlunoWhereUniqueInput
+    update?: XOR<XOR<AlunoUpdateToOneWithWhereWithoutSoftskillsInput, AlunoUpdateWithoutSoftskillsInput>, AlunoUncheckedUpdateWithoutSoftskillsInput>
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -10720,6 +12226,34 @@ export namespace Prisma {
     skipDuplicates?: boolean
   }
 
+  export type SoftSkillCreateWithoutAlunoInput = {
+    id_softskill?: string
+    nome: string
+    nivel: number
+    descricao?: string | null
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+  }
+
+  export type SoftSkillUncheckedCreateWithoutAlunoInput = {
+    id_softskill?: string
+    nome: string
+    nivel: number
+    descricao?: string | null
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+  }
+
+  export type SoftSkillCreateOrConnectWithoutAlunoInput = {
+    where: SoftSkillWhereUniqueInput
+    create: XOR<SoftSkillCreateWithoutAlunoInput, SoftSkillUncheckedCreateWithoutAlunoInput>
+  }
+
+  export type SoftSkillCreateManyAlunoInputEnvelope = {
+    data: SoftSkillCreateManyAlunoInput | SoftSkillCreateManyAlunoInput[]
+    skipDuplicates?: boolean
+  }
+
   export type ContratacaoUpsertWithWhereUniqueWithoutAlunoInput = {
     where: ContratacaoWhereUniqueInput
     update: XOR<ContratacaoUpdateWithoutAlunoInput, ContratacaoUncheckedUpdateWithoutAlunoInput>
@@ -10790,6 +12324,35 @@ export namespace Prisma {
     descricao?: StringNullableFilter<"Aptidao"> | string | null
   }
 
+  export type SoftSkillUpsertWithWhereUniqueWithoutAlunoInput = {
+    where: SoftSkillWhereUniqueInput
+    update: XOR<SoftSkillUpdateWithoutAlunoInput, SoftSkillUncheckedUpdateWithoutAlunoInput>
+    create: XOR<SoftSkillCreateWithoutAlunoInput, SoftSkillUncheckedCreateWithoutAlunoInput>
+  }
+
+  export type SoftSkillUpdateWithWhereUniqueWithoutAlunoInput = {
+    where: SoftSkillWhereUniqueInput
+    data: XOR<SoftSkillUpdateWithoutAlunoInput, SoftSkillUncheckedUpdateWithoutAlunoInput>
+  }
+
+  export type SoftSkillUpdateManyWithWhereWithoutAlunoInput = {
+    where: SoftSkillScalarWhereInput
+    data: XOR<SoftSkillUpdateManyMutationInput, SoftSkillUncheckedUpdateManyWithoutAlunoInput>
+  }
+
+  export type SoftSkillScalarWhereInput = {
+    AND?: SoftSkillScalarWhereInput | SoftSkillScalarWhereInput[]
+    OR?: SoftSkillScalarWhereInput[]
+    NOT?: SoftSkillScalarWhereInput | SoftSkillScalarWhereInput[]
+    id_softskill?: StringFilter<"SoftSkill"> | string
+    id_aluno?: StringFilter<"SoftSkill"> | string
+    nome?: StringFilter<"SoftSkill"> | string
+    nivel?: IntFilter<"SoftSkill"> | number
+    descricao?: StringNullableFilter<"SoftSkill"> | string | null
+    data_criacao?: DateTimeFilter<"SoftSkill"> | Date | string
+    data_atualizacao?: DateTimeFilter<"SoftSkill"> | Date | string
+  }
+
   export type RecrutadorCreateWithoutContratacoesInput = {
     id_recrutador?: string
     nome: string
@@ -10839,6 +12402,7 @@ export namespace Prisma {
     data_atualizacao?: Date | string
     notas?: NotaCreateNestedManyWithoutAlunoInput
     aptidoes?: AptidaoCreateNestedManyWithoutAlunoInput
+    softskills?: SoftSkillCreateNestedManyWithoutAlunoInput
   }
 
   export type AlunoUncheckedCreateWithoutContratacoesInput = {
@@ -10861,6 +12425,7 @@ export namespace Prisma {
     data_atualizacao?: Date | string
     notas?: NotaUncheckedCreateNestedManyWithoutAlunoInput
     aptidoes?: AptidaoUncheckedCreateNestedManyWithoutAlunoInput
+    softskills?: SoftSkillUncheckedCreateNestedManyWithoutAlunoInput
   }
 
   export type AlunoCreateOrConnectWithoutContratacoesInput = {
@@ -10934,6 +12499,7 @@ export namespace Prisma {
     data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
     notas?: NotaUpdateManyWithoutAlunoNestedInput
     aptidoes?: AptidaoUpdateManyWithoutAlunoNestedInput
+    softskills?: SoftSkillUpdateManyWithoutAlunoNestedInput
   }
 
   export type AlunoUncheckedUpdateWithoutContratacoesInput = {
@@ -10956,6 +12522,7 @@ export namespace Prisma {
     data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
     notas?: NotaUncheckedUpdateManyWithoutAlunoNestedInput
     aptidoes?: AptidaoUncheckedUpdateManyWithoutAlunoNestedInput
+    softskills?: SoftSkillUncheckedUpdateManyWithoutAlunoNestedInput
   }
 
   export type AlunoCreateWithoutNotasInput = {
@@ -10978,6 +12545,7 @@ export namespace Prisma {
     data_atualizacao?: Date | string
     contratacoes?: ContratacaoCreateNestedManyWithoutAlunoInput
     aptidoes?: AptidaoCreateNestedManyWithoutAlunoInput
+    softskills?: SoftSkillCreateNestedManyWithoutAlunoInput
   }
 
   export type AlunoUncheckedCreateWithoutNotasInput = {
@@ -11000,6 +12568,7 @@ export namespace Prisma {
     data_atualizacao?: Date | string
     contratacoes?: ContratacaoUncheckedCreateNestedManyWithoutAlunoInput
     aptidoes?: AptidaoUncheckedCreateNestedManyWithoutAlunoInput
+    softskills?: SoftSkillUncheckedCreateNestedManyWithoutAlunoInput
   }
 
   export type AlunoCreateOrConnectWithoutNotasInput = {
@@ -11038,6 +12607,7 @@ export namespace Prisma {
     data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
     contratacoes?: ContratacaoUpdateManyWithoutAlunoNestedInput
     aptidoes?: AptidaoUpdateManyWithoutAlunoNestedInput
+    softskills?: SoftSkillUpdateManyWithoutAlunoNestedInput
   }
 
   export type AlunoUncheckedUpdateWithoutNotasInput = {
@@ -11060,6 +12630,7 @@ export namespace Prisma {
     data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
     contratacoes?: ContratacaoUncheckedUpdateManyWithoutAlunoNestedInput
     aptidoes?: AptidaoUncheckedUpdateManyWithoutAlunoNestedInput
+    softskills?: SoftSkillUncheckedUpdateManyWithoutAlunoNestedInput
   }
 
   export type AlunoCreateWithoutAptidoesInput = {
@@ -11082,6 +12653,7 @@ export namespace Prisma {
     data_atualizacao?: Date | string
     contratacoes?: ContratacaoCreateNestedManyWithoutAlunoInput
     notas?: NotaCreateNestedManyWithoutAlunoInput
+    softskills?: SoftSkillCreateNestedManyWithoutAlunoInput
   }
 
   export type AlunoUncheckedCreateWithoutAptidoesInput = {
@@ -11104,6 +12676,7 @@ export namespace Prisma {
     data_atualizacao?: Date | string
     contratacoes?: ContratacaoUncheckedCreateNestedManyWithoutAlunoInput
     notas?: NotaUncheckedCreateNestedManyWithoutAlunoInput
+    softskills?: SoftSkillUncheckedCreateNestedManyWithoutAlunoInput
   }
 
   export type AlunoCreateOrConnectWithoutAptidoesInput = {
@@ -11142,6 +12715,7 @@ export namespace Prisma {
     data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
     contratacoes?: ContratacaoUpdateManyWithoutAlunoNestedInput
     notas?: NotaUpdateManyWithoutAlunoNestedInput
+    softskills?: SoftSkillUpdateManyWithoutAlunoNestedInput
   }
 
   export type AlunoUncheckedUpdateWithoutAptidoesInput = {
@@ -11164,6 +12738,115 @@ export namespace Prisma {
     data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
     contratacoes?: ContratacaoUncheckedUpdateManyWithoutAlunoNestedInput
     notas?: NotaUncheckedUpdateManyWithoutAlunoNestedInput
+    softskills?: SoftSkillUncheckedUpdateManyWithoutAlunoNestedInput
+  }
+
+  export type AlunoCreateWithoutSoftskillsInput = {
+    id_aluno?: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date | string
+    endereco: string
+    linkedin?: string | null
+    github?: string | null
+    portfolio?: string | null
+    solicitacoes?: number
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    contratacoes?: ContratacaoCreateNestedManyWithoutAlunoInput
+    notas?: NotaCreateNestedManyWithoutAlunoInput
+    aptidoes?: AptidaoCreateNestedManyWithoutAlunoInput
+  }
+
+  export type AlunoUncheckedCreateWithoutSoftskillsInput = {
+    id_aluno?: string
+    nome: string
+    email: string
+    senha: string
+    matricula: string
+    curso: string
+    semestre_atual: number
+    cpf: string
+    telefone: string
+    data_nascimento: Date | string
+    endereco: string
+    linkedin?: string | null
+    github?: string | null
+    portfolio?: string | null
+    solicitacoes?: number
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+    contratacoes?: ContratacaoUncheckedCreateNestedManyWithoutAlunoInput
+    notas?: NotaUncheckedCreateNestedManyWithoutAlunoInput
+    aptidoes?: AptidaoUncheckedCreateNestedManyWithoutAlunoInput
+  }
+
+  export type AlunoCreateOrConnectWithoutSoftskillsInput = {
+    where: AlunoWhereUniqueInput
+    create: XOR<AlunoCreateWithoutSoftskillsInput, AlunoUncheckedCreateWithoutSoftskillsInput>
+  }
+
+  export type AlunoUpsertWithoutSoftskillsInput = {
+    update: XOR<AlunoUpdateWithoutSoftskillsInput, AlunoUncheckedUpdateWithoutSoftskillsInput>
+    create: XOR<AlunoCreateWithoutSoftskillsInput, AlunoUncheckedCreateWithoutSoftskillsInput>
+    where?: AlunoWhereInput
+  }
+
+  export type AlunoUpdateToOneWithWhereWithoutSoftskillsInput = {
+    where?: AlunoWhereInput
+    data: XOR<AlunoUpdateWithoutSoftskillsInput, AlunoUncheckedUpdateWithoutSoftskillsInput>
+  }
+
+  export type AlunoUpdateWithoutSoftskillsInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    contratacoes?: ContratacaoUpdateManyWithoutAlunoNestedInput
+    notas?: NotaUpdateManyWithoutAlunoNestedInput
+    aptidoes?: AptidaoUpdateManyWithoutAlunoNestedInput
+  }
+
+  export type AlunoUncheckedUpdateWithoutSoftskillsInput = {
+    id_aluno?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    senha?: StringFieldUpdateOperationsInput | string
+    matricula?: StringFieldUpdateOperationsInput | string
+    curso?: StringFieldUpdateOperationsInput | string
+    semestre_atual?: IntFieldUpdateOperationsInput | number
+    cpf?: StringFieldUpdateOperationsInput | string
+    telefone?: StringFieldUpdateOperationsInput | string
+    data_nascimento?: DateTimeFieldUpdateOperationsInput | Date | string
+    endereco?: StringFieldUpdateOperationsInput | string
+    linkedin?: NullableStringFieldUpdateOperationsInput | string | null
+    github?: NullableStringFieldUpdateOperationsInput | string | null
+    portfolio?: NullableStringFieldUpdateOperationsInput | string | null
+    solicitacoes?: IntFieldUpdateOperationsInput | number
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    contratacoes?: ContratacaoUncheckedUpdateManyWithoutAlunoNestedInput
+    notas?: NotaUncheckedUpdateManyWithoutAlunoNestedInput
+    aptidoes?: AptidaoUncheckedUpdateManyWithoutAlunoNestedInput
   }
 
   export type ContratacaoCreateManyRecrutadorInput = {
@@ -11271,6 +12954,15 @@ export namespace Prisma {
     descricao?: string | null
   }
 
+  export type SoftSkillCreateManyAlunoInput = {
+    id_softskill?: string
+    nome: string
+    nivel: number
+    descricao?: string | null
+    data_criacao?: Date | string
+    data_atualizacao?: Date | string
+  }
+
   export type ContratacaoUpdateWithoutAlunoInput = {
     id_contratacao?: StringFieldUpdateOperationsInput | string
     data_contratacao?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -11338,6 +13030,33 @@ export namespace Prisma {
     nome?: StringFieldUpdateOperationsInput | string
     nivel?: IntFieldUpdateOperationsInput | number
     descricao?: NullableStringFieldUpdateOperationsInput | string | null
+  }
+
+  export type SoftSkillUpdateWithoutAlunoInput = {
+    id_softskill?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type SoftSkillUncheckedUpdateWithoutAlunoInput = {
+    id_softskill?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
+  }
+
+  export type SoftSkillUncheckedUpdateManyWithoutAlunoInput = {
+    id_softskill?: StringFieldUpdateOperationsInput | string
+    nome?: StringFieldUpdateOperationsInput | string
+    nivel?: IntFieldUpdateOperationsInput | number
+    descricao?: NullableStringFieldUpdateOperationsInput | string | null
+    data_criacao?: DateTimeFieldUpdateOperationsInput | Date | string
+    data_atualizacao?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
 
